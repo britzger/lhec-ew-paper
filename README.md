@@ -18,18 +18,21 @@ Quick start with overleaf
 Edit the document at overleaf.
 Go to: https://www.overleaf.com/project/5d639b13de7b0c16fa85a6aa
 
-Synch between overleaf and github.com
+Sync between overleaf and github.com
 -------------------------------------
-In order to sync with github, someone has to `pull` or `fetch`:
+I've followed instructions from:
+https://de.overleaf.com/learn/how-to/How_do_I_push_a_new_project_to_Overleaf_via_git%3F
+
+In order to sync with github, someone has to `pull` or `fetch`, e.g.:
 `git pull overleaf master`
 
 I've followed instructions to work with two remotes from:
 https://gist.github.com/rvl/c3f156e117e22a25f242
 
-Then use:
+Then use (because `pull` does not work):\
 `git fetch --all`
 
-And:
+And: \
 `git push`
 
 
