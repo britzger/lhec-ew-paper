@@ -13,6 +13,15 @@ Quick start
       ` make` \
     (which just calls `pdflatex` and `bibtex` consecutively)
 
+Quick start with overleaf
+-------------------------
+Edit the document at overleaf.
+Go to: https://www.overleaf.com/project/5d639b13de7b0c16fa85a6aa
+
+Note: in order to sync with github, someone has to `pull` or `fetch`:
+`git pull overleaf master`
+
+
 Commit changes
 --------------
 Before commiting changes, please ensure that you have updated the repo,
