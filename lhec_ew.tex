@@ -1,0 +1,355 @@
+% ================================================================
+% LaTeX file with prefered layout for H1 paper drafts
+% use: dvips -D600 file-name
+% ================================================================
+%%%%%%%%%%%%% LATEX HEADER
+%%%%%%%%%%%%% DO NOT DELET NOT CHANGE ANYTHING IN THE HEADER
+%%%%%%%%%%%%% UNLESS CLEARLY RECOMMENDED
+
+\documentclass[12pt]{article}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\bibliographystyle{desy19-080}
+\bibliographystyle{utphys}
+ %Choose a bibliograhpic style
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{times}
+\usepackage{txfonts}
+\usepackage[mathlines,displaymath]{lineno}
+\DeclareMathAlphabet{\mathbold}{OML}{txr}{b}{it}
+%\usepackage[font={small,it}]{caption}
+\usepackage[font={small}]{caption}
+
+\usepackage{multirow}
+%\usepackage{units}
+%\usepackage{hhline}
+\usepackage{dsfont}
+\usepackage{xcolor}
+%\usepackage{subcaption}
+%\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{paralist} % compactitem
+
+%\usepackage{longtable}
+\usepackage{xspace}
+%\usepackage{bm} % 'bold' math symbols (better use \usepackage{newtxtext,newtxmath}, if available on latex distribution)
+\usepackage{acronym}
+\usepackage{dcolumn}
+\newcolumntype{L}{D{.}{.}{2,5}}
+%\usepackage{bbold}
+
+%%%%%%%%%%%%% Comment the next two lines to remove the line numbering
+%\usepackage[]{lineno}
+%\linenumbers
+%%%%%%%%%%%%%%
+
+\newcommand{\includegraphicss}[2][]{\fbox{\includegraphics[#1]{#2}}}
+%\newcommand{\includegraphicss}[2][]{\includegraphics[#1]{#2}}
+
+
+
+\usepackage{hyperref} % has to be last package loaded
+\hypersetup{colorlinks=true, urlcolor=blue}
+%\usepackage{cite} % Use this package to display references as [21-25], which in contrast removes the hyperlink
+\usepackage{cite} % DB: enable also clickable references (must be loaded after hyperref)
+\hypersetup{
+  colorlinks,
+  citecolor=blue,
+  linkcolor=red,
+  urlcolor=blue
+  }
+  
+%%%%%%%%%%%%
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\arraystretch}{1.25} % make lines a bit larger for tables
+\newlength{\dinwidth}
+\newlength{\dinmargin}
+\setlength{\dinwidth}{21.0cm}
+\textheight23.5cm \textwidth16.0cm
+\setlength{\dinmargin}{\dinwidth}
+\setlength{\unitlength}{1mm}
+\addtolength{\dinmargin}{-\textwidth}
+\setlength{\dinmargin}{0.5\dinmargin}
+\oddsidemargin -1.0in
+\addtolength{\oddsidemargin}{\dinmargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\marginparwidth}{0.9\dinmargin}
+\marginparsep 8pt \marginparpush 5pt
+\topmargin -42pt
+\headheight 12pt
+\headsep 30pt \footskip 24pt
+\parskip 3mm plus 2mm minus 2mm
+
+% do not indent first line of paragraph!
+%\setlength{\parindent}{0pt}
+\usepackage{parskip}
+\hyphenation{pa-ra-me-ters}
+
+
+%%%%%%%%%%%%%%%% END OF LATEX HEADER
+%===============================title page=============================
+\begin{document}  
+
+%Roman numbers
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+%% uncertainties: Absolute and relative uncertainties
+\newcommand{\delrel}{\ensuremath{\delta}}
+\newcommand{\delabs}{\ensuremath{\Delta}}
+\newcommand{\dabs}[2][1]{\ensuremath{\delabs^{{\rm{#1}}}_{{#2}}}}
+\newcommand{\drel}[2][1]{\ensuremath{\delrel^{{\rm{#1}}}_{{#2}}}}
+\newcommand{\TODO}{\color{red}TODO\xspace}
+
+\newcommand{\muf}{\ensuremath{\mu_{f}}\xspace}
+\newcommand{\mur}{\ensuremath{\mu_{r}}\xspace}
+\newcommand{\as}{\ensuremath{\alpha_s}\xspace}
+\newcommand{\asmz}{\ensuremath{\alpha_s(M_Z)}\xspace}
+\newcommand{\asmur}{\ensuremath{\alpha_s(\mur)}\xspace}
+\newcommand{\aem}{\ensuremath{\alpha_{\mathrm{em}}}\xspace}
+\newcommand{\Lumi}{\ensuremath{\mathcal{L}}}
+\newcommand{\pb}{\rm pb}
+\newcommand{\invpb}{\ensuremath{\rm{pb}^{-1}}}
+\newcommand{\PDF}{\ensuremath{{\rm PDF}}\xspace}
+
+%% observables
+\newcommand{\xbj}{\ensuremath{x}\xspace}
+\newcommand{\Qsq}{\ensuremath{Q^2}\xspace}
+
+%% ep scattering
+\newcommand{\ep}{\ensuremath{e^+}\xspace}
+\newcommand{\emm}{\ensuremath{e^-}\xspace}
+\newcommand{\epm}{\ensuremath{e^\pm}\xspace}
+
+%% tex
+\newcommand{\etal}{{\it et al.}}
+\newcommand{\eq}{equation}
+\newcommand{\fig}{figure}
+\newcommand{\tab}{table}
+
+%% units
+\newcommand{\MeV}{\ensuremath{\mathrm{MeV}}\xspace}
+\newcommand{\GeV}{\ensuremath{\mathrm{GeV}}\xspace}
+\newcommand{\GeVsq}{\ensuremath{\mathrm{GeV}^2}\xspace}
+\newcommand{\Ord}{\ensuremath{\mathcal{O}}}
+
+%% EW parameters
+\newcommand{\sw}{\ensuremath{{\rm sin}^2\theta_W}}
+\newcommand{\dr}{\ensuremath{\Delta r}}
+\newcommand{\gf}{\ensuremath{G_{\rm F}}}
+
+\newcommand{\rhopW}[2][]{\ensuremath{\rho^{\prime}_{\text{CC}#2}}}
+\newcommand{\rhop}[2][] {\ensuremath{\rho^{\prime}_{\text{NC}#2}}}
+\newcommand{\kapp}[2][] {\ensuremath{\kappa^{\prime}_{\text{NC}#2}}}
+\newcommand{\rhopu}{\rhop{, u}}
+\newcommand{\kappu}{\kapp{, u}}
+\newcommand{\rhopd}{\rhop{, d}}
+\newcommand{\kappd}{\kapp{, d}}
+\newcommand{\rhope}{\rhop{, e}}
+\newcommand{\kappe}{\kapp{, e}}
+\newcommand{\kapz}{\ensuremath{\kappa_{\text{NC}, f}}}
+\newcommand{\rhoz}{\ensuremath{\rho_{\text{NC},f}}}
+\newcommand{\Itf}{\ensuremath{I^3_{{\rm L},f}}}
+\newcommand{\Itq}{\ensuremath{I^3_{{\rm L},q}}}
+
+
+% couplings
+\newcommand{\ad} {\ensuremath{g_A^d}}
+\newcommand{\vd} {\ensuremath{g_V^d}}
+\newcommand{\au} {\ensuremath{g_A^u}}
+\newcommand{\vu} {\ensuremath{g_V^u}}
+\newcommand{\aq} {\ensuremath{g_A^q}}
+\newcommand{\vq} {\ensuremath{g_V^q}}
+\newcommand{\gae}{\ensuremath{g_A^e}}
+\newcommand{\ve} {\ensuremath{g_V^e}}
+
+
+%% masses
+\newcommand{\mt} {\ensuremath{m_t}}
+\newcommand{\mW} {\ensuremath{m_W}}
+\newcommand{\mWprop} {\ensuremath{m^{\rm prop}_W}}
+\newcommand{\mWGfW} {\ensuremath{m^{(\gf,\mW)}_W}}
+\newcommand{\mZ} {\ensuremath{m_Z}}
+\newcommand{\mH} {\ensuremath{m_H}}
+
+
+% Journal macro
+\def\Journal#1#2#3#4{{#1}~{\bf #2} (#3) #4}
+%
+\def\NPB{Nucl. Phys.~}
+\def\PRL{Phys. Rev. Lett.~}
+\def\EPJC{Eur. Phys. J.~}
+\def\PLB{Phys. Lett.~}
+\def\NIM{Nucl. Instrum. Meth.~}
+\def\PRD{Phys. Rev.~}
+\def\JHEP{JHEP~}
+\def\PROC{Conf. Proc.~}
+\def\CPC{Comp. Phys. Commun.~}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+\noindent
+\begin{flushleft}
+%{\tt Autumn 2019}                  \\
+\end{flushleft}
+
+\noindent
+Date:      \ \ \ August 2019      \\
+Version:   0.0 \\
+Editors:   D.\ Britzger (britzger@mpp.mpg.de), H. Spiesberger (spiesber@uni-mainz.de)
+\noindent
+
+\vspace{2cm}
+\begin{center}
+\begin{Large}
+{\bf Prospects for a determination of electroweak parameters with LHeC inclusive DIS data}
+\end{Large}
+\end{center}
+
+\vspace{2cm}
+
+\begin{abstract}
+\noindent
+%
+Electroweak parameters are determined from LHeC pseudo data.
+%
+\end{abstract}
+
+
+\vspace{6cm}
+
+\begin{center} To be submitted to a journal \end{center}
+
+\end{titlepage}
+\sloppy
+
+\clearpage
+%
+%   REMOVE the table of contents 
+%\clearpage
+%\tableofcontents
+%\clearpage
+
+\section*{Todo}
+\begin{itemize}
+\item Redo all fits with 'new' pseudo data
+\item Decide, whether to  include \mW\ from real HERA data or not.
+\item discuss on how to deal with 50\,\GeV vs.\ 60\,\GeV electrons
+\item finalise paper
+\end{itemize}
+\clearpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% body starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------------------------------------
+%   Introduction
+%-----------------------------------------------------------------------
+\section{Introduction}
+The EW parameters are determined together with the parameters of
+parton density functions (PDFs) of the proton in combined fits, thus
+accounting for their correlated uncertainties.
+
+%
+
+\section{Inclusive NC and CC DIS and generation of LHeC pseudo-data}
+{\color{red} This is from the H1 paper.}
+NC interactions in the process $e^\pm p\rightarrow e^\pm X$ are
+mediated by a virtual photon $(\gamma)$ or $Z$ boson in the
+$t$-channel, and the cross section is expressed in terms of
+generalised structure functions $\tilde{F}_2^\pm$, $x\tilde{F}_3^\pm$
+and $\tilde{F}_{\rm L}^\pm$ at EW leading order (LO)
+as
+\begin{equation}
+  \frac{d^2\sigma^{\rm NC}(e^\pm p)}{dxd\Qsq} = \frac{2\pi\alpha^2}{xQ^4}\left[Y_+\tilde{F}_2^\pm(x,\Qsq) \mp Y_{-}  x\tilde{F}_3^\pm(x,\Qsq) - y^2 \tilde{F}_{\rm L}^\pm(x,\Qsq)\right]~,
+  \label{eq:cs}
+\end{equation}
+where $\alpha$ is the fine structure constant and $x$ denotes the
+Bjorken scaling variable (see e.g.~\cite{CooperSarkar:1998ug}).
+The helicity dependence of the interaction is contained in the terms $Y_\pm = 1\pm(1-y)^2$ with $y$ being the inelasticity of the process.
+The generalised structure functions can be separated into contributions
+from pure $\gamma$- and $Z$-exchange and their interference~\cite{Klein:1983vs},
+\begin{align}
+  \tilde{F}_2^\pm
+  &= F_2
+  -(\ve\pm P_e\gae)\varkappa_ZF_2^{\gamma Z}
+  +\left[(\ve\ve+\gae\gae)\pm2P_e\ve\gae\right]\varkappa_Z^2F_2^Z~,
+  \\
+  \tilde{F}_3^\pm
+  &=~~
+  -(\gae\pm P_e\ve)\varkappa_ZF_3^{\gamma Z}
+  +\left[2\ve\gae\pm P_e(\ve\ve+\gae\gae)\right]\varkappa_Z^2F_3^Z~,
+\end{align}
+and similarly for $\tilde{F}_L$. The variables $g^e_V$ and $g^e_A$
+stand for the vector and axial-vector couplings of the lepton $e^\pm$
+to the $Z$ boson.
+
+
+
+
+
+%-----------------------------------------------------------------------
+%   Results from HERA combined data
+%-----------------------------------------------------------------------
+\boldmath\section{Determination of the $W$-boson mass from HERA combined data}
+
+
+%-----------------------------------------------------------------------
+%   Results from LHeC inclusive DIS data
+%-----------------------------------------------------------------------
+\section{Prospects for LHeC}
+
+\subsection{Mass determinations}\label{sec:mass}
+
+
+\subsection{Weak neutral-current couplings }\label{sec:couplings}
+
+\subsection{The $\rhop{}$, $\kapp{}$ and $\rhopW{}$ parameters}\label{sec:rho}
+
+
+\subsection{The effective weak mixing angle}\label{sec:sin2thw}
+
+
+
+
+
+
+%-----------------------------------------------------------------------
+%                            Summary
+%-----------------------------------------------------------------------
+\section{Summary}
+\label{sect:Conclusion}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Acknowledgements}
+Acknowledgements: Z.~Zhang, A.~Sch\"oning, M.~Klein, S.~Schmitt
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%======================= References ==========================%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+
+\begin{flushleft}
+\bibliography{lhec_ew}
+\end{flushleft}
+
+
+\end{document}
