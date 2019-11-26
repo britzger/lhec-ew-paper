@@ -1,282 +1,48 @@
-% ================================================================
-% LaTeX file with prefered layout for H1 paper drafts
-% use: dvips -D600 file-name
-% ================================================================
-%%%%%%%%%%%%% LATEX HEADER
-%%%%%%%%%%%%% DO NOT DELET NOT CHANGE ANYTHING IN THE HEADER
-%%%%%%%%%%%%% UNLESS CLEARLY RECOMMENDED
-
-\documentclass[12pt]{article}
-%\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-%\bibliographystyle{desy19-080}
-\bibliographystyle{utphys}
- %Choose a bibliograhpic style
-\usepackage{amsmath}
-\usepackage{amssymb}
-%\usepackage{times}
-\usepackage{txfonts}
-\usepackage[mathlines,displaymath]{lineno}
-\DeclareMathAlphabet{\mathbold}{OML}{txr}{b}{it}
-%\usepackage[font={small,it}]{caption}
-\usepackage[font={small}]{caption}
-
-\usepackage{multirow}
-%\usepackage{units}
-%\usepackage{hhline}
-\usepackage{dsfont}
-\usepackage{xcolor}
-%\usepackage{subcaption}
-%\usepackage{pdflscape}
-\usepackage{graphicx}
-\usepackage{rotating}
-\usepackage{paralist} % compactitem
-
-%\usepackage{longtable}
-\usepackage{xspace}
-%\usepackage{bm} % 'bold' math symbols (better use \usepackage{newtxtext,newtxmath}, if available on latex distribution)
-\usepackage{acronym}
-\usepackage{dcolumn}
-\newcolumntype{L}{D{.}{.}{2,5}}
-%\usepackage{bbold}
-
-%%%%%%%%%%%%% Comment the next two lines to remove the line numbering
-%\usepackage[]{lineno}
-%\linenumbers
-%%%%%%%%%%%%%%
-
-\newcommand{\includegraphicss}[2][]{\fbox{\includegraphics[#1]{#2}}}
-%\newcommand{\includegraphicss}[2][]{\includegraphics[#1]{#2}}
-
-
-
-\usepackage{hyperref} % has to be last package loaded
-\hypersetup{colorlinks=true, urlcolor=blue}
-%\usepackage{cite} % Use this package to display references as [21-25], which in contrast removes the hyperlink
-\usepackage{cite} % DB: enable also clickable references (must be loaded after hyperref)
-\hypersetup{
-  colorlinks,
-  citecolor=blue,
-  linkcolor=red,
-  urlcolor=blue
-  }
-  
-%%%%%%%%%%%%
-\renewcommand{\topfraction}{1.0}
-\renewcommand{\bottomfraction}{1.0}
-\renewcommand{\textfraction}{0.0}
-\renewcommand{\arraystretch}{1.25} % make lines a bit larger for tables
-\newlength{\dinwidth}
-\newlength{\dinmargin}
-\setlength{\dinwidth}{21.0cm}
-\textheight23.5cm \textwidth16.0cm
-\setlength{\dinmargin}{\dinwidth}
-\setlength{\unitlength}{1mm}
-\addtolength{\dinmargin}{-\textwidth}
-\setlength{\dinmargin}{0.5\dinmargin}
-\oddsidemargin -1.0in
-\addtolength{\oddsidemargin}{\dinmargin}
-\setlength{\evensidemargin}{\oddsidemargin}
-\setlength{\marginparwidth}{0.9\dinmargin}
-\marginparsep 8pt \marginparpush 5pt
-\topmargin -42pt
-\headheight 12pt
-\headsep 30pt \footskip 24pt
-\parskip 3mm plus 2mm minus 2mm
-
-% do not indent first line of paragraph!
-%\setlength{\parindent}{0pt}
-\usepackage{parskip}
-\hyphenation{pa-ra-me-ters}
-
-
-%%%%%%%%%%%%%%%% END OF LATEX HEADER
-%===============================title page=============================
-\begin{document}  
-
-%Roman numbers
-\makeatletter
-\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
-\makeatother
-
-%% uncertainties: Absolute and relative uncertainties
-\newcommand{\delrel}{\ensuremath{\delta}}
-\newcommand{\delabs}{\ensuremath{\Delta}}
-\newcommand{\dabs}[2][1]{\ensuremath{\delabs^{{\rm{#1}}}_{{#2}}}}
-\newcommand{\drel}[2][1]{\ensuremath{\delrel^{{\rm{#1}}}_{{#2}}}}
-\newcommand{\TODO}{\color{red}TODO\xspace}
-
-\newcommand{\muf}{\ensuremath{\mu_{f}}\xspace}
-\newcommand{\mur}{\ensuremath{\mu_{r}}\xspace}
-\newcommand{\as}{\ensuremath{\alpha_s}\xspace}
-\newcommand{\asmz}{\ensuremath{\alpha_s(M_Z)}\xspace}
-\newcommand{\asmur}{\ensuremath{\alpha_s(\mur)}\xspace}
-\newcommand{\aem}{\ensuremath{\alpha_{\mathrm{em}}}\xspace}
-\newcommand{\Lumi}{\ensuremath{\mathcal{L}}}
-\newcommand{\pb}{\rm pb}
-\newcommand{\invpb}{\ensuremath{\rm{pb}^{-1}}}
-\newcommand{\PDF}{\ensuremath{{\rm PDF}}\xspace}
-
-\newcommand{\ex}{\ensuremath{{\rm exp}}\xspace}
-\newcommand{\pdf}{\ensuremath{{\rm pdf}}\xspace}
-
-%% observables
-\newcommand{\xbj}{\ensuremath{x}\xspace}
-\newcommand{\Qsq}{\ensuremath{Q^2}\xspace}
-
-%% ep scattering
-\newcommand{\ep}{\ensuremath{e^+}\xspace}
-\newcommand{\emm}{\ensuremath{e^-}\xspace}
-\newcommand{\epm}{\ensuremath{e^\pm}\xspace}
-
-%% tex
-\newcommand{\etal}{{\it et al.}}
-\newcommand{\eq}{equation}
-\newcommand{\fig}{figure}
-\newcommand{\tab}{table}
-
-%% units
-\newcommand{\MeV}{\ensuremath{\mathrm{MeV}}\xspace}
-\newcommand{\GeV}{\ensuremath{\mathrm{GeV}}\xspace}
-\newcommand{\TeV}{\ensuremath{\mathrm{TeV}}\xspace}
-\newcommand{\GeVsq}{\ensuremath{\mathrm{GeV}^2}\xspace}
-\newcommand{\Ord}{\ensuremath{\mathcal{O}}}
-
-%% EW parameters
-\newcommand{\sw}{\ensuremath{{\rm sin}^2\theta_W}}
-\newcommand{\dr}{\ensuremath{\Delta r}}
-\newcommand{\gf}{\ensuremath{G_{\rm F}}}
-
-\newcommand{\rhopW}[2][]{\ensuremath{\rho^{\prime}_{\text{CC}#2}}}
-\newcommand{\rhop}[2][] {\ensuremath{\rho^{\prime}_{\text{NC}#2}}}
-\newcommand{\kapp}[2][] {\ensuremath{\kappa^{\prime}_{\text{NC}#2}}}
-\newcommand{\rhopu}{\rhop{, u}}
-\newcommand{\kappu}{\kapp{, u}}
-\newcommand{\rhopd}{\rhop{, d}}
-\newcommand{\kappd}{\kapp{, d}}
-\newcommand{\rhope}{\rhop{, e}}
-\newcommand{\kappe}{\kapp{, e}}
-\newcommand{\rhopq}{\rhop{, q}}
-\newcommand{\kappq}{\kapp{, q}}
-\newcommand{\rhopf}{\rhop{, f}}
-\newcommand{\kappf}{\kapp{, f}}
-\newcommand{\kapz}{\ensuremath{\kappa_{\text{NC}, f}}}
-\newcommand{\rhoz}{\ensuremath{\rho_{\text{NC},f}}}
-\newcommand{\Itf}{\ensuremath{I^3_{{\rm L},f}}}
-\newcommand{\Itq}{\ensuremath{I^3_{{\rm L},q}}}
-
-
-\newcommand{\chisq}{\ensuremath{\chi^{2}}}
-
-% couplings
-\newcommand{\ad} {\ensuremath{g_A^d}}
-\newcommand{\vd} {\ensuremath{g_V^d}}
-\newcommand{\au} {\ensuremath{g_A^u}}
-\newcommand{\vu} {\ensuremath{g_V^u}}
-\newcommand{\aq} {\ensuremath{g_A^q}}
-\newcommand{\vq} {\ensuremath{g_V^q}}
-\newcommand{\gae}{\ensuremath{g_A^e}}
-\newcommand{\ve} {\ensuremath{g_V^e}}
-
-
-%% masses
-\newcommand{\mt} {\ensuremath{m_t}}
-\newcommand{\mW} {\ensuremath{m_W}}
-\newcommand{\mWprop} {\ensuremath{m^{\rm prop}_W}}
-\newcommand{\mWGfW} {\ensuremath{m^{(\gf,\mW)}_W}}
-\newcommand{\mZ} {\ensuremath{m_Z}}
-\newcommand{\mH} {\ensuremath{m_H}}
-
-
-% Journal macro
-\def\Journal#1#2#3#4{{#1}~{\bf #2} (#3) #4}
-%
-\def\NPB{Nucl. Phys.~}
-\def\PRL{Phys. Rev. Lett.~}
-\def\EPJC{Eur. Phys. J.~}
-\def\PLB{Phys. Lett.~}
-\def\NIM{Nucl. Instrum. Meth.~}
-\def\PRD{Phys. Rev.~}
-\def\JHEP{JHEP~}
-\def\PROC{Conf. Proc.~}
-\def\CPC{Comp. Phys. Commun.~}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{titlepage}
-
-\noindent
-\begin{flushleft}
-%{\tt Autumn 2019}                  \\
-\end{flushleft}
-
-\noindent
-Date:      \ \ \ August 2019      \\
-Version:   0.0 \\
-Editors:   D.\ Britzger (britzger@mpp.mpg.de), H. Spiesberger (spiesber@uni-mainz.de)
-\noindent
-
-\vspace{2cm}
-\begin{center}
-\begin{Large}
-{\bf Prospects for a determination of electroweak parameters with LHeC inclusive DIS data}
-\end{Large}
-\end{center}
-
-\vspace{2cm}
-
-\begin{abstract}
-\noindent
-%
-Electroweak parameters are determined from LHeC pseudo data.
-%
-Test.
-%
-\end{abstract}
-
-
-\vspace{6cm}
-
-\begin{center} To be submitted to a journal \end{center}
-
-\end{titlepage}
-\sloppy
-
-\clearpage
-%
-%   REMOVE the table of contents 
-%\clearpage
-%\tableofcontents
-%\clearpage
-
-\section*{Todo}
-\begin{itemize}
-\item Redo all fits with 'new' pseudo data
-\item Decide, whether to  include \mW\ from real HERA data or not.
-\item discuss on how to deal with 50\,\GeV vs.\ 60\,\GeV electrons
-\item finalise paper
-\end{itemize}
-\clearpage
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% body starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-----------------------------------------------------------------------
 %   Introduction
 %-----------------------------------------------------------------------
 \section{Introduction}
-The EW parameters are determined together with the parameters of
-parton density functions (PDFs) of the proton in combined fits, thus
-accounting for their correlated uncertainties.
+Since the discovery of the Standard Model (SM) Higgs boson at the CERN
+LHC experiments and subsequent measurement of its
+parameters, all fundamental parameters of the SM have been measured
+directly and with remarkable precision.
+To further establish the validity of the theory of electroweak
+interactions, validate the mechanism of electroweak symmetry breaking
+and the mechanism of the generation of particle masses, further
+high-precision electroweak measurements have to be performed.
+Such high-precision measurements are also often considered as a portal
+to new physics, since non-SM contributions, as for instance
+loop-insertions, may yield significant deviations for some precisely
+measurable and calculable observables.
+The greatly enlarged kinematic reach to higher scales in comparison to
+HERA and the large targeted luminosity will allow for the first time
+high-precision electroweak measurements in $ep$.
+
+The LHeC experimental conditions offer the opportunity for unique measurements of electroweak
+parameters, which are often complementary to other experiments, such
+as proton-proton or electron-positron collider experiments or low
+energy neutrino or muon scattering experiments.
+Among many other quantities, unique measurements of the weak couplings
+of the light quarks, $u$ and $d$, can be performed due to the
+important contributions of valence quarks in the initial state, as well as scale
+dependent measurements of weak interactions, since deep-inelastic $ep$
+scattering is mediated through space-like momentum transfer
+($t$-channel exchange).
 
 %
+In this article we study the sensitivity of inclusive NC and CC cross
+section at LHeC to electroweak parameters.
 
-\section{Inclusive NC and CC DIS and generation of LHeC pseudo-data}
-{\color{red} This is from the H1 paper.}
-NC interactions in the process $e^\pm p\rightarrow e^\pm X$ are
-mediated by a virtual photon $(\gamma)$ or $Z$ boson in the
-$t$-channel, and the cross section is expressed in terms of
+
+
+%-----------------------------------------------------------------------
+%   Theory
+%-----------------------------------------------------------------------
+\clearpage
+\section{Theory of electroweak effects in inclusive NC and CC DIS cross sections}
+%
+Inclusive NC DIS cross sections are expressed in terms of
 generalised structure functions $\tilde{F}_2^\pm$, $x\tilde{F}_3^\pm$
 and $\tilde{F}_{\rm L}^\pm$ at EW leading order (LO)
 as
@@ -284,11 +50,12 @@ as
   \frac{d^2\sigma^{\rm NC}(e^\pm p)}{dxd\Qsq} = \frac{2\pi\alpha^2}{xQ^4}\left[Y_+\tilde{F}_2^\pm(x,\Qsq) \mp Y_{-}  x\tilde{F}_3^\pm(x,\Qsq) - y^2 \tilde{F}_{\rm L}^\pm(x,\Qsq)\right]~,
   \label{eq:cs}
 \end{equation}
-where $\alpha$ is the fine structure constant and $x$ denotes the
-Bjorken scaling variable (see e.g.~\cite{CooperSarkar:1998ug}).
-The helicity dependence of the interaction is contained in the terms $Y_\pm = 1\pm(1-y)^2$ with $y$ being the inelasticity of the process.
-The generalised structure functions can be separated into contributions
-from pure $\gamma$- and $Z$-exchange and their interference~\cite{Klein:1983vs},
+where $\alpha$ denotes the fine structure constant and $x$ the
+Bjorken scaling variable.
+The terms $Y_\pm = 1\pm(1-y)^2$ contain the helicity dependence of
+the process, where $y$ denotes the inelasticity of the process.
+The  generalised structure functions are then separated into contributions
+from pure $\gamma$- and $Z$-exchange and their interference~\cite{Klein:1983vs}:
 \begin{align}
   \tilde{F}_2^\pm
   &= F_2
@@ -298,37 +65,665 @@ from pure $\gamma$- and $Z$-exchange and their interference~\cite{Klein:1983vs},
   \tilde{F}_3^\pm
   &=~~
   -(\gae\pm P_e\ve)\varkappa_ZF_3^{\gamma Z}
-  +\left[2\ve\gae\pm P_e(\ve\ve+\gae\gae)\right]\varkappa_Z^2F_3^Z~,
+  +\left[2\ve\gae\pm P_e(\ve\ve+\gae\gae)\right]\varkappa_Z^2F_3^Z~.
+  \label{eq:strfun}
 \end{align}
-and similarly for $\tilde{F}_L$. The variables $g^e_V$ and $g^e_A$
-stand for the vector and axial-vector couplings of the lepton $e^\pm$
-to the $Z$ boson.
+Similar expressions hold for $\tilde{F}_L$.
+%
+In the naive quark-parton model, which corresponds to the LO QCD
+approximation, the structure functions are calculated as
+\begin{align}
+  \left[F_2,F_2^{\gamma Z},F_2^Z\right]
+  &= x\sum_q\left[Q_q^2,2Q_q\vq,\vq\vq+\aq\aq \right]\{q+\bar{q}\}~,
+  \label{eq:last1}
+  \\
+  x\left[F_3^{\gamma Z},F_3^Z\right]
+  &= x\sum_q\left[2Q_q\aq,2\vq\aq\right]\{q-\bar{q}\}~,
+  \label{eq:last2}
+\end{align}
+and it is easily recognized that those are closely related
+to the quark and anti-quark momentum distributions, $xq$ and $x\bar{q}$.
+In eqs.~\eqref{eq:strfun} and~\eqref{eq:gV-LO}, the variables $g_V^{e/q}$
+and $g_A^{e/q}$ stand for the vector and axial-vector couplings of the
+lepton or quarks to the $Z$ boson, and the coefficient $\varkappa_Z$
+accounts for the $Z$-boson propagator and the normalisation of the  weak contributions.
+%
+Both parameters are given by electroweak theory.
+The (effective) coupling parameters
+depend on the electric charge, $Q_{q/e}$, in units of the positron charge,
+and on the third component of the weak-isospin of the fermion, $I^3_{{\rm L},q/e}$.
+Using $\sw=1-\tfrac{M_W^2}{M_Z^2}$, they are given by
+\begin{align}
+  g_A^{f} &= \sqrt{\rho_{\text{NC}, f}} I^3_{{\rm L},f}
+  \label{eq:gA-LO} \,, \\
+  g_V^{f} &= \sqrt{\rho_{\text{NC}, f}} \left(I^3_{{\rm L},f} - 2
+  Q_{f} \kappa_{\text{NC}, f}\ \sw \right)
+  \label{eq:gV-LO} \,.
+\end{align}
+The form factors $\rho_{\text{NC}, f}$ and $\kappa_{\text{NC}, f}$
+represent the universal higher-order corrections, and due to their
+\Qsq\ dependence the couplings become `effective'.
+%The latter has been measured with highest precision
+%in muon-decay experiments~\cite{Tishchenko:2012ie}.
+%
+The coefficient $\varkappa_Z$ is calculated as
+\begin{equation}
+  \varkappa_Z(\Qsq)
+  = \frac{\Qsq}{\Qsq+M^2_Z}
+  \frac{1}{4\sw \cos^2\theta_W}
+  = \frac{\Qsq}{\Qsq+M^2_Z}
+  \frac{\gf M_Z^2}{2\sqrt{2}\pi\alpha}~,
+\end{equation}
+%i.e.\ taking into account either the weak mixing angle, $\sw=1-\mW^2 /
+i.e.\ taking into account $\sw$, or alternatively using the Fermi coupling constant $\gf$.
+
+In order to perform predictions in LO electroweak theory only two independent
+parameters are needed in addition to $\alpha$.
+At higher orders, loop corrections involve a non-negligible dependence
+on further parameters, where the most important ones are $M_t$
+and $M_H$ and hadronic contributions.
+
+
+In the LO approximation, the CC DIS cross section is written as
+\begin{equation}
+  \frac{d^2\sigma^{\rm CC}(e^\pm p)}{dxd\Qsq}
+  = \left(1 \pm P_e\right)
+  \frac{\gf^2}{4\pi x}
+  \left[\frac{m_W^2}{m_W^2+\Qsq}\right]^2
+  \left(Y_+ W_2^\pm(x,\Qsq) \mp Y_{-} xW_3^\pm(x,\Qsq)
+  - y^2 W_{\rm L}^\pm(x,\Qsq)\right)~.
+  \label{eq:cc-cs}
+\end{equation}
+In the simplified quark-parton model the structure
+functions $W_2^\pm$ and $xW_3^\pm$ are obtained from the parton
+distribution functions, while $W_{\rm L}^\pm = 0$:
+An incoming electron can scatter only with
+positively charged quarks,
+\begin{equation}
+  W_2^- =
+  x \left( U + \overline{D} \right)
+  \, ,
+  \quad xW_3^- =
+  x \left( U - \overline{D} \right)
+  \, ,
+  \label{eq:w23el-LO}
+\end{equation}
+while positrons scatter only with negatively charged quarks,
+\begin{equation}
+  W_2^+ =
+  x \left( \overline{U} + D \right)
+  \, {~~\text{and}~~}
+  \quad xW_3^+ =
+  x \left( D - \overline{U} \right)
+  \, ,
+  \label{eq:w23po-LO}
+\end{equation}
+using the parton combinations
+$U = u+c$, $\overline{U} = \bar{u} + \bar{c}$, $D = d+s$
+and $\overline{D} = \bar{d} + \bar{s}$.
+
+
+Due to renormalisation of the corrections and the choice of
+input parameters the calculations become scheme dependent.
+In this study we adopt the on-shell scheme using \mz\ and \mw\ as input
+parameters to the calculations.
+
+
+\clearpage
+\section{Methdology}
+\subsection{The inclusive NC and CC DIS cross section and LHeC}
+The single-differential inclusive NC and CC DIS cross sections
+for polarised $e^-p$ scattering as function of \Qsq for LHeC electron
+and proton beam energies are displayed in
+figure~\ref{fig:dSigma}, and compared to measurements at HERA.
+%
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.52\textwidth]{plot_GraphsDsigmaDQ2_LHeC}
+  \caption{{Single differential cross sections for polarised $e^-p$ NC
+      and CC DIS at LHeC for two different electron beam energies
+      ($E_e$). Cross sections for longitudinal electron beam
+      polarisations of $P_e=-0.8$ and $+0.8$ are displayed.
+      For comparison also measurements at center-of-mass energies
+      of $\sqrt{s}=920$ by H1 at HERA for unpolarised ($P=0\,\%$)
+      electron beams are displayed.
+  }}
+  \label{fig:dSigma}
+\end{figure}
+%
+The targeted longitudional polarisation states of the LHeC electron
+beam of $P_e=\pm0.8$ will considerably alter the CC DIS cross section,
+as it scales linearly with $P_e$, but also for NC cross sections the
+polarisation effects are significant in kinematic regions, where
+$\gamma Z$ and pure $Z$  exchange are important.
+With a reduced electron beam energy of $E_e=50\,\GeV$, the
+center-of-mass energy reduces to $1.18\,\TeV$ and
+in the exemplary range from $10000<\Qsq<100000\,\GeVsq$
+the reduced NC or CC cross sections are lower by about 10 to 15.
+With even higher \Qsq\ values, the difference further increases and also the
+sensitivity to electroweak parameters in NC exchange reduces
+accordingly.
+%
+
+{\color{red}Add text for the additional cross section plots, if needed...}
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.40\textwidth]{plot_GraphsDsigmaDQ2_LHeC_opt}
+  \hskip0.05\textwidth
+  \includegraphics[width=0.40\textwidth]{plot_GraphsDsigmaDQ2_FCC_opt}
+  \caption{
+    Left: Inclusive NC and CC DIS cross sections as a function of \Qsq
+    for two different polarisation states $P=\pm0.8$ and for two different electron
+    beam energies, $E_e=50$ and $60\,\GeV$.
+    For comparison, also the HERA measurements are displayed for $P=0$.
+    Right: Inclusive NC and CC DIS cross sections as a function of
+    \Qsq for different proton beam energies, $E_p=7$, 20 and
+    50\,TeV. The latter two are possible at the future FCC.
+    {\color{red} Appendix/additional figure?}
+  }
+  \label{fig:dSigmaopt}
+\end{figure}
+
+
+\subsection{LHeC pseudo-data}
+{\color{red} Write here about the pseudo-data from Max, and the
+  expected int. lumi.}
+
+
+~\cite{Britzger:2017fuc}
+
+
+%-----------------------------------------------------------------------
+%   Methodology
+%-----------------------------------------------------------------------
+\subsection{Methodology of a combined EW and QCD fit}
+{\color{green}
+The cross section and also all other parameters are predictions within the EW
+formalism and can be used to test the validity of the electroweak
+theory.}
+Reasonable examples are determinations of (all) the weak neutral current
+couplings, $g_A^{f}$ and $g_V^{f}$ with $f=(e,u,d,s,c,b,t)$,
+or more general, directly the $\rho_{\text{NC}, f}$ and
+$\kappa_{\text{NC}, f}$ parameters.
+These can be done either in the scale-indpendent LO approximation, by
+taking the scale-dependent loop corrections from theory, or their
+effective values can be determined at different scales.
+More commonly though, the effective weak mixing
+angle $\sin\theta_{\text{W}}^{\text{eff},f}:=\kappa_{\text{NC}, q/e}\ \sw$
+is tested at different scales, while also this quantity has an
+important scheme dependent component (see Ref.~\ref{pdg18} for a
+concise dicsussion).
+Noteworthy, most of the precision measurements are performed in the
+time-like domain, i.e.\ for $\mu^2>0$, whereas DIS is mediated by space-like
+momentum transfer, $\Qsq=-q^2$, and thus $q^2<0$.
+In DIS at the LHeC, in addition, a large kinematic range can be tested.
+
+Complementary, the measurement of the weak boson masses yields an interesting testing
+case of the theory, in particular the measurement of \mw.
+This is because \mw\ can be considered as input parameter to the
+formalism, or alternatively, if the precision measurement of \gf\ is
+been taken as input~\cite{Tishchenko:2012ie}, then \mw becomes a
+prediction and can be confronted with the measurement directly.
+
+The expected uncertainties of the electroweak parameters are
+obtained in a combined fit of electroweak parameters and the PDFs, where
+the inclusive NC and CC DIS pseudo-data (see sect.~\ref{sec:DISdata})
+are taken as data and full set of statistical and systematic
+uncertainties are considered.
+By fitting the PDFs together with EW parameters, uncertainties from the PDFs are taken into
+account, which is very reasonable, since the PDFs will predominantly
+be determined from those LHeC data in the future.
+The details of the PDF fit are altogether fairly similar to the PDF
+fits outlined in sect.~\ref{sec:PDFs}, but additionally EW effects are
+included into the calculation by considering the full set of 1-loop
+electroweak corrections~\cite{todo}.
+The pQCD predictions are performed in the zero-mass VFN-scheme
+and the $\chi^2$ quantity which is input to the minimisation and
+error propagation is based on normal-distributed relative
+uncertainties, such avoiding a dependence on the actual size of the
+cross sections.
+
+
+%-----------------------------------------------------------------------
+%   Results: mass parameters
+%-----------------------------------------------------------------------
+\clearpage
+\section{Mass determinations}
+\subsection{Weak boson masses ${M_W}$ and $M_Z$}
+\label{sec:mass}
+The expected uncertainties for a determination of the weak boson masses, \mW\ and \mZ, are determined in the
+PDF+EW-fit, where one of the masses is determined
+together with the PDFs, while the other mass parameter as taken as external input.
+The expected uncertainties of \mW\ are
+\begin{alignat}{2}
+  \Delta\mW(\text{LHeC-60})&=\pm5_{({\rm exp})}\pm8_{({\rm PDF})}\,\MeV  =\,&& 10_{\text{(tot)}}\,\MeV{\rm ~~and~~} \\
+  \Delta\mW(\text{LHeC-50})&=\pm8_{({\rm exp})}\pm9_{({\rm PDF})}\,\MeV  =\,&& 12_{\text{(tot)}}\,\MeV
+\nonumber
+\end{alignat}
+for LHeC with $E_e=60\,\GeV$ or 50\,\GeV, respectively.
+The breakdown into experimental and PDF uncertainties is obtained by repeating the fit with PDF
+parameters fixed.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.42\textwidth]{alphas_summary_W-bosonMass}
+    \hskip0.05\textwidth
+%    \includegraphics[width=0.44\textwidth]{alphas_summary_Z-bosonMass}
+% /nfs/dust/h1/group/britzger/alpos/Alpos/lhec_ew_CDR19/mW_uncorr_study
+    \includegraphics[width=0.42\textwidth]{mW_uncorr}
+    \caption{
+%      Measurements of the $W$-boson mass (left) and $Z$-boson mass (right)
+%      from HERA, LHeC and FCC-eh (simulated) data and compared to the PDG values.
+      Left: Measurements of the $W$-boson mass  at fixed top-quark
+      and $Z$-boson masses at LHeC for different LHeC
+      scenarios in comparison with todays
+      measurements~\cite{Group:2012gb,Schael:2013ita,Aaboud:2017svj}
+      and the  world average value (PDG19)~\cite{Tanabashi:2019}.
+      For LHeC, prospects for $E_e=60\,\GeV$ and 50\,\GeV are
+      displayed, as well as results for the two scenarios with 0.5\,\%
+      or 0.25\,\% uncorrelated uncertainty (see text).
+      Right: Comparison of the precision for $M_W$ for different assumptions of the uncorrelated
+      uncertainty of the pseudo-data.
+      The uncertainty of the world average value is displayed as horizontal line.
+      The nominal (and alternative) size of the uncorrelated uncertainty of the
+      inclusive NC/CC DIS pseudo-data is indicated by the vertical
+      line (see text),
+    }
+    \label{fig:mWZ}
+\end{figure}
+These uncertainties are displayed in
+figure~\ref{fig:mWZ} and compared to the values obtained by LEP2~\cite{Schael:2013ita},
+Tevatron~\cite{Group:2012gb}, ATLAS~\cite{Aaboud:2017svj} and the PDG
+value~\cite{PDG}.
+The LHeC measurement will become the most precise measurement of a
+single experiment and will greatly improve over the best measurement achieved
+by H1 of $\mW(\text{H1})=80.520\pm0.115\,\GeV$~\cite{Spiesberger:2018vki}.
+%H1~\cite{Spiesberger:2018vki} and to the
+%In addition, uncertainties when performing our PDF+EW-fit to the final combined
+%HERA data~\cite{HERAPDF} or to the simulated FCC-eh data are shown.
+%
+In case, the dominating uncorrelated uncertainties can be reduced from
+the prospected $0.5\,\%$ to $0.25\,\%$\footnote{Due to performance
+  reasons, the pseudo-data are generated for a rather coarse bin grid. With a
+  binning, which is closely related to the resolution of the LHeC
+  detector, a much finer binning in $x$ and \Qsq are feasible. Already
+  such a change would alter the uncertainties of the fit parameters.
+  However, such an effect can be reflected by a
+  changed uncorrelated uncertainty, and a value of 0.25\,\% appears
+  like an optimistic, but achievable,  alternative scenario. },
+a precision of \mW\ of up to
+\begin{alignat}{2}
+  \Delta\mW(\text{LHeC-60})&=\pm3_{({\rm exp})}\pm5_{({\rm PDF})}\,\MeV =\,&& 6_{\text{(tot)}}\,\MeV{\rm ~~and~~} \\
+  \Delta\mW(\text{LHeC-50})&=\pm6_{({\rm exp})}\pm6_{({\rm PDF})}\,\MeV =\,&& 8_{\text{(tot)}}\,\MeV
+\nonumber
+\end{alignat}
+for LHeC-60 and LHeC-50 will be achieved, respectively.
+A complete dependence of the expected total experimental uncertainty $\Delta\mW$ on the size of the uncorrelated
+uncertainty component %, and the normalisation uncertainty
+is displayed in
+figure~\ref{fig:mWZ}.%, and with more optimistic scenario an uncertainty of up
+%to $\Delta\mW\approx5\,\MeV$ can be achieved.
+Given such a high experimental precision further theoretical uncertainties
+will have to be considered and for instance the uncertainty of the
+top-quark mass of $0.5\,\GeV$ will yield an additional uncertainty of $\Delta\mW=2.5\,\MeV$.
+The prospected measurement of the $W$-boson mass with LHeC data will be among the most
+precise measurements and will significantly improve the world average
+value of \mw, which is currently dominated by the ATLAS measurement~\cite{Aaboud:2017svj}.
+
+While the measurement of \mW\ are competitive with other
+measurements, the expected experimental uncertainties of \mZ\ are about 11\,MeV and 13\,MeV for
+LHeC-60 and LHeC-50, respectively and are thus of similar size than those of \mW.
+Therefore, the precision of \mZ\ cannot compete
+with the precise measurements at the $Z$-pole by LEP+SLD and future
+$e^+e^-$ colliders may even improve on that~\cite{todo,FCCee,ILC}.
+
+A simultaneous determination of \mW\ and \mZ\ is displayed in
+fig.~\ref{fig:mWmZ}.
+Although the precision of these two mass parameters is only moderate, a
+meaningful test of the high-energy behaviour of electroweak theory is
+obtained by using additionally the precise measurement of $G_F$ as
+additional input:
+The high precision of the $G_F$ measurement yields a very shallow
+error ellipse and a precise test of the SM can be performed with only
+NC and CC DIS cross sections alone.
+Such a fit simultaneously determines and tests the
+high-energy behaviour of electroweak theory, while taking only low-energy parameters
+$\alpha$ and $G_F$ as inputs.
+Further parameters like $M_t$ and $M_H$ are needed only for the subleading corrections.
+\begin{figure}[tbhp]
+    \centering
+    \includegraphics[width=0.42\textwidth]{plot_mWmZ_mitGf}
+    \caption{
+      Simultaneous determination of the top-quark mass $M_t$ and
+      $W$-boson mass \mw\ from LHeC-60 or LHeC-50 data (left).
+      The additional precision measurement of \gf from PSI yields a
+      strong contraint and a very shallow ellipse is obtained.
+      Simultaneous determination of the $W$-boson and $Z$-boson masses
+      from LHeC-60 or LHeC-50 data (right).
+    }
+    \label{fig:mWmZ}
+\end{figure}
+
+{\color{magenta}Dicsussion about scheme dependence of paramters?}
+
+
+\subsection{Further mass determinations}
+The inclusive DIS data are sensitive to the top-quark mass $M_t$
+through radiative corrections and the $M_t$ dependent terms are the
+dominant corrections to the vertex and to the propagator self-energies.
+They are considered in the $\rho$ and $\kappa$ parameters and in the
+correction factor $\Delta r$, and the leading contributions are
+proportional to $M_t^2$. %$\gf{M_t^2}$.
+This allows for an indirect determination of the top-quark mass using
+LHeC inclusive DIS data, and a determination of $M_t$ will yield an
+uncertainty of $\Delta M_t = 1.8\,\GeV$ to 2.2\,\GeV.
+Assuming an uncorrelated uncertainty of the DIS pseudo-data of
+$0.25\,\%$ the uncertainty of $M_t$ becomes as small as
+\begin{equation}
+  \Delta M_t=1.1 \text{~~to~~} 1.4\,\GeV
+\end{equation}
+for 60 and 50\,\GeV electron beams, respectively.
+This would
+%greatly improve over the limited precision obtained with the final H1
+%data~\cite{Spiesberger:2018vki}, and would
+represent a very precise
+indirect determination of the top-quark mass from purely electroweak
+corrections and thus being fully complementary to measurements
+from real $t$-quark production, which suffer often from sizeable QCD corrections.
+\begin{figure}[tbhp]
+    \centering
+    \includegraphics[width=0.42\textwidth]{plot_lhec_mWmt}
+    \caption{
+      Simultaneous determination of the $W$-boson and $Z$-boson masses
+      from LHeC-60 or LHeC-50 data in comparision with the LEP+SLD
+      combination and results from a global EW fit~\cite{Haller:2018nnx}.
+    }
+    \label{fig:mWmt}
+\end{figure}
+
+More generally, and to some extent dependent on the choice of the
+renormalisation scheme, the leading self-energy and vertex corrections
+are proportional to $\tfrac{M_t^2}{\mw^2}$ and thus a simultaneous
+determination of $M_t$ and \mw\ is feasible.
+The prospects for such a simultaneous determination of $M_t$ and \mw is
+displayed in figure~\ref{fig:mWmt}.
+It is remarkable, that the precision of the LHeC is
+superior than the LEP combination~\cite{ALEPH:2005ab}, which combines results from all of the
+four LEP experiments and the SLD experiment, and in an optimistic
+scenario with $E_e=60\,\GeV$ and an uncorrelated uncertainty of
+$0.25\,\%$ an uncertainty similar to the global electroweak
+fit~\cite{Haller:2018nnx} can be achieved.
+In a fit without PDF parameters similar uncertainties are found (not shown),
+which illustrates that the determination of EW parameters is
+to a large extent independent on the QCD phenomenology and the PDFs.
+
+The subleading contributions to the vertex and self-energy corrections
+have a Higgs-boson mass dependence and are proportional to
+$\log\tfrac{M^2_H}{\mw^2}$.
+When fixing all other EW parameters the Higgs boson mass could be
+constrained indirectly through these loop corrections
+with a precision of $\Delta m_H=^{+29}_{-23}$ to $^{+24}_{-20}\,\GeV$
+for different LHeC scenarios.
+
+
+%-----------------------------------------------------------------------
+%   Results: couplings
+%-----------------------------------------------------------------------
+\clearpage
+\section{Weak Neutral Current Couplings}
+The vector and axial-vector couplings of up-type and
+down-type quarks to the $Z$, $g_V^{u/d}$ and $g_A^{u/d}$, see
+eq.~\eqref{eq:gV-LO}) are determined
+in a fit of the four coupling parameters together with the PDFs.
+These fit-parameters are defined in the Born approximation and
+\Qsq\ dependent higher-order corrections are calculated strictly in
+the SM formalism in the 1-loop approximation.
+The resulting uncertainties are collected in table~\ref{tab:couplings} and
+compared to the current most precise values in figure~\ref{fig:couplings}.
+%
+
+\begin{figure}[tbhp]
+    \centering
+    \includegraphics[width=0.40\textwidth]{plot_couplings_u}
+    \hskip0.05\textwidth
+    \includegraphics[width=0.40\textwidth]{plot_couplings_d}
+  \caption{
+    Weak-neutral-current vector and axial-vector couplings of $u$-type quarks to the $Z$-boson
+    (left), and those of the $d$-type quarks (right) at 68\,\% confidence level~(C.L.) for
+    simulated LHeC data with $E_e=50\,\GeV$.
+    The LHeC expectations are compared with results from the combined LEP experiments~\cite{ALEPH:2005ab}
+    and single measurements by D0~\cite{D0} and H1~\cite{Spiesberger:2018vki}.
+    The standard model expectations are diplayed by a red star.
+  }
+  \label{fig:couplings}
+\end{figure}
+
+\begin{table}[bth]
+\footnotesize
+%log.couplings.lhec60.uncorr.0.5.txt
+%EPRC.au                   =          0.5   +/-   0.00220346
+%EPRC.ad                   =         -0.5   +/-   0.00552205
+%EPRC.vu                   =     0.202804   +/-   0.00152003
+%EPRC.vd                   =    -0.351402   +/-   0.0046019
+%log.couplings.lhec60.uncorr.0.25.txt
+%EPRC.au                   =          0.5   +/-   0.00152328
+%EPRC.ad                   =         -0.5   +/-   0.00342166
+%EPRC.vu                   =     0.202804   +/-   0.00100496
+%EPRC.vd                   =    -0.351402   +/-   0.0027548
+%log.couplings.lhec50.uncorr.0.5.txt
+%EPRC.au                   =          0.5   +/-   0.00354618
+%EPRC.ad                   =         -0.5   +/-   0.00829618
+%EPRC.vu                   =     0.202804   +/-   0.00278195
+%EPRC.vd                   =    -0.351402   +/-   0.00673197
+%
+  \centering
+  \begin{tabular}{cr@{\hskip4pt}lccc}
+    \hline
+    Coupling  &  \multicolumn{2}{c}{PDG} & \multicolumn{3}{c}{Expected uncertainties} \\
+    parameter &  &  & LHeC-60 & LHeC-60 ({\footnotesize$\delta_\text{uncor.}=0.25\,\%$})  & LHeC-50 \\
+    \hline
+    $\au$  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.0022$ & $0.0015$ & $0.0035$ \\
+    $\ad$  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.0055$ & $0.0034$ & $0.0083$ \\
+    $\vu$  & $0.18$   & $\pm0.05$            & $0.0015$ & $0.0010$ & $0.0028$ \\
+    $\vd$  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.0046$ & $0.0027$ & $0.0067$ \\
+\hline
+  \end{tabular}
+  \caption{
+    Standard model expectations for the light-quark weak neutral
+    couplings ($\au$,$\ad$,$\vu$,$\vd$) together with the currently
+    most precise uncertainties (PDG~\cite{PDG}) and the prospected
+    uncertainties for different LHeC scenarios.
+    The LHeC prospects are obtained in a simultaneous fit of the PDF
+    parameters and all four coupling parameters at a time.
+     }
+     \label{tab:couplings}
+\end{table}
+%
+
+
+\begin{table}[bht]
+\footnotesize
+%log.couplings.lhec60.uncorr.0.5.txt
+%EPRC.au                   =          0.5   +/-   0.00220346
+%EPRC.ad                   =         -0.5   +/-   0.00552205
+%EPRC.vu                   =     0.202804   +/-   0.00152003
+%EPRC.vd                   =    -0.351402   +/-   0.0046019
+%log.couplings.lhec60.uncorr.0.25.txt
+%EPRC.au                   =          0.5   +/-   0.00152328
+%EPRC.ad                   =         -0.5   +/-   0.00342166
+%EPRC.vu                   =     0.202804   +/-   0.00100496
+%EPRC.vd                   =    -0.351402   +/-   0.0027548
+%log.couplings.lhec50.uncorr.0.5.txt
+%EPRC.au                   =          0.5   +/-   0.00354618
+%EPRC.ad                   =         -0.5   +/-   0.00829618
+%EPRC.vu                   =     0.202804   +/-   0.00278195
+%EPRC.vd                   =    -0.351402   +/-   0.00673197
+%
+  \centering
+  \begin{tabular}{cr@{\hskip4pt}lccc}
+    \hline
+    Fit &   \multicolumn{2}{c}{PDG} & \multicolumn{3}{c}{Expected uncertainties} \\
+    parameter &  &  & LHeC-60 & LHeC-60 ({\footnotesize$\delta_\text{uncor.}=0.25\,\%$})  & LHeC-50 \\
+    \hline
+    $\au$+PDF  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    $\ad$+PDF  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    $\vu$+PDF  & $0.18$   & $\pm0.05$            & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    $\vd$+PDF  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    $\ve$+PDF  & $ $      & $       $            & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    $\ve$+PDF  & $ $      & $                $   & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    \hline
+    $\vu+\au$+PDF  &  \\
+    $\vd+\ad$+PDF  &  \\
+    $\ve+\gae$+PDF  &  \\
+    \hline
+  \end{tabular}
+  \caption{
+    {\color{red}Todo.\color{green} Highest achievable precision for a 1D.
+    \color{red} Shall we include such a table?  What about the '2D'
+    fits ?}
+    \color{blue} Other tables are below.
+  }
+     \label{tab:couplings2}
+\end{table}
+%
+
+
+
+
+
+
+
+The two-dimensional uncertainty contours at the
+68\,\% confidence level obtained with LHeC with $E_e=50\,\GeV$ are
+displayed in figure~\ref{fig:couplings} for the two quark families and
+compared to recent measurements.
+While the current determinations from $e^+e^-$, $ep$ or $p\bar{p}$
+data have all somewhat similar precision,
+the future LHeC data will greatly improve the
+precision of the weak neutral-current couplings and
+expected uncertainties are an order of magnitude smaller than the
+currently most precise ones~\cite{PDG}.
+An electron beam energy of $E_e=60\,\GeV$ or reduced
+experimental uncertainties will of course further improve this
+measurement.
+Alternatively, these coupling parameters can be determined in a
+simplified procedure, where only one or two coupling parameters are
+determined simultaneously.
+Such a procedure yields even higher precision and the prospected
+uncertainties are collected in table~\ref{tab:couplings2}
+
+{\color{magenta} Discussion about \ve\ and \gae.}
 
 
 
 
 
 %-----------------------------------------------------------------------
-%   Results from HERA combined data
+%   Results: form factors
 %-----------------------------------------------------------------------
-\section{Determination of the $W$-boson mass from HERA combined data}
+\clearpage
+\section{Determination of the $\rho$ and $\kappa$ parameters}
+Beyond the born approximation the weak couplings are
+subject to higher-order loop corrections.
+These corrections are commonly parameterised into the
+$\rho_\text{NC}$, $\kappa_\text{NC}$ and $\rho_\text{CC}$
+form factors and
+many extensions of the Standard Model predict modifications of these
+factors, thus making them precision observables.
 
 
-%-----------------------------------------------------------------------
-%   Results from LHeC inclusive DIS data
-%-----------------------------------------------------------------------
-\section{Prospects for LHeC}
+\subsection{Anomalous NC form factors} % 'anomalous modifications of the NC form factor'?
+In NC interactions universal higher-order corrections to the vector
+and axial-vector couplings are be taken into account by $\Qsq$
+dependent form factors $\rho_{\text{NC}}$ and $\kappa_{\text{NC}}$.
+%
+Subsequently, commonly the so-called effective weak mixing
+angle at the $Z$-pole,
+$\sin\theta_{\text{W}}^{\text{eff},q/f}:=\kappa_{\text{NC}, q/f}\ \sw$
+is studied with real data, since it is well accessible in asymmetry
+measurements in $e^+e^-$ collisions.
+%
+In inclusive DIS, however, this parameter can be determined only
+together with the $\rho$ parameter due to the \Qsq\ dependence and the
+presence of the photon exchange terms.
 
-\subsection{Mass determinations}\label{sec:mass}
+Many of the extensions of the SM predict modifications of the weak
+neutral-current couplings and thus modifications of the
+$\rho_{\text{NC}}$ and $\kappa_{\text{NC}}$.
+Such modifications can be described conveniently by introducing the anomalous parameters \rhop\ and \kapp{},
+which can be also considered to be \Qsq\ dependent:
+\begin{align}
+  g_A^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \Itf
+  \label{eq:gA} \, ,
+  \\
+  g_V^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \left( \Itf - 2 Q_f \kappa_{\text{NC}, f}\kapp{,f}\sw \right)
+  \label{eq:gV} \,.
+\end{align}
+Consequently, the estimated relative uncertainties of these parameters
+can be interpreted as the relative uncertainty of a
+direct determination of $\rho_{\rm NC}$ or $\sin^2\theta_w^{\rm eff}$.
+In the following, we compare the uncertainties from LHeC pseudo-data
+with the relative uncertainties of
+$\sin\theta_{\text{W}}^{\text{eff}}$ and the $\rho_\text{NC}$
+parameter from the LEP+SLD combination~\cite{ALEPH:2005ab}, while
+setting their actual value to the SM expectation, since we are only
+interested in the sensitivity to those parameters at the moment.
 
 
-\subsection{Weak neutral-current couplings }\label{sec:couplings}
 
-\subsection{The $\rhop{}$, $\kapp{}$ and $\rhopW{}$ parameters}\label{sec:rho}
+First, the uncertainties the anomalous form factors $\rho_\text{NC}^\prime$
+and $\kappa_\text{NC}^\prime$ is obtained in a fit together with the PDFs and is
+displayed in fig.~\ref{fig:rhokappa} (left).
+The results are compared with results of the LEP+SLD combinations and
+found to have a similar uncertainty of about a few permille.
+\begin{figure}[thbp]
+    \centering
+    \includegraphics[width=0.32\textwidth]{plot_NC_rhokap}
+    \hskip0.02\textwidth
+    \includegraphics[width=0.32\textwidth]{plot_NC_rhokap_u}
+    \includegraphics[width=0.32\textwidth]{plot_NC_rhokap_d}
+  \caption{
+    Expectations at the 68\,\% confidence level for the determination
+    of the $\rho^\prime$ and $\kappa^\prime$
+    parameters assuming single anomalous factors for all fermions
+    (left). The results for three different LHeC scenarios are
+    compared with the achieved uncertainties from the LEP+SLD
+    combination~\cite{ALEPH:2005ab} for the determination the
+    respective factors for leptons.
+    Right: uncertainties for the simultaneous determination of the
+    anomalous form factors for $u$ and $d$-type quarks, assuming known
+    values for the electron parameters.
+    The values are compared with uncertainties reported by LEP+SLD for
+    the determination of the values $\rho_{\text{NC},(c,b)}$ and
+    $\sin\theta_{\text{W}}^{\text{eff},(c,b)}$ for charm or bottom quarks,
+    respectively.
+  }
+  \label{fig:rhokappa}
+\end{figure}
 
-\section{Determinations of single parameters}
-Maximum sensitivity. Reasonable to study deviations from SM with highest sensitivity.
-\begin{table}[h]
+
+
+Secondly, when assuming the weak couplings of the electron to be given by the SM formalism,
+the anomalous form factors for the two quark families can be
+determined, see fig.~\ref{fig:rhokappa} (right).
+This is done in a fit of the four parameters
+and thus the results can be translated to the results of the coupling
+fits (see tab.~\ref{tab:couplings} and fig.~\ref{fig:couplings}).
+In fig.~\ref{fig:rhokappa} the uncertainties for three different LHeC
+scenarios are compared with uncertainties from the LEP+SLD
+combination~\cite{ALEPH:2005ab}.
+Since in the LEP+SLD analysis the values of $\rho$ and $\kappa\sw$
+are determined themselves, we compare only the size of the uncertainties.
+Furthermore it shall be noted, that LEP is mainly sensitive to the
+parameters of leptons or heavy quarks, while LHeC data is more
+sensitive to light quarks ($u$,$d$,$s$), and thus the LHeC
+measurements are highly complementary.
+
+
+%\paragraph{Prospects for neutral current parameters}
+
+
+{\color{blue} Maximum sensitivity is obtained in 1-parameter fits, and prospects are collected in table:~\ref{tab:rhopwithcorrelations}}.
+\begin{table}[bhtp]
   \footnotesize
   \centering
   \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
@@ -358,14 +753,205 @@ Maximum sensitivity. Reasonable to study deviations from SM with highest sensiti
     \hline
   \end{tabular}
   \caption{
-    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters, and their
-    correlation coefficients.
+    {\color{red} note: these numbers need to be updated, if we want to
+    include such a table.}
+    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters.
   }
   \label{tab:rhopwithcorrelations}
 \end{table}
 
 
-\section{FCC and LHeC}
+
+\begin{figure}[thbp]
+    \centering
+    \includegraphics[width=0.40\textwidth]{plot_rhopQ2}
+    \hskip0.02\textwidth
+    \includegraphics[width=0.40\textwidth]{plot_kapQ2}
+    \caption{
+      Scale dependence of the anomalous modification of the $\rho$ and
+      $\kappa$ parameters for two different LHeC scenarios. In case of
+      LHeC-60, with $E_e=60\,\GeV$, an uncorrelated uncertainty of
+      $0.25\,\%$ on the data points is imposed.
+  }
+  \label{fig:rhokappaQ2}
+\end{figure}
+A meaningful test of the SM is obtained by determining the scale
+dependence of the anomalous form factors.
+In case of the $\kappa_\text{NC}^\prime$ parameter this procedure is equivalent to the
+running of the effective weak mixing angle,
+$\sin\theta_{\text{W}}^{\text{eff}}(\mu)$.
+However, DIS is again complementary to other measurements since the
+process is mediated in the space-like regime, i.e.\ $\Qsq=-q^2$ with
+$q$ being the boson four-momentum.
+Prospects for a determination of $\rho_\text{NC}^\prime$ or $\kappa_\text{NC}^\prime$ at
+different \Qsq\ values is displayed in fig.~\ref{fig:rhokappaQ2} and
+compared to results obtaind by H1.
+The value of $\kappa_\text{NC}^\prime(\mu)$ can be easily translated to a
+measurement of the effective weak mixing angle and shows, that this
+quantity can be determind with a precision of up to 0.1\,\% and with
+bettern than at least 1\,\% over a wide kinematic range of about
+$25<\sqrt{\Qsq}<700\,\GeV$.
+
+
+
+%% EW in CC
+\subsection{Electroweak effects in charged-current exchange}
+At the LHeC, the charged current sector can be uniquely measured
+over many orders of magnitude in $Q^2$, due to the excellent tracking
+detectors, calorimetry, and high-bandwidth triggers.
+%
+%This provides a precise determination of the $W$-boson mass (see
+%above)
+%and furthermore, the form factors of the
+%effective couplings of the fermions to the $W$-boson can be uniquely
+%measured.
+%
+Similarly as in the NC case, higher-order EW corrections to the CC
+cross sections are collected in the effective couplings of the
+fermions to the $W$-boson and these are represented in terms of the
+form factors $\rho_{\text{CC},eq}$ and $\rho_{\text{CC},e\bar{q}}$.
+%
+In the SM formalism, only two of these form factors are present.
+Since extensions of the SM formalism likely alter these factors, we
+introduce two anomalous form factors
+$\rho^\prime_{\text{CC},(eq/e\bar{q})}$,
+whose values are unity for the strict validity of the SM and
+%$\rho_{\text{CC},(eq/e\bar{q})} \rightarrow \rho^\prime_{\text{CC},(eq/e\bar{q})} \rho_{\text{CC},(eq/e\bar{q})}$.
+the CC structure functions then become 
+\begin{align}
+  W_2^- &=
+  x \left( (\rho_{\text{CC}, eq}\rhopW{,eq})^2 U + (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 \overline{D} \right)
+  \, ,
+  \\
+  xW_3^- &=
+  x \left( (\rho_{\text{CC},eq}\rhopW{,eq})^2 U - (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 \overline{D} \right)
+  \, ,
+\\
+  W_2^+ &=
+  x \left( (\rho_{\text{CC},eq}\rhopW{,eq})^2 \overline{U}+ (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 D \right)
+  \, ,
+  \\
+  xW_3^+ &=
+  x \left( (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 D - (\rho_{\text{CC},eq}\rhopW{,eq})^2 \overline{U} \right)
+  \, .
+\end{align}
+
+
+
+\begin{figure}[thbp]
+    \centering
+    \includegraphics[width=0.40\textwidth]{plot_rhoWellipse} 
+   \hskip0.05\textwidth
+    \includegraphics[width=0.40\textwidth]{plot_rhopWQ2}
+  \caption{
+    Left: anomalous modifications of the charged current form factors
+    $\rho^\prime_{\text{CC},eq}$ and $\rho^\prime_{\text{CC},e\bar{q}}$ for
+    different LHeC scenarios in comparison with the H1
+    measurement~\cite{Spiesberger:2018vki}.
+    Right: scale dependent measurement of the anomalous modification
+    of the charged current form factor $\rho^\prime_{\text{CC}}(\Qsq)$, assuming $\rho^\prime_{\text{CC},eq}=\rho^\prime_{\text{CC},e\bar{q}}=\rho^\prime_{\text{CC}}$.
+  }
+  \label{fig:rhoCC}
+\end{figure}
+The prospects for a determination of these anomalous form factors with
+LHeC data are obtained by performing a fit of the two parameters
+$\rho^\prime_{\text{CC},eq}$ and $\rho^\prime_{\text{CC},e\bar{q}}$ together with
+the PDFs.
+This procedure is equivalent to a direct determination of the the
+factors $\rho_{\text{CC},eq}$ and $\rho_{\text{CC},e\bar{q}}$
+themselves and results are displayed in fig.~\ref{fig:rhoCC} and
+collected in table~\ref{tab:rhoCC}.
+It is found, that these parameter can be determined with a relative
+uncertainty of up to 0.2--0.3\,\%.
+This represents a unique measurement at very high precision of charged
+current interactions at considerably high scales.
+
+
+Furthermore, the \Qsq dependence of the anomalous form factors can be studied.
+Relative uncertainties obtained in a determination of
+$\rho^\prime_\text{CC}$ at various values of \Qsq, where we used
+$\rho^\prime_{\text{CC},eq}=\rho^\prime_{\text{CC},e\bar{q}}$ and
+in that fit all parameters at the various \Qsq values are fitted
+simultaneously and together with the PDFs, are displayed in fig.~\ref{fig:rhoCC}.
+It is found, that with the LHeC data the potential deviation of
+$\rho^\prime_\text{CC}$ from
+the SM expectation can be studied with very high precision and over a
+large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
+\begin{table}[bhtp]
+  \footnotesize
+  \centering
+  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+    \hline
+    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC}& \multicolumn{2}{c}{FCC}  \\
+    \hline
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}         & 1  &   0.0030  & 1  &  0.0012\\
+    
+    \hline
+    % log.final.PAR19eq50.3p.PDF.2.txt
+    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1  & 0.0027 \\
+    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
+    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1  &  0.0012\\
+    \hline
+  \end{tabular}
+  \caption{
+    Expectations for \rhopW{,f} (CC).
+    {\color{red} note: these numbers need to be updated, if we want to
+    include such a table.}
+    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters.
+  }
+  \label{tab:rhoCC}
+\end{table}
+
+
+
+
+
+
+%-----------------------------------------------------------------------
+%   Results from HERA combined data
+%-----------------------------------------------------------------------
+\clearpage
+\section{Determination of the $W$-boson mass from HERA combined data}
+
+
+
+%-----------------------------------------------------------------------
+%                            Summary
+%-----------------------------------------------------------------------
+\clearpage
+\section{Summary and Conclusion}
+\label{sect:Conclusion}
+In summary, the inclusive NC and CC DIS cross sections measured at
+LHeC provide a unique opportunity to perform high-precision
+determinations of fundamental electroweak parameters and test the
+quantum  nature of electroweak processes with high precision.
+Complementarity!
+
+Unique measurements will be made for weak charged currents and
+for the scale-dependence of electroweak interactions.
+
+
+
+
+%-----------------------------------------------------------------------
+%                          Acknowledgements
+%-----------------------------------------------------------------------
+\section*{Acknowledgements}
+Acknowledgements: Z.~Zhang, A.~Sch\"oning, M.~Klein, S.~Schmitt
+
+
+
+%-----------------------------------------------------------------------
+%\input{fcc_draft}
+
+
+%-----------------------------------------------------------------------
+%   Results from LHeC inclusive DIS data
+%-----------------------------------------------------------------------
+\clearpage
+\section{Tables}
+\subsection{Determinations of single parameters}
 \begin{table}[h]
   \footnotesize
   \centering
@@ -463,7 +1049,6 @@ Maximum sensitivity. Reasonable to study deviations from SM with highest sensiti
 \end{table}
 
 
-\section{LHeC}
 \begin{table}[h]
   \footnotesize
   \centering
@@ -527,934 +1112,4 @@ Maximum sensitivity. Reasonable to study deviations from SM with highest sensiti
   \label{tab:rhopwithcorrelations}
 \end{table}
 
-\clearpage
-\begin{table}[tbhp]
-  %\footnotesize \scriptsize
-  \begin{center}
-    \begin{tabular}{l|ccc}
- %     \multicolumn{4}{c}{\bf Uncertainty on EW parameters from inclusive DIS data} \\
-      \hline
-          {\bf Parameter} & {\bf HERA} & {\bf LHeC} & {\bf FCC-eh}  \\
-          \hline
-          $\Delta$\mW~[{MeV}]  & $ \pm63\ex 29\pdf$ & $\pm14\ex 10\pdf $ & $ \pm9\ex 4\pdf $ \\
-          $\Delta$\mZ~[{MeV}]  & $ \pm56\ex 25\pdf $ & $\pm16\ex 10\pdf $ & $ \pm16\ex 10\pdf $ \\
-          $\Delta$\mt~[{GeV}]  & $\pm10\ex 5\pdf $ & $\pm2.6\ex 1.7\pdf $ & $\pm1.7\ex 0.5\pdf $  \\
-          $\Delta$\mH~[{GeV}]  & $ >\mathcal{O}(100\,\GeV)$ & $\pm31\ex 22\pdf $ & $\pm20\ex 4\pdf $  \\
-%          \hline
-%          $\Delta\gf^{\rm MOMS}$ [$10^{-8} \GeV^{-2}$]
-%          & $\pm4.7\ex 1.9\pdf$
-%          & $\pm1.9\ex 1.2\pdf$
-%          & $\pm2.8\ex 1.8\pdf$
-%          \\
-          \hline
-    \end{tabular}
-    \caption{Summary of electroweak parameters from HERA-II data and LHeC and FCC-ep simulated data.}
-    \label{tab:datasets}
-  \end{center}
-\end{table}
 
-\paragraph{Neutral current\\}
-Universal higher-order corrections are be taken into account by $\Qsq$-dependent form
-factors $\rho_{\text{NC}}$ and $\kappa_{\text{NC}}$.
-Many extensions of the Standard Model predict modifications of the weak neutral-current couplings.
-These can be described conveniently by introducing additional parameters \rhop\ and \kapp{},
-which can be also considerd to be \Qsq\ dependent:
-\begin{align}
-  g_A^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \Itf
-  \label{eq:gA} \, ,
-  \\
-  g_V^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \left( \Itf - 2 Q_f \kappa_{\text{NC}, f}\kapp{,f}\sw \right)
-  \label{eq:gV} \,.
-\end{align}
-The estimated relative uncertainties of the \rhop\ or \kapp{} achieved with the LHeC or FCC-eh data,
-can also be interpreted as the relative uncertainty of a direct determination of the $\rho_{\rm NC}$ parameters
-or $\sin^2\theta_w^{\rm eff}$.
-
-
-\paragraph{Charged current\\}
-Higher-order EW corrections to the CC cross sections are collected in form factors
-$\rho_{\text{CC}, eq/e\bar{q}}$.
-Similarly as for NC, modifications of the SM formalism can be expressed by introducing
-the additional \rhopW{} parameters:
-\begin{align}
-  W_2^- &=
-  x \left( (\rho_{\text{CC}, eq}\rhopW{,eq})^2 U + (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 \overline{D} \right)
-  \, ,
-  \\
-  xW_3^- &=
-  x \left( (\rho_{\text{CC},eq}\rhopW{,eq})^2 U - (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 \overline{D} \right)
-  \, ,
-\\
-  W_2^+ &=
-  x \left( (\rho_{\text{CC},eq}\rhopW{,eq})^2 \overline{U}+ \rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 D \right)
-  \, ,
-  \\
-  xW_3^+ &=
-  x \left( (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 D - \rho_{\text{CC},eq}\rhopW{,eq})^2 \overline{U} \right)
-  \, .
-\end{align}
-
-
-
-\subsection{The effective weak mixing angle}\label{sec:sin2thw}
-
-
-
-
-%-----------------------------------------------------------------------
-%   Theory
-%-----------------------------------------------------------------------
-\clearpage
-\section{Theoretical framework}
-NC interactions in the process $e^\pm p\rightarrow e^\pm X$ are
-mediated by a virtual photon $(\gamma)$ or $Z$ boson in the
-$t$-channel, and the cross section is expressed in terms of
-generalised structure functions $\tilde{F}_2^\pm$, $x\tilde{F}_3^\pm$
-and $\tilde{F}_{\rm L}^\pm$ at EW leading order (LO)
-as
-\begin{equation}
-  \frac{d^2\sigma^{\rm NC}(e^\pm p)}{dxd\Qsq} = \frac{2\pi\alpha^2}{xQ^4}\left[Y_+\tilde{F}_2^\pm(x,\Qsq) \mp Y_{-}  x\tilde{F}_3^\pm(x,\Qsq) - y^2 \tilde{F}_{\rm L}^\pm(x,\Qsq)\right]~,
-  \label{eq:cs}
-\end{equation}
-where $\alpha$ is the fine structure constant and $x$ denotes the
-Bjorken scaling variable (see e.g.~\cite{CooperSarkar:1998ug}).
-The helicity dependence of the interaction is contained in the terms $Y_\pm = 1\pm(1-y)^2$ with $y$ being the inelasticity of the process.
-The generalised structure functions can be separated into contributions
-from pure $\gamma$- and $Z$-exchange and their interference~\cite{Klein:1983vs},
-\begin{align}
-  \tilde{F}_2^\pm
-  &= F_2
-  -(\ve\pm P_e\gae)\varkappa_ZF_2^{\gamma Z}
-  +\left[(\ve\ve+\gae\gae)\pm2P_e\ve\gae\right]\varkappa_Z^2F_2^Z~,
-  \\
-  \tilde{F}_3^\pm
-  &=~~
-  -(\gae\pm P_e\ve)\varkappa_ZF_3^{\gamma Z}
-  +\left[2\ve\gae\pm P_e(\ve\ve+\gae\gae)\right]\varkappa_Z^2F_3^Z~,
-\end{align}
-and similarly for $\tilde{F}_L$. The variables $g^e_V$ and $g^e_A$
-stand for the vector and axial-vector couplings of the lepton $e^\pm$
-to the $Z$ boson.
-The degree of longitudinal polarisation of the incoming lepton is
-denoted as $P_e$.
-%, and the $P_e$ related terms are only present for non-zero
-%values, i.e.\ when the lepton beam is longitudinally polarised, as in HERA-II.
-The $\Qsq$-dependent coefficient
-$\varkappa_Z$ accounts for the $Z$-boson propagator,
-\begin{equation}
-  \varkappa_Z(\Qsq)
-  = \frac{\Qsq}{\Qsq+m^2_Z}
-  \frac{1}{4\sw \cos^2\theta_W}
-  = \frac{\Qsq}{\Qsq+m^2_Z}
-  \frac{\gf m_Z^2}{2\sqrt{2}\pi\alpha}~.
-\end{equation}
-It can be normalised using the
-weak mixing angle, $\sw=1-\mW^2 / \mZ^2$, i.e.\ using the $W$ and $Z$ boson
-masses, \mW\ and \mZ, or the
-Fermi coupling constant $\gf$, which is measured with high precision
-in muon-decay experiments~\cite{Tishchenko:2012ie}.
-The structure functions are related to linear combinations of the
-quark and anti-quark momentum distributions, $xq$ and $x\bar{q}$.
-For instance the $F_2$ and $xF_3$ structure functions in
-the naive quark-parton model, i.e.\ at LO in QCD, are:
-\begin{align}
-  \left[F_2,F_2^{\gamma Z},F_2^Z\right]
-  &= x\sum_q\left[Q_q^2,2Q_q\vq,\vq\vq+\aq\aq \right]\{q+\bar{q}\}~,
-  \label{eq:last1}
-  \\
-  x\left[F_3^{\gamma Z},F_3^Z\right]
-  &= x\sum_q\left[2Q_q\aq,2\vq\aq\right]\{q-\bar{q}\}~.
-  \label{eq:last2}
-\end{align}
-The axial-vector and vector couplings of the quarks $q$ to the $Z$ boson,
-$g^q_A$ and $g^q_V$, depend on the electric charge, $Q_q$, in units of the
-positron charge,
-and on the third component of the weak-isospin of the quarks, \Itq.
-In terms of $\sw$, they are given by the standard EW theory:
-\begin{align}
-  g_A^q &= \Itq
-  \label{eq:gA-LO} \,, \\
-  g_V^q &= \Itq - 2 Q_q \sw
-  \label{eq:gV-LO} \,.
-\end{align}
-The same formulae also apply to the lepton couplings $g^e_{A/V}$.
-
-Universal higher-order corrections, to be discussed below,
-can be taken into account by introducing $\Qsq$-dependent form
-factors $\rho_{\text{NC}, q}$ and $\kappa_{\text{NC}, q}$ \cite{Olive:2016xmw}, replacing
-equations~\eqref{eq:gA-LO} and \eqref{eq:gV-LO}) by
-\begin{align}
-  g_A^q &= \sqrt{\rho_{\text{NC}, q}} \Itq
-  \label{eq:gA-NLO} \, ,
-  \\
-  g_V^q &= \sqrt{\rho_{\text{NC}, q}} \left( \Itq - 2 Q_q \kappa_{\text{NC}, q}\sw \right)
-  \label{eq:gV-NLO} \,.
-\end{align}
-
-The CC cross section at LO is written as
-\begin{equation}
-  \frac{d^2\sigma^{\rm CC}(e^\pm p)}{dxd\Qsq}
-  = \left(1 \pm P_e\right)
-  \frac{\gf^2}{4\pi x}
-  \left[\frac{m_W^2}{m_W^2+\Qsq}\right]^2
-  \left(Y_+ W_2^\pm(x,\Qsq) \mp Y_{-} xW_3^\pm(x,\Qsq)
-  - y^2 W_{\rm L}^\pm(x,\Qsq)\right)~.
-  \label{eq:cc-cs}
-\end{equation}
-In the quark-parton model, $W_{\rm L}^\pm = 0$, and the structure
-functions $W_2^\pm$ and $xW_3^\pm$ are obtained from the parton
-distribution functions. For electron scattering, only
-positively charged quarks contribute:
-\begin{equation}
-  W_2^- =
-  x \left( U + \overline{D} \right)
-  \, ,
-  \quad xW_3^- =
-  x \left( U - \overline{D} \right)
-  \, ,
-  \label{eq:w23el-LO}
-\end{equation}
-while negatively charged quarks contribute to positron scattering:
-\begin{equation}
-  W_2^+ =
-  x \left( \overline{U} + D \right)
-  \, ,
-  \quad xW_3^+ =
-  x \left( D - \overline{U} \right)
-  \, .
-  \label{eq:w23po-LO}
-\end{equation}
-Below the top-quark threshold, one has
-\begin{equation}
-  U = u+c\, , \quad
-  \overline{U} = \bar{u} + \bar{c}\, , \quad
-  D = d+s\, , \quad
-  \overline{D} = \bar{d} + \bar{s} \, .
-\end{equation}
-
-Higher-order EW corrections are collected in form factors
-$\rho_{\text{CC}, eq/e\bar{q}}$. They modify the LO expressions
-equations~\eqref{eq:w23el-LO} and \eqref{eq:w23po-LO}
-as
-\begin{align}
-  W_2^- &=
-  x \left( \rho^2_{\text{CC}, eq} U + \rho^2_{\text{CC},e\bar{q}} \overline{D} \right)
-  \, ,
-  \quad xW_3^- =
-  x \left( \rho^2_{\text{CC},eq} U - \rho^2_{\text{CC},e\bar{q}} \overline{D} \right)
-  \, ,
-  \label{eq:w23el-NLO}
-\\
-  W_2^+ &=
-  x \left( \rho^2_{\text{CC},eq} \overline{U}+ \rho^2_{\text{CC},e\bar{q}} D \right)
-  \, ,
-  \quad xW_3^+ =
-  x \left( \rho^2_{\text{CC},e\bar{q}} D - \rho^2_{\text{CC},eq} \overline{U} \right)
-  \, .
-  \label{eq:w23po-NLO}
-\end{align}
-
-
-In the on-shell (OS) scheme~\cite{Sirlin:1980nh,Sirlin:1983ys},
-the independent parameters of the SM EW theory are
-determined by the fine structure constant $\alpha$ and the masses
-of the gauge bosons, the Higgs boson $m_H$, and
-the fermions $m_f$. The weak mixing angle is then fixed, and $\gf$ is a prediction, given by
-\begin{equation}
-  \gf=\frac{\pi\alpha}{\sqrt{2}m_W^2}
-  %  \left(1-\frac{m_W^2}{m_Z^2}\right)^{-1}
-  \frac{1}{\sw}
-  \frac{1}{(1-\dr)} \, ,
-  \label{eq:gf-mw-mz}
-\end{equation}
-where higher-order corrections enter through the
-quantity $\dr = \dr(\alpha, m_W, m_Z, m_H, m_t, \ldots)$
-\cite{Sirlin:1980nh}, which describes corrections to the muon
-decay beyond the tree-level~\cite{Bohm:1986rj,Hollik:1988ii}.
-
-The $\rho_\text{NC}$, $\kappa_\text{NC}$ and $\rho_\text{CC}$ parameters are introduced to cover
-the universal higher-order EW corrections described by
-loop insertions in the boson propagators. The $\rho_\text{NC}$ parameters absorb
-$Z$-boson propagator corrections combined with higher-order
-corrections entering the $\gf$-$\mW$-$\sw$ relation,
-equation~\eqref{eq:gf-mw-mz}, while the $\kappa_\text{NC}$ parameters absorb
-one-loop $\gamma Z$ mixing propagator corrections. In addition,
-there are higher-order corrections to the photon propagator
-which can be taken into account by using the running fine structure
-constant. Non-universal corrections due to vertex one-loop
-Feynman graphs and box diagrams are added separately to the
-NC cross sections. For the CC cross sections, both universal
-and non-universal corrections can be combined into the form factors
-$\rho_{\text{CC},eq/e\bar{q}}$.
-The dominating corrections in this case are due
-to loop insertions in the $W$-boson propagator.
-
-
-One-loop EW corrections have been calculated
-in refs.~\cite{Bohm:1986na,Bardin:1988by,Hollik:1992bz}
-for NC and in refs.~\cite{Bohm:1987cg,Bardin:1989vz} for CC
-scattering (see also ref.~\cite{Heinemann:1998kk} for a study of
-numerical results).
-The present analysis uses the implementation
-of EW higher-order corrections in the program EPRC described in ref.~\cite{Spiesberger:1995pr}.
-%DH: For us the loops in the propagators are relevant and they give raise to four charge form factors owing to the four exchanges WW, ZZ, $\gamma\gamma$ and $\gamma$Z.\
- Here the parameters needed to make the gauge theory predictive can be introduced and related to observables.
-The size of the purely weak one-loop
-corrections for the
-differential cross sections is displayed in
-figure~\ref{fig:EWcorrections} for
-selected values of \Qsq\ for $e^+p$ scattering.
-It includes the $\rho_\text{NC/CC}$ and
-$\kappa_\text{NC}$ form factors, as well as contributions from vertex
-and box graphs.
-The correction factors for electron
-scattering and their dependence on the electron polarisation
-differ by less than a per cent and do not change the overall
-picture. Higher-order QED corrections due to real and virtual
-emission of photons, as well as vacuum polarisation, i.e.\ the
-running of the fine structure constant, also have to be taken
-into account \cite{Kwiatkowski:1990es,Charchula:1994kf}.
-These effects, however, had been considered for the cross section measurement  and are
-therefore not included here.
-
-%-----------------------------------------------------------------------
-\begin{figure}[tb]
-  \begin{center}
-%    \includegraphics[width=0.495\textwidth]{{plots/EWHO_NC.ep.P0}.pdf}\hskip0.01\textwidth
-%    \includegraphics[width=0.495\textwidth]{{plots/EWHO_CC.ep.P0}.pdf}\hskip0.01\textwidth
-  \end{center}
-  \caption{
-    Size of the purely weak one-loop corrections for the $e^+p$
-    unpolarised inclusive NC DIS (left) and CC DIS (right) cross sections
-    at selected values of \Qsq\ as a function of \xbj.
-    QED corrections due to real and virtual photons and corrections from
-    the vacuum polarisation (the running of $\alpha$) are not included.
-    %since those corrections have been removed in the previous data analysis.
-    The corresponding corrections for electron scattering,
-    and also their dependence on the lepton beam polarisation, are
-    overall very similar and differ by less than a per cent.
-    %    The dominant contributions for CC cross sections arise through the calculation of the Fermi Constant, \gf, where 1-loop corrections are considered through \dr\
-.
-  }
-  \label{fig:EWcorrections}
-\end{figure}
-%-----------------------------------------------------------------------
-In the on-shell scheme, used in this analysis,
-the higher-order correction factors $\rho_\text{NC}$, $\kappa_\text{NC}$ and
-$\rho_\text{CC}$ are calculated as a function of $\alpha$ and the
-input mass values.
-They depend quadratically on the top-quark
-mass through $\Delta\rho_t\sim m_t^2$, and logarithmically on the
-Higgs-boson mass, $\Delta\rho_H\sim\ln\left(m^2_H/\mW^2\right)$.
-On the $Z$ pole they amount to about 4\%.
-For DIS at HERA they are of similar size, but they exhibit a
-non-negligible \Qsq-dependence~\cite{Spiesberger:1993jg}.
-%Alternatively, in the modified on-shell scheme \cite{Marciano:1980pb}, $\gf$ together with $m_Z$ are taken as independent parameters of the SM EW theory. The $W$-boso\
-n mass $m_W$ and the weak mixing angle \sw\ are determined from equation~\eqref{eq:gf-mw-mz}. The $\gf$ sets the normalization of the CC cross section as well as the $\
-Z$-boson exchange contributions of the NC cross section. This prescription exploits the precisely measured muon lifetime, thus allowing to obtain predictions with smal\
-ler uncertainties due to errors from input parameters. In addition,
-In  a modified version of the on-shell scheme~\cite{Marciano:1980pb},
-commonly used in QCD analyses of DIS data, the Fermi constant can be
-used to fix the input parameters replacing the $W$-boson mass as an
-input parameter.
-In that case the one-loop corrections are very small,
-i.e.\ $\rho_{\text{CC},eq/e\bar{q}}$ deviate from 1 by a few per mille.
-
-%The different prescriptions to fix the free parameters of the
-%electroweak theory in the on-shell
-%or in the modified on-shell
-%scheme lead to different sensitivities of the measured cross sections
-%to the EW parameters.
-%Both schemes will be used in this analysis to perform tests of the SM.
-
-
-Many extensions of the SM predict modifications of the weak
-neutral-current couplings. They can be described conveniently
-by introducing additional parameters $\rhop{}$ and $\kapp{}$, thus
-modifying the SM corrections.
-Also for charged current cross sections, similar $\rhopW{}$ parameters
-describing non-standard modifications of the CC couplings can be
-introduced.
-The $\rhop{}$,  $\kapp{}$ and $\rhopW{}$ are introduced
-through the following replacements in
-equations~\eqref{eq:gA-NLO}, \eqref{eq:gV-NLO}, \eqref{eq:w23el-NLO}
-and \eqref{eq:w23po-NLO}:
-\begin{align}
-  \rhop{}    &\rightarrow \rhop{}\rho_\text{NC}  \label{eq:rhozkapz1}~,\\
-  \kapp{}    &\rightarrow \kapp{}\kappa_\text{NC}  \label{eq:rhozkapz2}~,\\
-  \rhopW{} &\rightarrow \rhopW{}\rho_\text{CC} \label{eq:rhopW}~.
-\end{align}
-In the SM, the parameters $\rhop{}$, $\kapp{}$ and $\rhopW{}$ are defined to be
-1.
-Various models with physics beyond the SM predict typical
-flavour-dependent deviations from 1 and therefore distinct parameters
-for quarks ($\rhop{,q}$ and $\kapp{,q}$) and for leptons ($\rhop{,e}$ and $\kapp{,e}$) are considered.
-These parameters may also depend on the energy scale.
-Precision EW measurements on the
-$Z$ resonance are sensitive to the NC couplings
-at $m_Z$~\cite{ALEPH:2005ab}, while DIS is also probing their \Qsq\ dependence.
-For CC there could be independent modifications (\rhopW{}) for
-the lepton and quark couplings for each generation.
-However, only the product of lepton times quark couplings appears in the final
-expression for the cross section and therefore the same non-standard
-coupling for all generations is assumed here.
-Nonetheless, new 4-fermion operators can introduce
-a difference between electron-quark and electron-antiquark scattering,
-and thus two distinct parameters \rhopW{,eq}\ and \rhopW{,e\bar{q}}
-are considered.
-These possibly scale-dependent parameters allow for additional
-tests of the SM couplings.
-
-%-----------------------------------------------------------------------
-%   Data
-%-----------------------------------------------------------------------
-%\clearpage
-\section{H1 inclusive DIS cross section data}
-\label{sec:data}
-This study is based on the entire set of measurements of inclusive NC
-and CC DIS cross sections by the H1 Collaboration, using data samples
-for $e^+p$ and $e^-p$ taken in HERA-I and HERA-II.
-The measurements are subdivided into two kinematic ranges,
-corresponding to different subdetectors where the leptons with small
-and large scattering angles are identified: low- and medium-\Qsq\ for
-values of \Qsq\ typically
-smaller than $150\,\GeVsq$ and high-\Qsq for larger values up to 50\,000\,\GeVsq.
-A summary of the data sets used is given in table~\ref{tab:table1}.
-\begin{table}[tb]
-  \footnotesize
-  \centering
-  \begin{tabular}{rl|cccccc}
-   \hline
-   \multicolumn{2}{c|}{Data set} & \Qsq-range & $\sqrt{s}$ & \Lumi & No. of & Polarisation & Ref.  \\
-                             &  & [{\GeVsq}]   & [{\GeV}] & [{${\rm pb}^{-1}$}] &     data points   & [\%]  &   \\
-   \hline
-    1 & \ep\ combined low-\Qsq  & (0.5) 8.5 -- 150 & 301,319 & 20,\,22,\,97.6  &  94 (262) & --  &  \cite{Collaboration:2010ry} \\
-    2 & \ep\ combined low-$E_p$ & (1.5) 8.5 -- 90  & 225,252 & 12.2,\,5.9 & 132 (136) & --  &  \cite{Collaboration:2010ry} \\
-
-    3 & \ep\ NC 94--97  & 150 -- 30\,000 & 301 & 35.6 & 130 &  --& \cite{Adloff:1999ah} \\
-    4 & \ep\ CC 94--97  & 300 -- 15\,000 & 301 & 35.6 &  25 &  -- & \cite{Adloff:1999ah} \\
-   \hline
-   \end{tabular}
-  \caption{Data sets used in the combined EW and QCD fits. For
-    (CC) cross sections.}
-  \label{tab:table1}
-\end{table}
-
-
-%-----------------------------------------------------------------------
-%        Methodology
-%-----------------------------------------------------------------------
-%\clearpage
-\section{Methodology}
-The EW parameters are determined in fits of the predictions
-to data, where in addition to the EW parameters of interest also
-parameters of the PDFs  are determined in order to account for PDF
-uncertainties.
-The fits are denoted according to their fit
-parameters, for instance `\mW+PDF' denotes a determination of
-\mW\ together with the parameters of the PDFs.
-
-A dedicated determination of the PDFs in this analysis is important,
-since all state-of-the-art PDF sets were determined using H1 data, while
-assuming that the EW parameters take their SM values.
-Hence, the use of such PDF sets could bias the results.
-Furthermore, PDF sets which include the H1 data suffer from the
-additional complication that the same data were to be used twice, thus
-leading to underestimated uncertainties.
-
-The parameterisation of the PDFs %, the procedure
-follows closely the approach of
-ref.~\cite{Abramowicz:2015mha}, where the PDF set
-HERAPDF2.0\,\footnote{
-HERAPDF2.0 is determined from combined inclusive NC and CC data from
-the H1 and ZEUS experiments assuming unpolarised lepton beams.
-}
-was obtained, using EW parameters determined from other experiments.
-The parameterisation uses five functional forms with altogether 13 fit
-parameters, defined at the starting scale $Q_0^2=1.9\,\GeVsq$.
-The scale dependence of PDFs is evaluated using the DGLAP formalism.
-%The parameterisation and calculations of the PDFs follows closely the methodology as outlined in ref.~\cite{Abramowicz:2015mha}.
-
-As opposed to the HERAPDF2.0 analysis,
-the {\sc Alpos} fitting framework~\cite{Andreev:2017vxu} is used in
-the present analysis.
-The cross section predictions have been validated against the xFitter
-framework~\cite{Aaron:2012qi,Alekhin:2014irh,Abramowicz:2015mha},
-which is the successor of the H1Fitter framework~\cite{Aaron:2009kv}.
-The structure functions are obtained in the zero-mass
-variable-flavour-number-scheme at NNLO in QCD using the program
-QCDNUM~\cite{Botje:2010ay,Botje:2016wbq}.
-The one-loop EW corrections are included in an updated version of the
-program EPRC~\cite{Spiesberger:1995pr}, while the data have already
-been corrected for higher-order QED radiative
-effects, as outlined in section~\ref{sec:data}.
-%Higher-order QED corrections have been considered already for the cross section measurements.
-
-
-The goodness of fit,
-%quantity,
-\chisq, is derived from a likelihood function assuming the quantitites
-%probability densities of the relative uncertainties
-to be normal distributed in terms of relative uncertainties~\cite{Andreev:2014wwa,Andreev:2017vxu},
-which is equivalent to log-normal distributed quantities in terms of
-absolute uncertainties.
-The log-normal distribution is strictly positive and a good
-approximation of a Poisson distribution.
-The latter is important, since in the kinematic domain where the data
-exhibit the highest sensitivity to the EW parameters, the statistical
-uncertainties may become sizeable and dominating.
-The \chisq\ is calculated as
-\begin{equation}
-  \chi^2 = \sum_{ij}\log\tfrac{\varsigma_i}{\tilde\sigma_i} V_{ij}^{-1}\log\tfrac{\varsigma_j}{\tilde\sigma_j}\,,
-\end{equation}
-where the sum runs over all data points with measured cross sections
-$\varsigma_{i}$ and the corresponding theory predictions,
-$\tilde\sigma_i$. The covariance matrix $V_{ij}$ is constructed from all
-relative uncertainties, taking also correlated uncertainties between
-the data sets into account~\cite{Aaron:2012qi}.
-The beam polarisation measurements provide four additional
-data points, included in the vector $\varsigma$, with their
-uncertainties~\cite{Sobloher:2012rc} and four corresponding
-parameters in the fit.
-
-
-
-
-%-----------------------------------------------------------------------
-%                   Results
-%-----------------------------------------------------------------------
-%\clearpage
-\section{Results}
-This section reports the results of different fits, starting with mass
-determinations in section~\ref{sec:mass}, followed by weak NC coupling
-determinations in section~\ref{sec:couplings} and finally the study of
-$\rhop{}$, $\kapp{}$ and $\rhopW{}$ parameters in section~\ref{sec:ff}.
-%and of their possible scale dependence in section~\ref{sec:scale}.
-
-\subsection{Mass determinations}\label{sec:mass}
-%
-% DH: In the onshell scheme with the independent input parameters ($\alpha$,\mZ,\mt,\mH) the HERA data constrain the mass of the W to …  The analysis includes a detailed investigation of the weak propagators. With a different choice of independent input parameters also the masses of the Higgs and the top quark can be constrained, which is less accurate as a consequence of the intrinsic logarithmic dependence of the radiative corrections. Fitting simultaneously two parameters leads to larger limits, but restricts strongly the available phase space due to their strong intrinsic correlation.}
-%
-The masses of the $W$ and $Z$ bosons, as well as the top-quark mass
-are determined using different prescriptions to fix the fit parameters of the EW theory in the on-shell
-scheme. The different prescriptions lead to different sensitivities of the measured cross sections
-to the EW parameters~\cite{Blumlein:1987fd}.
-%or in the modified on-shell
-%scheme lead to different sensitivities of the measured cross sections
-%to the EW parameters.
-%Both schemes will be used in this analysis to perform tests of the SM.
-The results are summarised in table~\ref{tab:masses}.
-\begin{table}[hbt]
-  \footnotesize
-  \centering
-   \begin{tabular}{lc@{$\,=\,$}lc}
-   \hline
-   Fit parameters & \multicolumn{2}{c}{Result} & Independent input parameters \\
-   \hline %  ---------------------------------
-   %%% mW-mZ
-   \mW+PDF  & $\mW$ & $80.508\pm0.070_{\rm stat}\pm 0.055_{\rm syst}\pm0.073_{\PDF}\,\GeV$ & $\alpha$, $m_Z$, $m_t$, $m_H$, $m_f$ \\ %final value (22.3.18)
-   \mWprop+PDF & $\mWprop $ & $ 80.44\pm0.67_{\rm stat}\pm0.17_{\rm syst}\pm0.38_{\PDF}\,\GeV$ & $\alpha$, $m_W$, $m_Z$, $m_t$, $m_H$, $m_f$ \\
-   \mWGfW+PDF &  $\mWGfW $ & $ 82.02\pm0.51_{\rm stat}\pm0.44_{\rm syst}\pm0.38_{\PDF}\,\GeV$ & $\alpha$, \gf, $m_t$ $m_H$, $m_f$ \\
-   \mZ+PDF & $\mZ $ & $ 91.099\pm0.064_{\rm stat}\pm 0.050_{\rm syst}\pm0.070_{\PDF},\GeV$ & $\alpha$, $m_W$, $m_t$, $m_H$, $m_f$ \\ %final value (22.3.18)
-   \mt+PDF & $\mt $ & $ 157\pm10_{\rm stat}\pm12_{\rm syst}\pm15_{\rm PDF}\pm15_{\mW}\,\GeV$ & $\alpha$, $m_W$, $m_Z$, $m_H$, $m_f$ \\ %final value (22.3.18)
-   \hline %  ---------------------------------
-   \end{tabular}
-   \caption{Results for five combined fits of mass parameters together with PDFs.
-   The multiple uncertainties correspond to statistical (stat), experimental
-   systematic (syst) and PDF uncertainties. The last uncertainty
-   contribution to the $m_t$ determination is due to the uncertainty of
-   the $m_W$ mass.}
-   \label{tab:masses}
-\end{table}
-
-In the combined \mW+PDF fit,
-where
-%the on-shell scheme is employed and thus
-$\alpha$, \mZ, \mt, \mH\ and $m_f$ are taken as external input values~\cite{Olive:2016xmw}, the EW parameter \mW\ is determined to be
-\begin{equation}
-  \mW = 80.508\pm0.070_{\rm stat}\pm0.055_{\rm syst}\pm0.074_{\PDF}=80.508\pm 0.115_{\rm tot}\,\GeV~.
-\end{equation}
-%The decomposition of the uncertainties is performed by
-%\begin{compactitem}
-%\begin{itemize}
-%  \item
-and the expected uncertainty\,\footnote{The expected
-  uncertainty is obtained from a re-fit using the Asimov data
-  set and the data uncertainties~\cite{Cowan:2010js}.}.
-The total (tot) uncertainty is improved by
-about a factor of two in comparison to the earlier result based on
-HERA-I data only~\cite{Aktas:2005iv}.
-The uncertainty decomposition is derived by switching off the
-uncertainty sources subsequently or repeating the fit with fixed PDF parameters\,\footnote{
-    The PDF uncertainty contains both a statistical and a
-    systematic component, but the systematic component
-    dominates.}
-is 0.118\,\GeV.
-Other uncertainties due to uncertainties of the input masses
-(\mZ, \mt, \mH) and theoretical uncertainties, e.g.\ from
-incompletely known higher-order terms in \dr,
-or model and parameterisation uncertainties of the
-PDF fit, are all found to be negligible with respect to the
-experimental uncertainty.
-The correlation of \mW\ with any of the PDF parameters is always weak,
-with absolute values of the correlation coefficients below 0.2.
-The global correlation coefficient~\cite{James:1975dr} of \mW\
-in the EW+PDF analysis is 0.64.
-The \mW\ sensitivity arises predominantly from the CC data, with the most
-important constraint being the normalisation, \gf\ (see
-equations~\eqref{eq:cc-cs} and \eqref{eq:gf-mw-mz}).
-The highest sensitivity of the H1 data to \mW\ is at a \Qsq\ value of
-about 3800\,\GeVsq.
-
-%
-%The result on \mW\ is compared in figure~\ref{fig:mW} to measurements by other single experiments~\cite{Barate:1997bf,Acciarri:1997ra,Ackerstaff:1996nk,Abdallah:2008ad,Abazov:2012bv,Aaltonen:2012bp,Aaltonen:2013vwa,Schael:2013ita,Aaboud:2017svj} and to a previous world average value~\cite{Aaltonen:2013iut,Olive:2016xmw}.
-%The value of \mW\ is found to be consistent with other
-%determinations.
-%although with larger uncertainties than that of the other determinations displayed.
-%
-The result for \mW\ is compared to determinations from other single
-experiments~\cite{Barate:1997bf,Acciarri:1997ra,Ackerstaff:1996nk,Abdallah:2008ad,Abazov:2012bv,Aaltonen:2012bp,Aaltonen:2013vwa,Aaboud:2017svj}
-in figure~\ref{fig:mW}, and is found to be consistent with these
-% Schael:2013ita,
-as well as with the world average value
-of $80.385\pm0.015\,\GeV$~\cite{Aaltonen:2013iut,Olive:2016xmw}.
-%
-The $W$-mass determination in the space-like regime at HERA can be interpreted
-as an indirect constraint on
-%\mW, or equivalently through equation~\eqref{eq:gf-mw-mz} as a measurement of
-\gf\ through equation~\eqref{eq:gf-mw-mz}, however in a process at large momentum
-transfer~\cite{Blumlein:1987fd,Beyer:1995pw,CooperSarkar:1998ug}.
-%
-Using the world average value of
-%$\mZ=91.1876\pm0.002\,\GeV$
-\mZ~\cite{ALEPH:2005ab,Olive:2016xmw},
-the result obtained here, $\mW=80.508\pm 0.115\,\GeV$,
-represents an indirect determination of the weak mixing angle in the
-OS scheme as
-$\sw=0.22052\pm0.00223$. % value as of 22.3.18 (80.5077 +/- 0.115238
-                         % -> 0.220523 +/- 0.00223147)
-%  Gf would be: 1.17515e-05  +/- 7.76105e-08
-%               1.175(8)     x 10-5 GeV-2
-%  muLan has:   1.1663787(6) x 10-5 GeV-2
-
-%-----------------------------------------------------------------------
-\begin{figure}[tb]
-  \begin{center}
-%    \includegraphics[width=0.48\textwidth]{{plots/Wmass_summary}.pdf}\hskip0.01\textwidth
-  \end{center}
-  \caption{
-    Value of the $W$-boson mass compared to results obtained by the ATLAS, ALEPH, CDF,
-    D0, DELPHI, L3 and OPAL experiments, and the world average value.
-    The inner error bars indicate statistical uncertainties and the
-    outer error bars full uncertainties.
-}
-\label{fig:mW}
-\end{figure}
-
-
-
-
-\section{FCC-CDR}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-After the discovery of the Standard Model (SM) Higgs boson at the CERN LHC
-experiments, ATLAS and CMS~\cite{Chatrchyan:2012xdj,Aad:2012tfa},
-the measurement of all fundamental parameters of the SM has
-been completed with a remarkable precision.
-To fully establish the validity of the theory of electroweak
-interactions, explore the mechanism of electroweak symmetry breaking,
-and study the mechanism of the generation of particle masses, further
-high-precision electroweak measurements have to be performed.
-
-Electroweak precision measurements are made at low energies, for instance
-in neutrino-nucleon scattering~\cite{McFarland:1997wx,Zeller:2001hh}, polarised electron nucleon proton scattering~\cite{Androic:2018kni},
-M{\o}ller
-scattering or muon lifetime measurements~\cite{Tishchenko:2012ie},
-%measurements of parity violation effects in atomic transitions,
-%measurements of the electron magnetic moment,
-and at the scale of the masses of the electroweak boson in
-electron-positron~\cite{ALEPH:2005ab,Schael:2013ita} and
-hadron-hadron colliders (see e.g.\ Ref.~\cite{Olive:2016xmw} and therein).
-
-
-In deep-inelastic electron-proton scattering, electroweak
-precision measurements have a long tradition with a number of
-groundbreaking results~\cite{Prescott:1978tm,Prescott:1979dh,Ahmed:1994fa}.
-At HERA, precision measurements had been limited by both the
-$ep$ center-of-mass energy of $\sqrt{s}=920\,\GeV$ and the luminosities
-of about $0.5\,{\rm fb}^{-1}$ recorded by the H1 or ZEUS
-experiments~\cite{Aktas:2005iv,Abramowicz:2015mha,Abramowicz:2016ztw,Spiesberger:2018vki}. In contrast,
-the FCC-eh with its
-considerably increased center-of-mass
-energy of $3.5\,\TeV$ and a targeted integrated luminosity of up to
-$3\,{\rm ab}^{-1}$ will allow for unique precision electroweak
-measurements in deep-inelastic scattering and perform tests
-of new physics beyond the electroweak scale and
-up to the TeV masses.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% intro
-In the following, prospects for the determination of electroweak
-parameters from inclusive NC and CC DIS data at FCC-eh are studied.
-Additional direct measurements will provide further constraints, such
-as measurements of Higgs boson (see
-section~\ref{sec:FCCehHiggs})
-and top-quark production cross sections (section~\ref{sec:FCCehTop}).
-%
-The uncertainty values of electroweak parameters are
-estimated by performing fits of theoretical predictions to simulated inclusive NC
-and CC DIS data (see sections~\ref{sec:FCCehIntro} and~\ref{sec:PDFs}
-for details).
-In order to account for correlations with uncertainties of the
-PDFs, which are expected to be determined from the same data, the
-fits include also the determination of parameters of the PDF
-parametrizations.
-The methodology follows closely the prescription outlined in
-section~\ref{sec:FCCehPDFs} and Ref.~\cite{Spiesberger:2018vki}.
-Electroweak effects are included in the calculations through 1-loop
-weak
-corrections~\cite{Bohm:1986na,Bohm:1987cg,Bardin:1988by,Bardin:1989vz,Hollik:1992bz},
-and all calculations are performed in the on-shell
-renormalisation scheme,
-which utilizes the fine structure constant $\alpha$ and the weak boson
-masses, \mZ\ and \mW, as main input parameters\footnote{
-Note that in the on-shell renormalisation scheme the Fermi constant,
-$\gf=\gf(\alpha,\mZ,\mW,\mt,\mH,...)$,
-is a prediction~\cite{Sirlin:1980nh,Olive:2016xmw},
-and the weak mixing angle is
-defined at all orders by its relation to the weak boson masses, $\sw=1-\mW^2/\mZ^2$.}.
-%to the electroweak corrections.
-%Higher order %weak corrections further utilize the top-quark mass, \mtop,
-%the Higgs-boson mass, \mH, and further fermion masses.
-%Consequently, the Fermi constant is a prediction,
-%$\gf=\gf(\alpha,\mZ,\mW,\mtop,\mH,...)$, and the weak mixing angle is
-%defined to all orders as $\sw=1-\mW^2/\mZ^2$.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% cross section
-\begin{figure}[tbh]
-\centering
-%\includegraphics[width=0.75\textwidth]{\main/physics/img/figkappa}
-\includegraphics[width=0.55\textwidth]{plot_GraphsDsigmaDQ2}
-%\vspace{-4cm}
-\caption{{Single differential cross sections for unpolarised $e^+p$ and $e^-p$ NC
-    and CC DIS for FCC-ep in comparison to HERA measurements and LHeC
-    expectations.
-    The foreseen lepton beam polarisations of $\pm80\,\%$ will considerably change the
-    expected NC cross section in regions, where $\gamma Z$ and pure $Z$
-    exchange becomes important, whereas the CC cross section scales
-    linearly with the lepton beam polarisation.
-}}
-\label{fig:dSigma}
-\end{figure}
-%
-The neutral current (NC) and charge current (CC) DIS cross
-sections for unpolarised inclusive DIS are displayed in
-figure~\ref{fig:dSigma}.
-While CC DIS is mediated exclusively by the $W$ boson, the
-weak boson contribution to NC DIS becomes significant at higher scales,
-$\Qsq\gtrsim100\,\GeVsq$, through $\gamma Z$ interference and pure $Z$ exchange~\cite{Klein:1983vs}.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% neutral current couplings
-%
-\begin{figure}[tbhp]
-\centering
-\includegraphics[width=0.47\textwidth]{plot_couplings_u}
-\hfill
-\includegraphics[width=0.47\textwidth]{plot_couplings_d}
-\caption{
-  The expected uncertainties for the light-quark weak neutral
-  couplings ($g_{Au}$, $g_{Ad}$, $g_{Vu}$, $g_{Vd}$)
-  from FCC-eh inclusive DIS data
-  compared with the Standard Model expectations and
-  the currently most precise measurements.
-  For comparison, also the prospects for the LHeC are displayed.
-}
-\label{fig:couplings}
-\end{figure}
-%
-The determination of the vector- and axial-vector weak neutral
-current couplings, ideally performed separately for any of the
-individual quark or lepton flavor, represents a
-major precision test of the electroweak theory.
-Their precision measurements can provide constraints on various
-BSM models.
-The sensitivity to the light-quark vector and axial-vector couplings
-to the $Z$ boson ($g_{Au}$, $g_{Ad}$, $g_{Vu}$, $g_{Vd}$)
-is investigated by performing a $g_{Au}$+$g_{Ad}$+$g_{Vu}$+$g_{Vd}$+PDF
-fit to the simulated NC and CC DIS data at the FCC-eh.
-The two-dimensional uncertainty contours ($\Delta\chi^2=2.3$) are
-displayed in figure~\ref{fig:couplings} for each single quark flavor and
-compared to recent
-measurements~\cite{ALEPH:2005ab,Abazov:2011ws,Abramowicz:2016ztw,Spiesberger:2018vki}.
-While the current determinations from $e^+e^-$, $ep$ or $p\bar{p}$
-data have all similar uncertainties, the FCC-eh will provide a
-measurement with unprecedented precision.
-Uncertainties smaller than about 1\,\% are expected.
-Due to the $\gamma Z$ interference term, DIS data provide also  access to the sign of
-the coupling parameters, and thus FCC-eh does not exhibit any
-ambiguity as it is the case for the $Z$-pole measurements.
-
-
-Also electron coupling parameters are accessible at the FCC-eh
-and a determination of heavy-quark couplings can be explored
-if additional
-flavor-dependent final states are observed, e.g.\ in charm-production
-or $b$-quark production.
-Even if these parameters will be measured only with uncertainties similar to those of the high-precision
-measurements at the $Z$-pole, FCC-eh will allow for a unique
-measurement of the scale-dependence of the weak neutral current couplings in a single experiment.
-For instance a considerable precision for \Qsq\ dependent measurements
-of the light-quark weak neutral-current couplings
-can be expected in the range of $\sqrt{\Qsq}$ from a few 10\,\GeV up
-to about 1.5\,\TeV\ with uncertainties down to a few permille.
-At low scales such measurements are limited by the dominating contribution of
-the pure photon exchange, and at high scales by the kinematic limit
-and the integrated luminosity.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% weak mixing angle
-More explicitly, the effective weak neutral current couplings can be
-expressed in terms of the $\rho$ and $\kappa$ parameters:
-\begin{align}
-  g_{Af} &= \sqrt{\rho_f}I_{L,f}^3 \, , \\
-  g_{Vf} &= \sqrt{\rho_f}\left( I_{L,f}^3 -2Q_f\kappa_{f}\sw\right)
-  \, .
-\end{align}
-$\rho$ and $\kappa$ receive \Qsq\ dependent higher-order
-radiative corrections~\cite{Spiesberger:1993jg}.
-The determination of the vector and axial-vector couplings can be
-translated into a determination of the effective weak mixing
-angle, $\sin^2\theta_w^{\rm eff}=\kappa_{f}\sw$.
-For $\sin^2\theta_w^{\rm eff}$,
-an ultimate precision of down to 1.0~permille can be achieved when using
-FCC-eh inclusive DIS data.
-More meaningful flavor specific measurements and measurements
-in conjunction with the $\rho$ parameters, yield more conservative
-estimates.
-By exploiting the
-\Qsq\ dependence of the inclusive DIS data, a unique scale-dependent
-measurement of the effective weak mixing angle is feasible over two
-orders of magnitude in $\sqrt{\Qsq}$.
-Using cross section ratios, such as the polarisation asymmetry,
-charge asymmetry, or the CC/NC cross section ratio, further improvements can be achieved
-since systematic uncertainties are expected to cancel, at least partially~\cite{Blumlein:1987fd,AbelleiraFernandez:2012cc}.
-On the theory side, a cancellation of the $\rho$ parameter in
-ratios of cross sections, as it is the case
-for $Z$-pole measurements or in polarised M{\o}ller scattering,
-does not take place since pure photon exchange the
-$\gamma Z$-interference parts, which do not carry the same
-$\rho$ dependence, are not negligible.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% charged currents
-Direct measurements of CC cross sections at the $W$-pole
-are exclusively performed at hadron colliders; lepton colliders
-would need a well defined initial-state neutrino beam.
-This restricts the current availability of precise
-measurements of charged current coupling parameters.
-In DIS at FCC-eh, CC DIS cross sections can be measured with high precision.
-From the theoretical point of view, this is possible because CC
-scattering is mediated exclusively by $W$ bosons, i.e.\ no interference effects are present.
-From the experimental side, precision measurements can be
-performed since the event
-kinematics can be fully reconstructed by recording the hadronic
-final state.
-While at HERA, the uncertainties of charged current cross sections have been
-limited by the measurement of the hadronic final state, limited integrated
-luminosities, challenging trigger requirements and the
-moderate kinematic reach, FCC-eh will greatly improve on any of these
-aspects.
-
-
-The uncertainty of a $W$-boson mass determination is determined in a
-\mW+PDF-fit (the $Z$-boson mass \mZ\ is an external input in this study).
-The expected uncertainties of \mW\ are
-\begin{equation}
-  \Delta\mW = \pm9_{\rm exp}\pm 4_{\rm PDF}\,\MeV,
-\end{equation}
-where the dominating sensitivity to \mW\ arises from the
-normalization of the CC cross section and the $W$-boson
-propagator term $\tfrac{\mW^2}{\mW^2+\Qsq}$.
-The expected precision of \mW, $\Delta\mW=10\,\MeV$, exceeds the
-precision of the current world average~\cite{Tanabashi2018} ($\Delta\mW=\pm12\,\MeV$)
-and is more precise by about a factor of two than the most precise
-result of a single experiment~\cite{Aaltonen:2013vwa,Aaboud:2017svj} to date.
-%
-Current determinations of \mW\ from hadron-collider experiments
-have a considerable PDF uncertainty of about $\gtrsim7\,\MeV$~\cite{Tanabashi2018}, but measurements at the FCC-eh
-will provide further support for such precision measurements in
-hadron-hadron collisions by its ability to perform combined
-fits of electroweak parameters and PDFs.
-
-
-%
-%The expected uncertainty of \mZ\ of about 19\,\MeV\ can not compete with the precise
-%measurements at the $Z$-pole, but still provides a complementary
-%measurement of \mZ\ with remarkable precision.
-
-In addition, the measurement of CC DIS cross sections allows for a
-precise and unique test of the scale dependence of weak
-charged current coupling parameters.
-For instance, FCC-eh will allow for a test of the \Qsq\ dependence of
-the CC form factor $\rho_{CC}$~\cite{Bohm:1987cg,Bardin:1989vz}.
-The absolute value of $\rho_{CC}$ can be measured at FCC-eh with a
-precision of down to 1.5~permille, and its scale dependence will be
-measurable up to $\sqrt{\Qsq}\simeq1.5\,\TeV$ with an uncertainty of
-about 2.2~permille.
-At low scales, the FCC-eh measurement of CC DIS cross sections will be
-limited by trigger constraints and at high scales by the available
-integrated luminosity.
-
-The measurement of charm production cross sections in CC DIS will be
-possible for the first time with high precision.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% summary
-In summary, the inclusive NC and CC DIS cross sections measured at
-FCC-eh provide a unique opportunity to perform high-precision
-determinations of fundamental electroweak parameters and test the
-quantum  nature of electroweak processes with high precision.
-Outstanding measurements will be made for weak charged currents and
-for the scale-dependence of electroweak interactions.
-
-
-%-----------------------------------------------------------------------
-%                            Summary
-%-----------------------------------------------------------------------
-\section{Summary}
-\label{sect:Conclusion}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Acknowledgements}
-Acknowledgements: Z.~Zhang, A.~Sch\"oning, M.~Klein, S.~Schmitt
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%======================= References ==========================%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\clearpage
-
-\begin{flushleft}
-\bibliography{lhec_ew}
-\end{flushleft}
-
-
-\end{document}

@@ -1,4 +1,4 @@
-projectname = lhec_ew
+projectname = paper
 
 all:
 	pdflatex $(projectname)
