@@ -40,7 +40,7 @@ section at LHeC to electroweak parameters.
 %   Theory
 %-----------------------------------------------------------------------
 \clearpage
-\section{Theory of electroweak effects in inclusive NC and CC DIS cross sections}
+\section{Electroweak effects in inclusive NC and CC DIS cross sections}
 %
 Inclusive NC DIS cross sections are expressed in terms of
 generalised structure functions $\tilde{F}_2^\pm$, $x\tilde{F}_3^\pm$
@@ -169,20 +169,31 @@ In this study we adopt the on-shell scheme using \mz\ and \mw\ as input
 parameters to the calculations.
 
 
+% -------------------------------------------------------------------
+%
+% -------------------------------------------------------------------
 \clearpage
-\section{Methdology}
-\subsection{The inclusive NC and CC DIS cross section and LHeC}
-The single-differential inclusive NC and CC DIS cross sections
+\section{The inclusive DIS cross section and LHeC}
+In order to illustrate the contribution of electroweak effects to the
+inclusive DIS cross sections, 
+the single-differential inclusive NC and CC DIS cross sections
 for polarised $e^-p$ scattering as function of \Qsq for LHeC electron
 and proton beam energies are displayed in
-figure~\ref{fig:dSigma}, and compared to measurements at HERA.
+figure~\ref{fig:dSigma}.
+Electron beam energies of $E_e=50\,\GeV$ and 60\,\GeV are
+displayed. 
+The LHeC predictions are compared to measurements at HERA
+($E_e=27.6\,\GeV$ and $E_p=920\,\GeV$, with $P_e=0$) and their
+predictions. 
 %
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.52\textwidth]{plot_GraphsDsigmaDQ2_LHeC}
-  \caption{{Single differential cross sections for polarised $e^-p$ NC
-      and CC DIS at LHeC for two different electron beam energies
-      ($E_e$). Cross sections for longitudinal electron beam
+  \caption{{Single differential inclusive DIS cross sections for
+      polarised $e^-p$ NC 
+      and CC DIS at the LHeC for two different electron beam energies
+      ($E_e=50\,\GeV$ and 60\,\GeV). Cross sections for longitudinal
+      electron beam
       polarisations of $P_e=-0.8$ and $+0.8$ are displayed.
       For comparison also measurements at center-of-mass energies
       of $\sqrt{s}=920$ by H1 at HERA for unpolarised ($P=0\,\%$)
@@ -191,26 +202,43 @@ figure~\ref{fig:dSigma}, and compared to measurements at HERA.
   \label{fig:dSigma}
 \end{figure}
 %
-The targeted longitudional polarisation states of the LHeC electron
-beam of $P_e=\pm0.8$ will considerably alter the CC DIS cross section,
-as it scales linearly with $P_e$, but also for NC cross sections the
-polarisation effects are significant in kinematic regions, where
-$\gamma Z$ and pure $Z$  exchange are important.
+At lower values of \Qsq, the NC cross sections are dominated by the
+photon-exchange contribution to the cross sections represented by and
+the structure function $F_2$ (c.f.~Eq.\,\eqref{eq:strfun}), and the CC
+cross section are suppressed with respect to the NC ones and become
+almost independent on \Qsq\ due to the mass of the $W$ boson, since
+$\Qsq\ll\mW^2$ and thus the propagator term becomes
+$\tfrac{\mW^2}{\mW^2+\Qsq} \simeq 1$.
+At \Qsq\ values around the electroweak scale, $\Qsq\approx\mZ^2$,
+weak contributions to the NC cross sections become important.
+For instance, this can be observed as the NC cross section becomes
+dependent on the longitudinal beam polarisation, $P_e$, and the cross
+sections for positive and negative polarisations start to differ
+significantly.
+For CC, the impact of the longitudinal beam polarisation is of course
+much more prominent, since CC is mediated exclusively by weak
+interactions and the cross section scales linearly with the
+size of $P_e$ (c.f.~Eq.\,\eqref{eq:cc-cs}).
+%Also for NC cross sections the 
+%polarisation effects are significant in kinematic regions, where
+%$\gamma Z$ and pure $Z$  exchange are important.
 With a reduced electron beam energy of $E_e=50\,\GeV$, the
 center-of-mass energy reduces to $1.18\,\TeV$ and
-in the exemplary range from $10000<\Qsq<100000\,\GeVsq$
-the reduced NC or CC cross sections are lower by about 10 to 15.
-With even higher \Qsq\ values, the difference further increases and also the
-sensitivity to electroweak parameters in NC exchange reduces
-accordingly.
+in the exemplary range from $10\,000<\Qsq<100\,000\,\GeVsq$
+the reduced NC or CC cross sections are lower by about 10 to 15\,\%.
+At even higher \Qsq\ values the difference further increases.
+%and also the
+%sensitivity to electroweak parameters in NC exchange reduces
+%accordingly.
 %
 
-{\color{red}Add text for the additional cross section plots, if needed...}
-\begin{figure}[htb]
+\clearpage
+{\color{green}Two alternative versions of this plot are below}
+\begin{figure}[h!b]
   \centering
-  \includegraphics[width=0.40\textwidth]{plot_GraphsDsigmaDQ2_LHeC_opt}
+  \includegraphics[width=0.38\textwidth]{plot_GraphsDsigmaDQ2_LHeC_opt}
   \hskip0.05\textwidth
-  \includegraphics[width=0.40\textwidth]{plot_GraphsDsigmaDQ2_FCC_opt}
+  \includegraphics[width=0.38\textwidth]{plot_GraphsDsigmaDQ2_FCC_opt}
   \caption{
     Left: Inclusive NC and CC DIS cross sections as a function of \Qsq
     for two different polarisation states $P=\pm0.8$ and for two different electron
@@ -225,64 +253,290 @@ accordingly.
 \end{figure}
 
 
-\subsection{LHeC pseudo-data}
-{\color{red} Write here about the pseudo-data from Max, and the
-  expected int. lumi.}
+{\color{green}A potential additional plot could be about the
+  polarisation asymmetry, but this maybe opens a long discussion...}
+\begin{figure}[h!b]
+\begin{center}
+   \includegraphics[width=0.40\textwidth]{{figures/fcc_asymmetry}.pdf}
+   \hskip1cm
+   \includegraphics[width=0.40\textwidth]{{figures/fcc_CCtot}.pdf}
+\end{center}
+\caption{
+  Left: Neutral-current polarisation asymmetry as a function of
+  \Qsq\ integrated over $x$ for FCC-eh simulated data. The polarisation asymmetry
+  is displayed for pure photon exchange, which is zero
+  by definition, % due to the absence of parity violating terms.
+  for calculations including only the interference terms $\gamma^*Z$,
+  and for predictions including also purely weak effects, $ZZ$.
+  The full circles illustrate simulated data points, which have
+  uncertainties invisible at the chose scales.
+  Right: Charged-current cross sections measured with different lepton
+  polarisation states and for electron (red) and positron
+  (blue) beams. The full circles illustrate FCC-eh simulated data,
+  whereas the open circles show H1 measurements. The data are scaled
+  by the the center-of-mass energies of the respective collider.
+  The error bars are smaller than the markers.
+}
+\label{fig:crosssections}
+\end{figure}
+
+
+
+% -------------------------------------------------------------------
+%
+% -------------------------------------------------------------------
+\clearpage
+\section{LHeC pseudo-data}
+In this section, the details of the LHeC pseudo-data\,\footnote{In the
+following, the pseudo-data is simply denoted as `data' in order to
+facilitate reading.} as used for the
+upcoming extraction of electroweak parameters are discussed.
+
+In this analysis a recent simulation of inclusive NC and CC DIS cross
+section data are exploited.
+The data sets include electron and positron data, different lepton
+beam polarisation states, and different proton beam energies.
+Since the actual layout of the LHeC energy-recovery linac for the lepton
+beam is not yet decided, we will study scenarios for two lepton beam
+energies of either $E_e=50\,\GeV$ or 60\,\GeV in the following,
+whereas the nominal LHC proton beam energy of $E_p=7000\,\GeV$ is considered.
+For each beam setup NC and CC DIS data are simulated and
+a summary of the data sets is given in Table~\ref{tab:datasets}.
+\begin{table}[bht]
+  \centering
+  \small
+  \begin{tabular}{lccccccc}
+    \toprule
+    Data set & Processes & $E_p$ [TeV] & $Q_e$ & $P_e$ &
+    $\mathcal{L}$ [fb$^{-1}$] & \Qsq\ range [\GeVsq] & No. of data points (NC,CC)\\
+    \midrule
+    D1 & NC,CC &  7  & $-1$ &  $-0.8$ & 1000 & 5 -- $10^6$ & 100 \\ % D4
+    D2 & NC,CC &  7  & $-1$ &  $+0.8$ & 10   & 5 -- 1\,000\,000 & 100 \\ % D8
+    D3 & NC,CC &  7  & $+1$ &  $ 0  $ & 10   & 5 -- 1\,000\,000 & 100 \\ % D7
+    D4 & NC,CC &  1  & $-1$ &  $ 0  $ & 1    & 5 -- 1\,000\,000 & 100 \\ % D5
+    \bottomrule
+ \end{tabular}
+  \caption{Summary of simulated data sets used.
+    Each data set is simulated for the two studied
+    electron beam energies of $E_e=50\,\GeV$ and 60\,\GeV.
+    {\color{red}last twp columns!}
+    {\color{blue}to be checked, if Ee=50 and 60 used these settings.}
+  }
+  \label{tab:datasets}
+\end{table}
+The vast majority of the data will be collected with an electron
+($Q_e=-1$) beam and with a beam longitudinal polarisation
+of $P_e=-0.8$, reaching an integrated luminosity of about
+$\mathcal{L}\simeq1000\,\textrm{fb}^{-1}$.
+This will allow measurements of NC and CC DIS cross sections up to values of
+$\Qsq\simeq1\,000\,000\,\GeVsq$.
+A considerably smaller data sample will be collected with a positive
+electron beam polarisation of $P_e=+0.8$. For this sample, an
+integrated luminosity of 10\,fb$^{-1}$ is assumed.
+Another data sample will be collected with a positron beam, where
+an unpolarised beam is assumed.
+The technical limitations for the generation of positrons put
+constraints on the achievable beam current and thus on the instaneous
+luminosity. Therefore, an
+integrated luminosity of (only) 10\,fb$^{-1}$ is assumed for this sample.
+Nonetheless, this will allow measurements with positrons up to
+\Qsq\ values of 500\,000\,\GeVsq.
+Yet another data sample will be collected with a reduce proton beam
+energy, which will mainly be used for measurements of $F_L$ and access
+higher values of $x$.
+For this sample an integrated luminosity of 1\,fb$^{-1}$ is assumed.
+All data is restricted to $\Qsq\geq5\,\GeVsq$ in order to avoid
+regions, where higher order QCD effects are important, while the
+low-\Qsq region has anyhow only very low sensitivity to EW parameters.
+
+
+The simulated data points accout for the acceptance of the LHeC
+detector, the kinematic reconstruction, and trigger restrictions.
+The latter, for instance, restricts CC DIS measurements to
+$\Qsq\gtrsim100\,\GeVsq$.
+The resulting kinematic plane of the simulated data points is displayed, for
+instance, in Ref.~\cite{AbdulKhalek:2019mps} (where, however, slightly
+different assumptions on the data uncertainties have been used).
+
+The data include a full set of systematic uncertainties and
+the individual sources are summarised in Table~\ref{tab:uncert}.
+\begin{table}[bht]
+  \centering
+  \small
+  \begin{tabular}{lc}
+    \toprule
+    Source of uncertainty & Uncertainty \\
+    \midrule
+    Scattered electron energy scale $\Delta E_e' /E_e'$ & 0.1 \% \\
+    Scattered electron polar angle  & 0.1\,mrad \\
+    Hadronic energy scale $\Delta E_h /E_h$ & 0.5\,\% \\
+    %calorimeter noise (only $y < 0.01$) & 1-3\,\% \\
+    Radiative corrections & 0.3\,\% \\
+    Photoproduction background ($y > 0.5$) & 1\,\% \\
+    Uncorrelated uncertainty & 0.5\,\% \\ % Global efficiency error
+    Luminosity uncertainty & 1.0\,\% \\
+    \bottomrule
+ \end{tabular}
+\caption{
+  Assumptions used in the simulation of the NC cross sections
+  on the size of uncertainties from various sources. The top three are
+  uncertainties on the calibrations which are transported to
+  provide correlated systematic cross section errors.
+  The lower three values are uncertainties of the cross section
+  caused by various sources.
+}
+\label{tab:uncert}
+\end{table}
+For the bulk of the phase space, the `electron' reconstruction method
+is employed and important uncertainties originate from the scattered
+electron energy scale and its polar angle measurement, where
+uncertainties of $\Delta E_e' /E_e'=0.1\,\%$ and
+$\Delta\theta^\prime_e=0.1$\,mrad are assumed, respectively.
+However, at lower values of $y$ the so-called `mixed' reconstruction
+method~\cite{Blumlein:1990dj} is employed, which makes use of the
+measurement of the hadronic final state for $y$, and $x=sy/\Qsq$. %$y_h=\tfrac{\Sigma}{2E_e}$.
+For the measurement of the hadronic final state,
+an uncertainty on the hadronic energy scale $\Delta E_h/E_h=0.5\,\%$
+is imposed.
+Furthermore, uncertainties on the QED radiative corrections of
+0.3\,\%, and uncertainty on the background from photoproduction events
+of $1.0\,\%$ at the high-$y$ region is assumed.
+The statistical uncertainty is take to be at least 0.1\,\%.
+A global normalisation uncertainty, including the luminosity
+uncertainty, of 1\,\% is taken. 
+
+A number of further potential uncertainty sources ({\color{red} e.g. ...}) is
+summarised in an uncorrelated uncertainty component of 0.5\,\%.
+
+These data samples have been simulated mainly for the purpose of performing
+reliable studies for PDF determinations, which are mainly sensitive to
+the lower \Qsq region.
+In contrast, the present study on electroweak parameters is mainly
+sensitive to the high \Qsq region.
+For technical reasons, and for simplicity, an \emph{ad-hoc} $x$-\Qsq
+grid for the simulated data points was chosen.
+Though, the upcoming real data may allow a much finer binning, in
+particular at medium $x$ values and higher \Qsq.
+With the given treatement of fully correlated, or fully uncorrelated
+uncertainty sources, a finer binning can to a very good approximation
+be simulated by changing the size of the uncorrelated uncertainty.
+In the following, an alternative scenarios is considered, where we assume
+a two times finer bin-grid in $x$, as well as in \Qsq, which then is
+simply emulated by using an uncorrelated uncertainty of $0.25\,\%$.
+{\color{green} We keep a minimum statistical uncertainty on every data
+  point of 0.1\,\%.}
+
+In summary, we study four sets of data samples, as summarised in Table\,\ref{tab:scenarios}.
+\begin{table}[hbt]
+  \centering
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    Number & $E_e$ & $\delta_\textrm{unc}$ & Bin grid \\
+    \midrule
+    1  &   50\,\GeV  &  0.5\,\%  &  nominal \\
+    2  &   50\,\GeV  &  0.25\,\% &  4$\times$ nominal  \\
+    3  &   60\,\GeV  &  0.5\,\%  &  nominal \\
+    4  &   60\,\GeV  &  0.25\,\% &  4$\times$ nominal \\
+    \bottomrule
+ \end{tabular}
+\caption{
+  LHeC scenarios.
+}
+\label{tab:scenarios}
+\end{table}
+
 
 
 ~\cite{Britzger:2017fuc}
 
 
+
+
 %-----------------------------------------------------------------------
 %   Methodology
 %-----------------------------------------------------------------------
-\subsection{Methodology of a combined EW and QCD fit}
-{\color{red} DB. This entire section needs to be re-written!}
-{\color{green}
-The cross section and also all other parameters are predictions within the EW
-formalism and can be used to test the validity of the electroweak
-theory.}
-Reasonable examples are determinations of (all) the weak neutral current
-couplings, $g_A^{f}$ and $g_V^{f}$ with $f=(e,u,d,s,c,b,t)$,
-or more general, directly the $\rho_{\text{NC}, f}$ and
-$\kappa_{\text{NC}, f}$ parameters.
-These can be done either in the scale-indpendent LO approximation, by
-taking the scale-dependent loop corrections from theory, or their
-effective values can be determined at different scales.
-More commonly though, the effective weak mixing
-angle $\sin\theta_{\text{W}}^{\text{eff},f}:=\kappa_{\text{NC}, q/e}\ \sw$
-is tested at different scales, while also this quantity has an
-important scheme dependent component (see Ref.~\ref{pdg18} for a
-concise dicsussion).
-Noteworthy, most of the precision measurements are performed in the
-time-like domain, i.e.\ for $\mu^2>0$, whereas DIS is mediated by space-like
-momentum transfer, $\Qsq=-q^2$, and thus $q^2<0$.
-In DIS at the LHeC, in addition, a large kinematic range can be tested.
-
-Complementary, the measurement of the weak boson masses yields an interesting testing
-case of the theory, in particular the measurement of \mw.
-This is because \mw\ can be considered as input parameter to the
-formalism, or alternatively, if the precision measurement of \gf\ is
-been taken as input~\cite{Tishchenko:2012ie}, then \mw becomes a
-prediction and can be confronted with the measurement directly.
-
+\clearpage
+\section{Methodology of a combined EW and QCD fit}
 The expected uncertainties of the electroweak parameters are
-obtained in a combined fit of electroweak parameters and the PDFs, where
-the inclusive NC and CC DIS pseudo-data (see sect.~\ref{sec:DISdata})
-are taken as data and full set of statistical and systematic
-uncertainties are considered.
-By fitting the PDFs together with EW parameters, uncertainties from the PDFs are taken into
-account, which is very reasonable, since the PDFs will predominantly
-be determined from those LHeC data in the future.
-The details of the PDF fit are altogether fairly similar to the PDF
-fits outlined in sect.~\ref{sec:PDFs}, but additionally EW effects are
-included into the calculation by considering the full set of 1-loop
+determined in a combined fit of the electroweak parameter(s) together
+with the PDFs to the inclusive NC/CC DIS data, where the their full set
+of statistical and systematic uncertainties are considered.
+In this fit, also parameters of the PDFs are determined, since at the
+time of the LHeC, PDFs will predominantly be determined from these
+inclusive DIS data under consideration.
+In order to account for the correlation between uncertainties of the
+PDFs, which mainly represenent the propagated uncertainties of the LHeC inclusive
+DIS data, and the EW parameter, the PDFs have to be determined
+simultaneously in this fit.
+
+For the determination of the PDFs, NNLO pQCD calculations are used,
+and the zero-mass variable flavor number scheme is employed.
+For the PDF evolution or the structure function calculations, no QED
+or EW contributions are included, since these are expected to be negligible.
+In particular, these contributions will not add additional sensitivity
+to the EW parameters of interest.
+The $x$-dependent PDFs are parameterised at a scale of
+$\mu_0=1.3784\,\GeV$, i.e.\ below the charm mass \emph{threshold}.
+Five orthogonal PDF linear combinations are chosen to be parameterised
+at $\mu_0$ then: the $u$ and
+$d$-valence quark distributions ($xu$,$xv$), the $u$-type and $d$-type
+anti-quark distributions ($x\bar{U}$,$x\bar{D}$), and the gluon
+distribution ($xg$).
+The chosen parameterisation follows closely previous LHeC PDF studies~\cite{todo},
+which are closely related to HERAPDF-style PDFs~\cite{todo}.
+The following functional form is chosen
+\begin{equation}
+  xf = f_A x^{f_B} (1-x)^{f_C} (1+f_Dx+f_Ex^2) -
+      f_{A^\prime}x^{f_{B^\prime}}(1-x)^{0.25}\,,
+\end{equation}
+where $f$ denotes one of the five linear combinations.
+The second summand is considered only for the gluon distribution\footnote{
+Although, this term is commonly considered to be of importance for PDF
+determinations as it introduces
+additional freedom at lower values of $x$ and since the
+LHeC probes $x$ regions as low as $5\cdot10^{-6}$, it is found to has
+no significant impact on the resulting uncertainties of the
+electroweak parameters.}.
+The normalisation parameters are determined through the quark number
+sum-rule ($u_A$, $d_A$) or the momentum sum-rules ($A_g$), or are calculated
+as $\bar{U}_A=\bar{D}_A(1-0.4)$.
+Furthermore, we use $\bar{D}_B=\bar{U}_B$.
+Finally, altogether 13 parameters  of the PDFs are determined in each
+of the fits
+($g_B$, $g_C$, $g_{A^\prime}$, $g_{B^\prime}$, $u_B$, $u_C$, $u_E$,
+$d_B$, $d_C$, $\bar{U}_C$, $\bar{D}_A$, $\bar{D}_B$, $\bar{D}_C$), while
+all other parameters are set to zero.
+The actual values of the PDF parameters are not of noteworthy
+relevance here, and are set to values, as they can be obtained from a fit to HERA
+data~\cite{H1dataTodo}. 
+
+EW effects are included into the calculation by considering the full set of 1-loop
 electroweak corrections~\cite{todo}.
-The pQCD predictions are performed in the zero-mass VFN-scheme
-and the $\chi^2$ quantity which is input to the minimisation and
+{\color{red} more to add here...}
+
+The $\chi^2$ quantity which is input to the minimisation and
 error propagation is based on normal-distributed relative
-uncertainties, such avoiding a dependence on the actual size of the
-cross sections.
+uncertainties,
+\begin{equation}
+  \chi^2 =\sum_{ij} \log{\frac{\varsigma_i}{\sigma_i}}V^{-1}_{ij}\log{\frac{\varsigma_j}{\sigma_j}}
+\end{equation}
+where the sum runs over all data points $\varsigma_i$ and their
+corresponding predictions, $\sigma_i$.
+The covariance matrix $V$ represents the relative uncertainties of the
+data points.
+The Minuit library is employed and the resulting uncertainties of the fit
+parameters are calculated using the HESSE or MINOS algorithm~\cite{Minuit}.
+For our study, we set the data values equivalent to the predictions,
+i.e.\ our data represent an \emph{Asimov data set}~\cite{Cowan:2010js}.
+It it is noteworthy, that with the chosen $\chi^2$ definition, the actual
+size of the cross section at a given point does not enter the
+calculation of the uncertainties, but only the relative size of the uncertainties
+are of relevance.
+
+
+
+
 
 
 %-----------------------------------------------------------------------
@@ -906,14 +1160,22 @@ large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
 
 
 
-
-
-
 %-----------------------------------------------------------------------
-%   Results from HERA combined data
+%   EW effects in PDF fits
 %-----------------------------------------------------------------------
 \clearpage
-\section{Determination of the $W$-boson mass from HERA combined data}
+\section{Impact of electroweak effects on the determination of PDFs}
+???
+
+
+%-----------------------------------------------------------------------
+%   FCC
+%-----------------------------------------------------------------------
+\clearpage
+\section{Prospects for the FCC-eh}
+In this section, we briefly outline the prospects for the FCC-eh and
+give numbers for a few benchmark parameters.
+
 
 
 
@@ -923,6 +1185,44 @@ large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
 \clearpage
 \section{Summary and Conclusion}
 \label{sect:Conclusion}
+{\color{green} Text partially equivalent to the FCC-CDR}
+%
+Simulated neutral current and charged current inclusive DIS cross
+sections at the LHeC are explored for a determination of the
+fundamental parameters of electroweak theory and for precision tests
+of the Standard Model formalism.
+%
+The high center-of-mass energy and the large integrated
+luminosity at the LHeC will allow for the first time precision electroweak
+measurement in DIS at high scales.
+%
+
+
+Highest precision is achieved for the measurement of the $W$-boson
+mass with a prospected experimental uncertainty of up to
+$\Delta\mW=5\,\MeV$, and an outstanding  
+precision can also be achieved for the weak neutral current couplings of
+light quarks to the $Z$ boson.
+%
+The space-like momentum transfer in DIS further allows for unique
+scale dependent test of the electroweak theory, both, for neutral and
+charged currents.
+This includes for instance scale dependent measurements of the effective
+weak mixing angle in the range of about $40<\sqrt{\Qsq}<700\,\GeV$
+with a precision up to a few permille.
+
+Further direct measurements, as for instance Higgs production,
+top-quark production or single $W$ or $Z$
+production cross sections, or vector-boson-scattering cross sections,
+as well as heavy flavor cross sections in NC and CC DIS, will provide further
+improvements for electroweak precision measurements.
+
+The measurements will not be limited by the need for parton
+distribution functions.
+In many cases, the measurements are complementary to measurements in
+$e^+e^-$ or hadron-hadron collisions.
+
+
 In summary, the inclusive NC and CC DIS cross sections measured at
 LHeC provide a unique opportunity to perform high-precision
 determinations of fundamental electroweak parameters and test the
@@ -1114,3 +1414,31 @@ Acknowledgements: Z.~Zhang, A.~Sch\"oning, M.~Klein, S.~Schmitt
 \end{table}
 
 
+% ------------------------------------------------------------------------
+%
+% ------------------------------------------------------------------------
+\clearpage
+\section*{Useless stuff}
+%Reasonable examples are determinations of (all) the weak neutral current
+%couplings, $g_A^{f}$ and $g_V^{f}$ with $f=(e,u,d,s,c,b,t)$,
+%or more general, directly the $\rho_{\text{NC}, f}$ and
+%$\kappa_{\text{NC}, f}$ parameters.
+These can be done either in the scale-indpendent LO approximation, by
+taking the scale-dependent loop corrections from theory, or their
+effective values can be determined at different scales.
+More commonly though, the effective weak mixing
+angle $\sin\theta_{\text{W}}^{\text{eff},f}:=\kappa_{\text{NC}, q/e}\ \sw$
+is tested at different scales, while also this quantity has an
+important scheme dependent component (see Ref.~\ref{pdg18} for a
+concise dicsussion).
+Noteworthy, most of the precision measurements are performed in the
+time-like domain, i.e.\ for $\mu^2>0$, whereas DIS is mediated by space-like
+momentum transfer, $\Qsq=-q^2$, and thus $q^2<0$.
+In DIS at the LHeC, in addition, a large kinematic range can be tested.
+
+Complementary, the measurement of the weak boson masses yields an interesting testing
+case of the theory, in particular the measurement of \mw.
+This is because \mw\ can be considered as input parameter to the
+formalism, or alternatively, if the precision measurement of \gf\ is
+been taken as input~\cite{Tishchenko:2012ie}, then \mw becomes a
+prediction and can be confronted with the measurement directly.
