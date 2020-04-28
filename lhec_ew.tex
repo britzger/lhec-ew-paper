@@ -287,6 +287,7 @@ At even higher \Qsq\ values the difference further increases.
 % -------------------------------------------------------------------
 \clearpage
 \section{LHeC pseudo-data}
+\label{sec:data}
 In this section, the details of the LHeC pseudo-data\,\footnote{In the
 following, the pseudo-data is simply denoted as `data' in order to
 facilitate reading.} as used for the
@@ -426,6 +427,15 @@ simply emulated by using an uncorrelated uncertainty of $0.25\,\%$.
 {\color{green} We keep a minimum statistical uncertainty on every data
   point of 0.1\,\%.}
 
+%\footnote{Due to performance
+%  reasons, the pseudo-data are generated for a rather coarse bin grid. With a
+%  binning, which is closely related to the resolution of the LHeC
+%  detector, a much finer binning in $x$ and \Qsq are feasible. Already
+%  such a change would alter the uncertainties of the fit parameters.
+%  However, such an effect can be reflected by a
+%  changed uncorrelated uncertainty, and a value of 0.25\,\% appears
+%  like an optimistic, but achievable,  alternative scenario. },
+
 In summary, we study four sets of data samples, as summarised in Table\,\ref{tab:scenarios}.
 \begin{table}[hbt]
   \centering
@@ -460,7 +470,7 @@ In summary, we study four sets of data samples, as summarised in Table\,\ref{tab
 \section{Methodology of a combined EW and QCD fit}
 The expected uncertainties of the electroweak parameters are
 determined in a combined fit of the electroweak parameter(s) together
-with the PDFs to the inclusive NC/CC DIS data, where the their full set
+with the PDFs to the inclusive NC/CC DIS data (denoted in the following as `PDF+EW' fit), where their full set
 of statistical and systematic uncertainties are considered.
 In this fit, also parameters of the PDFs are determined, since at the
 time of the LHeC, PDFs will predominantly be determined from these
@@ -470,16 +480,17 @@ PDFs, which mainly represenent the propagated uncertainties of the LHeC inclusiv
 DIS data, and the EW parameter, the PDFs have to be determined
 simultaneously in this fit.
 
-For the determination of the PDFs, NNLO pQCD calculations are used,
-and the zero-mass variable flavor number scheme is employed.
+In the calculation, NNLO pQCD calculations with the zero-mass variable
+flavor number scheme is used. 
 For the PDF evolution or the structure function calculations, no QED
 or EW contributions are included, since these are expected to be negligible.
 In particular, these contributions will not add additional sensitivity
-to the EW parameters of interest.
+to the EW parameters of interest, and as such will not change the
+expected uncertainties in the present study.
 The $x$-dependent PDFs are parameterised at a scale of
-$\mu_0=1.3784\,\GeV$, i.e.\ below the charm mass \emph{threshold}.
+$\mu_0=1.3784\,\GeV$, i.e.\ below the charm mass.
 Five orthogonal PDF linear combinations are chosen to be parameterised
-at $\mu_0$ then: the $u$ and
+at $\mu_0$: the $u$ and
 $d$-valence quark distributions ($xu$,$xv$), the $u$-type and $d$-type
 anti-quark distributions ($x\bar{U}$,$x\bar{D}$), and the gluon
 distribution ($xg$).
@@ -490,9 +501,9 @@ The following functional form is chosen
   xf = f_A x^{f_B} (1-x)^{f_C} (1+f_Dx+f_Ex^2) -
       f_{A^\prime}x^{f_{B^\prime}}(1-x)^{0.25}\,,
 \end{equation}
-where $f$ denotes one of the five linear combinations.
+where $f$ denotes any of the five linear combinations.
 The second summand is considered only for the gluon distribution\footnote{
-Although, this term is commonly considered to be of importance for PDF
+Although, the second term is commonly considered to be of importance for PDF
 determinations as it introduces
 additional freedom at lower values of $x$ and since the
 LHeC probes $x$ regions as low as $5\cdot10^{-6}$, it is found to has
@@ -508,11 +519,11 @@ of the fits
 $d_B$, $d_C$, $\bar{U}_C$, $\bar{D}_A$, $\bar{D}_B$, $\bar{D}_C$), while
 all other parameters are set to zero.
 The actual values of the PDF parameters are not of noteworthy
-relevance here, and are set to values, as they can be obtained from a fit to HERA
-data~\cite{H1dataTodo}. 
+relevance here, and are set to values, as they can be obtained from a
+fit to HERA data~\cite{H1dataTodo}. 
 
-EW effects are included into the calculation by considering the full set of 1-loop
-electroweak corrections~\cite{todo}.
+EW effects are included into the calculation by considering the full
+set of 1-loop electroweak corrections~\cite{todo}.
 {\color{red} more to add here...}
 
 The $\chi^2$ quantity which is input to the minimisation and
@@ -531,8 +542,8 @@ For our study, we set the data values equivalent to the predictions,
 i.e.\ our data represent an \emph{Asimov data set}~\cite{Cowan:2010js}.
 It it is noteworthy, that with the chosen $\chi^2$ definition, the actual
 size of the cross section at a given point does not enter the
-calculation of the uncertainties, but only the relative size of the uncertainties
-are of relevance.
+calculation of the uncertainties, but only the relative size of the
+uncertainties are of relevance.
 
 
 
@@ -543,22 +554,73 @@ are of relevance.
 %   Results: mass parameters
 %-----------------------------------------------------------------------
 \clearpage
-\section{Mass determinations}
-\subsection{Weak boson masses ${M_W}$ and $M_Z$}
+\section{Mass determinations of the weak bosons}
 \label{sec:mass}
-The expected uncertainties for a determination of the weak boson masses, \mW\ and \mZ, are determined in the
-PDF+EW-fit, where one of the masses is determined
-together with the PDFs, while the other mass parameter as taken as external input.
-The expected uncertainties of \mW\ are
+In this section, first, a determination of the $W$-boson mass, \mW,
+then the $Z$-boson mass, \mZ, then a combined determination of \mW\ and
+\mW, and finally a potential determination of the Higgs-boson mass,
+\mH, is discussed. 
+The expected uncertainties for a determination of the weak boson
+masses are determined in the PDF+EW-fit, where one of the masses is
+determine together with the PDFs.
+The other mass parameters are taken as external input in this
+fit.
+
+
+For a determination of the $W$-boson mass, expected uncertainties of
 \begin{alignat}{2}
   \Delta\mW(\text{LHeC-60})&=\pm5_{({\rm exp})}\pm8_{({\rm PDF})}\,\MeV  =\,&& 10_{\text{(tot)}}\,\MeV{\rm ~~and~~} \\
   \Delta\mW(\text{LHeC-50})&=\pm8_{({\rm exp})}\pm9_{({\rm PDF})}\,\MeV  =\,&& 12_{\text{(tot)}}\,\MeV
 \nonumber
 \end{alignat}
-for LHeC with $E_e=60\,\GeV$ or 50\,\GeV, respectively.
-The breakdown into experimental and PDF uncertainties is obtained by repeating the fit with PDF
-parameters fixed.
-\begin{figure}
+are found for the LHeC with $E_e=60\,\GeV$ or 50\,\GeV, respectively.
+%
+With the assumption of an uncorrelated uncertainty of $0.25\,\%$ (c.f.\
+section\,\ref{sec:data}) uncertainties of
+\begin{alignat}{2}
+  \Delta\mW(\text{LHeC-60})&=\pm3_{({\rm exp})}\pm5_{({\rm PDF})}\,\MeV =\,&& 6_{\text{(tot)}}\,\MeV{\rm ~~and~~} \\
+  \Delta\mW(\text{LHeC-50})&=\pm6_{({\rm exp})}\pm6_{({\rm PDF})}\,\MeV =\,&& 8_{\text{(tot)}}\,\MeV
+\nonumber
+\end{alignat}
+for LHeC-60 and LHeC-50 are obtained, respectively.
+
+An artificial breakdown into experimental and PDF uncertainties is
+obtained by repeating the fit with PDF parameters kept fixed, which
+yields the \emph{exp} uncertainty, while the PDF uncertainty is then
+calculated as the quadratic difference from the total uncertianty.
+The size of the uncertainty component associated to the PDFs is found
+to be  of similar size as the \emph{exp} uncertainty.
+%
+The expected total uncertainties are displayed in
+figure~\ref{fig:mWZ} and compared to the values obtained by
+LEP2~\cite{Schael:2013ita}, Tevatron~\cite{Group:2012gb},
+ATLAS~\cite{Aaboud:2017svj} and the PDG value~\cite{PDG}.
+It is found, that the LHeC measurement will yield the smallest
+experimental uncertainties in a single experiment\,\footnote{In
+  figure~\ref{fig:mWZ}, the values from LEP2 and Tevatron represent
+  combined results taking into account measurements from independent
+  experiments and thus benefit from a reduction of the systematic
+  uncertainties in the combination procedure. Similarly, the
+  PDG world average value.}.
+The LHeC measurement will further be even superior than the current
+world average. 
+As such, a detailed assessement of associated theoretical
+uncertainties will be needed ({\color{blue}Shall we give/make some
+  first estimates here?}).
+The LHeC will constitute the most precise measurement in DIS, where
+presently the most precise measurement was obtained by
+H1~\cite{Spiesberger:2018vki} 
+($\mW(\text{H1})=80.520\pm0.115\,\GeV$). 
+
+({\color{blue}Conclusion?)
+  The measurement of \mW\ in DIS constitutes an highly important
+  alternative determination of \mW, ... $t$-channel vs.\ $s$-channel,
+  DIS vs.\ $ee$ and $pp$. $W$ mass not produced on-shell, but a
+  measurement from purely virtual effects.
+})
+
+%
+\begin{figure}[thbp]
     \centering
     \includegraphics[width=0.42\textwidth]{alphas_summary_W-bosonMass}
     \hskip0.05\textwidth
@@ -585,37 +647,12 @@ parameters fixed.
     }
     \label{fig:mWZ}
 \end{figure}
-These uncertainties are displayed in
-figure~\ref{fig:mWZ} and compared to the values obtained by LEP2~\cite{Schael:2013ita},
-Tevatron~\cite{Group:2012gb}, ATLAS~\cite{Aaboud:2017svj} and the PDG
-value~\cite{PDG}.
-The LHeC measurement will become the most precise measurement of a
-single experiment and will greatly improve over the best measurement achieved
-by H1 of $\mW(\text{H1})=80.520\pm0.115\,\GeV$~\cite{Spiesberger:2018vki}.
-%H1~\cite{Spiesberger:2018vki} and to the
-%In addition, uncertainties when performing our PDF+EW-fit to the final combined
-%HERA data~\cite{HERAPDF} or to the simulated FCC-eh data are shown.
-%
-In case, the dominating uncorrelated uncertainties can be reduced from
-the prospected $0.5\,\%$ to $0.25\,\%$\footnote{Due to performance
-  reasons, the pseudo-data are generated for a rather coarse bin grid. With a
-  binning, which is closely related to the resolution of the LHeC
-  detector, a much finer binning in $x$ and \Qsq are feasible. Already
-  such a change would alter the uncertainties of the fit parameters.
-  However, such an effect can be reflected by a
-  changed uncorrelated uncertainty, and a value of 0.25\,\% appears
-  like an optimistic, but achievable,  alternative scenario. },
-a precision of \mW\ of up to
-\begin{alignat}{2}
-  \Delta\mW(\text{LHeC-60})&=\pm3_{({\rm exp})}\pm5_{({\rm PDF})}\,\MeV =\,&& 6_{\text{(tot)}}\,\MeV{\rm ~~and~~} \\
-  \Delta\mW(\text{LHeC-50})&=\pm6_{({\rm exp})}\pm6_{({\rm PDF})}\,\MeV =\,&& 8_{\text{(tot)}}\,\MeV
-\nonumber
-\end{alignat}
-for LHeC-60 and LHeC-50 will be achieved, respectively.
-A complete dependence of the expected total experimental uncertainty $\Delta\mW$ on the size of the uncorrelated
-uncertainty component %, and the normalisation uncertainty
+
+\emph{A complete dependence of the expected total experimental uncertainty
+$\Delta\mW$ on the size of the uncorrelated  uncertainty component %,
+%and the normalisation uncertainty
 is displayed in
-figure~\ref{fig:mWZ}.%, and with more optimistic scenario an uncertainty of up
+figure~\ref{fig:mWZ}. %, and with more optimistic scenario an uncertainty of up
 %to $\Delta\mW\approx5\,\MeV$ can be achieved.
 Given such a high experimental precision further theoretical uncertainties
 will have to be considered and for instance the uncertainty of the
@@ -623,7 +660,10 @@ top-quark mass of $0.5\,\GeV$ will yield an additional uncertainty of $\Delta\mW
 The prospected measurement of the $W$-boson mass with LHeC data will be among the most
 precise measurements and will significantly improve the world average
 value of \mw, which is currently dominated by the ATLAS measurement~\cite{Aaboud:2017svj}.
+}
 
+\clearpage
+\subsection{Z mass}
 While the measurement of \mW\ are competitive with other
 measurements, the expected experimental uncertainties of \mZ\ are about 11\,MeV and 13\,MeV for
 LHeC-60 and LHeC-50, respectively and are thus of similar size than those of \mW.
@@ -661,7 +701,21 @@ Further parameters like $M_t$ and $M_H$ are needed only for the subleading corre
 {\color{magenta}Dicsussion about scheme dependence of parameters?}
 
 
-\subsection{Further mass determinations}
+The subleading contributions to the vertex and self-energy corrections
+have a Higgs-boson mass dependence and are proportional to
+$\log\tfrac{M^2_H}{\mw^2}$.
+When fixing all other EW parameters the Higgs boson mass could be
+constrained indirectly through these loop corrections
+with a precision of $\Delta m_H=^{+29}_{-23}$ to $^{+24}_{-20}\,\GeV$
+for different LHeC scenarios.
+
+
+
+%-----------------------------------------------------------------------
+%   top quark mass
+%-----------------------------------------------------------------------
+\clearpage
+\section{Top quark mass determination}
 The inclusive DIS data are sensitive to the top-quark mass $M_t$
 through radiative corrections and the $M_t$ dependent terms are the
 dominant corrections to the vertex and to the propagator self-energies.
@@ -710,15 +764,6 @@ fit~\cite{Haller:2018nnx} can be achieved.
 In a fit without PDF parameters similar uncertainties are found (not shown),
 which illustrates that the determination of EW parameters is
 to a large extent independent on the QCD phenomenology and the PDFs.
-
-The subleading contributions to the vertex and self-energy corrections
-have a Higgs-boson mass dependence and are proportional to
-$\log\tfrac{M^2_H}{\mw^2}$.
-When fixing all other EW parameters the Higgs boson mass could be
-constrained indirectly through these loop corrections
-with a precision of $\Delta m_H=^{+29}_{-23}$ to $^{+24}_{-20}\,\GeV$
-for different LHeC scenarios.
-
 
 %-----------------------------------------------------------------------
 %   Results: couplings
@@ -1158,6 +1203,13 @@ large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
   \label{tab:rhoCC}
 \end{table}
 
+
+
+%-----------------------------------------------------------------------
+%   Results: sin2thw
+%-----------------------------------------------------------------------
+\clearpage
+\section{\boldmath The effective leptonic weak mixing angle $\sin^2\theta_\textrm{W,eff}^{ll}$}
 
 
 %-----------------------------------------------------------------------
