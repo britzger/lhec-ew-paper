@@ -3,7 +3,7 @@
 %   Introduction
 %-----------------------------------------------------------------------
 \section{Introduction}
-Since the discovery of the Standard Model (SM) Higgs boson at the CERN
+\emph{Since the discovery of the Standard Model (SM) Higgs boson at the CERN
 LHC experiments and subsequent measurement of its
 parameters, all fundamental parameters of the SM have been measured
 directly and with remarkable precision.
@@ -17,9 +17,9 @@ loop-insertions, may yield significant deviations for some precisely
 measurable and calculable observables.
 The greatly enlarged kinematic reach to higher scales in comparison to
 HERA and the large targeted luminosity will allow for the first time
-high-precision electroweak measurements in $ep$.
+high-precision electroweak measurements in $ep$.}
 
-The LHeC experimental conditions offer the opportunity for unique measurements of electroweak
+\emph{The LHeC experimental conditions offer the opportunity for unique measurements of electroweak
 parameters, which are often complementary to other experiments, such
 as proton-proton or electron-positron collider experiments or low
 energy neutrino or muon scattering experiments.
@@ -28,7 +28,7 @@ of the light quarks, $u$ and $d$, can be performed due to the
 important contributions of valence quarks in the initial state, as well as scale
 dependent measurements of weak interactions, since deep-inelastic $ep$
 scattering is mediated through space-like momentum transfer
-($t$-channel exchange).
+($t$-channel exchange).}
 
 %
 In this article we study the sensitivity of inclusive NC and CC cross
@@ -202,11 +202,12 @@ predictions.
   \label{fig:dSigma}
 \end{figure}
 %
-At lower values of \Qsq, the NC cross sections are dominated by the
-photon-exchange contribution to the cross sections represented by and
-the structure function $F_2$ (c.f.~Eq.\,\eqref{eq:strfun}), and the CC
-cross section are suppressed with respect to the NC ones and become
-almost independent on \Qsq\ due to the mass of the $W$ boson, since
+At lower values of \Qsq, the NC cross sections are dominated by
+photon-exchange contributions, represented by 
+the structure function $F_2$ (c.f.~eq.\,\eqref{eq:strfun}), while the CC
+cross section are suppressed with respect to the NC ones and are
+almost independent on \Qsq.
+This is due to the mass of the $W$ boson, since
 $\Qsq\ll\mW^2$ and thus the propagator term becomes
 $\tfrac{\mW^2}{\mW^2+\Qsq} \simeq 1$.
 At \Qsq\ values around the electroweak scale, $\Qsq\approx\mZ^2$,
@@ -252,33 +253,6 @@ At even higher \Qsq\ values the difference further increases.
   \label{fig:dSigmaopt}
 \end{figure}
 
-
-{\color{green}A potential additional plot could be about the
-  polarisation asymmetry, but this maybe opens a long discussion...}
-\begin{figure}[h!b]
-\begin{center}
-   \includegraphics[width=0.40\textwidth]{{figures/fcc_asymmetry}.pdf}
-   \hskip1cm
-   \includegraphics[width=0.40\textwidth]{{figures/fcc_CCtot}.pdf}
-\end{center}
-\caption{
-  Left: Neutral-current polarisation asymmetry as a function of
-  \Qsq\ integrated over $x$ for FCC-eh simulated data. The polarisation asymmetry
-  is displayed for pure photon exchange, which is zero
-  by definition, % due to the absence of parity violating terms.
-  for calculations including only the interference terms $\gamma^*Z$,
-  and for predictions including also purely weak effects, $ZZ$.
-  The full circles illustrate simulated data points, which have
-  uncertainties invisible at the chose scales.
-  Right: Charged-current cross sections measured with different lepton
-  polarisation states and for electron (red) and positron
-  (blue) beams. The full circles illustrate FCC-eh simulated data,
-  whereas the open circles show H1 measurements. The data are scaled
-  by the the center-of-mass energies of the respective collider.
-  The error bars are smaller than the markers.
-}
-\label{fig:crosssections}
-\end{figure}
 
 
 
@@ -737,7 +711,7 @@ c.f.\ sect.~\ref{sec:data}).
 In the scenario with $E_e=60\,\GeV$, the top-quark
 mass is determined with an uncertainty of $1.4\,\GeV$ or
 \begin{equation}
-  \Delta\mt=1.1\,\GeV\,
+  \Delta\mt= \pm1.1\,\GeV\,
 \end{equation}
 for the two assumptions on $\delta_\textrm{unc.}$.
 The size of the PDF-related uncertainty may be attributed to be about
@@ -817,8 +791,7 @@ Since the inclusive DIS cross section does not distinguish between
 different quark flavors in the final state, with inclusive DIS cross
 sections only the vector and axial-vector couplings of up-type and down-type
 quarks can be determined, but not for each quark flavour separately.
-
-The up-type and down-type couplings can be well interpreted as the
+Howeve, the up-type and down-type couplings can be well interpreted as the
 couplings of the $u$ or $d$-quarks, since  electroweak effects in NC
 interactions are important predominantly at higher \Qsq, which is
 related to higher values of $x$, where the valence quark distributions
@@ -830,7 +803,7 @@ In the PDF+EW fit, the vector and axial-vector couplings of up-type and
 down-type quarks, $g_V^{u/d}$ and $g_A^{u/d}$ are determined.
 A single fit is performed to the LHeC data, where all the four
 coupling parameters are determined together with the PDFs. 
-The fit-parameters are defined in the Born approximation and
+The fit parameters are defined in the Born approximation and
 \Qsq\ dependent higher-order corrections are calculated in
 the SM formalism in the 1-loop approximation.
 The resulting uncertainties are displayed in table~\ref{tab:couplings}
@@ -874,22 +847,22 @@ precise measurements in figure~\ref{fig:couplings}.
 %
   \centering
   \begin{tabular}{cr@{\hskip4pt}lccc}
-    \hline
+    \toprule
     Coupling  &  \multicolumn{2}{c}{PDG} & \multicolumn{3}{c}{Expected uncertainties} \\
     parameter &  &  & LHeC-60 & LHeC-60 ({\footnotesize$\delta_\text{uncor.}=0.25\,\%$})  & LHeC-50 \\
-    \hline
+    \midrule
     $\au$  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.0022$ & $0.0015$ & $0.0035$ \\
     $\ad$  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.0055$ & $0.0034$ & $0.0083$ \\
     $\vu$  & $0.18$   & $\pm0.05$            & $0.0015$ & $0.0010$ & $0.0028$ \\
     $\vd$  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.0046$ & $0.0027$ & $0.0067$ \\
-    \hline
+    \midrule
     $\ve$  & $ $      & $       $            & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
     $\ve$  & $ $      & $                $   & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
-    \hline
+    \midrule
     $\vu+\au$+PDF  &  \\
     $\vd+\ad$+PDF  &  \\
     $\ve+\gae$+PDF  &  \\
-    \hline
+    \bottomrule
 \hline
   \end{tabular}
   \caption{
@@ -907,13 +880,13 @@ precise measurements in figure~\ref{fig:couplings}.
 While the current determinations from $e^+e^-$, $ep$ or $p\bar{p}$
 data have all somewhat similar precision,
 the LHeC will greatly improve nowadays measurements of these
-parameters, and the LHeC uncertainties are about an order of magnitude
+parameters, and the uncertainties at the LHeC are about an order of magnitude
 smaller than the currently most precise ones~\cite{PDG}.
 With $E_e=60\,\GeV$, and/or with more optimistic assumptions in the
 data, these prospected uncertainties are even further decreased.
 Again smaller uncertainties are obtained, when the coupling parameters
 of only a single quark-type is fitted, and the other is set to its SM
-predictions. 
+predictions. {\color{red}Values are displayed in tab.~\ref{tab:couplings}}
 
 
 At the LHeC, the vector and axial-vector couplings can be disentangled
@@ -929,7 +902,7 @@ such a measurement cannot be performed at comparably high precision in
 other experiments.  
 
 {\color{green} Shall we estimate an uncertainty on the quark couplings
-  due to the electron-couplings?}
+  due to the uncertainty on the electron-couplings?}
 
 
 
@@ -946,18 +919,118 @@ other experiments.
 %Such a procedure yields even higher precision and the prospected
 %uncertainties are collected in table~\ref{tab:couplings2}
 
-{\color{magenta} Todo: Discussion about \ve\ and \gae.}
 
 
+%-----------------------------------------------------------------------
+%   Results: sin2thw
+%-----------------------------------------------------------------------
+\clearpage
+\section{\boldmath The leptonic effective weak mixing angle $\sin^2\theta_\textrm{W,eff}^{\ell}$}
+A very common electroweak precision observable is the leptonic
+effective weak mixing angle.
+It is defined at the $Z$ boson mass squared as
+\begin{equation}
+  \sin^2\theta_\textrm{W,eff}^{\ell}=\kappa_{\ell}(\mZ^2) \sw  \,.
+\end{equation}
+In $e^+e^-$ collisions at the $Z$ pole, it can be measured with very
+high precision using forward-backward asymmetry observables, since the
+$\rho$ parameter cancels in the calculation of the asymmetry
+observable, and box diagrams and photon contributions are negligible.
 
+In DIS, however, $\sin^2\theta_\textrm{W,eff}^{\ell}$ cannot be
+accessed directly in asymmetry observables, since DIS is mediated in
+the space-like regime ($q^2<0$) and photon exchange contributions are
+always present.
+However, a comparable definition of
+$\sin^2\theta_\textrm{W,eff}^{\ell}$ can be made in DIS, and we modify
+the second term in eq.~\eqref{eq:gV} according to
+\begin{equation}
+  2Q_{f} \kappa_{\text{NC}, f}\ \cdot \sw
+  \rightarrow
+  2Q_{f} \kappa_{\text{NC}, f}\ \cdot
+  \frac{\sin^2\theta_\textrm{W,eff}^{\ell}}{\kappa_{\ell}(\mZ^2)}\,,
+  \label{eq:sw2ff}
+\end{equation}
+and apply this to all fermion vector couplings, i.e.\ leptons and quarks.
+The parameter $\sin^2\theta_\textrm{W,eff}^{\ell}$ can then be defined
+as a fit parameter in the PDF+EW fit.
+Note, that $\kappa_{\text{NC}, f}$ represents \Qsq- and
+flavor-dependent corrections, and thus quark and lepton couplings, both, contribute
+to a measurement of $\sin^2\theta_\textrm{W,eff}^{\ell}$.
+This is very reasonable, since, for instance,
+the most precise measurement today arises from
+forward-backward asymmetry measurement of $b$-hadrons  at LEP
+($A^{0,b}_\textrm{fb}$), where also the small non-universal
+flavour-specific electroweak correction have been taken in the SM
+formalism.
+Similarly at the LHC and Tevatron, \Qsq-dependent and
+flavour-specific corrections are imposed from the SM formalism since
+the measurements cannot be performed strictly at the $Z$-pole, and also
+the process is quark induced.
+As such, the parameter $\sin^2\theta_\textrm{W,eff}^{\ell}$ as
+defined in eq.~\eqref{eq:sw2ff} and measureable in DIS, is well comparable to
+other measurements. 
+{\color{red}Add a discussion on the scheme dependence?}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.50\textwidth]{figures/sw2eff}
+  \caption{
+      Comparison of the determination of
+      $\sin^2\theta_{\text{W}}^{\text{eff},\ell}(\mz^2)$
+      from LHeC inclusive NC/CC DIS data with recent averaged values.
+      Results from LEP+SLC~\cite{ALEPH:2005ab}, Tevatron~\cite{Aaltonen:2018dxj},
+      LHC~\cite{Aaij:2015lka,ATLAS:2018gqq,Sirunyan:2018swq,Erler:2019dcx} and the world average
+      value~\cite{Erler:2019dcx} are all obtained from a combination of various separate
+      measurements (not shown individually) (see also
+      Ref.~\cite{Erler:2019hds} for additional discussions).
+      For LHeC, the experimental and PDF uncertainties
+      are displayed.
+  }
+  \label{fig:sw2eff}
+\end{figure}
+%
+In the PDF+EW fit the uncertainties of
+$\sin^2\theta_\textrm{W,eff}^{\ell}$ are determined and results for
+LHeC with $E_e=50\,\GeV$ or 60\,\GeV are displayed in
+fig.~\ref{fig:sw2eff}.
+For LHeC with $E_e=60\,\GeV$ and with $\delta_\textrm{unc.}=0.25\,\%$
+(c.f.~sect.~\ref{sec:data}) an uncertainty of
+\begin{equation}
+  \Delta \sin^2\theta_\textrm{W,eff}^{\ell} =  \pm0.00015
+\end{equation}
+is found.
+This is superior than any current single measurement and of similar
+size than the world average or the LEP+SLC combination. 
+
+Once a deviation from the SM expectation is observed, more detailed
+investigations of its origin have to be performed.
+Many extensions of the SM predict not only a modification of
+$\sin^2\theta_\textrm{W,eff}^{\ell}$, but also of the $\rho$
+parameters, and many models further predict flavor-specific or 
+\Qsq-dependent modifications.
+In a simulataneous determination of
+$\sin^2\theta_\textrm{W,eff}^{\ell}$ and a universal modification of
+$\rho$, an uncertainty $\sin^2\theta_\textrm{W,eff}^{\ell}=\pm0.00023$
+($\pm0.00071$) for $E_e=60\,\GeV$ and $\delta_\textrm{unc.}=0.25\,\%$
+($E_e=50\,\GeV$, $\delta_\textrm{unc.}=0.5\,\%$) is found in the
+EW+PDF fit.
+%
+The sensitivity of the LHeC NC/CC DIS data on \Qsq-dependent SM
+modification is studied in a slightly more general framework in
+sect.~\ref{sec:rhokappa} below. 
+
+{\color{red}Not mentioned so far: $\kappa^\prime_{\text{NC},e}$, and
+  $\kappa^\prime_{\text{NC},e}+\kappa^\prime_{\text{NC},u}+\kappa^\prime_{\text{NC},d}$,
+and table~\ref{tab:sw2eff}.}
 
 
 %-----------------------------------------------------------------------
 %   Results: form factors
 %-----------------------------------------------------------------------
 \clearpage
-\section{Determination of the $\rho$ and $\kappa$ parameters}
-
+\section{\boldmath Determination of the $\rho$ and $\kappa$ parameters}
+\label{sec:rhokappa}
 Ultimate precision tests of the electroweak theory require detailed
 tests of its quantum nature
 
@@ -1247,12 +1320,6 @@ large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
 
 
 
-%-----------------------------------------------------------------------
-%   Results: sin2thw
-%-----------------------------------------------------------------------
-\clearpage
-\section{\boldmath The effective leptonic weak mixing angle $\sin^2\theta_\textrm{W,eff}^{ll}$}
-
 
 
 %-----------------------------------------------------------------------
@@ -1267,7 +1334,7 @@ large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
 %   Results: global EW fits
 %-----------------------------------------------------------------------
 \clearpage
-\section{Oblique parameters}
+\section{Oblique parameters S,T, and U}
 
 
 %-----------------------------------------------------------------------
@@ -1342,12 +1409,127 @@ Complementarity!
 Unique measurements will be made for weak charged currents and
 for the scale-dependence of electroweak interactions.
 
+{\color{red}We studied in a traditional way NC and CC separately.
+Many models predict changes to NC and CC simultaneously. A such, a
+simultaneous determination of NC and CC observables is reasonable}
 
+
+
+%-----------------------------------------------------------------------
+%  Optional material, to be discussed...
+%-----------------------------------------------------------------------
+\clearpage
+\section{Optional material}
+\subsection{Electron couplings}
+{\color{magenta} Todo: Discussion about \ve\ and \gae.}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.40\textwidth]{plot_couplings_e}
+  \caption{
+    Weak-neutral-current vector and axial-vector couplings of the electron
+    at 68\,\% confidence level~(C.L.) for
+    simulated LHeC data with $E_e=60\,\GeV$.
+    The LHeC expectations are compared with results from the combined
+    analysis of LEP+SLD data~\cite{ALEPH:2005ab}, which are much more precise.
+    {\color{red}We need to re-do this plot, but I don't know if it is
+      at all reasonable to show it...}
+  }
+  \label{fig:couplings}
+\end{figure}
+
+% ------------------------------------------------------------------------ 
+\clearpage
+\subsection{Polarisation asymmetry in NC, and polarisation in CC}
+Results from  more specific fits of
+$\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$.
+
+\begin{table}[htb]
+  \centering
+  \small
+  %\begin{tabular}{lr@{\hskip4pt}lccc}
+  \begin{tabular}{lcccccc}
+    \toprule
+    Fit parameters &  Parameter & SM & \multicolumn{4}{c}{Expected uncertainties} \\
+    \cmidrule(lr){4-7}
+    &   of interest  &  value    & LHeC-50 & LHeC-60 & LHeC-50 & LHeC-60 \\
+    &                &          &  \multicolumn{2}{c}{\footnotesize{($\delta_\text{uncor.}=0.50\,\%$)}} & \multicolumn{2}{c}{\footnotesize{($\delta_\text{uncor.}=0.25\,\%$)}} \\
+    \midrule
+    $\kappa^\prime_{\text{NC},f}$, PDFs
+    & $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ & 0.23154 & $0.00033$ & $0.00025$ & 0.00022 & $0.00015$ \\ % ok
+    $\kappa^\prime_{\text{NC},f}$, $\rho^\prime_{\text{NC},f}$, PDFs
+    & $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ & 0.23154 & 0.00071  & 0.00036 &  0.00056 & 0.00023 \\ %ok
+    $\kappa^\prime_{\text{NC},e}$, PDFs
+    &  $\sin^2\theta_\text{W}^{\text{eff},e}(\mz^2)$   & 0.23154 & $0.00059$  & $0.00047$ & 0.00038 & $0.00028$ \\
+    $\kappa^\prime_{\text{NC},e}$, $\kappa^\prime_{\text{NC},u}$, $\kappa^\prime_{\text{NC},d}$, PDFs
+    &  $\sin^2\theta_\text{W}^{\text{eff},e}(\mz^2)$   & 0.23154 & 0.00111 & 0.00095 & 0.00069 & 0.00056\\ %ok
+%    \midrule
+    $\kappa^\prime_{\text{NC},f}$
+    & $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ & 0.23154 & 0.00028 & 0.00023 & 0.00017 & 0.00014 \\ % ok
+    \bottomrule
+    % kappa' fit with PDFs:
+    %  0.00033 & 0.00025 & 0.00022 & 0.00015
+    % kappa' fit without PDFs:
+    %  0.00028 & 0.00023 & 0.00017 & 0.00014
+    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (PDG)      & $0.23148$    & $\pm0.00013$    \\
+    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (LEP+SLD)  & $0.23154$    & $\pm0.00016$    \\
+    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (Tevatron) & $0.23148$    & $\pm0.00033$    \\
+    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (LHC)      & $0.23131$    & $\pm0.00033$    \\
+    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ ($A_{fb}^{0,\ell}$ LEP)  & $0.23099$    & $\pm0.00053$    \\
+%\hline
+  \end{tabular}
+  \caption{
+    Determination of $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$
+    with inclusive DIS data at the LHeC for different scenarios.
+    Since the value of the effective weak mixing angle at the $Z$ pole
+    cannot be determined directly in DIS, a fit of the
+    $\kappa^\prime_{\text{NC},f}$ parameter is performed instead and
+    its uncertainty is translated to
+    $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$.
+    Different assumptions on the fit parameters are studied, and
+    results include uncertainties from the PDFs.
+    Only the last line shows results where the PDF parameters are kept fixed.
+    See text for more details.
+    {\color{red}Not yet referenced and discussed in the text.}
+  }
+  \label{tab:sweff}
+\end{table}
+
+
+% ------------------------------------------------------------------------ 
+\clearpage
+\subsection{Polarisation asymmetry in NC, and polarisation in CC}
+{\color{green}A potential additional plot could be about the
+  polarisation asymmetry, but this maybe opens a long discussion...}
+\begin{figure}[h!b]
+\begin{center}
+   \includegraphics[width=0.40\textwidth]{{figures/fcc_asymmetry}.pdf}
+   \hskip1cm
+   \includegraphics[width=0.40\textwidth]{{figures/fcc_CCtot}.pdf}
+\end{center}
+\caption{
+  Left: Neutral-current polarisation asymmetry as a function of
+  \Qsq\ integrated over $x$ for FCC-eh simulated data. The polarisation asymmetry
+  is displayed for pure photon exchange, which is zero
+  by definition, % due to the absence of parity violating terms.
+  for calculations including only the interference terms $\gamma^*Z$,
+  and for predictions including also purely weak effects, $ZZ$.
+  The full circles illustrate simulated data points, which have
+  uncertainties invisible at the chose scales.
+  Right: Charged-current cross sections measured with different lepton
+  polarisation states and for electron (red) and positron
+  (blue) beams. The full circles illustrate FCC-eh simulated data,
+  whereas the open circles show H1 measurements. The data are scaled
+  by the the center-of-mass energies of the respective collider.
+  The error bars are smaller than the markers.
+}
+\label{fig:crosssections}
+\end{figure}
 
 
 %-----------------------------------------------------------------------
 %                          Acknowledgements
 %-----------------------------------------------------------------------
+\clearpage
 \section*{Acknowledgements}
 Acknowledgements: Z.~Zhang, A.~Sch\"oning, M.~Klein, S.~Schmitt
 
