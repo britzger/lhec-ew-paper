@@ -926,6 +926,7 @@ other experiments.
 %-----------------------------------------------------------------------
 \clearpage
 \section{\boldmath The leptonic effective weak mixing angle $\sin^2\theta_\textrm{W,eff}^{\ell}$}
+\label{sec:sw2eff}
 A very common electroweak precision observable is the leptonic
 effective weak mixing angle.
 It is defined at the $Z$ boson mass squared as
@@ -979,7 +980,7 @@ other measurements.
       Comparison of the determination of
       $\sin^2\theta_{\text{W}}^{\text{eff},\ell}(\mz^2)$
       from LHeC inclusive NC/CC DIS data with recent averaged values.
-      Results from LEP+SLC~\cite{ALEPH:2005ab}, Tevatron~\cite{Aaltonen:2018dxj},
+      Results from LEP+SLD~\cite{ALEPH:2005ab}, Tevatron~\cite{Aaltonen:2018dxj},
       LHC~\cite{Aaij:2015lka,ATLAS:2018gqq,Sirunyan:2018swq,Erler:2019dcx} and the world average
       value~\cite{Erler:2019dcx} are all obtained from a combination of various separate
       measurements (not shown individually) (see also
@@ -1001,7 +1002,7 @@ For LHeC with $E_e=60\,\GeV$ and with $\delta_\textrm{unc.}=0.25\,\%$
 \end{equation}
 is found.
 This is superior than any current single measurement and of similar
-size than the world average or the LEP+SLC combination. 
+size than the world average or the LEP+SLD combination. 
 
 Once a deviation from the SM expectation is observed, more detailed
 investigations of its origin have to be performed.
@@ -1049,26 +1050,17 @@ for new discoveries, and also validate further our
 understanding of the quantum nature of weak interactions.
 In this section, we study the sensitivity of LHeC inclusive DIS data
 to the NC form factors, $\rho_\text{NC}$ and $\kappa_\text{NC}$.
-Studies on the CC form factor $\rho_\text{CC}$, are studied in the
+Studies on the CC form factor $\rho_\text{CC}$, are discussed in the
 subsequent section.
 
 
-In NC interactions universal higher-order corrections to the vector
-and axial-vector couplings are be taken into account by $\Qsq$
-dependent form factors $\rho_{\text{NC}}$ and $\kappa_{\text{NC}}$.
-
 In NC interactions the form factors $\rho_{\text{NC}}$ and
-$\kappa_{\text{NC}}$ represent the \Qsq dependent  universal
+$\kappa_{\text{NC}}$ represent the universal
 and flavor-specific{\color{blue}(?)} higher-order corrections to the
-vector and axial-vector couplings. 
-
+vector and axial-vector couplings and cause their \Qsq dependence. 
 A precise test of the validity of these corrections can be performed
 by introducing the anomalous parameters \rhop\ and \kapp{}, which can
 also be considered to be \Qsq\ dependent:
-
-Such modifications can be described conveniently by introducing the
-anomalous parameters \rhop\ and \kapp{}, 
-which can be also considered to be \Qsq\ dependent:
 \begin{align}
   g_A^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \Itf
   \label{eq:gA} \, ,
@@ -1076,38 +1068,82 @@ which can be also considered to be \Qsq\ dependent:
   g_V^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \left( \Itf - 2 Q_f \kappa_{\text{NC}, f}\kapp{,f}\sw \right)
   \label{eq:gV} \,.
 \end{align}
-Consequently, the estimated relative uncertainties of these parameters
-can be interpreted as the relative uncertainty of a
-direct determination of $\rho_{\rm NC}$ or $\sin^2\theta_w^{\rm eff}$.
-In the following, we compare the uncertainties from LHeC pseudo-data
-with the relative uncertainties of
-$\sin\theta_{\text{W}}^{\text{eff}}$ and the $\rho_\text{NC}$
-parameter from the LEP+SLD combination~\cite{ALEPH:2005ab}, while
-setting their actual value to the SM expectation, since we are only
-interested in the sensitivity to those parameters at the moment.
+For the strict validity of the SM the anomalous parameters \rhop\ and
+\kapp{} are expected to be unity. 
+Any significant deviation would indicate non-SM contributions or that
+further SM corrections are important.
 
+%Consequently, the estimated relative uncertainties of these parameters
+%can be interpreted as the relative uncertainty of a
+%direct determination of $\rho_{\rm NC}$ or $\sin^2\theta_w^{\rm eff}$.
+%In the following, we compare the uncertainties from LHeC pseudo-data
+%with the relative uncertainties of
+%$\sin\theta_{\text{W}}^{\text{eff}}$ and the $\rho_\text{NC}$
+%parameter from the LEP+SLD combination~\cite{ALEPH:2005ab}, while
+%setting their actual value to the SM expectation, since we are only
+%interested in the sensitivity to those parameters at the moment.
 
-
-First, the uncertainties the anomalous form factors $\rho_\text{NC}^\prime$
-and $\kappa_\text{NC}^\prime$ is obtained in a fit together with the PDFs and is
-displayed in fig.~\ref{fig:rhokappa} (left).
-The results are compared with results of the LEP+SLD combinations and
-found to have a similar uncertainty of about a few permille.
-\begin{figure}[thbp]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.32\textwidth]{plot_NC_rhokap}
-    \hskip0.02\textwidth
-    \includegraphics[width=0.32\textwidth]{plot_NC_rhokap_u}
-    \includegraphics[width=0.32\textwidth]{plot_NC_rhokap_d}
-  \caption{
-    Expectations at the 68\,\% confidence level for the determination
+    \includegraphics[width=0.55\textwidth]{plot_NC_rhokap}
+    \caption{
+      Expectations at the 68\,\% confidence level for the determination
     of the $\rho^\prime$ and $\kappa^\prime$
     parameters assuming single anomalous factors for all fermions
     (left). The results for three different LHeC scenarios are
     compared with the achieved uncertainties from the LEP+SLD
     combination~\cite{ALEPH:2005ab} for the determination the
     respective factors for leptons.
-    Right: uncertainties for the simultaneous determination of the
+  }
+  \label{fig:rhokappa:f}
+\end{figure}
+Using the LHeC inclusive NC/CC DIS data, the uncertainties of the
+anomalous form factors 
+$\rho_\text{NC}^\prime$ and $\kappa_\text{NC}^\prime$ are
+determined in a simultaneous fit together with the
+PDFs
+In this fit, the $\rho_\text{NC}^\prime$ and $\kappa_\text{NC}^\prime$
+parameters are considered to be universal, i.e.\ no flavor-specific
+factors are considered. 
+Results are displayed in fig.~\ref{fig:rhokappa:f} and
+are compared with the uncertainties from 
+LEP+SLD\,\footnote{In the LEP+SLD combination the parameters
+  $\rho_{\textrm{NC},\ell}$ and $\kappa_{\textrm{NC},\ell}$ have been
+  determined.
+  For this comparison, we have translated the uncertainties
+  to the anomalous parameters $\rho_\text{NC}^\prime$ and
+  $\kappa_\text{NC}^\prime$.}.
+The uncertainties of LHeC are about a few permille, and are
+of similar size than those of the LEP+SLD combination.
+As expected, the scenario LHeC-60b yields smallest uncertainties,
+while LHeC-50a the largest ones.
+
+
+The anomalous form factors of the two quark families can be
+determined, when assuming the parameters of the electron to be given
+by the SM formalism.
+A fit of four anomalous parameters ($\rho_{\textrm{NC},u}$, 
+$\kappa_{\textrm{NC},u}$, $\rho_{\textrm{NC},d}$,
+and $\kappa_{\textrm{NC},d}$) is performed and the
+resulting contours at 68\,\%~C.L. for the two parameters, for each of
+the two quark families, is displayed in fig.~\ref{fig:rhokappa:ud}.
+The results of this analysis can be translated to the results of the coupling
+fits (see fig.~\ref{fig:couplings}).
+The uncertainties may be compared to measurements at LEP+SLD, where directly
+the $\rho$ and $\kappa$ parameters have been measured for the second
+generation quarks, $c$ and $b$. 
+However, the LHeC inclusive NC DIS data is fairly complementary to
+such measurements in $e^+e^-$ collisions, since LHeC is mainly
+sensitive to the light quarks, since they form the valence quarks at
+high $x$. 
+%
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.46\textwidth]{plot_NC_rhokap_u}
+  \includegraphics[width=0.46\textwidth]{plot_NC_rhokap_d}
+  \caption{
+    Expectations at the 68\,\% confidence level for
+    the simultaneous determination of the
     anomalous form factors for $u$ and $d$-type quarks, assuming known
     values for the electron parameters.
     The values are compared with uncertainties reported by LEP+SLD for
@@ -1115,71 +1151,13 @@ found to have a similar uncertainty of about a few permille.
     $\sin\theta_{\text{W}}^{\text{eff},(c,b)}$ for charm or bottom quarks,
     respectively.
   }
-  \label{fig:rhokappa}
+  \label{fig:rhokappa:ud}
 \end{figure}
+%
 
-
-
-Secondly, when assuming the weak couplings of the electron to be given by the SM formalism,
-the anomalous form factors for the two quark families can be
-determined, see fig.~\ref{fig:rhokappa} (right).
-This is done in a fit of the four parameters
-and thus the results can be translated to the results of the coupling
-fits (see tab.~\ref{tab:couplings} and fig.~\ref{fig:couplings}).
-In fig.~\ref{fig:rhokappa} the uncertainties for three different LHeC
-scenarios are compared with uncertainties from the LEP+SLD
-combination~\cite{ALEPH:2005ab}.
-Since in the LEP+SLD analysis the values of $\rho$ and $\kappa\sw$
-are determined themselves, we compare only the size of the uncertainties.
-Furthermore it shall be noted, that LEP is mainly sensitive to the
-parameters of leptons or heavy quarks, while LHeC data is more
-sensitive to light quarks ($u$,$d$,$s$), and thus the LHeC
-measurements are highly complementary.
-
-
-%\paragraph{Prospects for neutral current parameters}
-
-
-{\color{blue} Maximum sensitivity is obtained in 1-parameter fits, and prospects are collected in table:~\ref{tab:rhopwithcorrelations}}.
-\begin{table}[bhtp]
-  \footnotesize
-  \centering
-  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-    \hline
-    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC}& \multicolumn{2}{c}{FCC}  \\
-    \hline
-    \rhopu+PDF & \rhopu &  1  &  0.009    & 1  & 0.004  \\
-    \kappu+PDF & \kappu &  1  &  0.004    & 1  & 0.003  \\
-    \rhopd+PDF & \rhopd &  1  &  0.014    & 1  & 0.006  \\
-    \kappd+PDF & \kappd &  1  &  0.023    & 1  & 0.013  \\
-    \rhope+PDF & \rhope &  1  &  0.006    & 1  & 0.003  \\
-    \kappe+PDF & \kappe &  1  &  0.003    & 1  & 0.002  \\
-    \hline
-    \rhopq+PDF & \rhopq &  1  &  0.0059    & 1  & 0.0027  \\
-    \kappq+PDF & \kappq &  1  &  0.0038    & 1  & 0.0024  \\
-    \hline
-    \rhopf+PDF & \rhopf &  1  &  0.0031    & 1  & 0.0015  \\ %0.00145641
-    \kappf+PDF & \kappf &  1  &  0.0019    & 1  & 0.0011  \\
-    \hline
-    \\
-    \multicolumn{3}{l}{Expectations for \rhopW{,f} (CC)} \\
-    \hline
-    % log.final.PAR19eq50.3p.PDF.2.txt
-    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1  & 0.0027 \\
-    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
-    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1  &  0.0012\\
-    \hline
-  \end{tabular}
-  \caption{
-    {\color{red} note: these numbers need to be updated, if we want to
-    include such a table.}
-    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters.
-  }
-  \label{tab:rhopwithcorrelations}
-\end{table}
-
-
-
+% --------------------------------------------
+% Q2 dependent study
+%
 \begin{figure}[thbp]
     \centering
     \includegraphics[width=0.40\textwidth]{plot_rhopQ2}
@@ -1193,22 +1171,26 @@ measurements are highly complementary.
   }
   \label{fig:rhokappaQ2}
 \end{figure}
-A meaningful test of the SM is obtained by determining the scale
+%
+A very important test of the SM is obtained by determining the scale
 dependence of the anomalous form factors.
-In case of the $\kappa_\text{NC}^\prime$ parameter this procedure is equivalent to the
-running of the effective weak mixing angle,
-$\sin\theta_{\text{W}}^{\text{eff}}(\mu)$.
-However, DIS is again complementary to other measurements since the
+Prospects for a determination of $\rho_\text{NC}^\prime$ or
+$\kappa_\text{NC}^\prime$ at 
+different \Qsq\ values is displayed for the scenarios LHeC-60a and
+LHeC-50a in fig.~\ref{fig:rhokappaQ2}.
+These values can be compared to results obtained by
+H1~\cite{Spiesberger:2018vki}. 
+The measurement of $\kappa_\text{NC}^\prime(\Qsq)$ can be easily
+translated to a measurement of the effective weak mixing angle and
+it shows, that the \Qsq dependence of 
+$\sin\theta_{\text{W}}^{\text{eff},(\ell)}(\Qsq)$ can be determind
+over a wide kinematic range of about $25<\sqrt{\Qsq}<700\,\GeV$
+with a precision of up to 0.1\,\% and commonly better than at least
+1\,\%.
+However, DIS is complementary to other measurements since the
 process is mediated in the space-like regime, i.e.\ $\Qsq=-q^2$ with
-$q$ being the boson four-momentum.
-Prospects for a determination of $\rho_\text{NC}^\prime$ or $\kappa_\text{NC}^\prime$ at
-different \Qsq\ values is displayed in fig.~\ref{fig:rhokappaQ2} and
-compared to results obtaind by H1.
-The value of $\kappa_\text{NC}^\prime(\mu)$ can be easily translated to a
-measurement of the effective weak mixing angle and shows, that this
-quantity can be determind with a precision of up to 0.1\,\% and with
-bettern than at least 1\,\% over a wide kinematic range of about
-$25<\sqrt{\Qsq}<700\,\GeV$.
+$q$ being the boson four-momentum (c.f.\ sect.~\ref{sec:sw2eff}).
+
 
 
 % -------------------------------------------------------------------- 
@@ -1217,27 +1199,27 @@ $25<\sqrt{\Qsq}<700\,\GeV$.
 \clearpage
 \section{Electroweak effects in charged-current exchange}
 At the LHeC, the charged current sector can be uniquely measured
-over many orders of magnitude in $Q^2$, due to the excellent tracking
-detectors, calorimetry, and high-bandwidth triggers.
+over many orders of magnitude in $Q^2$.
+This is because the CC DIS event kinematics can be fully reconstructed with
+the known electron beam-energy and the measurement of the hadronic
+final state.
+The measurement of the hadronic final state is then of great
+importance and is achieved by precise tracking
+detectors, highly granular calorimeters, and high-bandwidth triggers.
 %
-%This provides a precise determination of the $W$-boson mass (see
-%above)
-%and furthermore, the form factors of the
-%effective couplings of the fermions to the $W$-boson can be uniquely
-%measured.
-%
-Similarly as in the NC case, higher-order EW corrections to the CC
+Higher-order EW corrections to the CC
 cross sections are collected in the effective couplings of the
-fermions to the $W$-boson and these are represented in terms of the
+fermions to the $W$-boson.
+Similarly as in the NC case, these are represented in terms of the
 form factors $\rho_{\text{CC},eq}$ and $\rho_{\text{CC},e\bar{q}}$.
 %
-In the SM formalism, only two of these form factors are present.
+In the SM formalism only two of these form factors are present.
 Since extensions of the SM formalism likely alter these factors, we
 introduce two anomalous form factors
 $\rho^\prime_{\text{CC},(eq/e\bar{q})}$,
-whose values are unity for the strict validity of the SM and
+whose values are unity for the strict validity of the SM.
 %$\rho_{\text{CC},(eq/e\bar{q})} \rightarrow \rho^\prime_{\text{CC},(eq/e\bar{q})} \rho_{\text{CC},(eq/e\bar{q})}$.
-the CC structure functions then become 
+The CC structure functions then become 
 \begin{align}
   W_2^- &=
   x \left( (\rho_{\text{CC}, eq}\rhopW{,eq})^2 U + (\rho_{\text{CC},e\bar{q}}\rhopW{,e\bar{q}})^2 \overline{D} \right)
@@ -1258,11 +1240,24 @@ the CC structure functions then become
 
 
 
-\begin{figure}[thbp]
+The prospects for a determination of these anomalous form factors with
+LHeC data are obtained by performing a fit of the two parameters
+$\rho^\prime_{\text{CC},eq}$ and $\rho^\prime_{\text{CC},e\bar{q}}$ together with
+the PDFs.
+This procedure is equivalent to a direct determination of the the
+factors $\rho_{\text{CC},eq}$ and $\rho_{\text{CC},e\bar{q}}$
+themselves. 
+The prospected uncertainties for the LHeC-50a and LHeC-60a scenarios
+are displayed in fig.~\ref{fig:rhoCC}. 
+Numerical values are collected in table~\ref{tab:rhoCC}.
+It is found, that these parameter can be determined with a relative
+uncertainty of up to 0.2--0.3\,\%.
+For the LHeC-60b scenario, even smaller uncertainties may be achieved.
+This represents a unique measurement at very high precision of charged
+current interactions at considerably high scales.
+\begin{figure}
     \centering
-    \includegraphics[width=0.40\textwidth]{plot_rhoWellipse} 
-   \hskip0.05\textwidth
-    \includegraphics[width=0.40\textwidth]{plot_rhopWQ2}
+    \includegraphics[width=0.50\textwidth]{plot_rhoWellipse} 
   \caption{
     Left: anomalous modifications of the charged current form factors
     $\rho^\prime_{\text{CC},eq}$ and $\rho^\prime_{\text{CC},e\bar{q}}$ for
@@ -1273,46 +1268,22 @@ the CC structure functions then become
   }
   \label{fig:rhoCC}
 \end{figure}
-The prospects for a determination of these anomalous form factors with
-LHeC data are obtained by performing a fit of the two parameters
-$\rho^\prime_{\text{CC},eq}$ and $\rho^\prime_{\text{CC},e\bar{q}}$ together with
-the PDFs.
-This procedure is equivalent to a direct determination of the the
-factors $\rho_{\text{CC},eq}$ and $\rho_{\text{CC},e\bar{q}}$
-themselves and results are displayed in fig.~\ref{fig:rhoCC} and
-collected in table~\ref{tab:rhoCC}.
-It is found, that these parameter can be determined with a relative
-uncertainty of up to 0.2--0.3\,\%.
-This represents a unique measurement at very high precision of charged
-current interactions at considerably high scales.
 
-
-Furthermore, the \Qsq dependence of the anomalous form factors can be studied.
-Relative uncertainties obtained in a determination of
-$\rho^\prime_\text{CC}$ at various values of \Qsq, where we used
-$\rho^\prime_{\text{CC},eq}=\rho^\prime_{\text{CC},e\bar{q}}$ and
-in that fit all parameters at the various \Qsq values are fitted
-simultaneously and together with the PDFs, are displayed in fig.~\ref{fig:rhoCC}.
-It is found, that with the LHeC data the potential deviation of
-$\rho^\prime_\text{CC}$ from
-the SM expectation can be studied with very high precision and over a
-large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
 \begin{table}[bhtp]
   \footnotesize
   \centering
-  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-    \hline
-    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC}& \multicolumn{2}{c}{FCC}  \\
-    \hline
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}         & 1  &   0.0030  & 1  &  0.0012\\
-    
+  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+    \toprule
+    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC-50a}& \multicolumn{2}{c}{LHeC-50b}& \multicolumn{2}{c}{LHeC-60a}& \multicolumn{2}{c}{LHeC-60b}  \\
+    \midrule
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}          &  1  &   0.0027  & 1 & 0.00  & 1 & 0.00  & 1 & 0.00 \\
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}    &  1  &   0.0030  & 1 & 0.00  & 1 & 0.00  & 1 & 0.00 \\
     \hline
     % log.final.PAR19eq50.3p.PDF.2.txt
-    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1  & 0.0027 \\
-    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
-    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1  &  0.0012\\
-    \hline
+    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1 & 0.0027  & 1 & 0.0027  & 1 & 0.0027 \\
+    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1 & 0.0011  & 1 & 0.0011  & 1 & 0.0011 \\
+    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1 & 0.0012  & 1 & 0.0012  & 1 & 0.0012 \\
+    \bottomrule
   \end{tabular}
   \caption{
     Expectations for \rhopW{,f} (CC).
@@ -1322,6 +1293,34 @@ large range in $\sqrt{\Qsq}$, up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
   }
   \label{tab:rhoCC}
 \end{table}
+
+
+Furthermore, the \Qsq dependence of the anomalous form factors can be studied.
+Relative uncertainties obtained in a determination of
+$\rho^\prime_\text{CC}$ at various values of \Qsq are displayed in fig.~\ref{fig:rhoCC}.
+In this PDF+EW fit we used $\rho^\prime_{\text{CC},eq}=\rho^\prime_{\text{CC},e\bar{q}}$ and
+twelve $\rho^\prime_\text{CC}$ parameters at the \Qsq values of the
+data bin grid are fitted simultaneously.
+It is found, that with the LHeC CC DIS data the parameter $\rho^\prime_\text{CC}$ 
+can be studied with very high precision over a
+large range up to values of $\sqrt{\Qsq}$ of about 500\,\GeV.
+The uncertainty of these parameters are mainly dominated by
+the normalisation uncertainties of the data.
+Higher center-of-mass energies, i.e.\ $E_e=60\,\GeV$ instead of
+50\,\GeV, has therefore only moderate impact on the size of the
+uncertainties in the central \Qsq region, but extends the measurement
+to higher \Qsq.
+%
+\begin{figure}[thbp]
+    \centering
+    \includegraphics[width=0.50\textwidth]{plot_rhopWQ2}
+  \caption{
+    Right: scale dependent measurement of the anomalous modification
+    of the charged current form factor $\rho^\prime_{\text{CC}}(\Qsq)$, assuming $\rho^\prime_{\text{CC},eq}=\rho^\prime_{\text{CC},e\bar{q}}=\rho^\prime_{\text{CC}}$.
+  }
+  \label{fig:rhoCC}
+\end{figure}
+%
 
 
 
@@ -1442,6 +1441,7 @@ simultaneous determination of NC and CC observables is reasonable}
   \label{fig:couplings}
 \end{figure}
 
+
 % ------------------------------------------------------------------------ 
 \clearpage
 \subsection{Polarisation asymmetry in NC, and polarisation in CC}
@@ -1498,6 +1498,53 @@ $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$.
   }
   \label{tab:sweff}
 \end{table}
+
+
+
+% ------------------------------------------------------------------------ 
+\clearpage
+\subsection{Best uncertainties for $\rho^\prime$ and $\kappa^\prime$
+  parameters}
+In a fit of a single anomalous form factor, we obtain following uncertainties. 
+\color{blue} Maximum sensitivity is obtained in 1-parameter fits, and prospects are collected in table:~\ref{tab:rhopwithcorrelations}.
+\begin{table}[bhtp]
+  \footnotesize
+  \centering
+  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+    \hline
+    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC}& \multicolumn{2}{c}{FCC}  \\
+    \hline
+    \rhopu+PDF & \rhopu &  1  &  0.009    & 1  & 0.004  \\
+    \kappu+PDF & \kappu &  1  &  0.004    & 1  & 0.003  \\
+    \rhopd+PDF & \rhopd &  1  &  0.014    & 1  & 0.006  \\
+    \kappd+PDF & \kappd &  1  &  0.023    & 1  & 0.013  \\
+    \rhope+PDF & \rhope &  1  &  0.006    & 1  & 0.003  \\
+    \kappe+PDF & \kappe &  1  &  0.003    & 1  & 0.002  \\
+    \hline
+    \rhopq+PDF & \rhopq &  1  &  0.0059    & 1  & 0.0027  \\
+    \kappq+PDF & \kappq &  1  &  0.0038    & 1  & 0.0024  \\
+    \hline
+    \rhopf+PDF & \rhopf &  1  &  0.0031    & 1  & 0.0015  \\ %0.00145641
+    \kappf+PDF & \kappf &  1  &  0.0019    & 1  & 0.0011  \\
+    \hline
+    \\
+    \multicolumn{3}{l}{Expectations for \rhopW{,f} (CC)} \\
+    \hline
+    % log.final.PAR19eq50.3p.PDF.2.txt
+    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1  & 0.0027 \\
+    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
+    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1  &  0.0012\\
+    \hline
+  \end{tabular}
+  \caption{
+    {\color{red} note: these numbers need to be updated, if we want to
+    include such a table.}
+    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters.
+  }
+  \label{tab:rhopwithcorrelations}
+\end{table}
+
+
 
 
 % ------------------------------------------------------------------------ 
