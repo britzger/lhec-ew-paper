@@ -761,9 +761,8 @@ The dominant corrections to the vertex and to the propagator
 self-energies depend on the top-quark mass \mt, and are
 represented by the  $\rho_\textrm{NC}$ and $\kappa_\textrm{NC}$ parameters and the
 correction factor \dr.
-Therefore, inclusive DIS cross sections are sensitive to \mt\
-through radiative corrections, and the leading terms are proportional
-to $\mt^2/\mW^2$.
+Therefore inclusive DIS cross sections are sensitive to \mt.
+The leading terms are proportional to $\mt^2/\mW^2$.
 \emph{Since possibly other heavy particles may contribute to
 these quantum corrections with similar terms, the determination of
 \mt\ represent an important portal to new physics beyond the SM.}
@@ -863,7 +862,7 @@ arise from strange quark contributions.
 
 In the PDF+EW fit, the vector and axial-vector couplings of up-type and
 down-type quarks, $g_V^{u/d}$ and $g_A^{u/d}$ are determined.
-A single fit is performed to the LHeC data, where all the four
+A single fit to the LHeC data is performed, where all the four
 coupling parameters are determined together with the PDFs. 
 The fit parameters are defined in the Born approximation and
 \Qsq\ dependent higher-order corrections are calculated in
@@ -881,8 +880,8 @@ figure~\ref{fig:couplings}.
   \caption{
     Weak-neutral-current vector and axial-vector couplings of $u$-type quarks to the $Z$-boson
     (left), and those of the $d$-type quarks (right) at 68\,\% confidence level~(C.L.) for
-    simulated LHeC data with $E_e=50\,\GeV$.
-    The LHeC expectations are compared with results from the combined LEP experiments~\cite{ALEPH:2005ab}
+    simulated LHeC data with $E_e=50\,\GeV$ (scenario LHeC-50a).
+    The LHeC expectations are compared with results from the combined LEP+SLC experiments~\cite{ALEPH:2005ab}
     and single measurements by D0~\cite{D0} and H1~\cite{Spiesberger:2018vki}.
     The standard model expectations are diplayed by a red star.
   }
@@ -911,19 +910,21 @@ figure~\ref{fig:couplings}.
   \begin{tabular}{cr@{\hskip4pt}lccc}
     \toprule
     Coupling  &  \multicolumn{2}{c}{PDG} & \multicolumn{3}{c}{Expected uncertainties} \\
-    parameter &  &  & LHeC-60 & LHeC-60 ({\footnotesize$\delta_\text{uncor.}=0.25\,\%$})  & LHeC-50 \\
+    parameter &  &  & LHeC-60b & LHeC-60a & LHeC-50a \\
     \midrule
-    $\au$  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.0022$ & $0.0015$ & $0.0035$ \\
-    $\ad$  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.0055$ & $0.0034$ & $0.0083$ \\
-    $\vu$  & $0.18$   & $\pm0.05$            & $0.0015$ & $0.0010$ & $0.0028$ \\
-    $\vd$  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.0046$ & $0.0027$ & $0.0067$ \\
+    $\au$  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.0015$ & $0.0022$ & $0.0035$ \\
+    $\ad$  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.0034$ & $0.0055$ & $0.0083$ \\
+    $\vu$  & $0.18$   & $\pm0.05$            & $0.0010$ & $0.0015$ & $0.0028$ \\
+    $\vd$  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.0027$ & $0.0046$ & $0.0067$ \\
     \midrule
-    $\ve$  & $ $      & $       $            & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
-    $\ve$  & $ $      & $                $   & $0.00xy$ & $0.00xy$ & $0.00xy$ \\
+    $\au$  &  \\
+    $\vu$  &  \\
     \midrule
-    $\vu+\au$+PDF  &  \\
-    $\vd+\ad$+PDF  &  \\
-    $\ve+\gae$+PDF  &  \\
+    $\ad$  &  \\
+    $\vd$  &  \\
+    \midrule
+    $\ae$  &  \\
+    $\ve$  &  \\
     \bottomrule
 \hline
   \end{tabular}
@@ -943,9 +944,9 @@ While the current determinations from $e^+e^-$, $ep$ or $p\bar{p}$
 data have all somewhat similar precision,
 the LHeC will greatly improve nowadays measurements of these
 parameters, and the uncertainties at the LHeC are about an order of magnitude
-smaller than the currently most precise ones~\cite{PDG}.
-With $E_e=60\,\GeV$, and/or with more optimistic assumptions on the
-data, these prospected uncertainties are even further decreased.
+smaller than the currently most precise ones~\cite{PDG19}.
+With $E_e=60\,\GeV$ and/or with more optimistic assumptions on the
+data, these prospected uncertainties are even further decreased (see tab.~\ref{tab:couplings}, not displayed in fig.~\ref{fig:couplings}).
 Again smaller uncertainties are obtained, when the coupling parameters
 of only a single quark-type is fitted, and the other is set to its SM
 predictions. {\color{red}Values are displayed in
@@ -954,7 +955,7 @@ predictions. {\color{red}Values are displayed in
 
 
 At LHeC, the vector and axial-vector couplings can be disentangled
-without any ambiguity, since DIS is mediated in the $t$-channel and particularly
+without any (mirror-)ambiguity, since DIS is mediated in the $t$-channel and particularly
 the $\gamma Z$ interference terms are of great importance.
 This is  different to measurements at the $Z$ pole, where only the
 squares of the couplings are accessible, which then yields three `mirror
@@ -1008,7 +1009,7 @@ the space-like regime ($q^2<0$) and photon exchange contributions are
 always present.
 However, a comparable definition of
 $\sin^2\theta_\textrm{W,eff}^{\ell}$ can be made in DIS, and we modify
-the second term in eq.~\eqref{eq:gV} according to
+the second term in eq.~\eqref{eq:gV} ({\color{red} forward ref. to be fixed.}) according to
 \begin{equation}
   2Q_{f} \kappa_{\text{NC}, f}\ \cdot \sw
   \rightarrow
@@ -1059,8 +1060,7 @@ In the PDF+EW fit the uncertainties of
 $\sin^2\theta_\textrm{W,eff}^{\ell}$ are determined and results for
 LHeC with $E_e=50\,\GeV$ or 60\,\GeV are displayed in
 fig.~\ref{fig:sw2eff}.
-For LHeC with $E_e=60\,\GeV$ and with $\delta_\textrm{unc.}=0.25\,\%$
-(c.f.~sect.~\ref{sec:data}) an uncertainty of
+For LHeC-60b an uncertainty of
 \begin{equation}
   \Delta \sin^2\theta_\textrm{W,eff}^{\ell} =  \pm0.00015
 \end{equation}
@@ -1077,17 +1077,19 @@ parameters, and many models further predict flavor-specific or
 In a simulataneous determination of
 $\sin^2\theta_\textrm{W,eff}^{\ell}$ and a universal modification of
 $\rho$, an uncertainty $\sin^2\theta_\textrm{W,eff}^{\ell}=\pm0.00023$
-($\pm0.00071$) for $E_e=60\,\GeV$ and $\delta_\textrm{unc.}=0.25\,\%$
-($E_e=50\,\GeV$, $\delta_\textrm{unc.}=0.5\,\%$) is found in the
+($\pm0.00071$) for LHeC-60b (LHeC-50a) is found in the
 EW+PDF fit.
 %
 The sensitivity of the LHeC NC/CC DIS data on \Qsq-dependent SM
-modification is studied in a slightly more general framework in
-sect.~\ref{sec:rhokappa} below. 
+modification is studied in a somewhat more general framework in
+sect.~\ref{sec:rhokappa} below, which is often referred to as the
+`running' of the weak mixing angle.
+
 
 {\color{red}Not mentioned so far: $\kappa^\prime_{\text{NC},e}$, and
   $\kappa^\prime_{\text{NC},e}+\kappa^\prime_{\text{NC},u}+\kappa^\prime_{\text{NC},d}$,
 and table~\ref{tab:sw2eff}.}
+
 
 
 %-----------------------------------------------------------------------
@@ -1116,15 +1118,16 @@ In this section, we study the sensitivity of LHeC inclusive DIS data
 to the NC form factors, $\rho_\text{NC}$ and $\kappa_\text{NC}$.
 Studies on the CC form factor $\rho_\text{CC}$, are discussed in the
 subsequent section.
+({\color{red}also refer to $sin^2\theta_W$ from previous section.})
 
-
-In NC interactions the form factors $\rho_{\text{NC}}$ and
-$\kappa_{\text{NC}}$ represent the universal
+In NC interactions the form factors $\rho_{\text{NC},f}$ and
+$\kappa_{\text{NC},f}$ represent the universal
 and flavor-specific{\color{blue}(?)} higher-order corrections to the
 vector and axial-vector couplings and cause their \Qsq dependence. 
 A precise test of the validity of these corrections can be performed
-by introducing the anomalous parameters \rhop\ and \kapp{}, which can
-also be considered to be \Qsq\ dependent:
+by introducing the anomalous parameters \rhop\ and
+\kapp{}~\cite{Spiesberger:2018vki}, which can  
+also be considered to be flavor-specific and \Qsq\ dependent:
 \begin{align}
   g_A^f &= \sqrt{\rho_{\text{NC}, f}\rhop{,f}} \Itf
   \label{eq:gA} \, ,
@@ -1271,16 +1274,16 @@ The measurement of the hadronic final state is then of great
 importance and is achieved by precise tracking
 detectors, highly granular calorimeters, and high-bandwidth triggers.
 %
-Higher-order EW corrections to the CC
+Higher-order EW corrections to the CC DIS
 cross sections are collected in the effective couplings of the
-fermions to the $W$-boson.
+fermions to the $W$ boson.
 Similarly as in the NC case, these are represented in terms of the
 form factors $\rho_{\text{CC},eq}$ and $\rho_{\text{CC},e\bar{q}}$.
 %
 In the SM formalism only two of these form factors are present.
 Since extensions of the SM formalism likely alter these factors, we
-introduce two anomalous form factors
-$\rho^\prime_{\text{CC},(eq/e\bar{q})}$,
+study two anomalous form factors
+$\rho^\prime_{\text{CC},(eq/e\bar{q})}$~\cite{Spiesberger:2018vki},
 whose values are unity for the strict validity of the SM.
 %$\rho_{\text{CC},(eq/e\bar{q})} \rightarrow \rho^\prime_{\text{CC},(eq/e\bar{q})} \rho_{\text{CC},(eq/e\bar{q})}$.
 The CC structure functions then become 
@@ -1316,7 +1319,7 @@ are displayed in fig.~\ref{fig:rhoCC}.
 Numerical values are collected in table~\ref{tab:rhoCC}.
 It is found, that these parameter can be determined with a relative
 uncertainty of up to 0.2--0.3\,\%.
-For the LHeC-60b scenario, even smaller uncertainties may be achieved.
+For the LHeC-60b scenario, even smaller uncertainties are be achieved.
 This represents a unique measurement at very high precision of charged
 current interactions at considerably high scales.
 \begin{figure}
@@ -1539,7 +1542,7 @@ simultaneous determination of NC and CC observables is reasonable}
     {\color{red}We need to re-do this plot, but I don't know if it is
       at all reasonable to show it...}
   }
-  \label{fig:couplings}
+  \label{fig:couplings2}
 \end{figure}
 
 
