@@ -373,21 +373,23 @@ A summary of the data sets is given in Table~\ref{tab:datasets}.
   \small
   \begin{tabular}{lccccccc}
     \toprule
-    Data set & Processes & $E_p$ [TeV] & $Q_e$ & $P_e$ &
-    $\mathcal{L}$ [fb$^{-1}$] & \Qsq\ range [GeV$^2$] & 
-    No. of data points \\
+    &  & & & & & 
+    \multicolumn{2}{c}{No. of data points (NC, CC)} \\
+%    \cmidrule(lr){7-8}
+    Processes & $E_p$ [TeV] & $Q_e$ & $P_e$ &
+    $\mathcal{L}$ [fb$^{-1}$] & \Qsq\ range [GeV$^2$] & LHeC-60 & LHeC-50  \\
     \midrule
-    D1 & NC, CC &  7  & $-1$ &  $-0.8$ & 1000 & 5 -- $10^6$ 
-       & 100 
+    NC, CC &  7  & $-1$ &  $-0.8$ & 1000 & 5 -- $10^6$ 
+       & 150, 114 & 150, 123
     \\ % D4
-    D2 & NC, CC &  7  & $-1$ &  $+0.8$ & 10   & 5 -- $10^6$  
-       & 100 
+    NC, CC &  7  & $-1$ &  $+0.8$ & 10   & 5 -- $10^6$  
+       & 150, 113 & 146, 117
     \\ % D8
-    D3 & NC, CC &  7  & $+1$ &  $ 0  $ & 10   & 5 -- $10^6$  
-       & 100 
+    NC, CC &  7  & $+1$ &  $ 0  $ & 10   & 5 -- $5\cdot10^5$  
+       & 148, 109 & 145, 111
     \\ % D7
-    D4 & NC, CC &  1  & $-1$ &  $ 0  $ & 1    & 5 -- $10^6$  
-       & 100 
+    NC, CC &  1  & $-1$ &  $ 0  $ & 1    & 5 -- $10^5$  
+       & 128, ~~93 & 120, ~~92
     \\ % D5
     \bottomrule
   \end{tabular}
@@ -445,18 +447,21 @@ have been used).
 \begin{table}[t!]
   \centering
   \small
-  \begin{tabular}{lc}
+  \begin{tabular}{lccc}
     \toprule
-    Source of uncertainty & Uncertainty \\
+     & & \multicolumn{2}{c}{Uncertainty on cross section} \\
+    Source of uncertainty & Size of uncertainty & $\Delta\sigma_\textrm{NC}$ & $\Delta\sigma_\textrm{CC}$ \\
     \midrule
-    Scattered electron energy scale $\Delta E_e' /E_e'$ & 0.1 \% \\
-    Scattered electron polar angle  & 0.1\,mrad \\
-    Hadronic energy scale $\Delta E_h /E_h$ & 0.5\,\% \\
-    %calorimeter noise (only $y < 0.01$) & 1-3\,\% \\
-    Radiative corrections & 0.3\,\% \\
-    Photoproduction background ($y > 0.5$) & 1\,\% \\
-    Uncorrelated uncertainty & 0.5\,\% \\ % Global efficiency error
-    Luminosity uncertainty & 1.0\,\% \\
+    Scattered electron energy scale $\Delta E_e' /E_e'$ & 0.1 \%  & 0.1 -- 1.7\,\% &   \\
+    Scattered electron polar angle  & 0.1\,mrad  &   0.1 -- 0.7\,\% &    \\
+    Hadronic energy scale $\Delta E_h /E_h$ & 0.5\,\%  & 0.1 -- 4\,\% &  1.0 -- 8.6\,\%  \\
+    Calorimeter noise (only $y < 0.01$) & 1\,--\,3\,\%  & 0.0 -- 1.1\,\% &    \\
+    \addlinespace    
+    Radiative corrections &  &  0.3\,\%  &  \\
+    Photoproduction background ($y > 0.5$) & 1\,\%  & 0.0 or 1.0\,\% &    \\
+    %Global efficiency uncertainty &   &  0.5\,\%  &   0.5\,\%   \\ that's the uncorrel. uncertainty
+    Uncorrelated uncertainty (efficiency) &  &  0.5\,\% &   0.5\,\%  \\ % Global efficiency error
+    Luminosity uncertainty (normalisation) & & 1.0\,\%   &  1.0\,\%    \\
     \bottomrule
  \end{tabular}
 \caption{
@@ -539,12 +544,12 @@ use are collected in Table\,\ref{tab:scenarios}.
   \small
   \begin{tabular}{lccc}
     \toprule
-    Scenario & $E_e$ & Bin grid  & $\delta_\textrm{unc}$\\
+    Scenario & $E_e$ & No. of data points (bin grid)\\
     \midrule
-    LHeC-50a  &   50\,\GeV&  nominal             &  0.5\,\%  \\
-    LHeC-50b  &   50\,\GeV&  4$\times$ nominal   &  0.25\,\% \\
-    LHeC-60a  &   60\,\GeV&  nominal             &  0.5\,\%  \\
-    LHeC-60b  &   60\,\GeV&  4$\times$ nominal   &  0.25\,\% \\
+    LHeC-50a  &   50\,\GeV&  nominal            \\
+    LHeC-50b  &   50\,\GeV&  4$\times$ nominal  \\
+    LHeC-60a  &   60\,\GeV&  nominal            \\
+    LHeC-60b  &   60\,\GeV&  4$\times$ nominal  \\
     \bottomrule
  \end{tabular}
   \caption{
@@ -553,7 +558,14 @@ use are collected in Table\,\ref{tab:scenarios}.
     last column indicates 
     {\color{red} 
     the technical realisation in the data tables of the chosen 
-    bin grid. ???} 
+    bin grid. ???}
+    {\color{blue}
+      An increased number of bins w.r.t.\ the \emph{nominal} number of
+      data points (c.f.\ table~\ref{tab:datasets}) is emulated by re-calculating
+      the uncorrelated uncertainty accordingly, i.e.\ for `nominal'
+      $\Delta_\textrm{uncorr}=0.5\,\%$ is used and for `4$\times$
+      nominal' a value of $\Delta_\textrm{uncorr}=0.25\,\%$ is used.
+    }
   }
   \label{tab:scenarios}
 \end{table}
@@ -678,12 +690,12 @@ expected uncertainties of
 \begin{eqnarray}
   \Delta\mW(\text{LHeC-60a}) 
   &=& 
-  \pm5_{({\rm exp})}\pm8_{({\rm PDF})}\,\MeV  
-  =\, 10_{\text{(tot)}}\,\MeV{\rm ~~~~and~~} 
+  \pm8_{({\rm exp})}\pm5_{({\rm PDF})}\,\MeV  
+  =\, 10_{\text{(tot)}}\,\MeV{\rm ~~~~and~~} % 9.6
   \\
   \Delta\mW(\text{LHeC-50a}) 
   &=& 
-  \pm8_{({\rm exp})}\pm9_{({\rm PDF})}\,\MeV  
+  \pm9_{({\rm exp})}\pm8_{({\rm PDF})}\,\MeV  % 8 is 7.55
   =\, 12_{\text{(tot)}}\,\MeV
 \nonumber
 \end{eqnarray}
@@ -692,7 +704,7 @@ section~\ref{sec:data}), and
 \begin{eqnarray}
   \Delta\mW(\text{LHeC-60b}) 
   &=& 
-  \pm3_{({\rm exp})}\pm5_{({\rm PDF})}\,\MeV 
+  \pm5_{({\rm exp})}\pm6_{({\rm PDF})}\,\MeV 
   =\, 6_{\text{(tot)}}\,\MeV{\rm ~~~~and~~} 
   \\
   \Delta\mW(\text{LHeC-50b}) 
@@ -754,10 +766,8 @@ data.
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.42\textwidth]{alphas_summary_W-bosonMass}
-  \hskip0.05\textwidth
-  \includegraphics[width=0.42\textwidth]{mW_uncorr}
   \caption{
-    Left: Determination of the $W$-boson mass from a combined 
+    Determination of the $W$-boson mass from a combined 
     EW+PDF fit, assuming fixed values for all other EW parameters. 
     Different LHeC scenarios with beam energies of $E_e=60~\GeV$ 
     and 50~\GeV as described in the text are considered and 
@@ -765,15 +775,30 @@ data.
     measurements~\cite{Group:2012gb,Schael:2013ita,Aaboud:2017svj}
     and with the world average value 
     (PDG19)~\cite{Tanabashi:2018,PDG19}. 
-    Right: The total uncertainty $\Delta m_W$ as a function of 
-    the size of the uncorrelated uncertainty. The horizontal 
-    line marks the uncertainty of the present world average.
-    The scenarios `a' and `b' are indicated by vertical lines.
     \\
     {\color{green} Shift label at the x-axis of the left plot, 
     numbers missing?}
     }
     \label{fig:mW}
+\end{figure}
+
+\begin{figure}[t!]
+  \centering
+  \includegraphics[width=0.42\textwidth]{mW_uncorr}
+  \hskip0.05\textwidth
+  \includegraphics[width=0.42\textwidth]{mW_norm}
+  \caption{
+    Left: The total uncertainty $\Delta m_W$ as a function of 
+    the size of the uncorrelated uncertainty. The horizontal 
+    line marks the uncertainty of the present world average.
+    The scenarios `a' and `b' are indicated by vertical lines.
+    Right: The total uncertainty $\Delta m_W$ as a function of 
+    the size of the normalisatoin uncertainty.
+    All other systematic uncertainties are kept as listed in
+    table~\ref{tab:uncert}.
+    The nominal assumption of 1\,\% is indicated by a vertical line.
+    }
+    \label{fig:mW2}
 \end{figure}
 
 {\color{blue}(For the conclusions: 
@@ -931,50 +956,76 @@ the current most precise measurements.
     The LHeC expectations are compared with results from the 
     combined LEP+SLC experiments~\cite{ALEPH:2005ab} and single 
     measurements by D0~\cite{D0} and H1~\cite{Spiesberger:2018vki}.
-    The standard model expectations are diplayed by a red star. 
-    {\color{red} invisible!? }
+    The standard model expectations are at the crossing of the
+    horizontal and vertical lines. 
   }
 \label{fig:couplings}
 \end{figure}
 
 \begin{table}[t!]
 \footnotesize
-%log.couplings.lhec60.uncorr.0.5.txt
-%EPRC.au                   =          0.5   +/-   0.00220346
-%EPRC.ad                   =         -0.5   +/-   0.00552205
-%EPRC.vu                   =     0.202804   +/-   0.00152003
-%EPRC.vd                   =    -0.351402   +/-   0.0046019
-%log.couplings.lhec60.uncorr.0.25.txt
-%EPRC.au                   =          0.5   +/-   0.00152328
-%EPRC.ad                   =         -0.5   +/-   0.00342166
-%EPRC.vu                   =     0.202804   +/-   0.00100496
-%EPRC.vd                   =    -0.351402   +/-   0.0027548
-%log.couplings.lhec50.uncorr.0.5.txt
-%EPRC.au                   =          0.5   +/-   0.00354618
-%EPRC.ad                   =         -0.5   +/-   0.00829618
-%EPRC.vu                   =     0.202804   +/-   0.00278195
-%EPRC.vd                   =    -0.351402   +/-   0.00673197
-%
   \centering
-  \begin{tabular}{cr@{\hskip4pt}lccc}
+  \begin{tabular}{cr@{\hskip4pt}lcccc}
     \toprule
-    Coupling  &  \multicolumn{2}{c}{PDG} & \multicolumn{3}{c}
+    Coupling  &  \multicolumn{2}{c}{PDG} & \multicolumn{4}{c}
        {Expected uncertainties} \\
-    parameter &  &  & LHeC-60b & LHeC-60a & LHeC-50a \\
+    parameter &  &  & LHeC-60b & LHeC-60a & LHeC-50b & LHeC-50a \\
     \midrule
-    $\au$  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.0015$ & $0.0022$ & $0.0035$ \\
-    $\ad$  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.0034$ & $0.0055$ & $0.0083$ \\
-    $\vu$  & $0.18$   & $\pm0.05$            & $0.0010$ & $0.0015$ & $0.0028$ \\
-    $\vd$  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.0027$ & $0.0046$ & $0.0067$ \\
+% /nfs/dust/h1/group/britzger/alpos/Alpos/lhec_ew_CDR19/couplings
+%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.00152264  
+%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00342126  
+%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.00100489  
+%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.0027448   
+%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00220341  
+%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00552109  
+%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.00152     
+%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.00460173  
+%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.00267682  
+%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00590186  
+%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.00204902  
+%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.00453882  
+%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00354618  
+%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00829551  
+%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.00278192  
+%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.00673111  
+%
+    $\au$  & $0.50$   & $^{+0.04}_{-0.05}$   & $0.0015$ & $0.0022$ & $0.0027$ & $0.0035$ \\
+    $\ad$  & $-0.514$ & $^{+0.050}_{-0.029}$ & $0.0034$ & $0.0055$ & $0.0059$ & $0.0083$ \\
+    $\vu$  & $0.18$   & $\pm0.05$            & $0.0010$ & $0.0015$ & $0.0020$ & $0.0028$ \\
+    $\vd$  & $-0.35$  & $^{+0.05}_{-0.06}$   & $0.0027$ & $0.0046$ & $0.0059$ & $0.0067$ \\
     \midrule
-    $\au$  &  \\
-    $\vu$  &  \\
+%log.couplings.u.lhec60+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.000946556 
+%log.couplings.u.lhec60+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.000490508 
+%log.couplings.u.lhec60+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00145217  
+%log.couplings.u.lhec60+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.000799386 
+%log.couplings.u.lhec50+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.00154661  
+%log.couplings.u.lhec50+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.000875427 
+%log.couplings.u.lhec50+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00215864  
+%log.couplings.u.lhec50+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.00125943  
+    $\au$  &  &  & $0.0009$ & $0.0015$ & $0.0015$ & $0.0022$   \\
+    $\vu$  &  &  & $0.0005$ & $0.0008$ & $0.0009$ & $0.0013$   \\
     \midrule
-    $\ad$  &  \\
-    $\vd$  &  \\
+%log.couplings.d.lhec60+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00197853  
+%log.couplings.d.lhec60+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.00134947  
+%log.couplings.d.lhec60+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00340999  
+%log.couplings.d.lhec60+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.0024223   
+%log.couplings.d.lhec50+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00321467  
+%log.couplings.d.lhec50+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.00193494  
+%log.couplings.d.lhec50+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00470463  
+%log.couplings.d.lhec50+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.00305495  
+    $\ad$  & & & $0.0020$ & $0.0034$ & $0.0032$ & $0.0047$   \\
+    $\vd$  & & & $0.0013$ & $0.0024$ & $0.0019$ & $0.0031$   \\
     \midrule
-    $\ae$  &  \\
-    $\ve$  &  \\
+%log.couplings.e.lhec60+.uncorr.0.25.txt:EPRC.ae                   =         -0.5   +/-   0.000861184 
+%log.couplings.e.lhec60+.uncorr.0.25.txt:EPRC.ve                   =   -0.0542056   +/-   0.00137261  
+%log.couplings.e.lhec60+.uncorr.0.5.txt:EPRC.ae                   =         -0.5   +/-   0.00137476  
+%log.couplings.e.lhec60+.uncorr.0.5.txt:EPRC.ve                   =   -0.0542056   +/-   0.00217389  
+%log.couplings.e.lhec50+.uncorr.0.25.txt:EPRC.ae                   =         -0.5   +/-   0.0018405   
+%log.couplings.e.lhec50+.uncorr.0.25.txt:EPRC.ve                   =   -0.0542056   +/-   0.00312676  
+%log.couplings.e.lhec50+.uncorr.0.5.txt:EPRC.ae                   =         -0.5   +/-   0.0024957   
+%log.couplings.e.lhec50+.uncorr.0.5.txt:EPRC.ve                   =   -0.0542056   +/-   0.00414468  
+    $\gae$  & & & $0.0009$ & $0.0014$ & $0.0018$ & $0.0025$   \\
+    $\ve$  & & & $0.0014$ & $0.0022$ & $0.0031$ & $0.0041$   \\
     \bottomrule
 \hline
   \end{tabular}
@@ -988,6 +1039,7 @@ the current most precise measurements.
     free fit parameters, 
     {\color{red} the next . . . and the next . . . 
     nothing for LHeC-50b ? }
+    {\color{blue} What to do with PDG? This seems to be lost and unrelated. }
     }
 \label{tab:couplings}
 \end{table}
@@ -1165,6 +1217,9 @@ previous section (see Fig.~\ref{fig:couplings}).
     In case of LHeC-60, with $E_e=60\,\GeV$, an uncorrelated 
     uncertainty of $0.25\,\%$ on the data points is imposed. 
     {\color{red} \em Clarify: which scenario! Left and right???}
+    {\color{blue}
+      Highest precision is obtained in the region of about $\Qsq\approx 20\,000\,\GeVsq$ and \rhop\ 50a: 0.0029435, 60b: 0.0014824; \kapp\ 50a: 0.0022532, 60b: 0.00112846.
+      }
   }
 \label{fig:rhokappaQ2}
 \end{figure}
@@ -1280,12 +1335,6 @@ which is independent of the weak mixing angle.
     combination of various separate measurements (not shown 
     individually) (see also Ref.~\cite{Erler:2019hds} for 
     additional information). 
-    {\color{red} For LHeC, the experimental and 
-    PDF uncertainties are displayed {\em separately? the 
-    combination of? Explain!} 
-    \\
-    {\color{green} Shift label at the x-axis, numbers missing?}
-    }
   }
 \label{fig:sw2eff}
 \end{figure}
@@ -1316,6 +1365,30 @@ $\kappa^\prime_{\text{NC},e}+\kappa^\prime_{\text{NC},u}
 +\kappa^\prime_{\text{NC},d}$, and table~\ref{tab:sw2eff}.
 }
 
+{\color{blue}Values are:
+\begin{eqnarray}
+  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-60b}) 
+  &=& 
+  \pm0.00014_{({\rm exp})}\pm0.00006_{({\rm PDF})}
+  =\, 0.00015_{\text{(tot)}}{\rm ~~~~and~~} % 9.6
+  \\
+  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-60a}) 
+  &=& 
+  \pm0.00023_{({\rm exp})}\pm0.00009_{({\rm PDF})}
+  =\, 0.00025_{\text{(tot)}}
+  \\
+  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-50b}) 
+  &=& 
+  \pm0.00017_{({\rm exp})}\pm0.00014_{({\rm PDF})}
+  =\, 0.00022_{\text{(tot)}}{\rm ~~~~and~~} 
+  \\
+  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-50a}) 
+  &=& 
+  \pm0.00028_{({\rm exp})}\pm0.00019_{({\rm PDF})}
+  =\, 0.00034_{\text{(tot)}}
+\nonumber
+\end{eqnarray}
+}
 
 %--------------------------------------------------------------------
 %   EW in charged currents (CC)
@@ -1385,17 +1458,38 @@ uncertainties can be achieved.
 \begin{table}[b!]
   \footnotesize
   \centering
-  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+  \begin{tabular}{lccccc}
     \toprule
-    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC-50a}& \multicolumn{2}{c}{LHeC-50b}& \multicolumn{2}{c}{LHeC-60a}& \multicolumn{2}{c}{LHeC-60b}  \\
+    & & \multicolumn{4}{c}{Expected uncertainty} \\
+    Fit parameters & Parameter & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\
     \midrule
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}          &  1  &   0.0027  & 1 & 0.00  & 1 & 0.00  & 1 & 0.00 \\
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}    &  1  &   0.0030  & 1 & 0.00  & 1 & 0.00  & 1 & 0.00 \\
-    \hline
+%log.rhoWq.lhec60.uncorr.0.25.txt:rhoWqb                    =            1   +/-   0.00275459  
+%log.rhoWq.lhec60.uncorr.0.25.txt:rhoWq                     =            1   +/-   0.00266751  
+%log.rhoWq.lhec60.uncorr.0.5.txt:rhoWqb                    =            1   +/-   0.0030307   
+%log.rhoWq.lhec60.uncorr.0.5.txt:rhoWq                     =            1   +/-   0.00281397  
+%log.rhoWq.lhec50.uncorr.0.25.txt:rhoWqb                    =            1   +/-   0.00280593  
+%log.rhoWq.lhec50.uncorr.0.25.txt:rhoWq                     =            1   +/-   0.00265216  
+%log.rhoWq.lhec50.uncorr.0.5.txt:rhoWqb                    =            1   +/-   0.00313966  
+%log.rhoWq.lhec50.uncorr.0.5.txt:rhoWq                     =            1   +/-   0.00280834  
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}         &   0.0027  & 0.0028 & 0.0027 & 0.0028 \\
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   0.0028  & 0.0030 & 0.0028 & 0.0031 \\
+    \addlinespace
+%log.rhoWq.q.lhec60.uncorr.0.25.test.txt:rhoWq                      =            1   +/-   0.000831298 
+%log.rhoWq.q.lhec60.uncorr.0.5.test.txt:rhoWq                       =            1   +/-   0.0012586   
+%log.rhoWq.q.lhec50.uncorr.0.25.test.txt:rhoWq                      =            1   +/-   0.00103654  
+%log.rhoWq.q.lhec50.uncorr.0.5.test.txt:rhoWq                       =            1   +/-   0.00147361  
+%log.rhoWq.qb.lhec60.uncorr.0.25.test.txt:rhoWqb                    =            1   +/-   0.000885987 
+%log.rhoWq.qb.lhec60.uncorr.0.5.test.txt:rhoWqb                     =            1   +/-   0.00143666  
+%log.rhoWq.qb.lhec50.uncorr.0.25.test.txt:rhoWqb                    =            1   +/-   0.00116098  
+%log.rhoWq.qb.lhec50.uncorr.0.5.test.txt:rhoWqb                     =            1   +/-   0.00178834  
+    \rhopW{,eq}+PDF        & \rhopW{,eq}         &   0.0008  & 0.0013 & 0.0010 & 0.0015 \\
+    \addlinespace
+    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   0.0009  & 0.0014 & 0.0012 & 0.0018 \\
     % log.final.PAR19eq50.3p.PDF.2.txt
-    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1 & 0.0027  & 1 & 0.0027  & 1 & 0.0027 \\
-    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1 & 0.0011  & 1 & 0.0011  & 1 & 0.0011 \\
-    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1 & 0.0012  & 1 & 0.0012  & 1 & 0.0012 \\
+%    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1 & 0.0027  & 1 & 0.0027  & 1 & 0.0027 \\
+%    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1 & 0.0011  & 1 & 0.0011  & 1 & 0.0011 \\
+%    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1 & 0.0012  & 1 & 0.0012  & 1 & 0.0012 \\
     \bottomrule
   \end{tabular}
   \caption{
