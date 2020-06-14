@@ -112,6 +112,9 @@ $\sw$.
 \section{Electroweak effects in inclusive NC and CC DIS}
 \label{sec:theo}
 
+We start in this section with laying out the general 
+properties of DIS cross sections, first at leading order, 
+taking into account 1-boson exchange diagrams at tree level. 
 Inclusive NC DIS cross sections are expressed in terms of
 generalised structure functions $\tilde{F}_2^\pm$, 
 $x\tilde{F}_3^\pm$ and $\tilde{F}_{\rm L}^\pm$ at EW leading 
@@ -143,9 +146,11 @@ interference~\cite{Klein:1983vs}:
   \tilde{F}_3^\pm
   &=& ~~~~
   -(\gae\pm P_e\ve)\varkappa_ZF_3^{\gamma Z}
-  +\left[2\ve\gae\pm P_e(\ve\ve+\gae\gae)\right]\varkappa_Z^2F_3^Z~.
+  +\left[2\ve\gae\pm P_e(\ve\ve+\gae\gae)\right]\varkappa_Z^2F_3^Z~,
 \label{eq:strfun2}
 \end{eqnarray}
+where $P_e$ is the degree of longitudinal polarization ($P_e = -1$ 
+for a purely left-handed polarized electron beam). 
 A similar decomposition exists for $\tilde{F}_L$.
 %
 In the naive quark-parton model, which corresponds to the LO QCD
@@ -197,7 +202,8 @@ Using $\sw = 1-m_W^2/m_Z^2$, they are given, at LO, by
 \end{eqnarray} 
 
 The CC DIS cross section is written, in the LO approximation, 
-as
+as 
+{\color{red} \em True? On-shell or modified on-shell scheme?}
 \begin{equation}
   \frac{d^2\sigma^{\rm CC}(e^\pm p)}{dxd\Qsq}
   = \left(1 \pm P_e\right)
@@ -279,16 +285,16 @@ running couplings. The coefficient $\kappa_{\text{NC}, f}$ can
 be combined with \sw\ to define an effective, flavor-dependent 
 weak mixing angle, 
 \begin{equation}
-  \sin^2 \theta_{W,f}^{\rm eff} (Q^2) = 
-  \kappa_{\text{NC}, f}(Q^2) \sw \, . 
+  \sin^2 \theta_{W,f}^{\rm eff} (\mu^2) = 
+  \kappa_{\text{NC}, f}(\mu^2) \sw \, . 
 \label{eq:sin2w-eff}
 \end{equation} 
 The leptonic weak mixing angle, $\sin^2 \theta_{W, {\rm eff}}^{\ell} 
 (m_Z^2)$, has been used to describe LEP/SLD observables at the 
 $Z$-pole (see e.g.~\cite{Tanabashi:2018oca,PDG19}). We emphasize 
-that the $Q^2$ dependence of the effective weak mixing angle 
-is not negligible for LHeC phyiscs, while only its value at 
-$Q^2 = m_Z^2$ was relevant for $Z$-pole observables. 
+that the $\mu^2$ dependence of the effective weak mixing angle 
+is not negligible for LHeC physics ($\mu^2 = - Q^2$), while only 
+its value at $\mu^2 = m_Z^2$ was relevant for $Z$-pole observables. 
 
 For CC scattering, a corresponding correction factor 
 $\rho_{\text{CC}, eq}$ is introduced for $e^- q$ and 
@@ -487,8 +493,6 @@ A summary of the data sets is given in Table~\ref{tab:datasets}.
     Summary of data sets used in our analysis. Each set is 
     simulated for the two electron beam energies $E_e=50~\GeV$ 
     and 60~\GeV. 
-    {\color{blue}to be checked, whether Ee=50 and 60 
-    used these settings.}
   }
   \label{tab:datasets}
 \end{table}
@@ -1085,9 +1089,7 @@ most precise measurements.
     scenarios, obtained in a simultaneous EW+PDF fit. The upper 
     section shows results of a fit where all 4 couplings are 
     free fit parameters, the lower three sections are results 
-    from two-parameter+PDF fits. 
-    {\color{red} True???}
-    The values shown in the second 
+    from two-parameter+PDF fits. The values shown in the second 
     column are taken from the PDG-online particle listing 
     ($Z$-boson) \cite{PDG19}.  
 %    $g_A^u = 0.519^{+0.028}_{-0.033}$, 
@@ -1123,11 +1125,6 @@ are accessible. The determination of quark NC couplings will
 provide a unique possibility for testing the EW SM theory. 
 Such a measurement cannot be performed with a comparably high 
 precision in other experiments.  
-
-{\color{magenta} 
-Shall we estimate an uncertainty on the quark couplings
-due to the uncertainty on the electron-couplings? 
-} {\color{red} a correlation???}
 
 
 %--------------------------------------------------------------------
@@ -1172,9 +1169,11 @@ $\kappa_\text{NC}$ take higher-order SM corrections into account,
 as described in Sect.~\ref{sec:theo}. In the SM, the anomalous 
 parameters \rhop\ and \kapp{} are unity. In the presence of 
 physics beyond the SM, they can deviate from unity and be 
-\Qsq-dependent. A similar study of a generalization of the 
-CC form factor $\rho_\text{CC}$ will be discussed below in 
-Sect.~\ref{sec:ewcc}. \kapp{} can also be interpreted as a 
+\Qsq-dependent. In particular, a value of $\rhop\ \neq 1$ 
+corresponds to a modification of the ratio of the strengths of 
+NC and CC weak interactions. A similar study of a generalization 
+of the CC form factor $\rho_\text{CC}$ will be discussed below 
+in Sect.~\ref{sec:ewcc}. \kapp{} can also be interpreted as a 
 modification of the weak mixing angle $\sin^2\theta_W$. This 
 will be discussed separately in the next section. 
 
@@ -1183,13 +1182,12 @@ parameters $\rho_\text{NC}^\prime$ and $\kappa_\text{NC}^\prime$
 in a simultaneous fit together with the PDFs, using simulated 
 inclusive NC and CC DIS data at the LHeC. First, we consider 
 universal, i.e.\ flavor-independent $\rho_\text{NC}^\prime$ 
-and $\kappa_\text{NC}^\prime$ parameters, 
-{\color{red} i.e., for both the quark and electron couplings}. 
-The results are 
-displayed in Fig.~\ref{fig:rhokappa:f}. In this figure, we 
-compare the expected LHeC uncertainties with corresponding 
-results that have been obtained from combined LEP+SLD 
-data for leptonic couplings~\footnote{In the LEP+SLD 
+and $\kappa_\text{NC}^\prime$ parameters, i.e., for both the 
+quark and electron couplings. The results are displayed in 
+Fig.~\ref{fig:rhokappa:f}. In this figure, we compare the 
+expected LHeC uncertainties with corresponding results that 
+have been obtained from combined LEP+SLD data for leptonic 
+couplings~\footnote{In the LEP+SLD 
   combination the parameters $\rho_{\textrm{NC},\ell}$ and 
   $\kappa_{\textrm{NC},\ell}$ have been determined. 
   {\color{red} \em reference ?}
@@ -1217,15 +1215,15 @@ should expect the largest ones.
 \label{fig:rhokappa:f}
 \end{figure}
 
-\begin{figure}[t!]
-  \centering
-  \includegraphics[width=0.48\textwidth]{plot_NC_rhoCCkap}
-  \includegraphics[width=0.48\textwidth]{plot_NC_rhoGlobkap}
-  \caption{
-    Variants of fig.~\ref{fig:rhokappa:f}
-  }
-\label{fig:rhokappa2:f}
-\end{figure}
+%\begin{figure}[t!]
+%  \centering
+%  \includegraphics[width=0.48\textwidth]{plot_NC_rhoCCkap}
+%  \includegraphics[width=0.48\textwidth]{plot_NC_rhoGlobkap}
+%  \caption{
+%    Variants of fig.~\ref{fig:rhokappa:f}
+%  }
+%\label{fig:rhokappa2:f}
+%\end{figure}
 
 Next, we allow the anomalous coupling parameters to be different 
 for up- and down-type quarks, but assume the couplings of the 
@@ -1331,40 +1329,50 @@ of allowing independent, flavor-dependent variations for vector
 and axial-vector couplings as in the previous sections. 
 
 The highest precision for a $\sin^2\theta_\textrm{W}$ 
-measurement has been obtained, so far, in $e^+e^-$ collisions 
+measurement has been obtained so far in $e^+e^-$ collisions 
 at the $Z$ pole. The results are conventionally expressed in 
 terms of a {\em leptonic} effective weak mixing angle which is 
 related with the on-shell definition of $\sin^2\theta_\textrm{W}$ 
 by a well-known correction factor (cf.~Eqs.~(\ref{eq:gV-NLO}, 
 \ref{eq:sin2w-eff})), 
 \begin{equation}
-  \sin^2\theta_\textrm{W,eff}^{\ell} 
+  \sin^2\theta_{\textrm{W},\ell}^\textrm{eff} 
   = 
   \kappa_{\ell}(\mZ^2) \sw \,.
 \end{equation}
 A determination of $\sin^2\theta_\textrm{W}$ from DIS data 
 can be compared with $Z$-pole measurements, provided its 
 value is mapped to the definition of the leptonic weak 
-mixing angle. 
+mixing angle. Also in DIS one can define an effective, scale- 
+and flavor-dependent weak mixing angle, 
+\begin{equation}
+  \sin^2\theta_\textrm{W,f}^\textrm{eff}(\mu^2) 
+  = 
+  \kappa_{\text{NC}, f}(\mu^2) \kapp{,f}(\mu^2) \sw \,.
+\end{equation}
+This generalizes the definition of Eq.~(\ref{eq:sin2w-eff}), 
+as we now allow for a modification due to non-standard physics 
+described by the scale-dependent parameter $\kapp{,f}$ 
+(cf.\ Eq.~(\ref{eq:gV})). A determination of the weak mixing 
+angle is therefore a re-interpretation of a one-parameter 
+fit of \kapp\ described in the previous section. 
 
-We perform a PDF+EW fit assuming $\sin^2\theta_\textrm{W}$ 
+We perform a PDF+EW fit assuming 
+$\sin^2\theta_\textrm{W,f}^\textrm{eff}(\mu^2)$ 
 as a free parameter, but the same for all fermions, i.e.\ 
 for lepton and quark vector couplings. SM higher-order 
 corrections are taken into account as described in 
 Sect.\ \ref{sec:theo} by keeping the \Qsq- and 
 flavor-dependent form factors $\kappa_{\text{NC}, f}$ 
-(see Eq.~(\ref{eq:gV-NLO})). Results for LHeC beam energies 
-of $E_e=50~\GeV$ or 60~\GeV are collected in
-Fig.~\ref{fig:sw2eff}. Our estimate for the uncertainties 
-in the different LHeC scenarios are  
-{\color{red} \em write \sw, not leptonic effective \sw\ }
+(see Eq.~(\ref{eq:gV-NLO})). Our estimate for the uncertainties 
+in the different LHeC scenarios are 
 \begin{eqnarray}
-  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-60a}) 
+  \Delta\sin^2\theta_\textrm{W,f}^\textrm{eff}\ (\text{LHeC-60a}) 
   &=& 
   \pm0.00023_{({\rm exp})}\pm0.00009_{({\rm PDF})}
   =\, 0.00025_{\text{(tot)}} \, , 
   \\
-  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-50a}) 
+  \Delta\sin^2\theta_\textrm{W,f}^\textrm{eff}\ (\text{LHeC-50a}) 
   &=& 
   \pm0.00028_{({\rm exp})}\pm0.00019_{({\rm PDF})}
   =\, 0.00034_{\text{(tot)}} 
@@ -1372,32 +1380,39 @@ in the different LHeC scenarios are
 \end{eqnarray} 
 and 
 \begin{eqnarray}
-  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-60b}) 
+  \Delta\sin^2\theta_\textrm{W,f}^\textrm{eff}\ (\text{LHeC-60b}) 
   &=& 
   \pm0.00014_{({\rm exp})}\pm0.00006_{({\rm PDF})}
   =\, 0.00015_{\text{(tot)}} \, ,  % 9.6
   \\
-  \Delta\sin^2\theta_\textrm{W,eff}^{\ell} (\text{LHeC-50b}) 
+  \Delta\sin^2\theta_\textrm{W,f}^\textrm{eff}\ (\text{LHeC-50b}) 
   &=& 
   \pm0.00017_{({\rm exp})}\pm0.00014_{({\rm PDF})}
   =\, 0.00022_{\text{(tot)}} \, .
   \nonumber
 \end{eqnarray} 
-This is superior to any current single measurement and of 
-similar size as the world average or the LEP+SLD combination. 
-Even measurements in a space-like region of momentum transfers, 
-i.e.\ for a non-resonant process, turns out to be competitive 
-with $Z$-pole measurements, despite of the fact that the cross 
-section receives large contributions from pure photon exchange, 
-which is independent of the weak mixing angle. 
+These results are collected in Fig.~\ref{fig:sw2eff} where 
+we compare with presently available determinations of the 
+weak mixing angle expressed in terms of 
+$\sin^2\theta_{\textrm{W},\ell}^\textrm{eff}(m_Z^2)$. 
+Here we have neglected additional parametric uncertainties that 
+may enter when the LHeC measurement are mapped to the leptonic 
+effective weak mixing angle. The determination at the LHeC is 
+superior to any current single measurement and of similar size 
+as the world average or the LEP+SLD combination. Even measurements 
+in a space-like region of momentum transfers, i.e.\ for a 
+non-resonant process, turns out to be competitive with $Z$-pole 
+measurements, despite of the fact that the cross section receives 
+large contributions from pure photon exchange, which is 
+independent of the weak mixing angle. 
 
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.50\textwidth]{figures/sw2eff}
   \caption{
-    Comparison of determinations of the weak mixing angle, 
-    expressed in terms of the leptonic effective parameter 
-    $\sin^2\theta_{\text{W}}^{\text{eff},\ell}(\mz^2)$. 
+    Comparison of determinations of 
+    $\sin^2\theta_\textrm{W,f}^\textrm{eff}$ expressed in 
+    terms of the leptonic effective weak mixing angle.  
     Two scenarios for the simulation of LHeC inclusive NC/CC 
     DIS data are considered. Results from 
     LEP+SLD~\cite{ALEPH:2005ab}, Tevatron~\cite{Aaltonen:2018dxj},
@@ -1410,48 +1425,36 @@ which is independent of the weak mixing angle.
 \label{fig:sw2eff}
 \end{figure}
 
-{\color{magenta}
 In a simulataneous determination 
-of $\sin^2\theta_\textrm{W,eff}^{\ell}$ and a universal 
-modification of $\rho$, an uncertainty 
-$\sin^2\theta_\textrm{W,eff}^{\ell}=\pm0.00023$
-($\pm0.00071$) for LHeC-60b (LHeC-50a) is found in the
-EW+PDF fit. 
-{\color{red} \em Don't keep this: is equivalent to the 
-rho-kappa fit described in the previous section.}
-}
+of $\sin^2\theta_\textrm{W,f}^\textrm{eff}$ and a universal 
+modification of the normalization of NC weak couplings by 
+\rhop\ as defined in the previous section, we find an 
+uncertainty of $\Delta \sin^2\theta_\textrm{W,f}^\textrm{eff} 
+= \pm 0.00023$ ($\pm0.00071$) for LHeC-60b (LHeC-50a). 
 
-{\color{orange}
-The measurement of $\kappa_\text{NC}^\prime(\Qsq)$ can be 
-translated to a measurement of the effective weak mixing angle 
-and it shows, that the \Qsq dependence of 
-$\sin\theta_{\text{W}}^{\text{eff},(\ell)}(\Qsq)$ can be determind
-over a wide kinematic range of about $25<\sqrt{\Qsq}<700\,\GeV$
-with a precision of up to 0.1\,\% and everywhere better than 
-1\,\%. We emphasize that DIS is complementary to other 
+As above, the measurement of 
+$\sin^2\theta_\textrm{W,f}^\textrm{eff}$ can be performed in 
+sub-regions of the wide kinematic range of \Qsq\ accessible at 
+the LHeC. We find that $\sin^2\theta_\textrm{W,f}^\textrm{eff}$ 
+can be determined in the range of about $25 < \sqrt{\Qsq} < 
+700\,\GeV$ with a precision better than 0.1\,\% and everywhere 
+better than 1\,\%. We emphasize that DIS is complementary to other 
 measurements since the scattering process is mediated by boson 
-exchange with space-like momenta, i.e.\ $\Qsq=-q^2$ with
-$q$ being the boson four-momentum (c.f.\ Sect.~\ref{sec:sw2eff}).
-
-Similar to the determination of non-standard \Qsq-dependent 
-couplings in the previous section, one can determine the 
-weak mixing angle from subsets of data in different \Qsq-ranges. 
-{\color{red} \em New Figure !!} 
-If a cacluation of DIS cross sections including higher-order 
+exchange with space-like momenta, i.e.\ the scale is given 
+by $\mu = - \sqrt{Q^2}$ (c.f.\ Sect.~\ref{sec:sw2eff}). If a 
+cacluation of DIS cross sections including higher-order 
 EW corrections in the $\overline{\rm MS}$ scheme is available, 
 the uncertainty of this \Qsq-dependent \sw-determination can 
 be translated into a test of the running of the weak mixing 
 angle. 
-}
-
 
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.60\textwidth]{figures/plot_sw2Q2}
   \caption{
-    Expected uncertainties of the weak mixing angle as a function of \Qsq. 
-    Two scenarios for the simulation of LHeC inclusive NC/CC 
-    DIS data are considered. 
+    Expected uncertainties of the weak mixing angle determind 
+    in sub-regions of \Qsq. Two scenarios for the simulation 
+    of LHeC inclusive NC/CC DIS data are considered. 
   }
 \label{fig:sw2Q2}
 \end{figure}
@@ -1480,17 +1483,18 @@ angle.
    \bottomrule
   \end{tabular}
   \caption{
-    Expected relative uncertinaties for the determination of the
-    running of $\sin^2\theta_\textrm{W}$ as a function of \Qsq. 
-    The values are obtained in a simultaneous fit of all 12 parameters
-    of $\sin^2\theta_\textrm{W}(\Qsq)$ and together with the PDF
-    parameters at a time.
-    In the on-shell scheme the value of $\sin^2\theta_\textrm{W}$
-    does not exhibit a \Qsq\ dependence, but these values can be
-    translated to other schemes, where a scale dependence is present.
+    Expected relative uncertainties for the determination of 
+    $\sin^2\theta_\textrm{W,f}^\textrm{eff}$ in different bins 
+    of \Qsq\ as a function of 
+    {\color{red} the central values $Q_i^2$ ?}. 
+    The uncertainties are obtained in a simultaneous fit of all 12 
+    parameters of $\sin^2\theta_\textrm{W,f}^\textrm{eff}(\mu^2_i)$ 
+    with $\mu_i^2 = - Q_i^2$ 
+    together with the PDF parameters at a time. 
   }
 \label{tab:sw2Q2}
 \end{table}
+
 
 %--------------------------------------------------------------------
 %   EW in charged currents (CC)
@@ -1591,9 +1595,8 @@ uncertainties can be achieved.
   \end{tabular}
   \caption{
   Expected uncertainties of anomalous CC coupling parameters 
-  \rhopW{,eq} and \rhopW{,e\bar{q}}.
-  {\color{red} Explain the difference between upper and 
-  lower two lines: one- or two-parameter fits ???}
+  \rhopW{,eq} and \rhopW{,e\bar{q}} from 2-parameter (upper 
+  part) and 1-parameter fits (lower part). 
   }
 \label{tab:rhoCC}
 \end{table}
@@ -1907,10 +1910,72 @@ $\alpha_\textrm{s}$.
 
 
 %--------------------------------------------------------------------
-%   Results: global EW fits
+%   Results: STU
 %--------------------------------------------------------------------
 \clearpage
-\section{Oblique parameters S, T, and U}
+\section{Oblique parameters $S$, $T$, and $U$}
+
+All extensions of the Standard Model with new particles lead 
+to indirect modifications of predictions through higher-order 
+corrections. Loop insertions with particle-antiparticle pairs 
+in gauge boson self energies can be observable even if the 
+new particles are too heavy to be produced directly in 
+scattering processes. If the masses of heavy particles are 
+large, a low-$Q^2$ expansion of self-energy corrections provides 
+a sufficiently precise approximation by constant parameters. 
+Taking into account that the electromagnetic $U(1)$ gauge 
+symmetry has to stay intact and that some of the constants 
+can be absorbed into renormalization constants, there are 
+3 free parameters, generally called $S$, $T$ and $U$. A suitable 
+definition is described in Ref.\ \cite{PDG2020} which we adopt 
+in the following. 
+
+For a PDF+STU fit where the SM masses, in particular $m_W$ 
+and $m_Z$, are fixed at their SM values, results are shown in 
+Figs.~\ref{fig:STU_OS} and Table~\ref{tab:STU_OS}. 
+Single-parameter fits can provide uncertainties which are 
+better by a factor of 2 to 5 compared with the present 
+PDG values. We observe a strong correlation of 2-parameter 
+fits which can be traced back to the fact that only certain 
+linear combinations of $S$, $T$ and $U$ contribute to the 
+NC and CC scattering cross sections and the $\gamma Z$ 
+interference contribution. These linear combinations can be 
+determined with very precision -- a fact which makes the DIS 
+measurement particularly useful since it is complementary 
+to determinations of $S$, $T$ and $U$ from $Z$-pole data 
+(see, for example, Refs.~\cite{PDG2020,Baak:2011ze}). 
+
+New physics parametrized with the help of $S$, $T$ and $U$ 
+will also affect the $G_F$-$m_W$ relation, 
+Eq.~(\ref{eq:deltar-NLO}), through the $W$-boson self energy 
+correction to the muon decay. In the modified on-shell scheme 
+where $m_W$ is calculated from $G_F$, new physics will 
+therefore not only contribute corrections to the measured 
+cross sections, but also indirectly through a modification 
+of input parameters. Using the modified on-shell scheme 
+corresponds to effectivly imposing the additional constraint 
+on SM parameters resulting from the $G_F$ measurement. As a 
+result, the sensitivity to $S$, $T$ and $U$ is modified. 
+Results of a PDF+STU fit in this modified on-shell scheme 
+are collected in Figs.~\ref{fig:STU_MOMS} and 
+Table~\ref{tab:STU_MOMS}. The uncertainties determined from 
+single-parameter fits are slightly less favorable in this 
+case. However, the 2- {\color{red} and 3 ???}-parameter fits 
+exhibit less correlation leading to smaller uncertainties 
+for their corresponding 1-parameter projections. 
+
+\begin{figure}[b!]
+  \centering
+  \includegraphics[width=0.32\textwidth]{STU_OS/plot_ST}
+  \includegraphics[width=0.32\textwidth]{STU_OS/plot_SU}
+  \includegraphics[width=0.32\textwidth]{STU_OS/plot_TU}
+  \caption{
+     Results of 2-parameter fits to pairs of $S$, $T$, and $U$ 
+     where $m_Z$ and $m_W$ are fixed SM input parameters. 
+     $1\sigma$ contours are shown for three LHeC scenarios. 
+   }
+  \label{fig:STU_OS}
+\end{figure}
 
 \begin{table}[bht!]
   \footnotesize
@@ -1926,10 +1991,6 @@ $\alpha_\textrm{s}$.
     T+PDF      &  T  &  $0.02$ & $0.03$ & $0.02$ & $0.04$ \\
     U+PDF      &  U  &  $0.02$ & $0.03$ & $0.04$ & $0.03$ \\
     \addlinespace
-    S+T+U+PDF  &  S  &  $0.20$ & $0.31$ & $0.46$ & $0.58$ & 1.0 & 0.7 & $-0.4$ \\
-               &  T  &  $0.32$ & $0.42$ & $0.52$ & $0.64$ &     & 1.0 & $-0.9$\\
-               &  U  &  $0.24$ & $0.30$ & $0.30$ & $0.36$ &     &     & 1.0 \\
-    \addlinespace
     S+T+PDF  &  S  & $0.18$ & $0.26$ & $0.35$ & $0.42$ & $1.0$ & $0.98$  \\
              &  T  & $0.09$ & $0.14$ & $0.19$ & $0.23$ &       & $1.0$  \\
     \addlinespace
@@ -1938,13 +1999,22 @@ $\alpha_\textrm{s}$.
     \addlinespace
     T+U+PDF  &  T  & $0.24$ & $0.28$ & $0.24$ & $0.28$ & & $1.0$ & $-0.99$  \\
              &  U  & $0.22$ & $0.26$ & $0.22$ & $0.26$ & &       & $1.0$  \\
+    \addlinespace
+    S+T+U+PDF  &  S  &  $0.20$ & $0.31$ & $0.46$ & $0.58$ & 1.0 & 0.7 & $-0.4$ \\
+               &  T  &  $0.32$ & $0.42$ & $0.52$ & $0.64$ &     & 1.0 & $-0.9$\\
+               &  U  &  $0.24$ & $0.30$ & $0.30$ & $0.36$ &     &     & 1.0 \\
     \bottomrule
   \end{tabular}
   \caption{
-    STU parameters in OMS
+    Results of the PDF+STU fits with fixed SM gauge boson masses. 
+    From top to bottom we show the expected uncertainties for 
+    1-, 2- and 3-parameter fits as indicated in the first column 
+    for all four LHeC scenarios. In the case of 2- and 3-parameter 
+    fits, the last columns shows the correlation matrix.     
   }
   \label{tab:STU_OS}
 \end{table}
+
 
 \begin{table}[bht!]
   \footnotesize
@@ -1960,10 +2030,6 @@ $\alpha_\textrm{s}$.
     T+PDF      &  T  &  $0.03$ & $0.05$ & $0.04$ & $0.07$ \\
     U+PDF      &  U  &  $0.04$ & $0.07$ & $0.06$ & $0.09$ \\
     \addlinespace
-    S+T+U+PDF  &  S  &  $0.20$ & $0.32$ & $0.46$ & $0.60$ & 1.00 & 0.98 &$-0.80$ \\
-               &  T  &  $0.22$ & $0.35$ & $0.46$ & $0.60$ &     & 1.00 & $-0.87$\\
-               &  U  &  $0.11$ & $0.19$ & $0.20$ & $0.27$ &     &     & 1.00 \\
-    \addlinespace
     S+T+PDF  &  S  & $0.12$ & $0.20$ & $0.21$ & $0.30$ & $1.00$ & $0.96$  \\
              &  T  & $0.11$ & $0.17$ & $0.17$ & $0.24$ &       & $1.00$  \\
     \addlinespace
@@ -1972,30 +2038,34 @@ $\alpha_\textrm{s}$.
     \addlinespace
     T+U+PDF  &  T  & $0.05$ & $0.08$ & $0.06$ & $0.10$ & & $1.00$ & $-0.76$  \\
              &  U  & $0.07$ & $0.11$ & $0.09$ & $0.14$ & &       & $1.00$  \\
+     \addlinespace
+    S+T+U+PDF  &  S  &  $0.20$ & $0.31$ & $0.46$ & $0.58$ & 1.0 & 0.7 & $-0.4$ \\
+               &  T  &  $0.32$ & $0.42$ & $0.52$ & $0.64$ &     & 1.0 & $-0.9$\\
+               &  U  &  $0.24$ & $0.30$ & $0.30$ & $0.36$ &     &     & 1.0 \\
     \bottomrule
   \end{tabular}
   \caption{
-    STU parameters in MOMS
+    Same as Table~\ref{tab:STU_OS}, but in the modified on-shell 
+    scheme with fixed $m_Z$ and $G_F$. 
+    {\color{red} 3-parameter fit results are identical for 
+    OS and MOS -- Check this! }
   }
-  \label{tab:STU_OS}
+  \label{tab:STU_MOMS}
 \end{table}
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.32\textwidth]{STU_OS/plot_ST}
-  \includegraphics[width=0.32\textwidth]{STU_OS/plot_SU}
-  \includegraphics[width=0.32\textwidth]{STU_OS/plot_TU}
-  \caption{2D-STU fits OMS.}
-  \label{fig:STU}
-\end{figure}
+
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_ST}
   \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_SU}
   \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_TU}
-  \caption{2D-STU fits MOMS.}
-  \label{fig:STU}
+  \caption{
+    Same as Fig.~\ref{fig:STU_OS} with fixed input for $m_Z$, 
+    but the $W$ boson mass is calculated from its relation to 
+    the Fermi constant (modified on-shell scheme).
+  }
+  \label{fig:STU_MOMS}
 \end{figure}
 
 
