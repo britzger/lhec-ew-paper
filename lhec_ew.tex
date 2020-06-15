@@ -896,23 +896,6 @@ a substantial improvement of the precision of
 \mZ~\cite{Abada:2019lih,Abada:2019zxq,Fan:2014vta}. 
 
 %--------------------------------------------------------
-%  Higgs mass
-%--------------------------------------------------------
-
-One may also try to determine the Higgs-boson mass from 
-DIS data since $m_H$ enters through higher-order corrections 
-(self-energy corrections) in the SM prediction for the cross 
-section. However, the $m_H$-dependence is only logarithmic, 
-$\propto\log(M^2_H/\mw^2)$, i.e.\ very weak. A PDF+EW fit 
-with the Higgs-boson mass as a free parameter leads to a 
-precision of $\Delta m_H=^{+29}_{-23}$ and $^{+24}_{-20}~\GeV$ 
-for the different LHeC scenarios. This compares well with 
-the precision found for the indirect $m_H$ determinations 
-from LEP+SLC combined data~\cite{ALEPH:2005ab}, but is, 
-of course, much less precise than the direct determination 
-from the LHC. 
-
-%--------------------------------------------------------
 %  2-parameter fit: W and Z mass
 %--------------------------------------------------------
 
@@ -948,18 +931,146 @@ input from $\alpha$, $G_F$ and $\sin^2\theta_W$.
 \end{figure}
 
 
+%--------------------------------------------------------------------
+%   top quark mass
+%--------------------------------------------------------------------
+\section{Mass parameters from radiative corrections}
+While the weak boson masses are important quantities
+for the cross section calculation already at the Born-level, the value of the
+top-quark mass contributes first at the level of electroweak radiative
+correction to the inclusive NC/CC DIS cross sections\,\footnote{Note,
+  at sufficiently high scales, e.g.\ $\Qsq\gtrsim2\mt$, the top-quark
+  contributes also to the QCD evolution equations and structure
+  function calculations. However, these contibution to the inclusive
+  NC/CC DIS cross section at the LHeC are very small. In particular the
+  sensitivity to the actual value of the top-quark mass can be neglected.}.
+As such, a determination of the top-quark mass from inclusive NC/CC
+DIS data and its comparison with
+direct measurements tests electroweak theory already at the level of
+virtual corrections (c.f.\ also subsequent sections).
+
+The dominant corrections to the vertex and to the propagator
+self-energies depend on the top-quark mass \mt, and are
+represented by the  $\rho_\textrm{NC}$ and $\kappa$
+parameters and the correction factor \dr.{\color{red}Use $\rho_t$ here ??}
+Therefore inclusive DIS cross sections are sensitive to \mt, and the
+leading terms are proportional to $\mt^2/\mW^2$.
+%Since possibly other heavy particles may contribute to
+%these quantum corrections with similar terms, the determination of
+%\mt\ represent an important portal to new physics beyond the SM.
+
+The top-quark mass \mt\ can be determined from the scenarios LHeC-50a
+and LHeC-50b with an uncertainty of $\Delta\mt=\pm2.2\,\GeV$ and $\pm1.8\,\GeV$, respectively.
+For the LHeC scenarios with $E_e=60\,\GeV$, the top-quark
+mass is determined with an uncertainty of $\Delta\mt=\pm1.4\,\GeV$ (LHeC-60a) or
+\begin{equation}
+  \Delta\mt\,\textrm{(LHeC-60b)}= \pm1.1\,\GeV\,.
+\end{equation}
+The size of the PDF-related uncertainty may be attributed to be about
+0.6\,\GeV\ and is already included in above values.
+In these studies, the value of \mW\ is considered
+as an external parameter to the PDF+EW fit.
+However, the dominant theoretical uncertainty arises from $\mW$, which is
+nowadays known with an uncertainty of
+$\Delta\mW=\pm12\,\MeV$\,\cite{PDG19}.
+This yields and uncertainty on \mt\ of about $\pm2\,\GeV$.
+
+The size of the LHeC experimental uncertainty compares well with
+uncertainties from recent LHC measurements, which are commonly
+about $\pm0.5$ to $\pm1.0$\,\GeV 
+(see Ref.~\cite{PDG19}, and references therein).
+%~\cite{Cortiana:2015rca}
+However, such a measurement at the LHeC may still contribute considerably to
+the world average value and the knowledge of \mt.
+This is because it is fully
+independent to the direct measurements, and also since the
+LHC measurements are (and still will be in the future) dominated by
+modelling and theoretical uncertainties,
+which are shared between different measurements and limit a further
+reduction of the world average value.
+Furthermore, in NC/CC DIS the top-quark mass contributes only through
+EW radiative corrections and therefore the determination of $\mt$ is
+in a first approximation free from sizeable QCD dependent corrections.
+Therefore, the measurement at the LHeC provides an important cross
+check of the top-quark mass from purely electroweak effects.
+Infact, this top-quark mass measurement compares well to `global EW'
+fits, where presently in a fit with further EW parameters
+uncertainties of $\Delta\mt=\pm2.1\,\GeV$ are achieved~\cite{Haller:2018nnx} .
+
+% %greatly improve over the limited precision obtained with the final H1
+% %data~\cite{Spiesberger:2018vki}, and would
 
 {\color{red} Discuss mtop and mW-mt results here. DB 15.6.}
+
 \begin{figure}[th!]
     \centering
     \includegraphics[width=0.42\textwidth]{plot_lhec_mWmt}
     \caption{
-      Simultaneous determination of the $W$-boson and $Z$-boson masses
-      from LHeC-60a or LHeC-50a data in comparision with the LEP+SLD
-      combination and results from a global EW fit~\cite{Haller:2018nnx}.
+      Simultaneous determination of the $W$-boson and top-quark masses
+      from LHeC-60a or LHeC-50a data.
+      As compaison, the results from the $Z$-pole fit with LEP+SLD
+      data~\cite{ALEPH:2005ab} and from a global EW fit, where direct
+      measurements of \mW\ and \mt\ have been excluded~\cite{Haller:2018nnx}.
     }
     \label{fig:mWmt}
 \end{figure}
+%
+As the leading self-energy and vertex corrections
+are proportional to $\mt^2/\mw^2$ it is reasonable to
+determine the $W$-boson mass \mw\ simultaneously together with \mt.
+Prospects for such a simultaneous determination of \mt, \mw, and
+the PDFs is displayed for selected LHeC scenarios in
+figure~\ref{fig:mWmt} and compared to results from the LEP+SLD
+combination of $Z$-pole measurements~\cite{ALEPH:2005ab} and to a
+global EW fit~\cite{Haller:2018nnx}, for which the
+direct measurements have been excluded. 
+It is found that the uncertainties of the LHeC is
+superior to the LEP+SLD combination.
+In case of LHeC-60b the uncertainty
+contour is even of similar size than the global EW fit.
+Since both studies, the global EW fit and the LHeC, exploit the same
+$\mt^2/\mw^2$ terms of the radiative corrections, the
+\mt--\mw\ correlations are found to be very similar. 
+
+{\color{red} Todo. Is there need to discuss/mention the choice of the
+  renormalisation scheme (once \gf is taken as input, there is no \mt-sensitivity in \dr...}
+
+These encouraging prospects for the determination of $\mt$ and $\mw$ may
+suggest also a relevant impact of inclusive NC/CC DIS data as
+an additional input to a global EW fit.
+However, once the direct measurements of \mt\ and \mw\ are considered
+in such a global EW fit (in contrast to the results displayed in
+fig.~\ref{fig:mWmt}),
+the $\mt^2/\mw^2$ relation of the radiative
+corrections is resolved and the global EW fit studies the
+dominant parameters of EW theory ($\alpha$, \gf, \mz, \mw, \mt, \mH,
+\dots) at a higher precision.
+As such the measurements of inclusive NC/CC DIS cross sections at the
+LHeC will have only a very moderate impact on the parameters of
+interest in a global EW fit, as it is briefly studied in
+appendix~\ref{app:globalfit}.
+Therefore, the strengths of an EW analysis of LHeC inclusive NC/CC DIS
+data are rather particular aspects of EW theory than actually the most
+precise values of the SM parameters, as it will be studied in the
+following sections.
+
+%--------------------------------------------------------
+%  Higgs mass
+%--------------------------------------------------------
+{\color{blue}(This may also go to the appendix) }
+One may also try to attempt to determine the Higgs-boson mass \mH\ from NC/CC
+DIS data which enters through the self-energy corrections in the SM formalism.
+However, the \mH\ dependence is only logarithmic,  
+$\propto\log(M^2_H/\mw^2)$, i.e.\ very weak. A PDF+EW fit 
+with the Higgs-boson mass as a free parameter leads an uncertainty
+of $\Delta m_H=^{+29}_{-23}$ and $^{+24}_{-20}~\GeV$ 
+for the LHeC scenarios LHeC-50a and LHeC-60b, respectively.
+This compares well with 
+the precision found for the indirect \mH\ determinations 
+from LEP+SLC combined data~\cite{ALEPH:2005ab}, but is, 
+of course, much less precise than the direct determination 
+from the LHC nowadays. 
+
 
 
 %--------------------------------------------------------------------
@@ -1656,260 +1767,6 @@ one to extend the measurement to higher \Qsq values.
 \end{figure}
 
 
-%--------------------------------------------------------------------
-%   Results: global EW fits
-%--------------------------------------------------------------------
-\clearpage
-\section{A global EW fit with LHeC inclusive DIS data}
-
-{\color{red}11. May: As discussed, the top-quark mass and 'EW global
-  fit' sections are merged. DB will revisit the text. (ongoing...)
-} 
-
-%--------------------------------------------------------------------
-%   top quark mass
-%--------------------------------------------------------------------
-The dominant corrections to the vertex and to the propagator
-self-energies depend on the top-quark mass \mt, and are
-represented by the  $\rho_\textrm{NC}$ and $\kappa_\textrm{NC}$ parameters and the
-correction factor \dr.
-Therefore inclusive DIS cross sections are sensitive to \mt.
-The leading terms are proportional to $\mt^2/\mW^2$.
-\emph{Since possibly other heavy particles may contribute to
-these quantum corrections with similar terms, the determination of
-\mt\ represent an important portal to new physics beyond the SM.}
-
-When taking \mW\ as an external parameter to the PDF+EW fit,
-the top-quark mass can be determined with LHeC-50 with an uncertainty of
-$1.8$\,--\,$2.2\,\GeV$, for the scenario `a' or `b', respectively.
-In the scenario with $E_e=60\,\GeV$, the top-quark
-mass is determined with an uncertainty of $1.4\,\GeV$ (LHeC-60a) or
-\begin{equation}
-  \Delta\mt\textrm{(LHeC-60b)}= \pm1.1\,\GeV\,,
-\end{equation}
-for the scenario LHeC-60b.
-The size of the PDF-related uncertainty may be attributed to be about
-0.6\,\GeV\ and is already included in above values.
-The dominant theoretical uncertainty arises from $\mW$, which is
-nowadays known with an uncertainty of $\Delta\mW=12\,\MeV$\,\cite{PDG19}, and
-yields and uncertainty on \mt\ of about 2\,\GeV.
-The size of the experimental uncertainty compares well with
-uncertainties from recent LHC measurements, which are commonly of
-about 0.5\,--\,1.0\,\GeV 
-(see Ref.~\cite{PDG19}, and references therein).
-%~\cite{Cortiana:2015rca}
-However, such a measurement at the LHeC may still contribute considerably to
-the world average value and the knowledge of \mt.
-This is because it is fully
-independent to the direct measurements, and also since the
-LHC measurements are (and still will be in the future) dominated by
-modelling and theoretical uncertainties,
-which are shared between different measurements and limit a further
-reduction of the world average value.
-Furthermore, in inclusive DIS the top-quark contributions are only through
-EW radiative corrections and are in a first approximation free from
-QCD dependent corrections.
-Therefore, the measurement at LHeC provides an important cross check of the top-quark
-mass in EW dominated processes.
-Infact, this top-quark mass measurement compares well to `global EW'
-fits, where presently in a fit with further EW parameters
-uncertainties of $\Delta\mt=2.1\,\GeV$ are achieved~\cite{Haller:2018nnx} .
-
-% This would represent a very precise
-% indirect determination of the top-quark mass from purely electroweak
-% corrections and thus being fully complementary to measurements
-% from real $t$-quark production, which suffer often from sizeable QCD
-% corrections.
-% %greatly improve over the limited precision obtained with the final H1
-% %data~\cite{Spiesberger:2018vki}, and would
-
-\begin{figure}[tbhp]
-    \centering
-    \includegraphics[width=0.42\textwidth]{plot_lhec_mWmt}
-    \caption{
-      Simultaneous determination of the $W$-boson and $Z$-boson masses
-      from LHeC-60a or LHeC-50a data in comparision with the LEP+SLD
-      combination and results from a global EW fit~\cite{Haller:2018nnx}.
-    }
-    \label{fig:mWmt}
-\end{figure}
-
-Since the leading self-energy and vertex corrections
-are proportional to ${M_t^2}/{\mw^2}$ it is reasonable to perform
-a simultaneous determination of \mt\ and \mw.
-The prospects for such a simultaneous determination of \mt, \mw, and
-the PDFs is displayed in figure~\ref{fig:mWmt}.
-It is remarkable, that the precision of the LHeC is
-superior to the LEP combination~\cite{ALEPH:2005ab}.
-In the optimistic scenario LHeC-60b an uncertainty contour similar to the
-one of a global EW fit~\cite{Haller:2018nnx} will be
-achieved.
-
-{\color{red} Todo. Discuss/mention the impact of the choice of the
-  renormalisation scheme (once \gf is taken as input, the top-mass
-  sensitivity in \dr\ is gone...}
-
-
-{\color{red} previous 'global ew fit' section starts here.}
-
-In a `global EW' fit a large number of precision measurements are
-compared with optimised (fitted) theory parameters in order to judge
-about the validity of EW theory and in order to dermine the
-parameters of EW theory in the most precise and comprehensive manner~\cite{Haller:2018nnx,deBlas:2016ojx}.
-A large number of observables are commonly considered in such fits and
-these include 
-$\alpha$ and \gf,
-mass parameters \mz, \mw, \mH, \mt, $m_b$, $m_c$,
-partial widths $\Gamma_W$, $\Gamma_Z$,
-the effective weak mixing angle
-$\sin^2\theta_\textrm {W,eff}^\ell$,  $\sigma^0_\textrm{had}$,
-asymmetry observables
-$A_\ell$, $A_c$, $A_b$,
-$A_\textrm{FB}^{0,\ell}$, $A_\textrm{FB}^{0,c}$, $A_\textrm{FB}^{0,b}$,  
-partial decay widths
-$R_\ell^0$,$R_b^0$, $R_c^0$,
-and QCD parameters $\Delta\alpha_\textrm{had}^5$ and
-$\alpha_\textrm{s}$.
-Under the assumption that $\alpha$ and \gf\ are known with ultimate
-precision, the following fit parameters are chosen in a global EW fit:
-\mZ, \mH, \mt, $m_b$, $m_c$, $\Delta\alpha_\textrm{had}^5$ and
-$\alpha_\textrm{s}$.
-
-In a simplified view, such a global fit is a trade-off between the
-experimental uncertainties of the measurements and the uncertainties
-of their predictions, which arise from the uncertainties on the
-(fitted) input parameters.
-As such, it is observed that the input experimental precision of \mz,
-\mH, $m_b$, 
-$m_c$, $\Delta\alpha_\textrm{had}^5$ and $\alpha_\textrm{s}$ is much
-higher than the predictions.
-For \mW\ and\ \mt\ the uncertainties of the measurement and the
-predictions are somewhat similar. All other observables have much
-larger experimental uncertainties than their predictions.
-Consequently, the overall constraint and sanity from a global EW fit
-arises predominantly from the comparison of the measurement of \mW\ and
-\mt\ with their predictions.
-
-
-In order to assess the impact of LHeC measurements on a global EW fit,
-we perform a simplified global EW fit, taking into account above's consideration:
-We consider measurements of \mZ, \mW, \mH, \mt, and \gf\ (since all
-other parameters do not provide additional constraints, and the
-QCD-related parameters are known sufficient precisely for their
-sub-leading relevance).
-The fit parameters then are chosen to be
-\gf, \mW, \mH\ and \mt, whereas \mz\ is a prediction.
-As such, the fit is overconstraint.
-All calculations are performed in the OS scheme.
-
-When using only EW precision observables and their best measurements
-as input~\cite{PDG19} we obtain an uncertainty for \mW\ of
-$\Delta\mw=5.6\,\MeV$, which is very similar to more general
-setups~\cite{Haller:2018nnx,deBlas:2016ojx}, but we did not accounted
-for theoretical uncertainties in our fit.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_1.pdf} 
-    \hskip0.03\textwidth
-    \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_2.pdf} 
-  \caption{
-    Left: Simplified global EW fit including LHeC-60b inclusive NC/CC DIS
-    data.
-    The results are compared to the simplified global EW fit without
-    LHeC data, and to the direct measurements of \mW\ and \mt.
-    Right: A magnified view of the figure.
-  }
-  \label{fig:globfit}
-\end{figure}
-When then further including LHeC-60b inclusive NC/CC DIS data into the
-fit, and further determining the PDF parameters in the fit as well, we
-obtain a moderate improvement on \mW\ to $\Delta\mw=5.5\,\MeV$.
-The 68\,\% C.L. contours in the \mW-\mt--plane are displayed in
-Fig.~\ref{fig:globfit}. It is found, that LHeC-60b provides only a
-very moderate improvement of the global EW fit.
-This is mainly because the predictions on relevant parameters are
-considerably more precise than their measurements, and LHeC cannot
-compete with direct measurements of $\alpha$, \gf, \mz\ or \mH.
-\emph{However, the strength of the LHeC EW analysis is its
-  complementarity with measurements in $ee$ or $pp$ or particular
-  aspects of EW theory, as for instance light-quark couplings to the
-  $Z$.
-  Further relevance is gained, since the dominant uncertainty in
-  $W$-boson mass measurements or measurements of
-  $\sin^2\theta_\text{W,eff}$  at the LHC (or HL-LHC) are PDF related
-  uncertainties. These may be considerably reduced with LHeC~\cite{Azzi:2019yne}.
-}
-
-Often in such global fits, the direct measurements are excluded. This
-is similar to the study of the simultaneous determination of \mW\ and
-\mt\ presented above.
-
-However, it is noteworthy, that this study represents the first global
-EW fit where simultaneously the PDF parameters are determined.
-
-
-
-
-
-
-
-%--------------------------------------------------------------------
-%   Results: global EW fits
-%--------------------------------------------------------------------
-\clearpage
-\section{A global EW fit with LHeC inclusive DIS data}
-A precise determination of various parameters, but in different
-processes represents a meaningful test of the electroweak theory.
-A simultaneous statistical analysis of multiple measurements represent
-a consistency test of the theory.
-
-A precise test of electroweak theory as the description of weak
-interaction is achieved in a more `global' view.
-
-In a `global EW' fit a large number of precision measurements are
-compared with optimised (fitted) theory parameters in order to judge
-about the validity of EW theory and in order to dermine the
-parameters of EW theory in the most precise and comprehensive manner~\cite{Haller:2018nnx,deBlas:2016ojx}.
-A large number of observables are commonly considered in such fits and
-these include 
-$\alpha$ and \gf,
-mass parameters \mz, \mw, \mH, \mt, $m_b$, $m_c$,
-partial widths $\Gamma_W$, $\Gamma_Z$,
-the effective weak mixing angle
-$\sin^2\theta_\textrm {W,eff}^\ell$,  $\sigma^0_\textrm{had}$,
-asymmetry observables
-$A_\ell$, $A_c$, $A_b$,
-$A_\textrm{FB}^{0,\ell}$, $A_\textrm{FB}^{0,c}$, $A_\textrm{FB}^{0,b}$,  
-partial decay widths
-$R_\ell^0$,$R_b^0$, $R_c^0$,
-and QCD parameters $\Delta\alpha_\textrm{had}^5$ and
-$\alpha_\textrm{s}$.
-Under the assumption that $\alpha$ and \gf\ are known with ultimate
-precision, the following fit parameters are chosen in a global EW fit:
-\mZ, \mH, \mt, $m_b$, $m_c$, $\Delta\alpha_\textrm{had}^5$ and
-$\alpha_\textrm{s}$.
-
-
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_1.pdf} 
-    \hskip0.03\textwidth
-    \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_2.pdf} 
-  \caption{
-    Left: Simplified global EW fit including LHeC-60b inclusive NC/CC DIS
-    data.
-    The results are compared to the simplified global EW fit without
-    LHeC data, and to the direct measurements of \mW\ and \mt.
-    Right: A magnified view of the figure.
-  }
-  \label{fig:globfit}
-\end{figure}
-
-
-
 
 
 
@@ -2075,7 +1932,7 @@ for their corresponding 1-parameter projections.
 %   FCC
 %--------------------------------------------------------------------
 \clearpage
-\section{Prospects for the FCC-eh}
+\section{Prospects for the FCC-eh and EIC}
 In this section, we briefly outline the prospects for the FCC-eh and
 give numbers for a few benchmark parameters.
 
@@ -2175,6 +2032,118 @@ for the scale-dependence of electroweak interactions.
 {\color{red}We studied in a traditional way NC and CC separately.
 Many models predict changes to NC and CC simultaneously. A such, a
 simultaneous determination of NC and CC observables is reasonable}
+
+
+\appendix
+
+
+%--------------------------------------------------------------------
+%   Results: global EW fits
+%--------------------------------------------------------------------
+\clearpage
+\section{A simplified global EW fit with LHeC inclusive DIS data}
+\label{app:globalfit}
+A precise determination of various parameters, but in different
+processes represents a meaningful test of the electroweak theory.
+A simultaneous statistical analysis of multiple measurements represent
+a consistency test of the theory.
+
+In a `global EW' fit a large number of precision measurements are
+compared with optimised (fitted) theory parameters in order to judge
+about the validity of EW theory and in order to dermine the
+parameters of EW theory in the most precise and comprehensive manner~\cite{Haller:2018nnx,deBlas:2016ojx}.
+A large number of observables are commonly considered in such fits and
+these include 
+$\alpha$ and \gf,
+mass parameters \mz, \mw, \mH, \mt, $m_b$, $m_c$,
+partial widths $\Gamma_W$, $\Gamma_Z$,
+the effective weak mixing angle
+$\sin^2\theta_\textrm {W,eff}^\ell$,  $\sigma^0_\textrm{had}$,
+asymmetry observables
+$A_\ell$, $A_c$, $A_b$,
+$A_\textrm{FB}^{0,\ell}$, $A_\textrm{FB}^{0,c}$, $A_\textrm{FB}^{0,b}$,  
+partial decay widths
+$R_\ell^0$,$R_b^0$, $R_c^0$,
+and QCD parameters $\Delta\alpha_\textrm{had}^5$ and
+$\alpha_\textrm{s}$.
+Under the assumption that $\alpha$ and \gf\ are known with ultimate
+precision, the following fit parameters are chosen in a global EW fit:
+\mZ, \mH, \mt, $m_b$, $m_c$, $\Delta\alpha_\textrm{had}^5$ and
+$\alpha_\textrm{s}$.
+
+In a simplified view, such a global fit is a trade-off between the
+experimental uncertainties of the measurements and the uncertainties
+of their predictions, which arise from the uncertainties on the
+(fitted) input parameters.
+As such, it is observed that the input experimental precision of \mz,
+\mH, $m_b$, 
+$m_c$, $\Delta\alpha_\textrm{had}^5$ and $\alpha_\textrm{s}$ is much
+higher than the predictions.
+For \mW\ and\ \mt\ the uncertainties of the measurement and the
+predictions are somewhat similar. All other observables have much
+larger experimental uncertainties than their predictions.
+Consequently, the overall constraint and sanity from a global EW fit
+arises predominantly from the comparison of the measurement of \mW\ and
+\mt\ with their predictions.
+
+
+In order to assess the impact of LHeC measurements on a global EW fit,
+we perform a simplified global EW fit, taking into account above's consideration:
+We consider measurements of \mZ, \mW, \mH, \mt, and \gf\ (since all
+other parameters do not provide additional constraints, and the
+QCD-related parameters are known sufficient precisely for their
+sub-leading relevance).
+The fit parameters then are chosen to be
+\gf, \mW, \mH\ and \mt, whereas \mz\ is a prediction.
+As such, the fit is overconstraint.
+All calculations are performed in the OS scheme.
+
+When using only EW precision observables and their best measurements
+as input~\cite{PDG19} we obtain an uncertainty for \mW\ of
+$\Delta\mw=5.6\,\MeV$, which is very similar to more general
+setups~\cite{Haller:2018nnx,deBlas:2016ojx}, but we did not accounted
+for theoretical uncertainties in our fit.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_1.pdf} 
+    \hskip0.03\textwidth
+    \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_2.pdf} 
+  \caption{
+    Left: Simplified global EW fit including LHeC-60b inclusive NC/CC DIS
+    data.
+    The results are compared to the simplified global EW fit without
+    LHeC data, and to the direct measurements of \mW\ and \mt.
+    Right: A magnified view of the figure.
+  }
+  \label{fig:globfit}
+\end{figure}
+When then further including LHeC-60b inclusive NC/CC DIS data into the
+fit, and further determining the PDF parameters in the fit as well, we
+obtain a moderate improvement on \mW\ to $\Delta\mw=5.5\,\MeV$.
+The 68\,\% C.L. contours in the \mW-\mt--plane are displayed in
+Fig.~\ref{fig:globfit}. It is found, that LHeC-60b provides only a
+very moderate improvement of the global EW fit.
+This is mainly because the predictions on relevant parameters are
+considerably more precise than their measurements, and LHeC cannot
+compete with direct measurements of $\alpha$, \gf, \mz\ or \mH.
+\emph{However, the strength of the LHeC EW analysis is its
+  complementarity with measurements in $ee$ or $pp$ or particular
+  aspects of EW theory, as for instance light-quark couplings to the
+  $Z$.
+  Further relevance is gained, since the dominant uncertainty in
+  $W$-boson mass measurements or measurements of
+  $\sin^2\theta_\text{W,eff}$  at the LHC (or HL-LHC) are PDF related
+  uncertainties. These may be considerably reduced with LHeC~\cite{Azzi:2019yne}.
+}
+
+Often in such global fits, the direct measurements are excluded. This
+is similar to the study of the simultaneous determination of \mW\ and
+\mt\ presented above.
+
+However, it is noteworthy, that this study represents the first global
+EW fit where simultaneously the PDF parameters are determined.
+
 
 
 
