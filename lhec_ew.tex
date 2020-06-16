@@ -1773,54 +1773,65 @@ one to extend the measurement to higher \Qsq values.
 %--------------------------------------------------------------------
 \clearpage
 \section{Oblique parameters $S$, $T$, and $U$}
-
-All extensions of the Standard Model with new particles lead 
-to indirect modifications of predictions through higher-order 
+%
+Extensions of the Standard Model with new particles commonly lead 
+to modifications of predictions through new contributions to higher-order 
 corrections. Loop insertions with particle-antiparticle pairs 
-in gauge boson self energies can be observable even if the 
+in gauge boson self energies can become relevant even if the 
 new particles are too heavy to be produced directly in 
-scattering processes. If the masses of heavy particles are 
-large, a low-$Q^2$ expansion of self-energy corrections provides 
+scattering processes. If the masses of the non-SM particles are 
+large, a low-$Q^2$ expansion of the self-energy corrections provides
 a sufficiently precise approximation by constant parameters. 
 Taking into account that the electromagnetic $U(1)$ gauge 
-symmetry has to stay intact and that some of the constants 
+symmetry has to stay intact and that some of the constants ({\color{blue} constant terms (?)}) 
 can be absorbed into renormalization constants, there are 
-3 free parameters, generally called $S$, $T$ and $U$. A suitable 
+three free parameters, generally called $S$, $T$ and $U$~\cite{Peskin:1991sw}. A suitable 
 definition is described in Ref.\ \cite{PDG2020} which we adopt 
-in the following. 
+in the following, while their relation to alternative
+definitions~\cite{Kennedy:1988sn,Altarelli:1990zd}%,Altarelli:1993sz ,Altarelli:1989hv
+ is described in Ref.~\cite{Spiesberger:1993jg}.
 
-For a PDF+STU fit where the SM masses, in particular $m_W$ 
-and $m_Z$, are fixed at their SM values, results are shown in 
-Figs.~\ref{fig:STU_OS} and Table~\ref{tab:STU_OS}. 
-Single-parameter fits can provide uncertainties which are 
-better by a factor of 2 to 5 compared with the present 
-PDG values. We observe a strong correlation of 2-parameter 
-fits which can be traced back to the fact that only certain 
+
+Results for various $STU$+PDF fits are presented in 
+Figs.~\ref{fig:STU_OS} and Table~\ref{tab:STU_OS}.
+These fits are performed in the OMS scheme and the SM masses are fixed at
+their PDG values, in particular the values of $m_Z$ and $m_W$. 
+Single-parameter fits of $S$, $T$ or $U$ can provide uncertainties that are 
+better by a factor of 2 to 5 compared to the present 
+PDG values~\cite{PDG2020}.
+In further fits we observe a very strong correlation of two parameters.
+This can be traced back to the fact that only certain 
 linear combinations of $S$, $T$ and $U$ contribute to the 
 NC and CC scattering cross sections and the $\gamma Z$ 
-interference contribution. These linear combinations can be 
-determined with very precision -- a fact which makes the DIS 
+interference contribution.
+For instance, the values of $T$ and $U$ can be disentangled at all only
+through their contribution to CC DIS, but not from NC DIS alone.
+By implication, however, these linear combinations can be 
+determined with very high precision -- a fact which makes the DIS 
 measurement particularly useful since it is complementary 
 to determinations of $S$, $T$ and $U$ from $Z$-pole data 
 (see, for example, Refs.~\cite{PDG2020,Baak:2011ze}). 
-
+{\color{red}DB. Note. This statement only holds, if the linear
+  combinations in $Z$-pole fits would be different than in DIS. Not
+  sure, if this is the case...}
+  
 New physics parametrized with the help of $S$, $T$ and $U$ 
-will also affect the $G_F$-$m_W$ relation, 
+will also affect the \gf-\mw\ relation, 
 Eq.~(\ref{eq:deltar-NLO}), through the $W$-boson self energy 
-correction to the muon decay. In the modified on-shell scheme 
+correction to the muon decay. In the modified on-shell scheme~\cite{Marciano:1980pb}, 
 where $m_W$ is calculated from $G_F$, new physics will 
 therefore not only contribute corrections to the measured 
-cross sections, but also indirectly through a modification 
-of input parameters. Using the modified on-shell scheme 
-corresponds to effectivly imposing the additional constraint 
-on SM parameters resulting from the $G_F$ measurement. As a 
-result, the sensitivity to $S$, $T$ and $U$ is modified. 
-Results of a PDF+STU fit in this modified on-shell scheme 
+cross sections, but also through a modification 
+of the input parameters. Using the modified on-shell scheme 
+corresponds to effectively imposing the additional constraint 
+on SM parameters resulting from the \gf\ measurement. As a 
+consequence, the sensitivity to $S$, $T$ and $U$ is modified. 
+Results of a $STU$+PDF fit in this modified on-shell scheme 
 are collected in Figs.~\ref{fig:STU_MOMS} and 
 Table~\ref{tab:STU_MOMS}. The uncertainties determined from 
 single-parameter fits are slightly less favorable in this 
-case. However, the 2- {\color{red} and 3 ???}-parameter fits 
-exhibit less correlation leading to smaller uncertainties 
+case. However, the 2-  and 3-parameter fits 
+exhibit weaker correlations leading to smaller uncertainties 
 for their corresponding 1-parameter projections. 
 
 \begin{figure}[b!]
@@ -2150,29 +2161,9 @@ EW fit where simultaneously the PDF parameters are determined.
 %--------------------------------------------------------------------
 \clearpage
 \section{Optional material}
-\subsection{Electron couplings}
-{\color{magenta} Todo: Discussion about \ve\ and \gae.}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.40\textwidth]{plot_couplings_e}
-  \caption{
-    Weak-neutral-current vector and axial-vector couplings of the electron
-    at 68\,\% confidence level~(C.L.) for
-    simulated LHeC data with $E_e=60\,\GeV$.
-    The LHeC expectations are compared with results from the combined
-    analysis of LEP+SLD data~\cite{ALEPH:2005ab}, which are much more precise.
-    {\color{red}We need to re-do this plot, but I don't know if it is
-      at all reasonable to show it...}
-  }
-  \label{fig:couplings2}
-\end{figure}
-
-
-%-------------------------------------------------------------------- 
-\clearpage
 \subsection{Other $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ or $\kappa^\prime$ fits}
 Results from  more specific fits of
-$\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$.
+$\sin^2\theta_\mathrm{W,\ell}^{\text{eff}}(\mz^2)$.
 
 \begin{table}[htb]
   \centering
@@ -2273,37 +2264,6 @@ In a fit of a single anomalous form factor, we obtain following uncertainties.
 
 
 
-%-------------------------------------------------------------------- 
-\clearpage
-\subsection{Polarisation asymmetry in NC, and polarisation in CC}
-{\color{green}A potential additional plot could be about the
-  polarisation asymmetry, but this maybe opens a long discussion...}
-\begin{figure}[h!b]
-\begin{center}
-   \includegraphics[width=0.40\textwidth]{{figures/fcc_asymmetry}.pdf}
-   \hskip1cm
-   \includegraphics[width=0.40\textwidth]{{figures/fcc_CCtot}.pdf}
-\end{center}
-\caption{
-  Left: Neutral-current polarisation asymmetry as a function of
-  \Qsq\ integrated over $x$ for FCC-eh simulated data. The polarisation asymmetry
-  is displayed for pure photon exchange, which is zero
-  by definition, % due to the absence of parity violating terms.
-  for calculations including only the interference terms $\gamma^*Z$,
-  and for predictions including also purely weak effects, $ZZ$.
-  The full circles illustrate simulated data points, which have
-  uncertainties invisible at the chose scales.
-  Right: Charged-current cross sections measured with different lepton
-  polarisation states and for electron (red) and positron
-  (blue) beams. The full circles illustrate FCC-eh simulated data,
-  whereas the open circles show H1 measurements. The data are scaled
-  by the the center-of-mass energies of the respective collider.
-  The error bars are smaller than the markers.
-}
-\label{fig:crosssections}
-\end{figure}
-
-
 %--------------------------------------------------------------------
 %                          Acknowledgements
 %--------------------------------------------------------------------
@@ -2311,204 +2271,3 @@ In a fit of a single anomalous form factor, we obtain following uncertainties.
 \section*{Acknowledgements}
 Acknowledgements: A.~Sch\"oning, M.~Klein, S.~Schmitt
 
-
-
-%--------------------------------------------------------------------
-%\input{fcc_draft}
-
-
-%--------------------------------------------------------------------
-%   Results from LHeC inclusive DIS data
-%--------------------------------------------------------------------
-\clearpage
-\section{Tables}
-\subsection{Determinations of single parameters}
-\begin{table}[h]
-  \footnotesize
-  \centering
-  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-    \hline
-    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC}& \multicolumn{2}{c}{FCC}  \\
-    \hline
-    % log.fcc.6p.u.d.e.txt
-    % EPRC.rhopu                =            1   +/-   0.00864794
-    % EPRC.zkapu                =            1   +/-   0.00886882
-    % EPRC.rhopd                =            1   +/-   0.028591
-    % EPRC.zkapd                =            1   +/-   0.0438381
-    % EPRC.rhope                =            1   +/-   0.0136914
-    % EPRC.zkape                =            1   +/-   0.00510635
-    \rhopd+\kappd+\rhopu+\kappu+\rhop{,e}+\kapp{,e}+PDF
-    & \rhopu &  1  &  0.031    & 1  & 0.009 \\
-    & \kappu &  1  &  0.013    & 1  & 0.009 \\
-    & \rhopd &  1  &  0.062    & 1  & 0.029   \\
-    & \kappd &  1  &  0.076    & 1  & 0.044  \\
-    & \rhope &  1  &  0.036    & 1  & 0.014  \\
-    & \kappe &  1  &  0.008    & 1  & 0.005 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/../log.fcc.4p.u.d.txt
-    % EPRC.rhopu                =            1   +/-   0.00748481
-    % EPRC.zkapu                =            1   +/-   0.00663437
-    % EPRC.rhopd                =            1   +/-   0.0159018
-    % EPRC.zkapd                =            1   +/-   0.0419873
-    %lhec
-    % EPRC.rhopu                =            1   +/-   0.0185425
-    % EPRC.zkapu                =            1   +/-   0.0102184
-    % EPRC.rhopd                =            1   +/-   0.0394555
-    % EPRC.zkapd                =            1   +/-   0.0757502
-    \rhopd+\kappd+\rhopu+\kappu+PDF
-    & \rhopu &  1  &  0.019  & 1  & 0.007   \\
-    & \kappu &  1  &  0.010  & 1  & 0.007   \\
-    & \rhopd &  1  &  0.039  & 1  & 0.016   \\
-    & \kappd &  1  &  0.076  & 1  & 0.042   \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/../log.fcc.4p.e.q.txt
-    %rhopq                     =            1   +/-   0.00827489
-    %zkapq                     =            1   +/-   0.005199
-    %EPRC.rhope                =            1   +/-   0.0100664
-    %EPRC.zkape                =            1   +/-   0.00504328
-    \rhop{,q}+\kapp{,q}+\rhop{,e}+\kapp{,e}+PDF
-    & \rhop{,q} & 1 &  0.029  & 1 &  0.008  \\
-    & \kapp{,q} & 1 &  0.007  & 1 &  0.005 \\
-    & \rhop{,e} & 1 &  0.032  & 1 &  0.010 \\
-    & \kapp{,e} & 1 &  0.008  & 1 &  0.005 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/../log.fcc.4p.e.q.txt
-    %rhopq                     =            1   +/-   0.00827489
-    %zkapq                     =            1   +/-   0.005199
-    %EPRC.rhope                =            1   +/-   0.0100664
-    %EPRC.zkape                =            1   +/-   0.00504328
-    \rhop{,q}+\kapp{,q}+\rhop{,e}+\kapp{,e}+PDF
-    & \rhop{,q} & 1 &  0.029  & 1 &  0.008  \\
-    & \kapp{,q} & 1 &  0.007  & 1 &  0.005 \\
-    & \rhop{,e} & 1 &  0.032  & 1 &  0.010 \\
-    & \kapp{,e} & 1 &  0.008  & 1 &  0.005 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhopu+\kappu+PDF
-    & \rhopu &  1  &  0.011    & 1 & 0.005\\
-    & \kappu &  1  &  0.005    & 1 & 0.003\\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhopd+\kappd+PDF
-    & \rhopd &  1  &  0.022    &  1  & 0.011 \\
-    & \kappd &  1  &  0.038    &  1  & 0.021 \\
-    \hline
-    \rhop{,e}+\kapp{,e}+PDF
-    & \rhope &  1  & 0.009      & 1  & 0.005 \\
-    & \kappe &  1  & 0.005      & 1  & 0.003  \\
-    \hline
-    \rhop{,f}+\kapp{,f}+PDF
-    & \rhope &  1  & 0.0042      & 1  & 0.0022 \\
-    & \kappe &  1  & 0.0026      & 1  & 0.0016  \\
-    \hline
-    \\
-    \multicolumn{3}{l}{Fits including \rhopW{,f} (CC)} \\
-    \hline
-    % log.final.PAR19eq50.3p.PDF.2.txt
-    \rhop{,f}$+$\kapp{,f}$+$\rhopW{,f}+PDF
-    & \rhop{f}   &  1  &  0.0045   & 1  & 0.0021 \\
-    & \kapp{f}   &  1  &  0.0027   & 1  & 0.0015 \\
-    & \rhopW{,f} &  1  &  0.0043   & 1  & 0.0027 \\
-    % & $\rhop{W,f}=1.002\pm0.008$ & \\
-    \hline
-  \end{tabular}
-  \caption{
-    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters, and their
-    correlation coefficients.
-  }
-  \label{tab:rhopwithcorrelations}
-\end{table}
-
-
-\begin{table}[h]
-  \footnotesize
-  \centering
-  \begin{tabular}{lr@{$\,=\,$}c@{$\,\pm\,$}l|cccccc}
-    \hline
-    Fit parameters & \multicolumn{3}{c}{Result} & \multicolumn{6}{l}{Correlation} \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhopd+\kappd+\rhopu+\kappu+\rhop{,e}+\kapp{,e}+PDF
-    & \rhopu &    &      & 1.00 \\
-    & \kappu &    &      & 0.  & 1.00 \\
-    & \rhopd &    &      &$    $& $   $ & 1.00 \\
-    & \kappd &    &      &$    $& $   $ &  & 1.00 \\
-    & \rhope &    &      &      &       &  &      &  1.00 \\
-    & \kappe &    &      & 0.   &       &  &      &  & 1.00 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhopd+\kappd+\rhopu+\kappu+PDF
-    & \rhopu &    &      & 1.00 \\
-    & \kappu &    &      & 0.  & 1.00 \\
-    & \rhopd &    &      &$    $& $   $ & 1.00 \\
-    & \kappd &    &      &$    $& $   $ &  & 1.00 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhop{,q}+\kapp{,q}+\rhop{,e}+\kapp{,e}+PDF
-    & \rhop{,e} &    &     & 1.00 \\
-    & \kapp{,e} &    &     & 0.  & 1.00 \\
-    & \rhop{,q} &    &     &     & 0.  & 1.00 \\
-    & \kapp{,q} &    &     & 0.  & $0$ & 0.0  & 1.00 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhopu+\kappu+PDF
-    & \rhopu &    &      & 1.00 \\
-    & \kappu &    &      & 0.  & 1.00 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhopd+\kappd+PDF
-    & \rhopd &    &      & 1.00 \\
-    & \kappd &    &      &  & 1.00 \\
-    \hline
-    % /nfs/dust/h1/group/britzger/alpos/Alpos/
-    \rhop{,e}+\kapp{,e}+PDF
-    & \rhope &    &      &  1.00 \\
-    & \kappe &    &      &  & 1.00 \\
-    \hline
-    \\
-    \multicolumn{3}{l}{Fits including \rhopW{,f} (CC)} \\
-    \hline
-    % log.final.PAR19eq50.3p.PDF.2.txt
-    \rhop{,f}$+$\kapp{,f}$+$\rhopW{,f}+PDF
-    & \rhop{f}   &    &     & 1.00 & \\
-    & \kapp{f}   &    &     & 0. & 1.00  \\
-    & \rhopW{,f} &    &     & 0. & $0.$ & 1.00\\
-    % & $\rhop{W,f}=1.002\pm0.008$ & \\
-    \hline
-  \end{tabular}
-  \caption{
-    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters, and their
-    correlation coefficients.
-  }
-  \label{tab:rhopwithcorrelations}
-\end{table}
-
-
-% ------------------------------------------------------------------------
-%
-% ------------------------------------------------------------------------
-\clearpage
-\section*{Useless stuff}
-%Reasonable examples are determinations of (all) the weak neutral current
-%couplings, $g_A^{f}$ and $g_V^{f}$ with $f=(e,u,d,s,c,b,t)$,
-%or more general, directly the $\rho_{\text{NC}, f}$ and
-%$\kappa_{\text{NC}, f}$ parameters.
-These can be done either in the scale-indpendent LO approximation, by
-taking the scale-dependent loop corrections from theory, or their
-effective values can be determined at different scales.
-More commonly though, the effective weak mixing
-angle $\sin\theta_{\text{W}}^{\text{eff},f}:=\kappa_{\text{NC}, q/e}\ \sw$
-is tested at different scales, while also this quantity has an
-important scheme dependent component (see Ref.~\ref{pdg18} for a
-concise dicsussion).
-Noteworthy, most of the precision measurements are performed in the
-time-like domain, i.e.\ for $\mu^2>0$, whereas DIS is mediated by space-like
-momentum transfer, $\Qsq=-q^2$, and thus $q^2<0$.
-In DIS at the LHeC, in addition, a large kinematic range can be tested.
-
-Complementary, the measurement of the weak boson masses yields an interesting testing
-case of the theory, in particular the measurement of \mw.
-This is because \mw\ can be considered as input parameter to the
-formalism, or alternatively, if the precision measurement of \gf\ is
-been taken as input~\cite{Tishchenko:2012ie}, then \mw becomes a
-prediction and can be confronted with the measurement directly.
