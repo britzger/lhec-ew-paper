@@ -43,6 +43,28 @@ $ep$ scattering is mediated through space-like momentum transfer
 In this article we study the sensitivity of inclusive NC and CC cross
 section at LHeC to electroweak parameters.
 
+{\color{blue} Outline:
+  We first give some introduction, explain the methdology, and
+  introduce the LHeC inclusive NC/CC DIS pseudo-data.
+  Then we determine the input parameters to the SM theory, \mW\ and
+  \mZ\ (that enter the predictions already at the born-level).
+  Then we investigate the weak mixing angle in the SM formalism.
+  We then consider extensions of the SM in terms of insertions to the
+  self-energies due to   additional heavy particles, which are
+  commonly parameterised by the $S$, $T$ and $U$ parameters.
+  Then we exploit radiative corrections in the SM formalism by
+  determining the top-quark or Higgs-boson mass (once compared to direct
+  measurements these also probe non-SM contributions to the loop
+  radiative corrections).
+  Then we consider model independent modifications of the vector and
+  axial-vector couplings (\Qsq-dependent, and also for different
+  flavors, these are tests of the form factors $\rho$ and $\kappa$).
+  Similar studies are done for CC ($\rho^\prime_{\text{CC}}$).
+  Then, we study the weak neutral current couplings in a
+  model-independent manner.
+  Of course, we also conclude in the end.
+}
+
 {\color{red} 
 Goal: first to test the SM, i.e.\ data are compared with 
 SM predictions and the agreement is quantitatively described 
@@ -396,7 +418,7 @@ had been $E_e = 27.6$~GeV and $E_p = 920$~GeV, respectively.
       electron beam energies ($E_e=50\,\GeV$ and 60\,\GeV). Cross 
       sections for longitudinal electron beam polarisations of 
       $P_e=-0.8$ and $+0.8$ are displayed. For comparison also 
-      data measured by H1 at HERA {\color{red} reference?}
+      data measured by H1 at HERA~\cite{Aaron:2012qi}
       at center-of-mass energies of $\sqrt{s}=920$ with unpolarised 
       ($P=0$) electron beams are displayed. 
       }
@@ -445,14 +467,18 @@ between $E_e=50~\GeV$ and 60~\GeV increases with \Qsq.
 
 In this section, the details of the LHeC pseudo data\,\footnote{In 
    the following, the simulated \emph{pseudo data} is simply 
-   denoted as `data' in order to facilitate reading.}
+   denoted as \emph{data} in order to facilitate reading.}
 used below for an extraction of electroweak parameters are 
 described.
 
-In the present analysis a previous simulation 
-{\color{red} \em need reference?}
-of double-differential inclusive NC and CC DIS cross section 
-data are exploited. 
+In the present analysis simulated double-differential inclusive NC and
+CC DIS cross section data are exploited.
+The data have been simulated based on a numerical
+procedure~\cite{Blumlein:1990dj} for the purpose of the LHeC CDR
+update~\cite{Bruning:2706220} and are available from
+Ref.~\cite{MaxHome17,MaxHome19}.
+The data are briefly described in the following.
+
 The data sets include electron and positron scattering, 
 different lepton beam polarisation settings, and different 
 proton beam energies. Since a decision about the actual layout 
@@ -464,7 +490,7 @@ of $E_p = 7000~\GeV$, but in addition, a small sample with the
 reduced proton energy of $E_p = 1000$~GeV is also considered.
 A summary of the data sets is given in Table~\ref{tab:datasets}.
 
-\begin{table}[b!]
+\begin{table}[bh!]
   \centering
   \small
   \begin{tabular}{lccccccc}
@@ -1298,6 +1324,8 @@ for their corresponding 1-parameter projections.
 %--------------------------------------------------------------------
 %   top quark mass
 %--------------------------------------------------------------------
+\clearpage
+
 \section{Mass parameters from radiative corrections}
 While the weak boson masses are important quantities
 for the cross section calculation already at the Born-level, the value of the
@@ -1399,37 +1427,41 @@ $\mt^2/\mw^2$ terms of the radiative corrections, the
 
 These encouraging prospects for the determination of $\mt$ and $\mw$ may
 suggest also a relevant impact of inclusive NC/CC DIS data as
-an additional input to a global EW fit (see e.g.\ Refs.~\cite{deBlas:2016ojx,Haller:2018nnx,PDG19}).
-However, once the direct measurements of \mt\ and \mw\ are considered
-in such a global EW fit (in contrast to the results displayed in
-fig.~\ref{fig:mWmt}),
-the $\mt^2/\mw^2$ relation of the radiative
-corrections is resolved and the global EW fit studies the
-dominant parameters of EW theory ($\alpha$, \gf, \mz, \mw, \mt, \mH,
-\dots) at a higher precision~\cite{deBlas:2016ojx,Haller:2018nnx,PDG19}.
-As such, the measurements of inclusive NC/CC DIS cross sections at the
-LHeC will have only a very moderate impact on the parameters of
-interest in a global EW fit, as it is briefly studied in
-appendix~\ref{app:globalfit}.
-Therefore, the strengths of an EW analysis of LHeC inclusive NC/CC DIS
-data are rather particular aspects of EW theory than actually the most
-precise values of the SM parameters itself.
-This will be studied in the following sections.
+an additional input to a global EW fit (see
+e.g.\ Refs.~\cite{deBlas:2016ojx,Haller:2018nnx,PDG19}), which is
+studied briefly in appendix~\ref{app:globalfit}.
+
+{\color{brown}
+  Once the direct measurements of \mt\ and \mw\ are considered
+  in such a global EW fit (in contrast to the results displayed in
+  fig.~\ref{fig:mWmt}),
+  the $\mt^2/\mw^2$ relation of the radiative
+  corrections is resolved and the global EW fit studies the
+  dominant parameters of EW theory ($\alpha$, \gf, \mz, \mw, \mt, \mH,
+  \dots) at a higher precision~\cite{deBlas:2016ojx,Haller:2018nnx,PDG19}.
+  As such, the measurements of inclusive NC/CC DIS cross sections at the
+  LHeC will have only a very moderate impact on the parameters of
+  interest in a global EW fit, as it is briefly studied in
+  appendix~\ref{app:globalfit}.
+  Therefore, the strengths of an EW analysis of LHeC inclusive NC/CC DIS
+  data are rather particular aspects of EW theory than actually the most
+  precise values of the SM parameters itself.
+  This will be studied in the following sections.
+}
 
 %--------------------------------------------------------
 %  Higgs mass
 %--------------------------------------------------------
-{\color{blue}(This may also go to the appendix) }
 One may also try to attempt to determine the Higgs-boson mass \mH\ from NC/CC
 DIS data which enters through the self-energy corrections in the SM formalism.
 However, the \mH\ dependence is only logarithmic,  
-$\propto\log(M^2_H/\mw^2)$, i.e.\ very weak. A PDF+EW fit 
+$\propto\log(\mH^2/\mw^2)$, i.e.\ very weak. A PDF+EW fit 
 with the Higgs-boson mass as a free parameter leads an uncertainty
 of $\Delta m_H=^{+29}_{-23}$ and $^{+24}_{-20}~\GeV$ 
 for the LHeC scenarios LHeC-50a and LHeC-60b, respectively.
 This compares well with 
 the precision found for the indirect \mH\ determinations 
-from LEP+SLC combined data~\cite{ALEPH:2005ab}, but is, 
+from LEP+SLC combined data~\cite{ALEPH:2005ab,deBlas:2016ojx,Haller:2018nnx}, but is, 
 of course, much less precise than the direct determination 
 from the LHC nowadays. 
 
@@ -1717,7 +1749,7 @@ uncertainties can be achieved.
 \label{tab:rhoCC}
 \end{table}
 
-\begin{figure}[t!]
+\begin{figure}[th!]
   \centering
   \includegraphics[width=0.50\textwidth]{plot_rhoWellipse} 
   \caption{
@@ -1733,7 +1765,7 @@ Event rates at the LHeC are expected to be large and will
 cover a large \Qsq range between $10^2$~GeV$^2$ and almost 
 $1000^2$~GeV$^2$. It is therefore possible to determine 
 the anomalous CC couplings in different \Qsq ranges. Our 
-results are shown in Fig.~\ref{fig:rhoCC}. Here, we assumed 
+results are shown in Fig.~\ref{fig:rhoCCvsQ2}. Here, we assumed 
 $\rho^\prime_{\text{CC},eq} = \rho^\prime_{\text{CC},e\bar{q}} 
 =: \rho^\prime_{\text{CC},f}$. The \Qsq range is split into 
 twelve bins, and for each bin the coupling parameter 
@@ -1754,7 +1786,7 @@ one to extend the measurement to higher \Qsq values.
   parameters, assuming $\rho^\prime_{\text{CC},eq} = 
   \rho^\prime_{\text{CC},e\bar{q}} = \rho^\prime_{\text{CC},f}$.
   }
-\label{fig:rhoCC}
+\label{fig:rhoCCvsQ2}
 \end{figure}
 
 
@@ -1949,13 +1981,16 @@ precision in other experiments.
 \section{Prospects for the FCC-eh and EIC}
 In this section, we briefly outline the prospects for the FCC-eh and
 give numbers for a few benchmark parameters.
-
+%
 The LHeC \& FCC proceedings are Ref.~\cite{Britzger:2017fuc}.
 
-The EIC, HERA, LHeC and FCC are compared in Fig.~\ref{fig:dSigmaFacilities}
+The EIC, HERA, LHeC and FCC are compared in
+Fig.~\ref{fig:dSigmaFacilities}.
+{\color{green}Two alternative versions of this plot are below}
+%
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.52\textwidth]{plot_GraphsDsigmaDQ2_FCCEIC_opt}
+  \includegraphics[width=0.46\textwidth]{plot_GraphsDsigmaDQ2_FCCEIC_opt}
   \caption{{Single differential inclusive DIS cross sections for
       $e^-p$ NC  and CC DIS at the
       EIC, HERA, LHeC and FCC-eh.
@@ -1971,7 +2006,6 @@ The EIC, HERA, LHeC and FCC are compared in Fig.~\ref{fig:dSigmaFacilities}
   \label{fig:dSigmaFacilities}
 \end{figure}
 
-{\color{green}Two alternative versions of this plot are below}
 \begin{figure}[h!b]
   \centering
   \includegraphics[width=0.38\textwidth]{plot_GraphsDsigmaDQ2_LHeC_opt}
@@ -2058,7 +2092,7 @@ simultaneous determination of NC and CC observables is reasonable}
 \section{A simplified global EW fit including LHeC data}
 \label{app:globalfit}
 In a more general approach, the validity of the Standard Model is
-frequently studied in so-called `global EW fits'~\cite{Haller:2018nnx,deBlas:2016ojx,PDG19}. 
+frequently studied in so-called `global EW fits'~\cite{deBlas:2016ojx,Haller:2018nnx,PDG19}. 
 In these statistical analyses a large number of precision
 measurements are simultaneously fitted and compared to predictions in
 a consistent theoretical framework.
