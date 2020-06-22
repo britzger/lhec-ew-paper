@@ -745,9 +745,10 @@ uncertainties,
   \chi^2 =\sum_{ij} \log{\frac{\varsigma_i}{\sigma_i}}V^{-1}_{ij}
   \log{\frac{\varsigma_j}{\sigma_j}}
 \end{equation}
-where the sum runs over all data points $\varsigma_i$ and their
-corresponding predicted values, $\sigma_i$. The covariance matrix 
-$V$ represents the relative uncertainties of the data points.
+where the sum runs over all data points, $\varsigma_i$ are the 
+measured cross section values and $\sigma_i$ their corresponding 
+theory predictions depending on the fit parameters. The covariance 
+matrix $V$ represents the relative uncertainties of the data points.
 The Minuit library is employed and the resulting uncertainties 
 of the fit parameters are calculated using the HESSE or MINOS 
 algorithm~\cite{James:1975dr}. For our study, we set the data 
@@ -1014,10 +1015,7 @@ and flavor-dependent weak mixing angle,
 This generalizes the definition of Eq.~(\ref{eq:sin2w-eff}), 
 as we now allow for a modification due to non-standard physics 
 described by the scale-dependent parameter $\kapp{f}$ 
-(cf.\ Eq.~(\ref{eq:gV})). 
-%A determination of the weak mixing 
-%angle is therefore a re-interpretation of a one-parameter 
-%fit of \kapp\ described in the previous section. 
+(cf.\ Eq.~(\ref{eq:gV})). In the SM, one has $\kapp{f} = 1$. 
 
 We perform a PDF+EW fit assuming 
 $\sin^2\theta_{\textrm{W},f}^\textrm{eff}(\mu^2)$ 
@@ -1102,15 +1100,16 @@ can be performed in sub-regions of the wide kinematic range of
 $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$ can be determined in 
 the range of about $25 < \sqrt{\Qsq} < 700\,\GeV$ with a precision 
 better than 0.1\,\% and everywhere better than 1\,\%. The results 
-are shown in Fig.~\ref{fig:sw2Q2} and Table~\ref{tab:sw2Q2}. 
-We emphasize that DIS is complementary to other measurements 
-since the scattering process is mediated by boson exchange with 
-space-like momenta, i.e.\ the scale is given by $\mu = 
-- \sqrt{Q^2}$ (c.f.\ Sect.~\ref{sec:sw2eff}). If a cacluation 
-of DIS cross sections including higher-order EW corrections in 
-the $\overline{\rm MS}$ scheme is available, the uncertainty of 
-this \Qsq-dependent \sw-determination can be translated into a 
-test of the running of the weak mixing angle. 
+for 12 $Q^2$ values obtained from bin-width and bin-center 
+corrected cross section data are shown in Fig.~\ref{fig:sw2Q2} 
+and Table~\ref{tab:sw2Q2}. We emphasize that DIS is complementary 
+to other measurements since the scattering process is mediated 
+by boson exchange with space-like momenta, i.e.\ the scale is 
+given by $\mu^2 = - Q^2$ (c.f.\ Sect.~\ref{sec:sw2eff}). If a 
+calculation of DIS cross sections including higher-order EW 
+corrections in the $\overline{\rm MS}$ scheme is available, 
+the uncertainty of this \Qsq-dependent \sw-determination can 
+be translated into a test of the running of the weak mixing angle. 
 
 \begin{figure}[t!]
   \centering
@@ -1129,7 +1128,8 @@ test of the running of the weak mixing angle.
 %  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
   \begin{tabular}{lcccc}
     \toprule
-    & \multicolumn{4}{c}{Expected relative uncertainty} \\
+    & \multicolumn{4}{c}{Expected relative uncertainty of 
+                      $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$} \\
     \Qsq value $[\GeVsq]$  & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\
     \midrule
     200     & 0.026~  & 0.049~  & 0.027~  & 0.051~   \\
@@ -1148,14 +1148,11 @@ test of the running of the weak mixing angle.
   \end{tabular}
   \caption{
     Expected relative uncertainties for the determination of 
-    $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$ in different bins 
-    of \Qsq\ as a function of 
-    {\color{red} the central values $Q_i^2$ ?}. 
-    The uncertainties are obtained in a simultaneous fit of all 12 
-    parameters of $\sin^2\theta_{\textrm{W},f}^\textrm{eff}(\mu^2_i)$ 
-    with $\mu_i = - \sqrt{Q_i^2}$ 
-    together with the PDF parameters 
-    {\color{red} at a time ???}. 
+    $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$ as a function  
+    of \Qsq. The uncertainties are obtained in a simultaneous 
+    fit of all 12 parameters of 
+    $\sin^2\theta_{\textrm{W},f}^\textrm{eff}(\mu^2_i)$ with 
+    $\mu_i^2 = - Q_i^2$ together with the PDF parameters. 
   }
 \label{tab:sw2Q2}
 \end{table}
@@ -1581,6 +1578,7 @@ previous section (see Fig.~\ref{fig:couplings}).
   \includegraphics[width=0.46\textwidth]{plot_NC_rhokap_u}
   \includegraphics[width=0.46\textwidth]{plot_NC_rhokap_d}
   \caption{
+    {\color{red}DB. Check LHeC-50a values in plot. x-axis label (`NC')}
     Expectations at the 68\,\% confidence level for the 
     simultaneous determination of anomalous up- and down-type 
     quark couplings, assuming electron couplings fixed at 
@@ -1593,6 +1591,47 @@ previous section (see Fig.~\ref{fig:couplings}).
 \label{fig:rhokappa:ud}
 \end{figure}
 
+
+                                                                                                                                                                              
+\begin{table}[bht!]                                                                                                                                                           
+  \footnotesize                                                                                                                                                               
+  \centering                                                                                                                                                                  
+  \begin{tabular}{lccccc}                                                                                                                                                     
+    \toprule                                                                                                                                                                  
+    & & \multicolumn{4}{c}{Expected uncertainty}  \\
+    \cmidrule(lr){3-6}
+    Fit parameters & Parameter & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\ 
+    \midrule
+    \rhop{,f}+PDF           & \rhop{,f}  &  $\pm0.0010$   &  $\pm0.0017$   &  $\pm0.0012$   &  $\pm0.0020$  \\
+    \addlinespace
+    \rhop{,f}+\kapp{f}+PDF  & \rhop{,f}  &  $\pm0.0015$   &  $\pm0.0025$   &  $\pm0.0033$   &  $\pm0.0043$  \\
+                            & \kapp{f}   &  $\pm0.0010$   &  $\pm0.0015$   &  $\pm0.0025$   &  $\pm0.0031$  \\
+    \addlinespace
+    \rhop{,u}+\kapp{u}+\rhop{,d}+\kapp{d}+PDF
+                            & \rhop{,u}  &  $\pm0.006$   &  $\pm0.009$   &  $\pm0.011$   &  $\pm0.014$  \\
+                            & \kapp{u}   &  $\pm0.004$   &  $\pm0.005$   &  $\pm0.009$   &  $\pm0.011$  \\
+                            & \rhop{,d}  &  $\pm0.014$   &  $\pm0.022$   &  $\pm0.024$   &  $\pm0.033$  \\
+                            & \kapp{d}   &  $\pm0.028$   &  $\pm0.045$   &  $\pm0.050$   &  $\pm0.071$  \\
+    \addlinespace
+    \rhop{,u}+\kapp{u}+PDF  & \rhop{,u}  &  $\pm0.004$   &  $\pm0.006$   &  $\pm0.006$   &  $\pm0.009$  \\
+                            & \kapp{u}   &  $\pm0.002$   &  $\pm0.003$   &  $\pm0.004$   &  $\pm0.005$  \\
+    \addlinespace
+    \rhop{,d}+\kapp{d}+PDF  & \rhop{,d}  &  $\pm0.008$   &  $\pm0.014$   &  $\pm0.013$   &  $\pm0.019$  \\ 
+                            & \kapp{d}   &  $\pm0.014$   &  $\pm0.024$   &  $\pm0.023$   &  $\pm0.034$  \\ 
+    \midrule
+    \addlinespace
+    \rhopW{,f}+\kapp{f}+PDF  & \rhopW{,f} &  $\pm0.0017$   &  $\pm0.0019$   &  $\pm0.0016$   &  $\pm0.0018$  \\ 
+                             & \kapp{f}   &  $\pm0.0006$   &  $\pm0.0011$   &  $\pm0.0009$   &  $\pm0.0015$  \\ 
+    \bottomrule
+  \end{tabular}
+  \caption{ 
+    \rhop{} and \kapp{} fits.
+    {\color{red}New table. to be included in text.}
+  }
+  \label{tab:SM}
+\end{table}                                                                                                                                                                   
+
+
 %--------------------------------------------------------
 % Q2 dependence 
 %--------------------------------------------------------
@@ -1604,7 +1643,9 @@ previous section (see Fig.~\ref{fig:couplings}).
   \includegraphics[width=0.45\textwidth]{plot_kapQ2}
   \caption{
     Scale dependence of the anomalous coupling parameters  
-    \rhop\ (left) and \kapp{} (right) for the scenarios  
+    $\rho^{\prime}_{\text{NC},f}(\mu^2)$ (left) and 
+    $\kappa^{\prime}_f(\mu^2)$ (right) with $\mu^2 = - Q^2$ 
+    for the scenarios  
     LHeC-50a and LHeC-60b. The highest precision is obtained 
     in the region of about $\Qsq\approx 20\,000\,\GeVsq$ for 
     scenario LHeC-60b. 
@@ -1711,8 +1752,8 @@ uncertainties can be achieved.
 %log.rhoWq.lhec50.uncorr.0.25.txt:rhoWq                     =            1   +/-   0.00265216  
 %log.rhoWq.lhec50.uncorr.0.5.txt:rhoWqb                    =            1   +/-   0.00313966  
 %log.rhoWq.lhec50.uncorr.0.5.txt:rhoWq                     =            1   +/-   0.00280834  
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}         &   0.0027  & 0.0028 & 0.0027 & 0.0028 \\
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   0.0028  & 0.0030 & 0.0028 & 0.0031 \\
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}         &   $\pm0.0027$  & $\pm0.0028$ & $\pm0.0027$ & $\pm0.0028$ \\
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   $\pm0.0028$  & $\pm0.0030$ & $\pm0.0028$ & $\pm0.0031$ \\
     \addlinespace
 %log.rhoWq.q.lhec60.uncorr.0.25.test.txt:rhoWq                      =            1   +/-   0.000831298 
 %log.rhoWq.q.lhec60.uncorr.0.5.test.txt:rhoWq                       =            1   +/-   0.0012586   
@@ -1722,13 +1763,19 @@ uncertainties can be achieved.
 %log.rhoWq.qb.lhec60.uncorr.0.5.test.txt:rhoWqb                     =            1   +/-   0.00143666  
 %log.rhoWq.qb.lhec50.uncorr.0.25.test.txt:rhoWqb                    =            1   +/-   0.00116098  
 %log.rhoWq.qb.lhec50.uncorr.0.5.test.txt:rhoWqb                     =            1   +/-   0.00178834  
-    \rhopW{,eq}+PDF        & \rhopW{,eq}         &   0.0008  & 0.0013 & 0.0010 & 0.0015 \\
+    \rhopW{,eq}+PDF        & \rhopW{,eq}         &   $\pm0.0008$  & $\pm0.0013$ & $\pm0.0010$ & $\pm0.0015$ \\
     \addlinespace
-    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   0.0009  & 0.0014 & 0.0012 & 0.0018 \\
+    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   $\pm0.0009$  & $\pm0.0014$ & $\pm0.0012$ & $\pm0.0018$ \\
     % log.final.PAR19eq50.3p.PDF.2.txt
 %    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1 & 0.0027  & 1 & 0.0027  & 1 & 0.0027 \\
 %    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1 & 0.0011  & 1 & 0.0011  & 1 & 0.0011 \\
 %    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1 & 0.0012  & 1 & 0.0012  & 1 & 0.0012 \\
+    \addlinespace
+%log.rhoWf.lhec50.uncorr.0.25.txt:rhoWf                     =            1   +/-   0.00164196  
+%log.rhoWf.lhec50.uncorr.0.5.txt:rhoWf                     =            1   +/-   0.00184048  
+%log.rhoWf.lhec60.uncorr.0.25.txt:rhoWf                     =            1   +/-   0.00167647  
+%log.rhoWf.lhec60.uncorr.0.5.txt:rhoWf                     =            1   +/-   0.0018733   
+    \rhopW{,f}+PDF  & \rhopW{,f}                 &   $\pm0.0017$ &   $\pm0.0019$ &   $\pm0.0016$ &   $\pm0.0018$ \\
     \bottomrule
   \end{tabular}
   \caption{
@@ -2038,6 +2085,37 @@ luminosity at the LHeC will allow for the first time precision electroweak
 measurement in DIS at high scales.
 %
 
+\begin{table}[bht!]
+  \footnotesize
+  \centering
+  \begin{tabular}{lcccccc}
+    \toprule
+     & & & \multicolumn{4}{c}{Expected uncertainty}  \\
+    \cmidrule(lr){4-7}
+    Fit parameters & Parameter & Unit & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\
+    \midrule
+    \mw+PDF      &  \mw & MeV  &  $\pm6$ & $\pm10$ & $\pm12$ & $\pm8$ \\
+    \addlinespace
+    \mw+\mz+PDF  &  \mw & MeV  &  $\pm17$ & $\pm28$ & $\pm24$ & $\pm37$ \\
+                 &  \mz & MeV  &  $\pm19$ & $\pm31$ & $\pm26$ & $\pm40$ \\
+    \addlinespace
+    \sweff+PDF   &  \sweff & $10^{-5}$   &  $\pm19$ & $\pm29$ & $\pm31$ & $\pm41$ \\
+    \addlinespace
+    \mt+PDF      &  \mt & GeV  &  $\pm1.1$ & $\pm1.8$ & $\pm1.4$ & $\pm2.2$ \\
+    \addlinespace
+    \mW+\mt+PDF  &  \mW & MeV  &  $\pm18$ & $\pm29$ & $\pm24$ & $\pm38$\\
+                 &  \mt & GeV  &  $\pm3.3$ & $\pm5.4$ & $\pm4.4$ & $\pm6.9$\\
+    \addlinespace
+    log\mH+PDF      & $\log\tfrac{\mH}{\GeV}$ &   &  $\pm0.11$ & $\pm0.17$ & $\pm0.13$ & $\pm2.0$ \\
+    log\mH+PDF      &    \mH & GeV  &  $^{+14}_{-13}$ &  $^{+24}_{-20}$  &  $^{+17}_{-15}$ &  $^{+28}_{-23}$ \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Standard Model fits
+  }
+  \label{tab:SM}
+\end{table}
+
 
 Highest precision is achieved for the measurement of the $W$-boson
 mass with a prospected experimental uncertainty of up to
@@ -2098,77 +2176,58 @@ a comprehensive consistency test of the SM; on the other hand
 one can expect to obtain the most precise determination of 
 SM parameters. In this appendix, we are interested in estimating 
 the potential impact of LHeC inclusive NC/CC DIS data on the 
-results of a global fit. We describe in the following a 
-simplified approach which is suited for our purpose. 
+parameter determination within such a global fit. We describe 
+in the following a simplified approach which is suited for our 
+purpose. 
 
 It is common to consider a set of data as input for a global 
 EW fit comprising $\alpha$ and \gf, the mass parameters \mz, 
 \mw, \mH, and \mt, partial decay widths of the gauge bosons, 
 $\Gamma_W$ and $\Gamma_Z$, the effective weak mixing angle
-$\sin^2\theta^\textrm{eff}_{W,\ell}$, %  $\sigma^0_\textrm{had}$,
-partial decay widths and asymmetry observables in $e^+e^-$ 
-collisions~\cite{ALEPH:2005ab} $R_\ell^0$, $R_b^0$, $R_c^0$,
-$A_\ell$, $A_c$, $A_b$, $A_\textrm{FB}^{0,\ell}$, 
-$A_\textrm{FB}^{0,c}$, $A_\textrm{FB}^{0,b}$, QCD contributions 
-to the QED vacuum polarisation $\Delta\alpha_\textrm{had}^5$, 
-and sometimes also measurements of $\alpha_\textrm{s}$, $m_b$, 
-and $m_c$. With the assumption that $\alpha$ and \gf\ are known 
-with ultimate precision, the fit parameters are chosen as 
-\mZ, \mH, \mt, $\Delta\alpha_\textrm{had}^5$ and
-$\alpha_\textrm{s}$. Sometimes also $m_b$ and $m_c$ are taken 
-as parameters to be determined by the fit. 
+$\sin^2\theta^\textrm{eff}_{W,\ell}$, partial decay widths and 
+asymmetry observables in $e^+e^-$ collisions~\cite{ALEPH:2005ab} 
+$R_\ell^0$, $R_b^0$, $R_c^0$, $A_\ell$, $A_c$, $A_b$, 
+$A_\textrm{FB}^{0,\ell}$, $A_\textrm{FB}^{0,c}$, 
+$A_\textrm{FB}^{0,b}$, QCD contributions to the QED vacuum 
+polarisation $\Delta\alpha_\textrm{had}^5$, and sometimes also 
+measurements of $\alpha_\textrm{s}$, $m_b$, and $m_c$. With the 
+assumption that $\alpha$ and \gf\ are known with ultimate 
+precision, the fit parameters are chosen as \mZ, \mH, \mt, 
+$\Delta\alpha_\textrm{had}^5$ and $\alpha_\textrm{s}$. 
+Sometimes also $m_b$ and $m_c$ are taken as parameters to be 
+determined by the fit. 
 
 Since we are interested only in estimating uncertainties and 
 how these are affected by LHeC data, rather than in the actual 
 fit values, some simplifications can be made in the following. 
-{\color{red} ???
-In a rational view, and since the fit is overconstraint, 
-a global EW fit is a trade-off between the experimental 
-uncertainties of the measurements and the uncertainties
-of their predictions that arise in turn also from the 
-uncertainties of the measurements (if theoretical uncertainties 
-are ignored).
-}
-We observe that some of the fit parameters are determined with 
+One can observe that some of the fit parameters are determined with 
 a high precision directly from measurements. This is the case 
 for \mz, \mH, $m_b$, $m_c$, $\Delta\alpha_\textrm{had}^5$ and 
 $\alpha_\textrm{s}$. If these direct data were not taken into 
 account in the global fit, these parameters could be determined 
-only with a much larger uncertainty. In the case of \mW\ and 
+only with a much larger uncertainty. We do not expect that this 
+will change if LHeC data are taken into account. Many other 
+observables, like the $Z$-pole cross section ratios and 
+asymmetries have much larger experimental uncertainties than 
+predicted by the global fit. However, in the case of \mW\ and 
 \mt{}, the uncertainties from direct measurements is of a 
-similar size as those from a global fit. All other observables 
-have much larger experimental uncertainties than predicted by 
-the global fit. 
-{\color{red} ??? 
-Consequently, the constraints from a global EW fit arises 
-predominantly from the comparison of the measurement of \mW\ 
-and \mt\ with their predictions, which are obtained from the 
-precision measurements of $\alpha$, \gf, and \mz\ (with subleading 
-contributions from $\log\mH$, $m_b$, $m_c$, 
-$\Delta\alpha_\textrm{had}^5$).
-} 
+similar size as those from a global fit. These parameters are 
+therefore of special interest since for them one might expect 
+a significant impact from LHeC data. 
 
 Therefore, we perform a simplified global EW fit, where we 
-consider only the {\color{red} measurements} of \mZ, \mW, \mH\ 
-and \mt. All other parameters do not provide additional 
-constraints or are known with good precision 
-{\color{red} for their sub-leading relevance.} 
-The calculations are performed in the on-shell scheme.
-The fit parameters are chosen to be \mW, \mH\ and \mt, 
-while \mz\ is a {\color{red} prediction}\,\footnote{
-  {\color{red}Note.} Even simpler, and equally
-  good: Input measurements are \mZ, \mW, \mt, and fit parameters 
-  are \mW, \mt. 
-  }.
-When using {\color{red} above measurements} as input~\cite{PDG19} 
-we obtain uncertainties of
-$\Delta\mw=\pm5.6\,\MeV$ ($\pm6.2\,\MeV$) and 
-$\Delta\mt=\pm0.87\,\GeV$ ($\pm2.3\,\GeV$) when the 
-{\color{red} respective} 
-measurements are included (excluded) in the fit.
-This result is very similar to the one of thegeneral global 
-EW fit~\cite{Haller:2018nnx,deBlas:2016ojx} and confirms that 
-the simplifications of our approach are justified for our purpose. 
+consider only the determination of the SM parameters \mZ, \mW, 
+\mH\ and \mt. All other parameters do not provide additional 
+constraints or are known with good precision. The calculations 
+are performed in the on-shell scheme. The fit parameters are 
+chosen as \mW, \mt\ and \mH. When using input data for $\alpha$, 
+\gf\ and the SM masses from the PDG~\cite{PDG19} we obtain 
+uncertainties of $\Delta\mw=\pm5.6\,\MeV$ ($\pm6.2\,\MeV$) and 
+$\Delta\mt=\pm0.87\,\GeV$ ($\pm2.3\,\GeV$) when the data for 
+\mW\ and \mt\ are included (excluded) in the fit. This result 
+is very similar to the one of the general global EW 
+fit~\cite{Haller:2018nnx,deBlas:2016ojx} and confirms that the 
+simplifications of our approach are justified for our purpose. 
 
 \begin{figure}[t!]
   \centering
@@ -2190,34 +2249,21 @@ DIS data into the fit. Moreover, we include the PDF parameters
 in the fit as well. We then obtain a moderate improvement for 
 the uncertainty of \mW\ to $\Delta\mw = \pm 5.5\,\MeV$.
 The 68\,\% C.L. contours in the \mW-\mt--plane are displayed in
-Fig.~\ref{fig:globfit}. Obviously, already other data do already 
-constrain \mW\ and \mt\ already very well, and LHeC cannot
-compete with direct measurements of \mz\ or \mH, and 
-{\color{red} ??? the strong
-correlation of \mW\ with \mt\ (c.f.\ fig.~\ref{fig:mWmt}) 
-prevents a relevant impact of LHeC data on these parameters 
-in such fits.
-}
+Fig.~\ref{fig:globfit}. Obviously, already other than LHeC data 
+are sufficient to provide good constraints on \mW\ and \mt. 
+LHeC data probe essentially the same relation of \mW\ and \mt\ 
+and they cannot compete with direct measurements of these 
+mass parameters. The strength of the LHeC EW analysis is its 
+complementarity with measurements in $e^+e^-$ or $pp$ collisions, 
+in particular the fact that the dominant uncertainty in the 
+$W$-boson mass determination is due to its correlation with the 
+PDF determination. LHeC data will offer, for the first time, 
+the possibility to study a simultaneous fit of EW and PDF 
+parameters. The impact of the latter may be considerably 
+reduced if measurents at the LHeC will become available 
+\cite{Azzi:2019yne}.
 
-{\color{red}\em The following remarks can go to the conclusions:}
 
-The strength of the LHeC EW analysis is its complementarity with 
-measurements in $ee$ or $pp$ or particular aspects of the EW 
-theory, as for instance light-quark couplings to the $Z$.
-Further relevance is gained, since the dominant uncertainty in
-$W$-boson mass measurements or measurements of
-$\sin^2\theta^\text{eff}_W$ at the LHC (or HL-LHC) are PDF 
-related uncertainties. These may be considerably reduced with 
-LHeC~\cite{Azzi:2019yne}.
-
-{\color{blue}
-Often in such global fits, the direct measurements are excluded. This
-is similar to the study of the simultaneous determination of \mW\ and
-\mt\ presented above, see Fig.~\ref{fig:mWmt}.}
-{\color{red}
-It may be noteworthy, that this study represents the first global
-EW fit where simultaneously PDF parameters are determined.
-}
 {\color{brown}
 Discuss $\alpha_s$, and its role in EW fit and in DIS, very briefly.
 }
