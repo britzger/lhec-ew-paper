@@ -910,8 +910,7 @@ normalization uncertainty for the different LHeC scenarios.
     measurements~\cite{Group:2012gb,Schael:2013ita,Aaboud:2017svj}
     and with the world average value 
     (PDG19)~\cite{Tanabashi:2018oca,PDG19}. 
-    {\color{red} use only PDG20 - check values!}
-    }
+  }
     \label{fig:mW}
 \end{figure}
 
@@ -1201,7 +1200,7 @@ be translated into a test of the running of the weak mixing angle.
 \clearpage
 
 \section{Mass parameters through higher-order corrections}
-
+\label{sec:mt}
 The sensitivity to the weak boson masses $m_W$ and $m_Z$ is 
 highh since these parameters enter at tree level through the 
 cross section normalization and through the boson propagators. 
@@ -1615,7 +1614,6 @@ previous section (see Fig.~\ref{fig:couplings}).
   \includegraphics[width=0.46\textwidth]{plot_NC_rhokap_u}
   \includegraphics[width=0.46\textwidth]{plot_NC_rhokap_d}
   \caption{
-    {\color{red}DB. Check LHeC-50a values in plot. x-axis label (`NC')}
     Expectations at the 68\,\% confidence level for the 
     simultaneous determination of anomalous up- and down-type 
     quark couplings, assuming electron couplings fixed at 
@@ -1663,7 +1661,7 @@ previous section (see Fig.~\ref{fig:couplings}).
   \end{tabular}
   \caption{ 
     \rhop{} and \kapp{} fits.
-    {\color{red}New table. to be included in text.}
+    {\color{red}This new table needs to be referenced in the text.}
   }
   \label{tab:SM}
 \end{table}                                                                                                                                                                   
@@ -2241,15 +2239,15 @@ consider only the determination of the SM parameters \mZ, \mW,
 constraints or are known with good precision. The calculations 
 are performed in the on-shell scheme. The fit parameters are 
 chosen as \mW, \mt\ and \mH. When using input data for $\alpha$, 
-\gf\ and the SM masses from the PDG~\cite{PDG19} we obtain 
+\gf\ and the SM masses from the PDG16~\cite{Olive:2016xmw} we obtain 
 uncertainties of $\Delta\mw=\pm5.6\,\MeV$ ($\pm6.2\,\MeV$) and 
 $\Delta\mt=\pm0.87\,\GeV$ ($\pm2.3\,\GeV$) when the data for 
 \mW\ and \mt\ are included (excluded) in the fit. This result 
 is very similar to the one of the general global EW 
-fit~\cite{Haller:2018nnx,deBlas:2016ojx} and confirms that the 
+fit~\cite{Haller:2018nnx,deBlas:2016ojx,Erler:2019hds} and confirms that the 
 simplifications of our approach are justified for our purpose. 
 
-\begin{figure}[t!]
+\begin{figure}[th!]
   \centering
  %\includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_1.pdf} 
   \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global.pdf} 
@@ -2257,34 +2255,65 @@ simplifications of our approach are justified for our purpose.
 %  \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_2.pdf} 
   \includegraphics[width=0.47\textwidth]{plot_lhec_mWmt_global_ZOOM.pdf} 
   \caption{
-    Left: Simplified global EW fit including LHeC-60b inclusive 
-    NC/CC DIS data. The results are compared with the simplified 
+    Left: Expected uncertainties from a simplified global EW fit
+    including LHeC-60b inclusive NC/CC DIS data.
+    The results are compared with expected uncertainties from the simplified 
     global EW fit without LHeC data and to the direct measurements 
     of \mW\ and \mt.
-    Right: A magnified view of the figure.
+    Right: A magnified view of the left figure.
   }
 \label{fig:globfit}
 \end{figure}
 
 We can therefore proceed and include LHeC-60b inclusive NC/CC 
 DIS data into the fit. Moreover, we include the PDF parameters 
-in the fit as well. We then obtain a moderate improvement for 
-the uncertainty of \mW\ to $\Delta\mw = \pm 5.5\,\MeV$.
+in the fit as well, and we use recent values for \mW, \mt, and \mH\ from PDG20~\cite{PDG20}.
+When including LHeC-60b NC/CC DIS data, we obtain a very moderate
+improvement for \mw\ from $\Delta\mw=\pm4.6\,\MeV$ to $\Delta\mw = \pm 4.5\,\MeV$.
 The 68\,\% C.L. contours in the \mW-\mt--plane are displayed in
-Fig.~\ref{fig:globfit}. Obviously, already other than LHeC data 
+Fig.~\ref{fig:globfit}.
+An improvement to \mt\ is only seen beyond the rounding digit, which
+is reasonable, since \mt\ contributes to NC/CC DIS only through
+higher-order corrections.
+Obviously, already other than the LHeC NC/CC DIS data 
 are sufficient to provide good constraints on \mW\ and \mt. 
-LHeC data probe essentially the same relation of \mW\ and \mt\ 
+LHeC DIS data probe essentially the same relation of \mW\ and \mt\ 
 and they cannot compete with direct measurements of these 
-mass parameters. The strength of the LHeC EW analysis is its 
+mass parameters.
+The strength of the LHeC EW analysis is its 
 complementarity with measurements in $e^+e^-$ or $pp$ collisions, 
 in particular the fact that the dominant uncertainty in the 
 $W$-boson mass determination is due to its correlation with the 
-PDF determination. LHeC data will offer, for the first time, 
+PDF determination.
+LHeC data will offer, for the first time, 
 the possibility to study a simultaneous fit of EW and PDF 
 parameters. The impact of the latter may be considerably 
-reduced if measurents at the LHeC will become available 
+reduced if measurements at the LHeC will become available 
 \cite{Azzi:2019yne}.
+%
+Commonly, the global fit is repeated with direct measurements of the
+parameters of interest excluded, i.e.\ without \mw\ and \mt.
+This was studied in sect.~\ref{sec:mt}.
 
+\begin{table}[bht!]
+  \footnotesize
+  \centering
+  \begin{tabular}{lcccc}
+    \toprule
+    Input data & Fit parameters & $\Delta\mw$ [MeV] & $\Delta\mt$ [GeV] & Correlation $\rho_{\mW\mt}$  \\
+    \midrule
+    \mw, \mt\ (PDG20)              & \mw, \mt  &   $\pm12$ & $\pm0.67$  &  (0)\\
+    \mw, \mt, \mZ, \mH             & \mw, \mt  &   $\pm4.6$ & $\pm0.63$  &  $+0.83$ \\
+    \mw, \mt, \mZ, \mH, NC/CC DIS (LHeC-60b)  & \mw, \mt, PDF  &   $\pm4.5$ & $\pm0.63$  & $+0.83$ \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Results for expected uncertainties of \mw\ and \mt\ from a
+    simplified global fit, with and without NC/CC DIS data using the
+    LHeC-60b scenario.
+  }
+  \label{tab:SM}
+\end{table}
 
 {\color{brown}
 Discuss $\alpha_s$, and its role in EW fit and in DIS, very briefly.
