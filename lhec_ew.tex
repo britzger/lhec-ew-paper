@@ -75,7 +75,7 @@ document {\color{red} citation?}. Therefore we focus our studies
 in this paper on the potential of a future LHeC collider. Studies 
 of electroweak effects for similar energies have been performed
 in the past for the LHeC ({\color{red} cite: CDR-2012}) and earlier 
-for the LEP$\otimes$LHC proposal ({\color{red} cite earlier work}). 
+for the LEP$\otimes$LHC proposal \cite{Jarlskog:1990bk}. 
 \footnote{The main physics motivation of the EIC lies in studies 
   of the strong interaction and the nucleon structure, but it is 
   expected to contribute to electroweak physics as well 
@@ -144,30 +144,22 @@ extreme kinematic reach of the LHeC will also allow us to
 study the scale-, i.e.\ \Qsq-dependence of coupling parameters, 
 an opportunity which is in fact unique to the LHeC. 
 Finally, we conclude and summarize the most important results 
-in Sec.~\ref{sec:conclusions}. Some details of our fit results 
-are relegated to an appendix (\ref{app:other}). We also discuss 
-the impact of the LHeC measurements on possible future global 
-fits of the electroweak SM parameters to an appendix 
-(\ref{app:globalfit}). 
+in Sec.~\ref{sec:conclusions}. The impact of the LHeC 
+measurements on possible future global fits of the electroweak 
+SM parameters is discussed in an appendix (\ref{app:globalfit}). 
 
 
-{\color{red}
-
-{\em Do we need this? }
-
-\emph{
-%                                                                                                                       
-Nowadays, EW theory has been tested in great detail at
-lower scales with muon life-time 
-measurements~\cite{Tishchenko:2012ie}
-and neutrino scattering 
-experiments~\cite{Fogli:1988tv,Blondel:1989ev,Allaby:1987vr, 
-McFarland:1997wx,Zeller:2001hh},
-with precision measurements at the $Z$ pole and at even higher
-scales~\cite{ALEPH:2005ab,Chatrchyan:2011ya,Schael:2013ita, 
-Aaij:2015lka,Aad:2015uau,Aaltonen:2018dxj}.
-}
-}
+% Some extra references: 
+%
+% muon life-time measurements~\cite{Tishchenko:2012ie}
+%
+% neutrino scattering experiments~\cite{Fogli:1988tv, 
+% Blondel:1989ev,Allaby:1987vr,McFarland:1997wx,Zeller:2001hh},
+%
+% precision measurements at the $Z$ pole 
+% and at even higher 
+% scales~\cite{ALEPH:2005ab,Chatrchyan:2011ya,Schael:2013ita, 
+% Aaij:2015lka,Aad:2015uau,Aaltonen:2018dxj}.
 
 
 %--------------------------------------------------------------------
@@ -1123,7 +1115,8 @@ independent of the weak mixing angle.
     DIS data are considered. Results from 
     LEP+SLD~\cite{ALEPH:2005ab}, Tevatron~\cite{Aaltonen:2018dxj},
     LHC~\cite{Aaij:2015lka,ATLAS:2018gqq,Sirunyan:2018swq,% 
-    Erler:2019dcx} and the world average~\cite{Erler:2019dcx} 
+    Erler:2019dcx} and the SM value which includes the information 
+    about the $W$- and $Z$-boson masses~\cite{Erler:2019dcx} 
     are all obtained from a combination of various separate 
     measurements (not shown individually) (see also 
     Ref.~\cite{Erler:2019hds} for additional information). 
@@ -1340,15 +1333,23 @@ to higher-order corrections. Loop insertions with
 particle-antiparticle pairs in gauge boson self energies can 
 become relevant even if the new particles are too heavy to be 
 produced directly in scattering processes. If the masses of the 
-non-SM particles are large, a low-$Q^2$ expansion of the 
-self-energy corrections provides a sufficiently precise 
-approximation by constant parameters. Taking into account that 
-the electromagnetic $U(1)$ gauge symmetry has to stay intact 
-and that some of these constants can be absorbed into 
-renormalization constants, there are three free parameters, 
-generally called $S$, $T$ and $U$~\cite{Peskin:1991sw}. A suitable 
-definition is described in Ref.~\cite{PDG2020} which we adopt 
-in the following, while their relation to alternative
+non-SM particles are large, a low-$q^2$ expansion of the 
+self-energy corrections, 
+\begin{equation}
+  \Sigma^{ij}(q^2) = \Sigma^{ij}(0) + q^2 F^{ij}(q^2) \, ,  
+  \quad \quad 
+  (ij) = (\gamma\gamma),~(\gamma Z),~(ZZ),~(WW) \, , 
+\label{eq:def-stu}
+\end{equation} 
+and neglecting the $q^2$-dependence of $F^{ij}(q^2)$ can provide 
+a sufficiently precise approximation by constant parameters. 
+Taking into account that the electromagnetic $U(1)$ gauge 
+symmetry has to stay intact and that some of these constants 
+can be absorbed into renormalization constants, there are three 
+free parameters, usually called $S$, $T$ and 
+$U$~\cite{Peskin:1991sw}. A suitable definition is described 
+in Ref.~\cite{PDG2020} which we adopt in the following, while 
+their relation to alternative 
 definitions~\cite{Kennedy:1988sn,Altarelli:1990zd}
 %,Altarelli:1993sz ,Altarelli:1989hv
 is described in Ref.~\cite{Spiesberger:1993jg}.
@@ -1616,8 +1617,10 @@ shown in Fig.~\ref{fig:rhokappa:ud} and we find that the
 uncertainties for up-type quarks are superior to those from 
 LEP+SLD and comparable in the case of down-type quarks. 
 We have verified that the results of this analysis is consistent 
-with those of the coupling constant fits described in the 
-previous section (see Fig.~\ref{fig:couplings}).
+with those of the coupling constant fits described below in the 
+section~\ref{sec:nccouplings} (see Fig.~\ref{fig:couplings}).
+The results for different LHeC scenarios are summarized in 
+Table~\ref{tab:rhokappap}.
 
 \begin{figure}[tbp]
   \centering
@@ -1646,11 +1649,6 @@ previous section (see Fig.~\ref{fig:couplings}).
     \cmidrule(lr){3-6}
     Fit parameters & Parameter & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\ 
     \midrule
-    \rhop{,f}+PDF           & \rhop{,f}  &  $\pm0.0010$   &  $\pm0.0017$   &  $\pm0.0012$   &  $\pm0.0020$  \\
-    \addlinespace
-    \rhop{,f}+\kapp{f}+PDF  & \rhop{,f}  &  $\pm0.0015$   &  $\pm0.0025$   &  $\pm0.0033$   &  $\pm0.0043$  \\
-                            & \kapp{f}   &  $\pm0.0010$   &  $\pm0.0015$   &  $\pm0.0025$   &  $\pm0.0031$  \\
-    \addlinespace
     \rhop{,u}+\kapp{u}+\rhop{,d}+\kapp{d}+PDF
                             & \rhop{,u}  &  $\pm0.006$   &  $\pm0.009$   &  $\pm0.011$   &  $\pm0.014$  \\
                             & \kapp{u}   &  $\pm0.004$   &  $\pm0.005$   &  $\pm0.009$   &  $\pm0.011$  \\
@@ -1662,6 +1660,11 @@ previous section (see Fig.~\ref{fig:couplings}).
     \addlinespace
     \rhop{,d}+\kapp{d}+PDF  & \rhop{,d}  &  $\pm0.008$   &  $\pm0.014$   &  $\pm0.013$   &  $\pm0.019$  \\ 
                             & \kapp{d}   &  $\pm0.014$   &  $\pm0.024$   &  $\pm0.023$   &  $\pm0.034$  \\ 
+    \addlinespace
+    \rhop{,f}+\kapp{f}+PDF  & \rhop{,f}  &  $\pm0.0015$   &  $\pm0.0025$   &  $\pm0.0033$   &  $\pm0.0043$  \\
+                            & \kapp{f}   &  $\pm0.0010$   &  $\pm0.0015$   &  $\pm0.0025$   &  $\pm0.0031$  \\
+    \addlinespace
+    \rhop{,f}+PDF           & \rhop{,f}  &  $\pm0.0010$   &  $\pm0.0017$   &  $\pm0.0012$   &  $\pm0.0020$  \\
     \midrule
     \addlinespace
     \rhopW{,f}+\kapp{f}+PDF  & \rhopW{,f} &  $\pm0.0017$   &  $\pm0.0019$   &  $\pm0.0016$   &  $\pm0.0018$  \\ 
@@ -1669,10 +1672,13 @@ previous section (see Fig.~\ref{fig:couplings}).
     \bottomrule
   \end{tabular}
   \caption{ 
-    \rhop{} and \kapp{} fits.
-    {\color{red}This new table needs to be referenced in the text.}
+    Overview of results for the \rhop{} and \kapp{} fits 
+    in different LHeC scenarios. From top to bottom we 
+    list results for 4-, 2- and 1-parameter+PDF fits. The last 
+    two lines show the results from a fit combining the 
+    CC $\rho^\prime$ with the NC $\kappa^\prime$ parameter. 
   }
-  \label{tab:SM}
+  \label{tab:rhokappap}
 \end{table}                                                                                                                                                                   
 
 %--------------------------------------------------------
@@ -2051,46 +2057,6 @@ precision in other experiments.
 
 
 %--------------------------------------------------------------------
-%   FCC
-%--------------------------------------------------------------------
-\clearpage
-
-\section{Prospects for the FCC-eh and EIC}
-
-{\color{red} Weg damit ???}
-
-In this section, we briefly outline the prospects for the FCC-eh and
-give numbers for a few benchmark parameters.
-%
-The LHeC \& FCC proceedings are Ref.~\cite{Britzger:2017fuc}.
-
-The EIC, HERA, LHeC and FCC are compared in
-Fig.~\ref{fig:dSigmaFacilities}.
-{\color{green}Two alternative versions of this plot are below}
-%
-
-\begin{figure}[h!b]
-\centering
-\includegraphics[width=0.38\textwidth]{plot_GraphsDsigmaDQ2_LHeC_opt}
-\hskip0.05\textwidth
-\includegraphics[width=0.38\textwidth]{plot_GraphsDsigmaDQ2_FCC_opt}
-\caption{
-    Left: Inclusive NC and CC DIS cross sections as a function 
-    of \Qsq for two different polarisation states $P=\pm0.8$ and 
-    for two different electron beam energies, $E_e=50$ and 
-    $60\,\GeV$. For comparison, also the HERA measurements are 
-    displayed for $P=0$.
-    Right: Inclusive NC and CC DIS cross sections as a function of
-    \Qsq for different proton beam energies, $E_p=7$, 20 and
-    50\,TeV. The latter two are possible at the future FCC.
-    {\color{red} Appendix/additional figure?} 
-    tfa  
-    }
-  \label{fig:dSigmaopt}
-\end{figure}
-
-
-%--------------------------------------------------------------------
 %                            Summary
 %--------------------------------------------------------------------
 \clearpage
@@ -2139,7 +2105,7 @@ measurement in DIS at high scales.
     Standard Model fits 
     {\color{red} For sw2: check with Eqs.(24,25) ???}
   }
-  \label{tab:SM}
+  \label{tab:SM-summary}
 \end{table}
 
 
@@ -2320,7 +2286,7 @@ This was studied in sect.~\ref{sec:mt}.
     simplified global fit, with and without NC/CC DIS data using the
     LHeC-60b scenario.
   }
-  \label{tab:SM}
+  \label{tab:global}
 \end{table}
 
 {\color{brown}
@@ -2329,121 +2295,9 @@ Discuss $\alpha_s$, and its role in EW fit and in DIS, very briefly.
 
 
 %--------------------------------------------------------------------
-%  Optional material, to be discussed...
-%--------------------------------------------------------------------
-\clearpage
-
-\section{Optional material} 
-\label{app:other}
-
-\subsection{Other $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ or $\kappa^\prime$ fits}
-
-Results from  more specific fits of
-$\sin^2\theta_\mathrm{W,\ell}^{\text{eff}}(\mz^2)$.
-
-\begin{table}[htb]
-  \centering
-  \small
-  %\begin{tabular}{lr@{\hskip4pt}lccc}
-  \begin{tabular}{lcccccc}
-    \toprule
-    Fit parameters &  Parameter & SM & \multicolumn{4}{c}{Expected uncertainties} \\
-    \cmidrule(lr){4-7}
-    &   of interest  &  value    & LHeC-50 & LHeC-60 & LHeC-50 & LHeC-60 \\
-    &                &          &  \multicolumn{2}{c}{\footnotesize{($\delta_\text{uncor.}=0.50\,\%$)}} & \multicolumn{2}{c}{\footnotesize{($\delta_\text{uncor.}=0.25\,\%$)}} \\
-    \midrule
-    $\kappa^\prime_{f}$, PDFs
-    & $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ & 0.23154 & $0.00033$ & $0.00025$ & 0.00022 & $0.00015$ \\ % ok
-    $\kappa^\prime_{f}$, $\rho^\prime_{\text{NC},f}$, PDFs
-    & $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ & 0.23154 & 0.00071  & 0.00036 &  0.00056 & 0.00023 \\ %ok
-    $\kappa^\prime_{e}$, PDFs
-    &  $\sin^2\theta_\text{W}^{\text{eff},e}(\mz^2)$   & 0.23154 & $0.00059$  & $0.00047$ & 0.00038 & $0.00028$ \\
-    $\kappa^\prime_{e}$, $\kappa^\prime_{u}$, $\kappa^\prime_{d}$, PDFs
-    &  $\sin^2\theta_\text{W}^{\text{eff},e}(\mz^2)$   & 0.23154 & 0.00111 & 0.00095 & 0.00069 & 0.00056\\ %ok
-%    \midrule
-    $\kappa^\prime_{f}$
-    & $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$ & 0.23154 & 0.00028 & 0.00023 & 0.00017 & 0.00014 \\ % ok
-    \bottomrule
-    % kappa' fit with PDFs:
-    %  0.00033 & 0.00025 & 0.00022 & 0.00015
-    % kappa' fit without PDFs:
-    %  0.00028 & 0.00023 & 0.00017 & 0.00014
-    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (PDG)      & $0.23148$    & $\pm0.00013$    \\
-    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (LEP+SLD)  & $0.23154$    & $\pm0.00016$    \\
-    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (Tevatron) & $0.23148$    & $\pm0.00033$    \\
-    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ (LHC)      & $0.23131$    & $\pm0.00033$    \\
-    %    $\sin^2\theta_\text{W}^{\text{eff},\ell}$ ($A_{fb}^{0,\ell}$ LEP)  & $0.23099$    & $\pm0.00053$    \\
-%\hline
-  \end{tabular}
-  \caption{
-    Determination of $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$
-    with inclusive DIS data at the LHeC for different scenarios.
-    Since the value of the effective weak mixing angle at the $Z$ pole
-    cannot be determined directly in DIS, a fit of the
-    $\kappa^\prime_{f}$ parameter is performed instead and
-    its uncertainty is translated to
-    $\sin^2\theta_\text{W}^{\text{eff},\ell}(\mz^2)$.
-    Different assumptions on the fit parameters are studied, and
-    results include uncertainties from the PDFs.
-    Only the last line shows results where the PDF parameters are kept fixed.
-    See text for more details.
-    {\color{red}Not yet referenced and discussed in the text.}
-  }
-  \label{tab:sweff}
-\end{table}
-
-
-
-%-------------------------------------------------------------------- 
-\clearpage
-\subsection{Best uncertainties for $\rho^\prime$ and $\kappa^\prime$
-  parameters}
-In a fit of a single anomalous form factor, we obtain following uncertainties. 
-{\color{blue} Maximum sensitivity is obtained in 1-parameter fits, and prospects are collected in table:~\ref{tab:rhopwithcorrelations}.}
-\begin{table}[bhtp]
-  \footnotesize
-  \centering
-  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-    \hline
-    Fit parameters & Parameter & \multicolumn{2}{c}{LHeC}& \multicolumn{2}{c}{FCC}  \\
-    \hline
-    \rhopu+PDF & \rhopu &  1  &  0.009    & 1  & 0.004  \\
-    \kappu+PDF & \kappu &  1  &  0.004    & 1  & 0.003  \\
-    \rhopd+PDF & \rhopd &  1  &  0.014    & 1  & 0.006  \\
-    \kappd+PDF & \kappd &  1  &  0.023    & 1  & 0.013  \\
-    \rhope+PDF & \rhope &  1  &  0.006    & 1  & 0.003  \\
-    \kappe+PDF & \kappe &  1  &  0.003    & 1  & 0.002  \\
-    \hline
-    \rhopq+PDF & \rhopq &  1  &  0.0059    & 1  & 0.0027  \\
-    \kappq+PDF & \kappq &  1  &  0.0038    & 1  & 0.0024  \\
-    \hline
-    \rhopf+PDF & \rhopf &  1  &  0.0031    & 1  & 0.0015  \\ %0.00145641
-    \kappf+PDF & \kappf &  1  &  0.0019    & 1  & 0.0011  \\
-    \hline
-    \\
-    \multicolumn{3}{l}{Expectations for \rhopW{,f} (CC)} \\
-    \hline
-    % log.final.PAR19eq50.3p.PDF.2.txt
-    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1  & 0.0027 \\
-    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1  &  0.0011\\
-    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1  &  0.0012\\
-    \hline
-  \end{tabular}
-  \caption{
-    {\color{red} note: these numbers need to be updated, if we want to
-    include such a table.}
-    Results for $\rhop{}$, $\kapp{}$ and \rhopW{} parameters.
-  }
-  \label{tab:rhopwithcorrelations}
-\end{table}
-
-
-
-
-%--------------------------------------------------------------------
 %                          Acknowledgements
 %--------------------------------------------------------------------
 \clearpage
 \section*{Acknowledgements}
-Acknowledgements: A.~Sch\"oning, M.~Klein, S.~Schmitt
+Acknowledgements: A.~Sch\"oning, M.~Klein, S.~Schmitt, J.~Erler
 
