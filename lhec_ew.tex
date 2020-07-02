@@ -195,7 +195,7 @@ electron-positron annihiliation, or experiments at lower energies,
 like neutrino or muon scattering. The potential of experiments 
 at the LHeC with exclusive final states, for example $W$- or 
 $Z$-boson production, or production of the Higgs boson, has 
-been studied elsewhere {\color{red} references !}
+been studied elsewhere~\cite{todo,add,references}.
 
 Our goal is to study tests of the electroweak SM. We therefore 
 start with laying out the theoretical framework and summarize the 
@@ -219,7 +219,7 @@ Agreement with the theory can be quantified by the precision
 with which SM parameters are expected to be determined. 
 
 In addition, we will study a number of possible ways to 
-parametrize new physics beyond the SM and investigate the 
+generically parametrize new physics beyond the SM and investigate the 
 precision that can be obtained for limits on corresponding  
 new parameters not present in the SM. In Sec.~\ref{sec:stu} 
 we study the well-known $STU$-parameters which describe new 
@@ -264,9 +264,9 @@ SM parameters is discussed in an appendix (\ref{app:globalfit}).
 \section{Electroweak effects in inclusive NC and CC DIS}
 \label{sec:theo}
 
-We start in this section with laying out the general 
+In this section we lay out the general 
 properties of DIS cross sections, first at leading order, 
-taking into account 1-boson exchange diagrams at tree level. 
+taking into account single boson exchange diagrams at tree level. 
 Inclusive NC DIS cross sections are expressed in terms of
 generalised structure functions $\tilde{F}_2^\pm$, 
 $x\tilde{F}_3^\pm$ and $\tilde{F}_{\rm L}^\pm$ at electroweak 
@@ -281,8 +281,8 @@ $x\tilde{F}_3^\pm$ and $\tilde{F}_{\rm L}^\pm$ at electroweak
 \right]~,
 \label{eq:cs}
 \end{equation}
-where $\alpha$ denotes the fine structure constant. $x$ is the
-Bjorken scaling variable, $y$ the inelasticity. The factors 
+where $\alpha$ denotes the fine structure constant, $x$ is the
+Bjorken scaling variable, and $y$ the inelasticity. The factors 
 $Y_\pm = 1\pm(1-y)^2$ encode the helicity dependence of the 
 underlying lepton quark hard-scattering process. The generalised 
 structure functions can be separated into contributions from 
@@ -438,19 +438,19 @@ $\kappa_{f}$ are unity, but at NLO they are promoted
 to form factors which are flavor and scale dependent. Since they 
 depend on \Qsq, they render the coupling constants `effective' 
 running couplings. The coefficient $\kappa_{f}$ can 
-be combined with \sw\ to define an effective, flavor-dependent 
+be combined with \sw\ to define an effective, flavor and scale-dependent ($\mu^2$)
 weak mixing angle, 
 \begin{equation}
   \sin^2 \theta_{W,f}^{\rm eff} (\mu^2) = 
   \kappa_{f}(\mu^2) \sw \, . 
 \label{eq:sin2w-eff}
 \end{equation} 
-The leptonic weak mixing angle, $\sin^2 \theta_{W, {\rm eff}}^{\ell} 
+The leptonic weak mixing angle, $\sin^2 \theta_{W,\ell }^{\rm eff} 
 (m_Z^2)$, has been used to describe LEP/SLD observables at the 
 $Z$-pole (see e.g.~\cite{Tanabashi:2018oca,PDG19}). We emphasize 
 that the $\mu^2$ dependence of the effective weak mixing angle 
 is not negligible for LHeC physics ($\mu^2 = - Q^2$), while only 
-its value at $\mu^2 = m_Z^2$ was relevant for $Z$-pole observables. 
+its value at $\mu^2 = +m_Z^2$ was relevant for $Z$-pole observables. 
 
 For CC scattering, a corresponding correction factor 
 $\rho_{\text{CC}, eq}$ is introduced for $e^- q$ and 
@@ -482,7 +482,7 @@ and
 \end{equation}
 In addition, box graph corrections, which are $Q^2$ and 
 energy-dependent, are added as separate correction terms 
-to the cross section. Higher-order EW corrections are defined 
+to the NC and CC cross section. Higher-order EW corrections are defined 
 in the on-shell scheme~\cite{Sirlin:1980nh,Sirlin:1983ys}, 
 using \mz\ and \mw\ as independent parameters (see also 
 Refs.~\cite{Bohm:1986rj,Hollik:1988ii}).
@@ -494,7 +494,7 @@ non-negligible dependence on the complete set of SM parameters,
 where the most important ones are the top-quark mass, $m_t$, 
 and the Higgs-boson mass, $m_H$. In addition, hadronic 
 contributions to the running of the effective couplings 
-have to be provided as independent input, since the 
+have to be provided as independent input~\cite{Jegerlehner(?),todo}, since the 
 corresponding higher-order corrections can not be calculated 
 in perturbation theory. 
 
@@ -521,7 +521,7 @@ $\alpha$, $m_W$ and $m_Z$ (the naive on-shell scheme), or
 $\alpha$, \gf\ and $m_Z$ (the modified on-shell scheme) to 
 fix input parameters. The choice of a scheme for input 
 parameters is important since it leads to very different 
-sensitivies to parameter variations. 
+sensitivities to parameter variations. 
 
 
 %--------------------------------------------------------------------
@@ -1029,26 +1029,26 @@ normalization uncertainty for the different LHeC scenarios.
     \label{fig:mW2}
 \end{figure}
 
-{\color{blue}(For the conclusions: 
-\color{red}
-The determination of \mW\ from $t$-channel processes in  
-DIS provides an interesting alternative to the measurement 
-of \mW\ from $s$-channel, i.e.\ resonant, $W$-production in 
-$pp$ scattering. 
-}
-{\color{brown}
-Measurements at the LHeC will improve the precision of the 
-\mW\ determination obtained by H1~\cite{Spiesberger:2018vki} 
-($\mW(\text{H1}) = 80.520\pm0.115~\GeV$) by more than an order 
-of magnitude.
-}
-{\color{magenta}
-The determination of the $W$-boson mass from LHeC data 
-will be among the most precise measurements and will significantly 
-improve the world average value of \mw, which is currently 
-dominated by the ATLAS measurement~\cite{Aaboud:2017svj}.
-}
-
+ %DB {\color{blue}(For the conclusions: 
+ %DB \color{red}
+ %DB The determination of \mW\ from $t$-channel processes in  
+ %DB DIS provides an interesting alternative to the measurement 
+ %DB of \mW\ from $s$-channel, i.e.\ resonant, $W$-production in 
+ %DB $pp$ scattering. 
+ %DB }
+ %DB {\color{brown}
+ %DB Measurements at the LHeC will improve the precision of the 
+ %DB \mW\ determination obtained by H1~\cite{Spiesberger:2018vki} 
+ %DB ($\mW(\text{H1}) = 80.520\pm0.115~\GeV$) by more than an order 
+ %DB of magnitude.
+ %DB }
+ %DB {\color{magenta}
+ %DB The determination of the $W$-boson mass from LHeC data 
+ %DB will be among the most precise measurements and will significantly 
+ %DB improve the world average value of \mw, which is currently 
+ %DB dominated by the ATLAS measurement~\cite{Aaboud:2017svj}.
+ %DB }
+ %DB 
 %--------------------------------------------------------
 %  Z mass
 %--------------------------------------------------------
@@ -1218,14 +1218,14 @@ independent of the weak mixing angle.
 \label{fig:sw2eff}
 \end{figure}
 
-{\color{red} {\em move this to the section for rho-kappa fit: }
-In a simultaneous determination 
-of $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$ and a universal 
-modification of the normalization of NC weak couplings by 
-\rhop\ as defined in the previous section, we find an 
-uncertainty of $\Delta \sin^2\theta_{\textrm{W},f}^\textrm{eff} 
-= \pm 0.00023$ ($\pm0.00071$) for LHeC-60b (LHeC-50a). 
-} 
+ %DB  {\color{red} {\em move this to the section for rho-kappa fit: }
+ %DB  In a simultaneous determination 
+ %DB  of $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$ and a universal 
+ %DB  modification of the normalization of NC weak couplings by 
+ %DB  \rhop\ as defined in the previous section, we find an 
+ %DB  uncertainty of $\Delta \sin^2\theta_{\textrm{W},f}^\textrm{eff} 
+ %DB  = \pm 0.00023$ ($\pm0.00071$) for LHeC-60b (LHeC-50a). 
+ %DB  } 
 
 The measurement of $\sin^2\theta_{\textrm{W},f}^\textrm{eff}$ 
 can be performed in sub-regions of the wide kinematic range of 
@@ -1473,8 +1473,8 @@ can be combined with the contraint from the $G_F$ measurement.
 Since $G_F$ is known with very high precision, this constraint 
 amounts essentially to fixing one linear combination of the 
 $STU$ parameters, the one that enters in $\Delta r$ (see 
-Eq.~(\ref{eq:deltar-NLO})). {\color{red} . . . more . . . but we 
-don't show figure or table. }
+Eq.~(\ref{eq:deltar-NLO})).
+%DB {\color{red} . . . more . . . but we don't show figure or table. }
 
 New physics parametrized with the help of $S$, $T$ and $U$ 
 will also affect the \gf-\mw\ relation, Eq.~(\ref{eq:deltar-NLO}), 
@@ -2158,8 +2158,12 @@ precision in other experiments.
 % --- one general concluding sentence
 The proposed LHeC experiment at CERN's HL-LHC
 will provide a very unique opportunity for high precision
-electroweak physics {\color{brown}in neutral-current (NC) and
-  charged-current (CC) interactions} in a yet completely unexplored kinematic regime of
+electroweak physics
+%DB {\color{brown}
+  in neutral-current (NC) and
+  charged-current (CC) interactions
+  % }
+  in a yet completely unexplored kinematic regime of
 space-like momentum transfer.
 
 % --- technical summary
@@ -2248,14 +2252,19 @@ As such{\color{red}(?)}, the measurement at LHeC will be superior than present
 measurements at hadron colliders.
 % ... sw2 running
 In addition, the \Qsq\ dependent LHeC DIS data allow for a unique determination of the
-\emph{running} of the effective{\color{red}(?)} weak mixing angle in
+\emph{running} of the effective
+    %DB {\color{red}(?)}
+     weak mixing angle in
 the space-like regime of about $25<\sqrt{\Qsq}<700\,\GeV$ and small
 experimental uncertainties below $\pm20\cdot10^{-4}$ are achieved in
 the range of $60\lesssim\sqrt{\Qsq}\lesssim450\,\GeV$.
 
 % mt and mH
-{\color{brown}The high precision of the born-level parameters of EW theory also
-suggest a determination of} the dominant parameters of the 
+%DB{\color{brown}
+  The high precision of the born-level parameters of EW theory also
+  suggest a determination of
+%DB }
+the dominant parameters of the 
 higher-order EW corrections, the top-quark mass and the Higgs-boson mass,
 \mt\ and \mH.
 The value of \mt\ can be determined with an uncertainty of up to
@@ -2294,15 +2303,18 @@ $T$ or $U$ of up to a few percent are achieved.
 
 % --- rho kappa
 Modifications of the $\textrm{U}(1)\times \textrm{SU}(2)$ gauge structure
-{\color{red}(?)} may alter in NC interactions the vector and
+%DB {\color{red}(?)}
+may alter in NC interactions the vector and
 axial-vector couplings of fermions to the $Z$.
 We have therefore introduced flavor and \Qsq\ dependent anomalous
 form-factors as multiplicative modifications of the SM form-factors
 $\rho_{\text{NC},f}$ and $\kappa_f$.
 These can be determined with uncertainties up to a
 few permille and compare in size well with comparable results from LEP+SLD.
-{\color{brown}In contrast, however, LHeC has high sensitivity to
-  electroweak interaction of light quarks.}
+%DB {\color{brown}
+In contrast, however, LHeC has high sensitivity to
+electroweak interaction of light quarks.
+%DB }
 The \Qsq\ dependence of the anomalous form factors, $\rhop{f}$ and
 $\kapp{f}$, can be determined with percent precision in the range
 $60\lesssim\Qsq\lesssim600\,\GeVsq$.
@@ -2358,42 +2370,42 @@ parameters; studies of weak interactions of the light quarks; and
 experimental studies of charged current interactions. 
 
 
-\clearpage
-    {\color{blue} Old sentences...}
-    
-The space-like momentum transfer in DIS further allows for unique
-scale dependent test of the electroweak theory, both, for neutral and
-charged currents.
-%This includes for instance scale dependent measurements of the effective
-%weak mixing angle in the range of about $40<\sqrt{\Qsq}<700\,\GeV$
-%with a precision up to a few permille.
-
-
-In summary, the inclusive NC and CC DIS cross sections measured at
-LHeC provide a unique opportunity to perform high-precision
-determinations of fundamental electroweak parameters and test the
-quantum  nature of electroweak processes with high precision.
-
-Unique measurements will be made for weak charged currents and
-for the scale-dependence of electroweak interactions.
-
-{\color{red}We studied in a traditional way NC and CC separately.
-Many models predict changes to NC and CC simultaneously. A such, a
-simultaneous determination of NC and CC observables is reasonable}
-
-{\color{blue} Write about what we have NOT done... \\}
-Further direct measurements, as for instance Higgs production,
-top-quark production or single $W$ or $Z$
-production cross sections, or vector-boson-scattering cross sections,
-as well as heavy flavor cross sections in NC and CC DIS, will provide further
-improvements for electroweak precision measurements.
-
-
-{\color{brown} 
-  Refer to improvement of LHC measurements due to precise LHeC PDFs?
-}
-
-
+ %DB \clearpage
+ %DB     {\color{blue} Old sentences...}
+ %DB     
+ %DB The space-like momentum transfer in DIS further allows for unique
+ %DB scale dependent test of the electroweak theory, both, for neutral and
+ %DB charged currents.
+ %DB %This includes for instance scale dependent measurements of the effective
+ %DB %weak mixing angle in the range of about $40<\sqrt{\Qsq}<700\,\GeV$
+ %DB %with a precision up to a few permille.
+ %DB 
+ %DB 
+ %DB In summary, the inclusive NC and CC DIS cross sections measured at
+ %DB LHeC provide a unique opportunity to perform high-precision
+ %DB determinations of fundamental electroweak parameters and test the
+ %DB quantum  nature of electroweak processes with high precision.
+ %DB 
+ %DB Unique measurements will be made for weak charged currents and
+ %DB for the scale-dependence of electroweak interactions.
+ %DB 
+ %DB {\color{red}We studied in a traditional way NC and CC separately.
+ %DB Many models predict changes to NC and CC simultaneously. A such, a
+ %DB simultaneous determination of NC and CC observables is reasonable}
+ %DB 
+ %DB {\color{blue} Write about what we have NOT done... \\}
+ %DB Further direct measurements, as for instance Higgs production,
+ %DB top-quark production or single $W$ or $Z$
+ %DB production cross sections, or vector-boson-scattering cross sections,
+ %DB as well as heavy flavor cross sections in NC and CC DIS, will provide further
+ %DB improvements for electroweak precision measurements.
+ %DB 
+ %DB 
+ %DB {\color{brown} 
+ %DB   Refer to improvement of LHC measurements due to precise LHeC PDFs?
+ %DB }
+ %DB 
+ %DB 
 
 %--------------------------------------------------------------------
 %   Results: global EW fits
@@ -2534,9 +2546,9 @@ This was studied in sect.~\ref{sec:mt}.
   \label{tab:global}
 \end{table}
 
-{\color{brown}
-Discuss $\alpha_s$, and its role in EW fit and in DIS, very briefly.
-}
+ %DB {\color{brown}
+ %DB Discuss $\alpha_s$, and its role in EW fit and in DIS, very briefly.
+ %DB }
 
 
 %--------------------------------------------------------------------
