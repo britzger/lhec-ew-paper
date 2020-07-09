@@ -1,4 +1,4 @@
-% UT Physics bibliographic style, ver. 2.8. Based on:
+% UT Physics bibliographic style, ver. 2.7. Based on:
 %
 %X     IEEE Transactions bibliography style (29-Jan-88 version)
 %X       numeric labels, order-of-reference, IEEE abbreviations,
@@ -21,7 +21,7 @@
 %                    Jonathan Flynn' suggestion. SPIRES now supports this field.
 %                 7) Improved output of Proceedings entries
 %
-%    Modified by Jacques Distler, 12/18
+%    Modified by Jacques Distler, 2/11
 %           History: ver 1.0  9/96
 %                    ver 1.1 10/96 - added "collaboration" field
 %                    ver 1.2  7/97 - added a "\providecommand{\href}[2]{#2}"
@@ -55,8 +55,9 @@
 %                                    in previous version. (Reported by Ling Weak)
 %                   ver 2.7   8/11 - Fix "et~al." in format.crossref.editor, too.
 %                                    (Reported by Blake Stacey)
-%                   ver 2.8  12/18 - Fix format.title and format.title.p for when the
-%                                    title contains trailing punctuation.
+%                   ver x            Changes for LHeC CDR
+%                   ver x+1   1/20 - added "group" field, as superior alternative to 'collaboration'
+%                                    do not display url if doi is given
 %
 % HyperTeX Wizardry:
 %
@@ -108,8 +109,10 @@
 % SPIRES in mind.
 
 FUNCTION {string.and} {" and "}
-FUNCTION {string.editors} {", eds."}
-FUNCTION {string.editor} {", ed."}
+%FUNCTION {string.editors} {", eds."}
+%FUNCTION {string.editor} {", ed."}
+FUNCTION {string.editors} {" (eds.)"}
+FUNCTION {string.editor} {" (ed.)"}
 FUNCTION {string.edition} {"~ed."}
 FUNCTION {string.volume} {"vol.~"}
 FUNCTION {string.capsvolume} {"Vol.~"}
@@ -122,7 +125,8 @@ FUNCTION {string.capsin} {"In "}
 FUNCTION {string.multipages} {"pp.~"}
 FUNCTION {string.pages} {"p.~"}
 FUNCTION {string.chapter} {"ch.~"}
-FUNCTION {string.techrep} {"Tech. Rep."}
+%FUNCTION {string.techrep} {"Tech. Rep."}
+FUNCTION {string.techrep} {""}
 FUNCTION {string.mastersthesis} {"Master's thesis"}
 FUNCTION {string.phdthesis} {"PhD thesis"}
 
@@ -185,6 +189,7 @@ ENTRY
     eprint
     report
     collaboration
+    group
     SLACcitation
     archivePrefix
     primaryClass
@@ -371,7 +376,7 @@ FUNCTION {format.names}
 	{ namesleft #1 >
 	    { ", " * t * }
 	    { numnames #2 >
-		{ "," * }
+		{ "" * }
 		'skip$
 	      if$
 	      t "others" =
@@ -393,6 +398,7 @@ FUNCTION {format.authors}
 { author empty$
     { "" }
     { author format.names }
+%    { author format.names * ", " }
   if$
 }
 
@@ -408,7 +414,8 @@ FUNCTION {format.primaryClass}
 {
   primaryClass empty$
       { "" }
-      { " [" primaryClass * "]" *}
+      { "" }
+%      { " [" primaryClass * "]" *}
   if$            
 }
 
@@ -428,9 +435,13 @@ FUNCTION {format.eprint}
 }
 
 FUNCTION {format.url}
-{ url empty$
+{ doi empty$
+  { url empty$
     { "" }
-    {"\url{" url * "}" *}
+    { "\url{" url * "}" *}
+    if$
+  }
+  { "" }
   if$
 }
 
@@ -475,20 +486,14 @@ FUNCTION {format.editors}
 FUNCTION {format.title}
 { title empty$
     { "" }
-    {title title text.length$ #1 substring$ duplicate$ duplicate$ "?" =
-     swap$ "!" = or
-     swap$ "." = or
-      { "``" title "t" change.case$ * "''" * }
-      { "``" title "t" change.case$ * ",''" * }
-    if$
-   }
+    { "``" title "t" change.case$ * ",''" * }
   if$
 }
 
 FUNCTION {format.title.p}
 { title empty$
     { "" }
-    { "``" title "t" change.case$ * add.period$ "''" * }
+    { "``" title "t" change.case$ * ".''" * }
   if$
 }
 
@@ -528,7 +533,8 @@ FUNCTION {format.date}
     }
     { month empty$
 	'year
-	{ month capitalize ", " * year * }
+%	{ month capitalize ", " * year * }
+	{ month capitalize " " * year * }
       if$
     }
   if$
@@ -545,16 +551,22 @@ FUNCTION {format.date.paren}
     }
     { month empty$
 	{"(" year * ") " *}
-	{"(" month capitalize * ", " * year * ") " *}
+	{"(" year * ") " *}
+%	{"(" month capitalize * ", " * year * ") " *}
       if$
     }
   if$
 }
 
 FUNCTION {format.collaboration}
-{ collaboration empty$
-    { "" }
-    { "{\bfseries " collaboration * "} " * "Collaboration" * }
+{ group empty$
+    { collaboration empty$
+        { "" }
+        { "{ " collaboration * "} " * "Collaboration" * }
+      if$
+    }
+%    { "{\bfseries " collaboration * "} " * "Collaboration" * }
+    { "{ " group * "}" * }
   if$
 }
 
@@ -674,7 +686,8 @@ FUNCTION {format.pages.nopp}
 FUNCTION {format.volume}
 { volume empty$
     { "" }
-    { "{\bfseries " volume * "} " * }
+%    { "{\bfseries " volume * "} " * }
+    { "{" volume * "} " * }
   if$
 }
 
@@ -838,7 +851,7 @@ FUNCTION {format.journal}
     { "" }
     {journal emphasize " " *
      format.volume *
-     format.number *
+%     format.number *
      format.date.paren *
      format.pages.nopp *
       }
@@ -850,6 +863,7 @@ FUNCTION {article}
   format.collaboration output
   format.authors "author" output.check
   format.title "title" output.check
+  ", " *
   blank.sep
   crossref missing$
   { journal missing$   
@@ -1024,11 +1038,11 @@ FUNCTION {inproceedings}
   blank.sep
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
-      format.bvolume output
-      format.number.series output
-      format.pages output
-      organization output
-      new.block
+%      format.bvolume output
+%      format.number.series output
+%      format.pages output
+%      organization output
+%      new.block
       publisher output
       address output
       format.date "year" output.check
