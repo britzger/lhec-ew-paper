@@ -9,8 +9,8 @@ With the discovery of the Standard Model (SM) Higgs boson at
 the CERN Large Hadron Collider (LHC) experiments and subsequent 
 measurement of its parameters, the fundamental parameters of the 
 SM have been measured directly and with remarkable precision.
-To fully map out the validity of the theory of electroweak
-interactions, further high-precision electroweak measurements 
+To further map out the validity of the theory of electroweak
+interactions, more high-precision electroweak measurements 
 have to be performed. Such high-precision measurements can also  
 be considered as a portal to new physics, since non-SM contributions 
 may lead to significant deviations for some precisely measurable 
@@ -63,6 +63,13 @@ inclusive DIS cross sections for polarized electron-proton
 scattering as a function of \Qsq\ comparing the future 
 facilities LHeC, FCC-$eh$, and EIC, with H1 data from the past HERA
 collider~\cite{Aaron:2012qi}.  
+%
+{\color{blue}
+  DB: shall we add a short comment about the figure?
+  Something like:
+  For studies of electroweak effects, particular data at higher
+  scales/\Qsq are important
+  }
 %
 \begin{figure}[t!hb]
   \centering
@@ -136,7 +143,7 @@ higher-order corrections (Sec.\,\ref{sec:mt}). These studies
 will allow one to perform tests of the SM by comparing 
 different determinations of the electroweak physics parameters. 
 Agreement with the theory can be quantified by the precision 
-with which SM parameters are expected to be determined. 
+with which SM parameters are expected to be determined. {\color{red}(?)} 
 
 In addition, we will study a number of possible ways to 
 generically parametrize new physics beyond the SM and investigate 
@@ -178,7 +185,7 @@ SM parameters is discussed in an appendix (\ref{app:globalfit}).
 %--------------------------------------------------------------------
 %   Theory
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Electroweak effects in inclusive NC and CC DIS}
 \label{sec:theo}
@@ -365,8 +372,8 @@ weak mixing angle,
   \kappa_{f}(\mu^2) \sw \, . 
 \label{eq:sin2w-eff}
 \end{equation} 
-The leptonic weak mixing angle, $\sin^2 \theta_{W,\ell }^{\rm eff} 
-(m_Z^2)$, has been used to describe LEP/SLD observables at the 
+The leptonic weak mixing angle, $\sweffl(m_Z^2)$,
+has been used to describe LEP/SLD observables at the 
 $Z$-pole (see e.g.~\cite{PDG2020}). We emphasize that the $\mu^2$ 
 dependence of the effective weak mixing angle is not negligible 
 for LHeC physics ($\mu^2 = - Q^2$), while only its value at 
@@ -448,7 +455,7 @@ sensitivities to parameter variations.
 %--------------------------------------------------------------------
 %
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Inclusive DIS cross sections at the LHeC}
 \label{sec:xsections}
@@ -483,7 +490,7 @@ had been $E_e = 27.6$~GeV and $E_p = 920$~GeV, respectively.
 
 At lower values of \Qsq, the NC cross section is dominated by
 the photon-exchange contribution, determined by the structure 
-function $F_2$ (c.f.\ Eqs.~(\ref{eq:strfun1}, \ref{eq:strfun2})), 
+function $F_2$ (cf.\ Eqs.~(\ref{eq:strfun1}, \ref{eq:strfun2})), 
 and much larger than the cross section for CC scattering. 
 At values of \Qsq below the mass of the $W$ 
 boson, $\Qsq\ll\mW^2$, the propagator term in the CC cross 
@@ -499,7 +506,7 @@ significantly. Since CC scattering is purely left-handed, the
 dependence on the longitudinal beam polarisation is strongest 
 in this case: the CC cross section scales linearly with the 
 fraction of left-handed electrons in the beam, i.e.\ with 
-$1 - P_e$ (c.f.\, Eq.~\eqref{eq:cc-cs}). Note that, since DIS 
+$1 - P_e$ (cf.\, Eq.~\eqref{eq:cc-cs}). Note that, since DIS 
 is mediated by gauge boson exchange with spacelike momentum 
 transfer, no resonance of a weak boson is present in the 
 \Qsq-dependent cross section. 
@@ -517,7 +524,7 @@ between $E_e=50$ and 60\,\GeV increases with \Qsq.
 %--------------------------------------------------------------------
 %
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{LHeC pseudo data}
 \label{sec:data}
@@ -751,7 +758,7 @@ for correlated measurement errors.
 %--------------------------------------------------------------------
 %   Methodology
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Methodology of a combined EW+PDF fit}
 \label{sec:fitmethods}
@@ -830,7 +837,7 @@ uncertainties,
 \end{equation}
 where the sum runs over all data points, $\varsigma_i$ are the 
 measured cross section values and $\sigma_i$ their corresponding 
-theory predictions (c.f.\ Eqs.~\eqref{eq:cs} and~\eqref{eq:cc-cs}),
+theory predictions (cf.\ Eqs.~\eqref{eq:cs} and~\eqref{eq:cc-cs}),
 which incorporate the dependence on the fit parameters. The covariance 
 matrix $V$ represents the relative uncertainties of the data points.
 The Minuit library is employed and the resulting uncertainties 
@@ -854,7 +861,7 @@ samples~\cite{AbdulKhalek:2019mps,Bruning:2706220}.
 %--------------------------------------------------------------------
 %   Results: mass parameters
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Weak boson masses}
 \label{sec:mass}
@@ -902,7 +909,7 @@ expected uncertainties of
   =\, \pm12_{\text{(tot)}}\,\MeV
 \nonumber
 \end{eqnarray}
-for the scenarios LHeC-60a and LHeC-50a (c.f.\ 
+for the scenarios LHeC-60a and LHeC-50a (cf.\ 
 section~\ref{sec:data}), and 
 \begin{eqnarray}
   \Delta\mW(\text{LHeC-60b}) 
@@ -1051,25 +1058,21 @@ LHeC, therefore, rather provides a consistency test of the SM, if the
 value of \mw\ is compared to direct mass measurements, rather than
 a direct measurement of the mass of the weak boson itself.
 
-
-
-
-
-
-
-
-{\color{brown}
+{
+  \color{red}DB: Drop or put elsewhere:
+  \color{brown}
 Not surprising, the measurement at the LHeC will improve the precision of the 
 \mW\ determination obtained by H1~\cite{Spiesberger:2018vki} 
 ($\mW(\text{H1}) = 80.520\pm0.115~\GeV$) by more than an order 
 of magnitude.
 }
 
+
 %--------------------------------------------------------
 %  Z mass
 %--------------------------------------------------------
 
-A determination of the $Z$-boson mass from a \mz+PDF fit yields 
+A determination of the $Z$-boson mass from an \mz+PDF fit yields 
 expected experimental uncertainties of $\Delta\mZ=11$~MeV 
 (13~MeV) for LHeC-60a (LHeC-50a), respectively. These 
 uncertainties are of a similar size as those for \mW.
@@ -1079,10 +1082,24 @@ Moreover, future $e^+e^-$ colliders are expected to provide
 a substantial improvement of the precision of 
 \mZ~\cite{Abada:2019lih,Abada:2019zxq,Fan:2014vta}. 
 
+
 %--------------------------------------------------------
 %  2-parameter fit: W and Z mass
 %--------------------------------------------------------
 
+\begin{figure}[tbh!]
+  \centering
+  \includegraphics[width=0.48\textwidth]{plot_mWmZ_mitGf}
+  \caption{
+    Simultaneous determination of the $Z$-boson and $W$-boson 
+    masses $m_Z$ and \mw\ from LHeC-60a or LHeC-50a data.
+    The additional precision measurement of \gf\ yields a
+    strong constraint and its combination with the \mZ\ and \mW\ 
+    determination leads to a very shallow ellipse. 
+    }
+\label{fig:mWmZ}
+\end{figure}
+%
 Finally we investigate the possibility to perform a combined 
 determination of \mW\ and \mZ. The result is shown in 
 Fig.~\ref{fig:mWmZ}, where the 68\,\% confidence level
@@ -1101,24 +1118,12 @@ this figure. Their comparison provides a test for the
 consistency of high-energy data from the LHeC with low-energy 
 input from $\alpha$, $G_F$ and $\sin^2\theta_W$. 
 
-\begin{figure}[th!]
-  \centering
-  \includegraphics[width=0.48\textwidth]{plot_mWmZ_mitGf}
-  \caption{
-    Simultaneous determination of the $Z$-boson and $W$-boson 
-    masses $m_Z$ and \mw\ from LHeC-60a or LHeC-50a data.
-    The additional precision measurement of \gf\ yields a
-    strong constraint and its combination with the \mZ\ and \mW\ 
-    determination leads to a very shallow ellipse. 
-    }
-\label{fig:mWmZ}
-\end{figure}
 
 
 %--------------------------------------------------------------------
 %   Results: sin2thw
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{\boldmath The weak mixing angle \sw}
 \label{sec:sw2eff}
@@ -1147,7 +1152,7 @@ related with the on-shell definition of \sw\
 by a well-known correction factor (cf.~Eqs.~(\ref{eq:gV-NLO}, 
 \ref{eq:sin2w-eff})), 
 \begin{equation}
-  \sweff
+  \sweffl
   = 
   \kappa_{\ell}(\mZ^2) \sw \,.
 \end{equation}
@@ -1169,7 +1174,11 @@ but the same parameter for lepton and quark vector couplings. SM higher-order
 corrections are taken into account as described in 
 Sec.\ \ref{sec:theo} by keeping the \Qsq- and 
 flavor-dependent form factors $\kappa_{f}$ 
-(see Eq.~(\ref{eq:gV-NLO})). Our estimate for the uncertainties 
+(see Eq.~(\ref{eq:gV-NLO}))
+{\color{red}
+  ... in order to translate the fit parameter to the
+  actual quantities used in the calculation (?)}.
+Our estimate for the uncertainties 
 in the different LHeC scenarios are 
 \begin{eqnarray}
   \Delta\sweff\ (\text{LHeC-60a}) 
@@ -1199,24 +1208,14 @@ and
 These results are collected in Fig.~\ref{fig:sw2eff} where 
 we compare with presently available determinations of the 
 weak mixing angle expressed in terms of leptonic 
-$\sweff(m_Z^2)$. 
-Here we have neglected additional parametric uncertainties that 
-may enter when the LHeC measurement are mapped to the leptonic 
-effective weak mixing angle. The determination at the LHeC is 
-superior to any current single measurement and of similar size 
-as the world average or the LEP+SLD combination. Even measurements 
-in a spacelike region of momentum transfers, i.e.\ for a 
-non-resonant process, turns out to be competitive with $Z$-pole 
-measurements, despite of the fact that the cross section receives 
-large contributions from pure photon exchange, which is 
-independent of the weak mixing angle. 
-
-\begin{figure}[t!]
+$\sweffl(m_Z^2)$. 
+%
+\begin{figure}[tbh!]
   \centering
   \includegraphics[width=0.50\textwidth]{figures/sw2eff}
   \caption{
     Comparison of determinations of 
-    $\sweff$ expressed in 
+    $\sweffl$ expressed in 
     terms of the leptonic effective weak mixing angle.  
     Two scenarios for the simulation of LHeC inclusive NC/CC 
     DIS data are considered. Results from 
@@ -1230,36 +1229,51 @@ independent of the weak mixing angle.
   }
 \label{fig:sw2eff}
 \end{figure}
+%
+Here we have neglected additional parametric uncertainties that 
+may enter when the LHeC measurement are mapped to the leptonic 
+effective weak mixing angle. The determination at the LHeC is 
+superior to any current single measurement and of similar size 
+as the world average or the LEP+SLD combination. Even measurements 
+in a spacelike region of momentum transfers, i.e.\ for a 
+non-resonant process, turns out to be competitive with $Z$-pole 
+measurements, despite of the fact that the cross section receives 
+large contributions from pure photon exchange, which is 
+independent of the weak mixing angle. 
 
-The measurement of \sweff\ 
-can be performed in sub-regions of the wide kinematic range of 
-\Qsq\ accessible at the LHeC. We find that 
-\sweff\ can be determined in 
-the range of about $25 < \sqrt{\Qsq} < 700\,\GeV$ with a precision 
-better than 0.1\,\% and everywhere better than 1\,\%. The results 
-for 12 $Q^2$ values obtained from bin-width and bin-center 
-corrected cross section data are shown in Fig.~\ref{fig:sw2Q2} 
-and Table~\ref{tab:sw2Q2}. We emphasize that DIS is complementary 
-to other measurements since the scattering process is mediated 
-by boson exchange with spacelike momenta, i.e.\ the scale is 
-given by $\mu^2 = - Q^2$ (c.f.\ Sec.~\ref{sec:sw2eff}). If a 
-calculation of DIS cross sections including higher-order EW 
-corrections in the $\overline{\rm MS}$ scheme is available, 
-the uncertainty of this \Qsq-dependent \sw-determination can 
-be translated into a test of the running of the weak mixing angle. 
 
-\begin{figure}[t!]
+\begin{figure}[tbh!]
   \centering
   \includegraphics[width=0.60\textwidth]{figures/plot_sw2Q2}
   \caption{
     Expected uncertainties of the weak mixing angle determined 
     in sub-regions of \Qsq. Two scenarios for the simulation 
-    of LHeC inclusive NC/CC DIS data are considered. 
+    of LHeC inclusive NC/CC DIS data are displayed, LHeC-50a and
+    LHeC-60b.
+    The SM expectation is displayed as dotted line.
   }
 \label{fig:sw2Q2}
 \end{figure}
-
-\begin{table}[b!]
+%
+The measurement of \sweff\ 
+can be performed in sub-regions of the wide kinematic range of 
+\Qsq\ accessible at the LHeC.
+The results for twelve $Q^2$ values obtained from bin-width and bin-center 
+corrected cross section data are shown in Fig.~\ref{fig:sw2Q2} 
+and Table~\ref{tab:sw2Q2}.
+We find that \sweff\ can be determined in 
+the range of about $25 < \sqrt{\Qsq} < 700\,\GeV$ with a precision 
+better than 0.1\,\% and everywhere better than 1\,\%.
+We emphasize that DIS is complementary 
+to other measurements since the scattering process is mediated 
+by boson exchange with spacelike momenta, i.e.\ the scale is 
+given by $\mu^2 = - Q^2$ (cf.\ Sec.~\ref{sec:sw2eff}). If a 
+calculation of DIS cross sections including higher-order EW 
+corrections in the $\overline{\rm MS}$ scheme is available, 
+the uncertainty of this \Qsq-dependent \sw-determination can 
+be translated into a test of the running of the weak mixing angle. 
+%
+\begin{table}[bth!]
   \footnotesize
   \centering
 %  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
@@ -1302,7 +1316,7 @@ be translated into a test of the running of the weak mixing angle.
 %--------------------------------------------------------------------
 %   top quark and Higgs mass
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Mass parameters through higher-order corrections}
 \label{sec:mt} 
@@ -1318,7 +1332,7 @@ provides a test of the SM at the level of quantum corrections
 which is complementary to direct determinations. 
 
 The dominant corrections to the gauge boson self energies depend 
-on the top-quark mass \mt\ \footnote{Note that,
+on the top-quark mass \mt\,\footnote{Note that,
   at sufficiently high scales, e.g.\ $\Qsq \gtrsim (2\mt)^2$, 
   the top-quark contributes also to the QCD evolution of the PDFs. 
   However, these indirect contributions to the inclusive NC/CC 
@@ -1334,7 +1348,7 @@ on \mt\ and since $\rho_t$ is in the order of 1\,\%, one can
 expect to observe a sizeable effect on the DIS cross sections. 
 
 We have determined the uncertainties of the top-quark mass \mt\ 
-through DIS cross section measurements for the four scenarios in a
+through DIS cross section measurements for the four scenarios in an
 \mt+PDF fit. 
 For LHeC-50a and LHeC-50b we find $\Delta\mt = \pm2.2\,\GeV$ 
 and $\pm 1.8\,\GeV$, respectively. For the LHeC scenarios with 
@@ -1346,7 +1360,7 @@ uncertainty of $\Delta\mt = \pm1.4\,\GeV$ (LHeC-60a) and
 The size of the PDF-related uncertainty amounts to about
 0.6\,\GeV\ and is already included in the values above. In these 
 studies, the value of \mW\ is considered as an external, i.e.\ fixed,
-parameter. However, the dominant theoretical uncertainty for a 
+parameter. However, the dominant theoretical uncertainty for an 
 \mt\ determination arises in fact from the uncertainty of $\mW$. 
 At present, the $W$ mass is known with an uncertainty of
 $\Delta\mW = \pm 12\,\MeV$~\cite{PDG2020}. This corresponds to 
@@ -1354,8 +1368,8 @@ a theory uncertainty of \mt\ of about $\pm2\,\GeV$.
 
 The size of the LHeC experimental uncertainty compares well with
 uncertainties from recent LHC measurements, which are typically 
-in the range between $\Delta \mt = \pm0.3$ and $\pm2.0$\,\GeV 
-(see Ref.~\cite{PDG2020}, and references therein).
+in the range between $\Delta \mt = \pm0.3$ and $\pm2.0$\,\GeV~\cite{LHCTopWG} 
+(see also Ref.~\cite{PDG2020} and references therein).
 %~\cite{Cortiana:2015rca} 
 One should note, however, that the uncertainty of \mt\ at 
 the LHC experiments is dominated by Monte Carlo modelling and 
@@ -1392,6 +1406,7 @@ measurements of \mt\ and \mw\ are taken into account.
     \label{fig:mWmt}
 \end{figure}
 
+{\color{blue}DB: Add motivating sentence?\\}
 We also consider the possibility to determine the $W$-boson mass 
 \mw\ simultaneously together with \mt. Prospects for such a 
 simultaneous determination of \mt, \mw, and the PDFs are displayed 
@@ -1421,13 +1436,13 @@ respectively. This compares well with the precision found for
 the indirect \mH\ determinations from LEP+SLD combined 
 data~\cite{ALEPH:2005ab,deBlas:2016ojx,Haller:2018nnx}, but 
 is, of course, much less precise than the direct determination 
-from the LHC experiments. 
+from the LHC experiments nowadays~\cite{Sirunyan:2020xwk,ATLAS-CONF-2020-005}. 
 
 
 %--------------------------------------------------------------------
 %   Results: STU
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{\boldmath Oblique parameters $S$, $T$, and $U$} 
 \label{sec:stu}
@@ -1462,6 +1477,61 @@ definitions~\cite{Kennedy:1988sn,Altarelli:1990zd}
 %,Altarelli:1993sz ,Altarelli:1989hv
 is described in Ref.~\cite{Spiesberger:1993jg}.
 
+\begin{figure}[tbh!]
+  \centering
+  \includegraphics[width=0.32\textwidth]{STU_OS/plot_ST}
+  \includegraphics[width=0.32\textwidth]{STU_OS/plot_SU}
+  \includegraphics[width=0.32\textwidth]{STU_OS/plot_TU}
+  \caption{
+     Results of 2-parameter fits to pairs of $S$, $T$, and $U$ 
+     where $m_Z$ and $m_W$ are fixed SM input parameters. For 
+     each choice of two of the three parameters $S$, $T$, or $U$, 
+     the third oblique parameter is kept equal to zero. 
+     $1\sigma$ contours are shown for three LHeC scenarios. 
+     The relation how a direct measurement of \gf\ would constrain the
+     parameters is indicated in addition.
+  }
+  \label{fig:STU_OS}
+\end{figure}
+%
+\begin{table}[bht!]
+  \footnotesize
+  \centering
+%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+  \begin{tabular}{l@{\hspace*{0.5em}}cc@{\hspace*{0.5em}}c@{\hspace*{0.5em}}c@{\hspace*{0.5em}}cccc}
+    \toprule
+    Fit parameters & Parameter & \multicolumn{4}{c}{Expected uncertainty} & \multicolumn{3}{c}{Correlation (LHeC-60b)} \\
+    \cmidrule(lr){3-6}    \cmidrule(lr){7-9}
+    & & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a & S & T & U \\
+    \midrule
+    $S$+PDF      &  $S$  & $\pm0.04$ & $\pm0.06$ & $\pm0.04$ & $\pm0.07$ \\
+    $T$+PDF      &  $T$  & $\pm0.02$ & $\pm0.03$ & $\pm0.02$ & $\pm0.04$ \\
+    $U$+PDF      &  $U$  & $\pm0.02$ & $\pm0.03$ & $\pm0.04$ & $\pm0.03$ \\
+    \addlinespace
+    $S$+$T$+PDF  &  $S$  & $\pm0.18$ & $\pm0.26$ & $\pm0.35$ & $\pm0.42$ & $1.00$ & $0.98$  \\
+                 &  $T$  & $\pm0.09$ & $\pm0.14$ & $\pm0.19$ & $\pm0.23$ &        & $1.00$  \\
+    \addlinespace
+    $S$+$U$+PDF  &  $S$  & $\pm0.15$ & $\pm0.20$ & $\pm0.22$ & $\pm0.26$ & $1.00$ & & $0.97$  \\
+                 &  $U$  & $\pm0.07$ & $\pm0.09$ & $\pm0.11$ & $\pm0.13$ &        & & $1.00$  \\
+    \addlinespace
+    $T$+$U$+PDF  &  $T$  & $\pm0.24$ & $\pm0.28$ & $\pm0.24$ & $\pm0.28$ & & $1.00$ & $-0.99$  \\
+                 &  $U$  & $\pm0.22$ & $\pm0.26$ & $\pm0.22$ & $\pm0.26$ & &        & \phantom{--}$1.00$  \\
+    \addlinespace
+    $S$+$T$+$U$+PDF  &  $S$  & $\pm0.20$ & $\pm0.31$ & $\pm0.46$ & $\pm0.58$ & 1.00 & 0.65 & $-0.41$ \\
+                 &  $T$  & $\pm0.32$ & $\pm0.42$ & $\pm0.52$ & $\pm0.64$ &      & 1.00 & $-0.96$\\
+                 &  $U$  & $\pm0.24$ & $\pm0.30$ & $\pm0.30$ & $\pm0.36$ &      &      & \phantom{--}1.00 \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Results of the $STU$+PDF fits with fixed SM gauge boson masses. 
+    From top to bottom we show the expected uncertainties for 
+    1-, 2- and 3-parameter fits as indicated in the first column 
+    for all four LHeC scenarios. In the case of 2- and 3-parameter 
+    fits, the last columns show the correlation matrices.     
+  }
+  \label{tab:STU_OS}
+\end{table}
+%
 Results for various $STU$+PDF fits are presented in 
 Figs.~\ref{fig:STU_OS} and Table~\ref{tab:STU_OS}.
 These fits are performed in the on-shell scheme and the 
@@ -1483,13 +1553,69 @@ to determinations of $S$, $T$ and $U$ from $Z$-pole data
 (see, for example, Refs.~\cite{deBlas:2016ojx,Haller:2018nnx,PDG2020}). 
 
 The $STU$+PDF fit to LHeC DIS data in the on-shell scheme 
-can be combined with the constraint from the $G_F$ measurement. 
+can be combined with the constraint from the $G_F$ measurement, cf. Fig.~\ref{fig:STU_OS}. 
 Since $G_F$ is known with very high precision, this constraint 
 amounts essentially to fixing one linear combination of the 
 $STU$ parameters, the one that enters in $\Delta r$ (see 
 Eq.~(\ref{eq:deltar-NLO})).
 %DB {\color{red} . . . more . . . but we don't show figure or table. }
 
+\begin{figure}[tbh!]
+  \centering
+  \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_ST}
+  \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_SU}
+  \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_TU}
+  \caption{
+    Same as Fig.~\ref{fig:STU_OS}, but the calculations are performed in the
+    modified on-shell scheme:
+    The value for $m_Z$ is fixed, but the $W$ boson mass is calculated from its relation to 
+    the Fermi constant \gf.
+    The relations how direct measurements of \mw\
+    or \sweff\ at the $Z$-pole would constrain the two oblique
+    parameters are additionally indicated by dashed and dotted lines,
+    respectively.
+    In the modified on-shell scheme, the measurement of \mw\ would
+    constrain the same relation as a mesurement of $1-\mw^2/\mz^2$.
+  }
+  \label{fig:STU_MOMS}
+\end{figure}
+%
+\begin{table}[bht!]
+  \footnotesize
+  \centering
+%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
+  \begin{tabular}{l@{\hspace*{0.5em}}cc@{\hspace*{0.5em}}c@{\hspace*{0.5em}}c@{\hspace*{0.5em}}cccc}
+    \toprule
+    Fit parameters & Parameter& \multicolumn{4}{c}{Expected uncertainty} & \multicolumn{3}{c}{Correlation (LHeC-60b)} \\
+    \cmidrule(lr){3-6}    \cmidrule(lr){7-9}
+    & & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a & S & T & U \\
+    \midrule
+    $S$+PDF      &  $S$  & $\pm0.04$ & $\pm0.06$ & $\pm0.05$ & $\pm0.08$ \\
+    $T$+PDF      &  $T$  & $\pm0.03$ & $\pm0.05$ & $\pm0.04$ & $\pm0.07$ \\
+    $U$+PDF      &  $U$  & $\pm0.04$ & $\pm0.07$ & $\pm0.06$ & $\pm0.09$ \\
+    \addlinespace
+    $S$+$T$+PDF  &  $S$  & $\pm0.12$ & $\pm0.20$ & $\pm0.21$ & $\pm0.30$ & $1.00$ & $0.95$  \\
+                 &  $T$  & $\pm0.11$ & $\pm0.17$ & $\pm0.17$ & $\pm0.24$ &        & $1.00$  \\
+    \addlinespace
+    $S$+$U$+PDF  &  $S$  & $\pm0.05$ & $\pm0.07$ & $\pm0.06$ & $\pm0.10$ & $1.00$ & & $0.57$  \\
+                 &  $U$  & $\pm0.06$ & $\pm0.09$ & $\pm0.07$ & $\pm0.11$ &        & & $1.00$  \\
+    \addlinespace
+    $T$+$U$+PDF  &  $T$  & $\pm0.05$ & $\pm0.08$ & $\pm0.06$ & $\pm0.10$ & & $1.00$ & $-0.76$  \\
+                 &  $U$  & $\pm0.07$ & $\pm0.11$ & $\pm0.09$ & $\pm0.14$ & &        & \phantom{--}$1.00$  \\
+     \addlinespace
+    $S$+$T$+$U$+PDF  & $S$  & $\pm0.20$ & $\pm0.32$ & $\pm0.47$ & $\pm0.60$ & 1.00 & 0.97 & $-0.79$ \\
+                 & $T$  & $\pm0.22$ & $\pm0.35$ & $\pm0.46$ & $\pm0.60$ &      & 1.00 & $-0.87$\\
+                 & $U$  & $\pm0.11$ & $\pm0.19$ & $\pm0.20$ & $\pm0.28$ &      &      & \phantom{--}1.00 \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Same as Table~\ref{tab:STU_OS}, but in the modified on-shell 
+    scheme with $m_Z$ and $G_F$ as fixed input parameters, i.e.\ 
+    $m_W$ is calculated. 
+  }
+  \label{tab:STU_MOMS}
+\end{table}
+%
 New physics parametrized with the help of $S$, $T$ and $U$ 
 will also affect the \gf-\mw\ relation, Eq.~(\ref{eq:deltar-NLO}), 
 through the $W$-boson self energy correction to the muon decay. 
@@ -1506,120 +1632,14 @@ case. However, the 2-  and 3-parameter fits exhibit weaker
 correlations leading to smaller uncertainties for their 
 corresponding 1-parameter projections. 
 
-\begin{figure}[b!]
-  \centering
-  \includegraphics[width=0.32\textwidth]{STU_OS/plot_ST}
-  \includegraphics[width=0.32\textwidth]{STU_OS/plot_SU}
-  \includegraphics[width=0.32\textwidth]{STU_OS/plot_TU}
-  \caption{
-     Results of 2-parameter fits to pairs of $S$, $T$, and $U$ 
-     where $m_Z$ and $m_W$ are fixed SM input parameters. For 
-     each choice of two of the three parameters $S$, $T$, or $U$, 
-     the third oblique parameter is kept equal to zero. 
-     $1\sigma$ contours are shown for three LHeC scenarios. 
-     The relation how a direct measurement of \gf\ would constrain the
-     parameters is indicated in addition.
-  }
-  \label{fig:STU_OS}
-\end{figure}
-
-\begin{table}[bht!]
-  \footnotesize
-  \centering
-%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-  \begin{tabular}{lcccccccc}
-    \toprule
-    Fit parameters & Parameter & \multicolumn{4}{c}{Expected uncertainty} & \multicolumn{3}{c}{Correlation (LHeC-60b)} \\
-    \cmidrule(lr){3-6}    \cmidrule(lr){7-9}
-    & & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a & S & T & U \\
-    \midrule
-    $S$+PDF      &  $S$  &  $0.04$ & $0.06$ & $0.04$ & $0.07$ \\
-    $T$+PDF      &  $T$  &  $0.02$ & $0.03$ & $0.02$ & $0.04$ \\
-    $U$+PDF      &  $U$  &  $0.02$ & $0.03$ & $0.04$ & $0.03$ \\
-    \addlinespace
-    $S$+$T$+PDF  &  $S$  & $0.18$ & $0.26$ & $0.35$ & $0.42$ & $1.00$ & $0.98$  \\
-                 &  $T$  & $0.09$ & $0.14$ & $0.19$ & $0.23$ &        & $1.00$  \\
-    \addlinespace
-    $S$+$U$+PDF  &  $S$  & $0.15$ & $0.20$ & $0.22$ & $0.26$ & $1.00$ & & $0.97$  \\
-                 &  $U$  & $0.07$ & $0.09$ & $0.11$ & $0.13$ &        & & $1.00$  \\
-    \addlinespace
-    $T$+$U$+PDF  &  $T$  & $0.24$ & $0.28$ & $0.24$ & $0.28$ & & $1.00$ & $-0.99$  \\
-                 &  $U$  & $0.22$ & $0.26$ & $0.22$ & $0.26$ & &        & \phantom{--}$1.00$  \\
-    \addlinespace
-    $S$+$T$+$U$+PDF  &  $S$  &  $0.20$ & $0.31$ & $0.46$ & $0.58$ & 1.00 & 0.65 & $-0.41$ \\
-                 &  $T$  &  $0.32$ & $0.42$ & $0.52$ & $0.64$ &      & 1.00 & $-0.96$\\
-                 &  $U$  &  $0.24$ & $0.30$ & $0.30$ & $0.36$ &      &      & \phantom{--}1.00 \\
-    \bottomrule
-  \end{tabular}
-  \caption{
-    Results of the $STU$+PDF fits with fixed SM gauge boson masses. 
-    From top to bottom we show the expected uncertainties for 
-    1-, 2- and 3-parameter fits as indicated in the first column 
-    for all four LHeC scenarios. In the case of 2- and 3-parameter 
-    fits, the last columns show the correlation matrices.     
-  }
-  \label{tab:STU_OS}
-\end{table}
 
 
-\begin{table}[bht!]
-  \footnotesize
-  \centering
-%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-  \begin{tabular}{lcccccccc}
-    \toprule
-    Fit parameters & Parameter& \multicolumn{4}{c}{Expected uncertainty} & \multicolumn{3}{c}{Correlation (LHeC-60b)} \\
-    \cmidrule(lr){3-6}    \cmidrule(lr){7-9}
-    & & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a & S & T & U \\
-    \midrule
-    $S$+PDF      &  $S$  &  $0.04$ & $0.06$ & $0.05$ & $0.08$ \\
-    $T$+PDF      &  $T$  &  $0.03$ & $0.05$ & $0.04$ & $0.07$ \\
-    $U$+PDF      &  $U$  &  $0.04$ & $0.07$ & $0.06$ & $0.09$ \\
-    \addlinespace
-    $S$+$T$+PDF  &  $S$  & $0.12$ & $0.20$ & $0.21$ & $0.30$ & $1.00$ & $0.95$  \\
-                 &  $T$  & $0.11$ & $0.17$ & $0.17$ & $0.24$ &        & $1.00$  \\
-    \addlinespace
-    $S$+$U$+PDF  &  $S$  & $0.05$ & $0.07$ & $0.06$ & $0.10$ & $1.00$ & & $0.57$  \\
-                 &  $U$  & $0.06$ & $0.09$ & $0.07$ & $0.11$ &        & & $1.00$  \\
-    \addlinespace
-    $T$+$U$+PDF  &  $T$  & $0.05$ & $0.08$ & $0.06$ & $0.10$ & & $1.00$ & $-0.76$  \\
-                 &  $U$  & $0.07$ & $0.11$ & $0.09$ & $0.14$ & &        & \phantom{--}$1.00$  \\
-     \addlinespace
-    $S$+$T$+$U$+PDF  &  $S$  &  $0.20$ & $0.32$ & $0.47$ & $0.60$ & 1.00 & 0.97 & $-0.79$ \\
-                 &  $T$  &  $0.22$ & $0.35$ & $0.46$ & $0.60$ &      & 1.00 & $-0.87$\\
-                 &  $U$  &  $0.11$ & $0.19$ & $0.20$ & $0.28$ &      &      & \phantom{--}1.00 \\
-    \bottomrule
-  \end{tabular}
-  \caption{
-    Same as Table~\ref{tab:STU_OS}, but in the modified on-shell 
-    scheme with $m_Z$ and $G_F$ as fixed input parameters, i.e.\ 
-    $m_W$ is calculated. 
-  }
-  \label{tab:STU_MOMS}
-\end{table}
-
-\begin{figure}[htb!]
-  \centering
-  \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_ST}
-  \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_SU}
-  \includegraphics[width=0.32\textwidth]{STU_MOMS/plot_TU}
-  \caption{
-    Same as Fig.~\ref{fig:STU_OS} with fixed input for $m_Z$, 
-    but the $W$ boson mass is calculated from its relation to 
-    the Fermi constant (modified on-shell scheme).
-    The relations how direct measurements of \mw\ (or
-    $1-\tfrac{\mw^2}{\mz^2}$) or
-    \sweff\ at the $Z$-pole would constrain the two oblique
-    parameters additionally are indicated by dashed and dotted lines, respectively.
-  }
-  \label{fig:STU_MOMS}
-\end{figure}
 
 
 %--------------------------------------------------------------------
 %   Results: rho and kappa form factors
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{\boldmath Weak neutral current couplings beyond the SM: 
 $\rho$ and $\kappa$}
@@ -1663,12 +1683,27 @@ weak mixing angle, Eq.~(\ref{eq:sw2eff}) is replaced by
   \kapp{f}(\mu^2) \kappa_{f}(\mu^2) \sw \,.
 \end{equation} 
 
+\begin{figure}[thb!]
+  \centering
+  \includegraphics[width=0.55\textwidth]{plot_NC_rhokap}
+  \caption{
+    Expectation for a determination of $\rhop{,f}$ and 
+    $\kapp{f}$ at the 68\,\% confidence level, assuming 
+    one common anomalous factor for each fermion type. The 
+    results for three different LHeC scenarios are compared 
+    with the relative uncertainties obtained from an analysis 
+    of LEP+SLD combined data~\cite{ALEPH:2005ab} for leptonic 
+    couplings. 
+  }
+\label{fig:rhokappa:f}
+\end{figure}
+%
 We determine the uncertainties of the anomalous form factors
  $\rho_\text{NC}^\prime$ and $\kappa^\prime$ 
-in a simultaneous fit together with the PDFs, using simulated 
-inclusive NC and CC DIS data at the LHeC. First, we consider 
-universal, i.e.\ flavor-independent $\rho_\text{NC}^\prime$ 
-and $\kappa^\prime$ parameters, i.e., for both the 
+in a simultaneous fit together with the PDFs, using the simulated 
+LHeC inclusive NC and CC DIS data. First, we consider 
+universal, i.e.\ flavor-independent, $\rho_\text{NC}^\prime$ 
+and $\kappa^\prime$ parameters for both the 
 quark and electron couplings. The results are displayed in 
 Fig.~\ref{fig:rhokappa:f}. In this figure, we compare the 
 expected LHeC uncertainties with corresponding results that 
@@ -1693,24 +1728,12 @@ modification of the normalization of NC weak couplings by
 $\Delta \sin^2\theta_{\textrm{W},f}^\textrm{eff} 
 = \pm 0.00023$ ($\pm0.00071$) for LHeC-60b (LHeC-50a). 
 
-\begin{figure}[thb!]
-  \centering
-  \includegraphics[width=0.55\textwidth]{plot_NC_rhokap}
-  \caption{
-    Expectation for a determination of $\rho^\prime$ and 
-    $\kappa^\prime$ at the 68\,\% confidence level, assuming 
-    one common anomalous factor for each fermion type. The 
-    results for three different LHeC scenarios are compared 
-    with the relative uncertainties obtained from an analysis 
-    of LEP+SLD combined data~\cite{ALEPH:2005ab} for leptonic 
-    couplings. 
-  }
-\label{fig:rhokappa:f}
-\end{figure}
 
 Next, we allow the anomalous form factors to be different 
 for up- and down-type quarks, but assume the couplings of the 
-electron as predicted by the SM. We perform a fit of the four 
+electron as predicted by the SM.
+{\color{red}Motivating sentence?}
+We perform a fit of the four 
 anomalous parameters ($\rho_{\textrm{NC},u}^\prime$, 
 $\kappa_{u}^\prime$, $\rho_{\textrm{NC},d}^\prime$, 
 and $\kappa_{d}^\prime$). The resulting contours 
@@ -1746,8 +1769,13 @@ Table~\ref{tab:rhokappap}.
 \label{fig:rhokappa:ud}
 \end{figure}
 
-                                                                                                                                                                            
-\begin{table}[bht!]                                                                                                                               \footnotesize                                                                                                                                   \centering                                                                                                                                      \begin{tabular}{lccccc}                                                                                                                           \toprule                                                                                                                                        Fit parameters & Parameter & \multicolumn{4}{c}{Expected uncertainty}  \\
+
+\begin{table}[bht!]
+  \footnotesize
+  \centering
+  \begin{tabular}{lccccc}
+    \toprule
+    Fit parameters & Parameter & \multicolumn{4}{c}{Expected uncertainty}  \\
     \cmidrule(lr){3-6}
     &  & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\ 
     \midrule
@@ -1778,8 +1806,8 @@ Table~\ref{tab:rhokappap}.
     in different LHeC scenarios. From top to bottom we 
     list results for 4-, 2- and 1-parameter+PDF fits. The last 
     two lines show the results from a fit combining the 
-    CC $\rho^\prime$ (see Eqs.~(\ref{eq:rhocc1}-\ref{eq:rhocc4}) 
-    in section \ref{sec:ewcc}) with the NC $\kappa^\prime$ 
+    CC parameter $\rhopW{}$ (see Eqs.~(\ref{eq:rhocc1}-\ref{eq:rhocc4}) 
+    in Sec.~\ref{sec:ewcc}) with the NC $\kappa^\prime$ 
     parameter. 
   }
   \label{tab:rhokappap}
@@ -1815,7 +1843,7 @@ the anomalous form factors. Indeed, many models predict
 flavor-specific and \Qsq-dependent modifications. In order to 
 study such a test, we perform fits of 
 $\rho_\text{NC}^\prime$ and $\kappa^\prime$ to LHeC 
-data split into 12 subsets with different \Qsq-ranges. Our 
+data split into twelve subsets with different \Qsq\ ranges. Our 
 findings are shown in Fig.~\ref{fig:rhokappaQ2} for the scenarios 
 LHeC-60a and LHeC-50a, where we include, for comparison, results 
 obtained from H1 data~\cite{Spiesberger:2018vki}. At the LHeC 
@@ -1832,7 +1860,7 @@ LHeC scenarios differ by a factor of 2.
 %--------------------------------------------------------------------
 %   EW in charged currents (CC)
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Electroweak effects in charged-current scattering}
 \label{sec:ewcc}
@@ -1881,70 +1909,8 @@ then become
   \label{eq:rhocc4}
 \end{eqnarray}
 
-The prospects for a determination of these anomalous couplings 
-with LHeC data are obtained by performing a fit of the two 
-parameters $\rho^\prime_{\text{CC},eq}$ and 
-$\rho^\prime_{\text{CC},e\bar{q}}$ together with the PDFs.
-The expected uncertainties for the LHeC-50a and LHeC-60a 
-scenarios are displayed in Fig.~\ref{fig:rhoCC} and collected 
-in table~\ref{tab:rhoCC}. We find that these parameter can be 
-determined with a relative uncertainty of better than 
-0.2--0.3\,\%. For the LHeC-60b scenario, even smaller 
-uncertainties can be achieved. 
 
-\begin{table}[b!]
-  \footnotesize
-  \centering
-%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
-  \begin{tabular}{lccccc}
-    \toprule
-    Fit parameters & Parameter & \multicolumn{4}{c}{Expected uncertainty} \\
-    \cmidrule(lr){3-6}
-    & & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\
-    \midrule
-%log.rhoWq.lhec60.uncorr.0.25.txt:rhoWqb                    =            1   +/-   0.00275459  
-%log.rhoWq.lhec60.uncorr.0.25.txt:rhoWq                     =            1   +/-   0.00266751  
-%log.rhoWq.lhec60.uncorr.0.5.txt:rhoWqb                    =            1   +/-   0.0030307   
-%log.rhoWq.lhec60.uncorr.0.5.txt:rhoWq                     =            1   +/-   0.00281397  
-%log.rhoWq.lhec50.uncorr.0.25.txt:rhoWqb                    =            1   +/-   0.00280593  
-%log.rhoWq.lhec50.uncorr.0.25.txt:rhoWq                     =            1   +/-   0.00265216  
-%log.rhoWq.lhec50.uncorr.0.5.txt:rhoWqb                    =            1   +/-   0.00313966  
-%log.rhoWq.lhec50.uncorr.0.5.txt:rhoWq                     =            1   +/-   0.00280834  
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}         &   $\pm0.0027$  & $\pm0.0028$ & $\pm0.0027$ & $\pm0.0028$ \\
-    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   $\pm0.0028$  & $\pm0.0030$ & $\pm0.0028$ & $\pm0.0031$ \\
-    \addlinespace
-%log.rhoWq.q.lhec60.uncorr.0.25.test.txt:rhoWq                      =            1   +/-   0.000831298 
-%log.rhoWq.q.lhec60.uncorr.0.5.test.txt:rhoWq                       =            1   +/-   0.0012586   
-%log.rhoWq.q.lhec50.uncorr.0.25.test.txt:rhoWq                      =            1   +/-   0.00103654  
-%log.rhoWq.q.lhec50.uncorr.0.5.test.txt:rhoWq                       =            1   +/-   0.00147361  
-%log.rhoWq.qb.lhec60.uncorr.0.25.test.txt:rhoWqb                    =            1   +/-   0.000885987 
-%log.rhoWq.qb.lhec60.uncorr.0.5.test.txt:rhoWqb                     =            1   +/-   0.00143666  
-%log.rhoWq.qb.lhec50.uncorr.0.25.test.txt:rhoWqb                    =            1   +/-   0.00116098  
-%log.rhoWq.qb.lhec50.uncorr.0.5.test.txt:rhoWqb                     =            1   +/-   0.00178834  
-    \rhopW{,eq}+PDF        & \rhopW{,eq}         &   $\pm0.0008$  & $\pm0.0013$ & $\pm0.0010$ & $\pm0.0015$ \\
-    \addlinespace
-    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   $\pm0.0009$  & $\pm0.0014$ & $\pm0.0012$ & $\pm0.0018$ \\
-    % log.final.PAR19eq50.3p.PDF.2.txt
-%    \rhopW{,f}+PDF   & \rhopW{,f}                &  1  &   0.0043  & 1 & 0.0027  & 1 & 0.0027  & 1 & 0.0027 \\
-%    \rhopW{,eq}+PDF  & \rhopW{,eq}               &  1  &   0.0027  & 1 & 0.0011  & 1 & 0.0011  & 1 & 0.0011 \\
-%    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &  1  &   0.0030  & 1 & 0.0012  & 1 & 0.0012  & 1 & 0.0012 \\
-    \addlinespace
-%log.rhoWf.lhec50.uncorr.0.25.txt:rhoWf                     =            1   +/-   0.00164196  
-%log.rhoWf.lhec50.uncorr.0.5.txt:rhoWf                     =            1   +/-   0.00184048  
-%log.rhoWf.lhec60.uncorr.0.25.txt:rhoWf                     =            1   +/-   0.00167647  
-%log.rhoWf.lhec60.uncorr.0.5.txt:rhoWf                     =            1   +/-   0.0018733   
-    \rhopW{,f}+PDF  & \rhopW{,f}                 &   $\pm0.0017$ &   $\pm0.0019$ &   $\pm0.0016$ &   $\pm0.0018$ \\
-    \bottomrule
-  \end{tabular}
-  \caption{
-  Expected uncertainties of anomalous CC coupling parameters 
-  \rhopW{,eq} and \rhopW{,e\bar{q}} from 2-parameter (upper 
-  part) and 1-parameter fits (lower part). 
-  }
-\label{tab:rhoCC}
-\end{table}
-
-\begin{figure}[th!]
+\begin{figure}[thb!]
   \centering
   \includegraphics[width=0.50\textwidth]{plot_rhoWellipse} 
   \caption{
@@ -1955,7 +1921,66 @@ uncertainties can be achieved.
   }
 \label{fig:rhoCC}
 \end{figure}
+%
+\begin{table}[bth!]
+  \footnotesize
+  \centering
+  \begin{tabular}{lccccc}
+    \toprule
+    Fit parameters & Parameter & \multicolumn{4}{c}{Expected uncertainty} \\
+    \cmidrule(lr){3-6}
+    & & LHeC-60b& LHeC-60a& LHeC-50b & LHeC-50a  \\
+    \midrule
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,eq}         &   $\pm0.0027$  & $\pm0.0028$ & $\pm0.0027$ & $\pm0.0028$ \\
+    \rhopW{,eq}+\rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   $\pm0.0028$  & $\pm0.0030$ & $\pm0.0028$ & $\pm0.0031$ \\
+    \addlinespace
+    \rhopW{,eq}+PDF        & \rhopW{,eq}         &   $\pm0.0008$  & $\pm0.0013$ & $\pm0.0010$ & $\pm0.0015$ \\
+    \addlinespace
+    \rhopW{,e\bar{q}}+PDF  & \rhopW{,e\bar{q}}   &   $\pm0.0009$  & $\pm0.0014$ & $\pm0.0012$ & $\pm0.0018$ \\
+    \addlinespace
+    \rhopW{,f}+PDF  & \rhopW{,f}                 &   $\pm0.0017$ &   $\pm0.0019$ &   $\pm0.0016$ &   $\pm0.0018$ \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+  Expected uncertainties of anomalous CC coupling parameters 
+  \rhopW{,eq} and \rhopW{,e\bar{q}} from 2-parameter (upper 
+  part) and 1-parameter fits (lower part). 
+  }
+\label{tab:rhoCC}
+\end{table}
+%
+The prospects for a determination of these anomalous couplings 
+with LHeC data are obtained by performing a fit of the two 
+parameters $\rho^\prime_{\text{CC},eq}$ and 
+$\rho^\prime_{\text{CC},e\bar{q}}$ together with the PDFs.
+The expected uncertainties for the LHeC-50a and LHeC-60a 
+scenarios are displayed in Fig.~\ref{fig:rhoCC} and collected 
+in table~\ref{tab:rhoCC}. We find that these parameters can be 
+determined with a relative uncertainty of better than 
+0.3\,\%.
+For the LHeC-60b scenario, even smaller 
+uncertainties can be achieved and we find in 1-parameter+PDF fits
+relative uncertainties below one per mille.
 
+{\color{red}
+  Discuss \rhopW{,f}+\kapp{f}+PDF here. Probably even move
+  numerical results from Tab.~\ref{tab:rhokappap} to Tab.~\ref{tab:rhoCC}.
+  . . . At LEP+SLD, there are $\rho$+$\kappa$-fits, but their
+  interpretation in DIS is ambigous, because $\rho$ can be $\rho_{NC}$
+  or $\rho_{CC}$...
+}
+
+\begin{figure}[tbh!]
+  \centering
+  \includegraphics[width=0.50\textwidth]{plot_rhopWQ2}
+  \caption{
+  Scale dependent determination of the anomalous CC coupling 
+  parameters, assuming $\rho^\prime_{\text{CC},eq} = 
+  \rho^\prime_{\text{CC},e\bar{q}} = \rho^\prime_{\text{CC},f}$.
+  }
+\label{fig:rhoCCvsQ2}
+\end{figure}
+%
 Event rates at the LHeC are expected to be large and will 
 cover a large \Qsq range between $10^2$~GeV$^2$ and almost 
 $1000^2$~GeV$^2$. It is therefore possible to determine 
@@ -1972,23 +1997,13 @@ energies, i.e.\ with $E_e=60~\GeV$ instead of 50~\GeV, has
 therefore only moderate impact on the size of the uncertainties 
 in the central \Qsq region. However, a larger beam energy allows 
 one to extend the measurement to higher \Qsq values.
-%
-\begin{figure}[b!]
-  \centering
-  \includegraphics[width=0.50\textwidth]{plot_rhopWQ2}
-  \caption{
-  Scale dependent determination of the anomalous CC coupling 
-  parameters, assuming $\rho^\prime_{\text{CC},eq} = 
-  \rho^\prime_{\text{CC},e\bar{q}} = \rho^\prime_{\text{CC},f}$.
-  }
-\label{fig:rhoCCvsQ2}
-\end{figure}
+
 
 
 %--------------------------------------------------------------------
 %   Results: couplings
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{SM weak neutral current couplings}
 \label{sec:nccouplings}
@@ -2015,11 +2030,11 @@ and down-type quarks can therefore be interpreted, with high
 precision, as a determination of the coupling constants of the 
 up- and down-quarks, i.e.\ of light quarks only. Only for the 
 down-type couplings, a contribution from strange quarks may have 
-a significant size. 
+a relevant size. 
 
-We perform a EW+PDF fit where the vector and axial-vector 
+We perform an EW+PDF fit where the vector and axial-vector 
 couplings of up-type ($u$ and $d$) and down-type quarks ($d$, 
-$s$ and $b$), i.e.\ $g_V^{u}$, $g_V^{d}$ and $g_A^{u}$, $g_A^{d}$, 
+$s$ and $b$), denoted as $g_V^{u}$, $g_V^{d}$ and $g_A^{u}$, $g_A^{d}$, 
 are free parameters in one single fit. Other parameters, in 
 particular the lepton couplings, are fixed. The fit parameters 
 are identified with the coupling constants defined in the Born 
@@ -2064,60 +2079,17 @@ most precise measurements.
        \cmidrule(lr){4-7}
      parameter &  &  & LHeC-60b & LHeC-60a & LHeC-50b & LHeC-50a \\
     \midrule
-% /nfs/dust/h1/group/britzger/alpos/Alpos/lhec_ew_CDR19/couplings
-%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.00152264  
-%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00342126  
-%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.00100489  
-%log.couplings.ud.lhec60+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.0027448   
-%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00220341  
-%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00552109  
-%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.00152     
-%log.couplings.ud.lhec60+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.00460173  
-%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.00267682  
-%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00590186  
-%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.00204902  
-%log.couplings.ud.lhec50+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.00453882  
-%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00354618  
-%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00829551  
-%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.00278192  
-%log.couplings.ud.lhec50+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.00673111  
-    %
-%    $\au$+$\ad$+$\vu$+$\vd$+PDF &
     $\au$  & $0.519$   & $^{+0.028}_{-0.033}$  & $\pm0.0015$ & $\pm0.0022$ & $\pm0.0027$ & $\pm0.0035$ \\
     $\ad$  & $-0.527$  & $^{+0.040}_{-0.028}$  & $\pm0.0034$ & $\pm0.0055$ & $\pm0.0059$ & $\pm0.0083$ \\
     $\vu$  & $0.266$   & $\pm0.034$            & $\pm0.0010$ & $\pm0.0015$ & $\pm0.0020$ & $\pm0.0028$ \\
     $\vd$  & $-0.38$   & $^{+0.04}_{-0.05}$    & $\pm0.0027$ & $\pm0.0046$ & $\pm0.0059$ & $\pm0.0067$ \\
     \midrule
-%log.couplings.u.lhec60+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.000946556 
-%log.couplings.u.lhec60+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.000490508 
-%log.couplings.u.lhec60+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00145217  
-%log.couplings.u.lhec60+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.000799386 
-%log.couplings.u.lhec50+.uncorr.0.25.txt:EPRC.au                   =          0.5   +/-   0.00154661  
-%log.couplings.u.lhec50+.uncorr.0.25.txt:EPRC.vu                   =     0.202804   +/-   0.000875427 
-%log.couplings.u.lhec50+.uncorr.0.5.txt:EPRC.au                   =          0.5   +/-   0.00215864  
-%log.couplings.u.lhec50+.uncorr.0.5.txt:EPRC.vu                   =     0.202804   +/-   0.00125943  
     $\au$  &  &  & $\pm0.0009$ & $\pm0.0015$ & $\pm0.0015$ & $\pm0.0022$   \\
     $\vu$  &  &  & $\pm0.0005$ & $\pm0.0008$ & $\pm0.0009$ & $\pm0.0013$   \\
     \midrule
-%log.couplings.d.lhec60+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00197853  
-%log.couplings.d.lhec60+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.00134947  
-%log.couplings.d.lhec60+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00340999  
-%log.couplings.d.lhec60+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.0024223   
-%log.couplings.d.lhec50+.uncorr.0.25.txt:EPRC.ad                   =         -0.5   +/-   0.00321467  
-%log.couplings.d.lhec50+.uncorr.0.25.txt:EPRC.vd                   =    -0.351402   +/-   0.00193494  
-%log.couplings.d.lhec50+.uncorr.0.5.txt:EPRC.ad                   =         -0.5   +/-   0.00470463  
-%log.couplings.d.lhec50+.uncorr.0.5.txt:EPRC.vd                   =    -0.351402   +/-   0.00305495  
     $\ad$  & & & $\pm0.0020$ & $\pm0.0034$ & $\pm0.0032$ & $\pm0.0047$   \\
     $\vd$  & & & $\pm0.0013$ & $\pm0.0024$ & $\pm0.0019$ & $\pm0.0031$   \\
     \midrule
-%log.couplings.e.lhec60+.uncorr.0.25.txt:EPRC.ae                   =         -0.5   +/-   0.000861184 
-%log.couplings.e.lhec60+.uncorr.0.25.txt:EPRC.ve                   =   -0.0542056   +/-   0.00137261  
-%log.couplings.e.lhec60+.uncorr.0.5.txt:EPRC.ae                   =         -0.5   +/-   0.00137476  
-%log.couplings.e.lhec60+.uncorr.0.5.txt:EPRC.ve                   =   -0.0542056   +/-   0.00217389  
-%log.couplings.e.lhec50+.uncorr.0.25.txt:EPRC.ae                   =         -0.5   +/-   0.0018405   
-%log.couplings.e.lhec50+.uncorr.0.25.txt:EPRC.ve                   =   -0.0542056   +/-   0.00312676  
-%log.couplings.e.lhec50+.uncorr.0.5.txt:EPRC.ae                   =         -0.5   +/-   0.0024957   
-%log.couplings.e.lhec50+.uncorr.0.5.txt:EPRC.ve                   =   -0.0542056   +/-   0.00414468  
     $\gae$  & $-0.50111$ & $\pm 0.00035$ & $\pm0.0009$ & $\pm0.0014$ & $\pm0.0018$ & $\pm0.0025$   \\
     $\ve$   & $0.03817$  & $\pm 0.00047$ & $\pm0.0014$ & $\pm0.0022$ & $\pm0.0031$ & $\pm0.0041$   \\
     \bottomrule
@@ -2132,12 +2104,6 @@ most precise measurements.
     fit. The upper section shows results of a fit where all 4 
     couplings are free fit parameters, the lower three sections 
     are results from two-parameter+PDF fits.  
-%    $g_A^u = 0.519^{+0.028}_{-0.033}$, 
-%    $g_A^d = -0.527^{+0.040}_{-0.028}$, 
-%    $g_V^u = 0.266 \pm 0.034$, 
-%    $g_V^d = -0.38^{+0.04}_{-0.05}$, 
-%    $g_A^e = -0.50111 \pm 0.00035$, 
-%    $g_V^e = 0.03817 \pm 0.00047$.}
     }
 \label{tab:couplings}
 \end{table}
@@ -2154,6 +2120,7 @@ SM value. We find that the uncertainties of light-quark couplings
 can be improved by more than an order of magnitude through LHeC 
 data.
 
+{\color{blue}Move elsewhere.??..}
 A fit to determine the electron couplings will not be 
 competitive with corresponding determinations from $Z$-pole 
 observables (see last two lines of table~\ref{tab:couplings}). 
@@ -2172,7 +2139,7 @@ precision in other experiments.
 %--------------------------------------------------------------------
 %                            Summary
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 
 \section{Summary and Conclusion}
 \label{sec:conclusions}
@@ -2205,7 +2172,7 @@ parameters.
 % --- SM parameters
 %
 \begin{table}[b!]
-  \footnotesize
+  \small
   \centering
   \begin{tabular}{lcccccc}
     \toprule
@@ -2248,7 +2215,10 @@ data and the related large amount of data points that all contribute
 to the sensitivity in the spacelike regime of momentum transfer. 
 The large number of cross section data in different $Q^2$ bins 
 and including both NC and CC scattering, as well as scattering 
-with positrons and with polarized electrons, is equivalent to 
+with positrons and with polarized electrons,
+{\color{red}...improve/shorten...
+\color{brown}
+is equivalent to 
 a large number of cross section ratios. Therefore, correlated 
 (normalization) uncertainties cancel to a large extent and play 
 a minor role, and uncorrelated uncertainties are reduced by the 
@@ -2278,28 +2248,31 @@ factors from theory will be needed to turn the result of such
 measurements into a determination of the effective weak mixing 
 angle, or the weak mixing angle in the $\overline{\rm MS}$ 
 scheme, which then can be compared with other measurements.  
+}
 
 % ... W-mass
 In the on-shell scheme, the weak mixing angle is defined by 
 the ratio of the weak boson masses, \mw\ and \mz. The 
 measurement of inclusive DIS cross sections can therefore 
 be interpreted as an indirect determination of the $W$-boson 
-mass. Based on simple error propagation, one can estimate 
-that the relative uncertainty for \mw, if determined from 
-the uncertainty of $\sin^2\theta_W$ with fixed \mz, can be 
-expected at the level of $10^{-4}$. Indeed, we find from 
+mass.
+We find from 
 our combined \mw+PDF fit an experimental uncertainty down 
-to $\pm6\,\MeV$. This high precision will improve all present 
+to $\pm6\,\MeV$.
+This is compatible with a rough estimate of an expected relative
+uncertainty, based on simple error propagation, at the level of $10^{-4}$.
+This high precision will improve all present 
 measurements and provide a highly valuable validation of future 
-improved direct \mw\ measurements with \MeV\ accuracy.
+improved direct \mw\ measurements with $\mathcal{O}(\MeV)$ accuracy.
 
 % ... mt and mH
 The high precision of the Born-level parameters of the EW theory 
 also suggests a determination of the dominant parameters of the 
 higher-order EW corrections, most notably the top-quark mass \mt. 
 The value of \mt\ can be determined with an uncertainty down to 
-$\pm 1.1\,\GeV$ and thus provides a precise indirect determination 
-which is complementary to direct measurements as it is theoretically 
+$\pm 1.1\,\GeV$.
+This provides a precise indirect determination 
+which is complementary to direct measurements, since it is theoretically 
 clean and free from ambiguities due to unknown QCD corrections.
 The dependence of higher-order corrections on the Higgs-boson 
 mass, \mH, is logarithmic only, i.e.\ sub-dominant. Therefore, 
@@ -2309,7 +2282,8 @@ indirect determinations from the LEP+SLD data.
 Non-Standard Model contributions to one-loop weak boson self 
 energy corrections, usually described by the so-called 
 \emph{oblique} parameters $S$, $T$ and $U$, can also be determined 
-independently with uncertainties of a few percent. 
+independently when NC and CC DIS data are considered together, and
+uncertainties of a few percent are expected.
 
 % ... global fit(s)
 A simultaneous determination of the weak boson masses, \mw\ and 
@@ -2319,7 +2293,7 @@ the uncertainties that can be achieved nowadays in global EW fits.
 We have studied in a simplified formalism the potential impact of
 LHeC NC/CC DIS data to such a global EW fit and found only small 
 improvements; the correlation between \mW\ and \mt\ or \mw\ and 
-\mz\ are not very different in DIS and in other observables. 
+\mz\ are not very different in DIS than in other observables. 
 
 % ... NC couplings 
 The $\textrm{SU}(2) \times \textrm{U}(1)$ gauge symmetry predicts 
@@ -2328,6 +2302,7 @@ Modifications of the SM can be studied in a rather
 model-independent manner by considering these coupling constants 
 as free parameters. 
 % ... rho kappa
+{\color{red}shorten: \color{brown}
 It is often convenient to parametrize anomalous weak coupling 
 parameters in a more restricted way by introducing multiplicative 
 modification factors, $\rho_{\text{NC},f}$ and $\kappa_f$, which 
@@ -2336,14 +2311,16 @@ While the NC coupling parameters have been measured at the $Z$-pole
 with high precision, in particular for leptons and $b$ quarks, 
 the couplings of the light quarks, $u$ and $d$, are experimentally 
 measured only with a rather poor precision. In contrast, the LHeC 
-has a high sensitivity to the NC couplings of light quarks. DIS 
-data from the LHeC will provide the unique opportunity to 
+has a high sensitivity to the NC couplings of light quarks.
+}
+DIS data from the LHeC will provide the unique opportunity to 
 determine the light-quark couplings with per mille accuracy, 
 either for the vector and axial-vector coupling constants (\vu, 
 \au, \vd\ and \ad) or for the anomalous form factors, 
-$\rhop{f}$ and $\kapp{f}$. In addition, their \Qsq\ dependence 
+$\rhop{f}$ and $\kapp{f}$.
+In addition, their \Qsq\ dependence 
 can be determined with percent precision in the range 
-$60\lesssim\Qsq\lesssim600\,\GeVsq$. 
+$60\lesssim\sqrt{\Qsq}\lesssim600\,\GeV$. 
 
 % ... CC
 Many precise data for parameters of the NC sector of the EW 
@@ -2355,7 +2332,7 @@ Anomalous electron--quark and electron--anti-quark form factors
 can be determined with an accuracy in the order of 
 $\mathcal{O}(0.1\,\%)$, and their potential \Qsq\ dependence 
 can be measured with per mille uncertainties in a \Qsq\ range 
-up to about $(400\,\GeV)^2$.
+up to about $400^2\,\GeVsq$.
 
 % --- final words
 %
@@ -2381,6 +2358,8 @@ coupling constants of the light quarks.
 In some cases uncertainties can be improved by a factor of 2 
 for the scenario with higher energy and higher resolution. }
 
+{\color{red}Improve:
+  \color{brown}
 Even though a few parameter determinations are unique to the 
 LHeC, a conclusive test of the SM can only be achieved by 
 comparing as many as possible different measurements. The 
@@ -2399,6 +2378,7 @@ that additional theoretical, parametric uncertainties play
 a role. We believe that our study provides a motivation for 
 the investigation and calculation of higher-order corrections 
 to DIS observables beyond the 1-loop level.  
+}
 
 
 %--------------------------------------------------------------------
@@ -2428,7 +2408,7 @@ It is common to consider a set of data as input for a global
 EW fit comprising $\alpha$ and \gf, the mass parameters \mz, 
 \mw, \mH, and \mt, partial decay widths of the gauge bosons, 
 $\Gamma_W$ and $\Gamma_Z$, the effective weak mixing angle
-$\sin^2\theta^\textrm{eff}_{W,\ell}$, partial decay widths and 
+$\sweffl$, partial decay widths and 
 asymmetry observables in $e^+e^-$ collisions~\cite{ALEPH:2005ab} 
 $R_\ell^0$, $R_b^0$, $R_c^0$, $A_\ell$, $A_c$, $A_b$, 
 $A_\textrm{FB}^{0,\ell}$, $A_\textrm{FB}^{0,c}$, 
@@ -2491,36 +2471,7 @@ for our purpose.
   }
 \label{fig:globfit}
 \end{figure}
-
-We can therefore proceed and include LHeC-60b inclusive NC/CC 
-DIS data into the fit. Moreover, we include the PDF parameters 
-as well, and we use recent values for \mW, \mt, and \mH\ from 
-PDG20~\cite{PDG2020}. When including LHeC-60b NC/CC DIS data, 
-we obtain a very moderate improvement for \mw: 
-$\Delta\mw=\pm4.6\,\MeV$ changes to $\Delta\mw = \pm 4.5\,\MeV$.
-The 68\,\% C.L. contours in the \mW-\mt--plane are displayed in
-Fig.~\ref{fig:globfit}. No significant improvement of $\Delta\mt$ 
-is seen. This was to be expected, since \mt\ contributes to NC/CC 
-DIS only through higher-order corrections. Obviously, already 
-other than the LHeC NC/CC DIS data are sufficient to provide good 
-constraints on \mW\ and \mt. LHeC DIS data probe essentially the 
-same relation of \mW\ and \mt\ and they cannot compete with direct 
-measurements of these mass parameters.
-
-Therefore, the strength of the LHeC 
-EW analysis is its complementarity with measurements in $e^+e^-$ 
-or $pp$ collisions, in particular the fact that the dominant 
-uncertainty in the $W$-boson mass determination is due to its 
-correlation with the PDF determination. LHeC data will offer, 
-for the first time, the possibility to study a simultaneous fit 
-of EW and PDF parameters. The impact of the latter may be 
-considerably reduced if measurements at the LHeC will become 
-available \cite{Azzi:2019yne}.
 %
-Commonly, the global fit is repeated with direct measurements of 
-the parameters of interest excluded, i.e.\ without \mw\ and \mt.
-This was studied in sect.~\ref{sec:mt}.
-
 \begin{table}[bht!]
   \footnotesize
   \centering
@@ -2542,6 +2493,39 @@ This was studied in sect.~\ref{sec:mt}.
   }
   \label{tab:global}
 \end{table}
+%
+We can therefore proceed and include LHeC-60b inclusive NC/CC 
+DIS data into the fit. Moreover, we include the PDF parameters 
+as well, and we use recent values for \mW, \mt, and \mH\ from 
+PDG20~\cite{PDG2020}. When including LHeC-60b NC/CC DIS data, 
+we obtain a very moderate improvement for \mw: 
+$\Delta\mw=\pm4.6\,\MeV$ changes to $\Delta\mw = \pm 4.5\,\MeV$.
+The 68\,\% C.L. contours in the \mW-\mt--plane are displayed in
+Fig.~\ref{fig:globfit}.
+Numerical values of the validation fits, and the study including
+LHeC-60b data are collected in Tab.~\ref{tab:global}.
+No significant improvement of $\Delta\mt$ 
+is seen. This was to be expected, since \mt\ contributes to NC/CC 
+DIS only through higher-order corrections. Obviously, already 
+other than the LHeC NC/CC DIS data are sufficient to provide good 
+constraints on \mW\ and \mt. LHeC DIS data probe essentially the 
+same relation of \mW\ and \mt\ and they cannot compete with direct 
+measurements of these mass parameters.
+
+Therefore, the strength of the LHeC 
+EW analysis is its complementarity with measurements in $e^+e^-$ 
+or $pp$ collisions, in particular the fact that the dominant 
+uncertainty in the $W$-boson mass determination is due to its 
+correlation with the PDF determination. LHeC data will offer, 
+for the first time, the possibility to study a simultaneous fit 
+of EW and PDF parameters. The impact of the latter may be 
+considerably reduced if measurements at the LHeC will become 
+available \cite{Azzi:2019yne}.
+%
+Commonly, the global fit is repeated with direct measurements of 
+the parameters of interest excluded, i.e.\ without \mw\ and \mt.
+This was studied in Sec.~\ref{sec:mt}.
+
 
  %DB {\color{brown}
  %DB Discuss $\alpha_s$, and its role in EW fit and in DIS, very briefly.
@@ -2551,7 +2535,8 @@ This was studied in sect.~\ref{sec:mt}.
 %--------------------------------------------------------------------
 %                          Acknowledgements
 %--------------------------------------------------------------------
-\clearpage
+%\clearpage
 \section*{Acknowledgements}
+{\color{red}Write something.}
 Acknowledgements: A.~Sch\"oning, M.~Klein, S.~Schmitt, J.~Erler
 
