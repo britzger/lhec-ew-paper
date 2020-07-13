@@ -487,6 +487,7 @@ FUNCTION {format.title}
 { title empty$
     { "" }
     { "``" title "t" change.case$ * ",''" * }
+%    { "``" title "t" change.case$ * ",''" * }
   if$
 }
 
@@ -863,7 +864,7 @@ FUNCTION {article}
   format.collaboration output
   format.authors "author" output.check
   format.title "title" output.check
-  ", " *
+%  ", " *
   blank.sep
   crossref missing$
   { journal missing$   
