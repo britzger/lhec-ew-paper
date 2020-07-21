@@ -1,4 +1,5 @@
-
+%--------------------------------------------------------------------
+% (c) Copyrights Britzger, Klein, Spiesberger
 %--------------------------------------------------------------------
 %   Introduction
 %--------------------------------------------------------------------
@@ -473,10 +474,10 @@ proton beam energy of $E_p=7000~\GeV$ are chosen. The LHeC
 predictions are compared to data for unpolarised scattering 
 measured at HERA, where the electron and proton beam energies 
 had been $E_e = 27.6$~GeV and $E_p = 920$~GeV, respectively.  
-
-\begin{figure}[thb!]
+%
+\begin{figure}[t!b]
   \centering
-  \includegraphics[width=0.56\textwidth]{plot_GraphsDsigmaDQ2_LHeC}
+  \includegraphics[width=0.56\textwidth,trim=0 10 0 40,clip]{plot_GraphsDsigmaDQ2_LHeC}
   \caption{
       Single differential inclusive DIS cross sections for
       polarized $e^-p$ NC and CC DIS at the LHeC for two different 
@@ -604,8 +605,8 @@ positron beam, where it is assumed that polarization will not
 be available. Technical limitations for the positron source 
 put constraints on the achievable beam current and thus on 
 the instantaneous luminosity. Therefore, an integrated luminosity 
-of 10\,fb$^{-1}$ is assumed for this sample\footnote{This value may eventually be smaller
- due to difficulties to generate intense positron beams for use in a linac.}. 
+of 10\,fb$^{-1}$ is assumed for this sample\footnote{This luminosity value may eventually be smaller
+ due to difficulties to generate intense positron beams.}. 
 Such reduced luminosity values  still allow
 to consider measurements with 
 positrons reaching up to \Qsq\ values of 500\,000\,\GeVsq. Finally, 
@@ -739,12 +740,11 @@ summarised in Table\,\ref{tab:scenarios}.
     \bottomrule
  \end{tabular}
   \caption{
-    Summary of the LHeC measurement scenarios. They will be 
-    referred to by the names shown in the first column. A 
-    reduced uncorrelated uncertainty of 0.25\,\% for the 
-    'b'-scenarios can be realized by increasing the number of 
-    bins with respect to the nominal number of data 
-    points given in Tab.~\ref{tab:datasets}. 
+    Summary of the LHeC measurement scenarios. 
+    The LHeC data scenarios differ by the assumption on the
+    electron beam energy, $E_e$, and the assumtions made for
+    the uncorrelated uncertainty (see text).
+    They will be referred to by the names shown in the first column.
   }
   \label{tab:scenarios}
 \end{table}
@@ -1013,7 +1013,7 @@ similar as the normalization uncertainty.
 
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.48\textwidth]{alphas_summary_W-bosonMass}
+  \includegraphics[width=0.48\textwidth,trim=0 0 0 40,clip]{alphas_summary_W-bosonMass}
   \caption{
     Determination of the $W$-boson mass from a combined 
     \mw+PDF fit, assuming fixed values for all other EW parameters. 
@@ -1103,7 +1103,7 @@ a substantial improvement of the precision of
 
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.48\textwidth]{plot_mWmZ_mitGf}
+  \includegraphics[width=0.54\textwidth,trim=0 10 0 25,clip]{plot_mWmZ_mitGf}
   \caption{
     Simultaneous determination of the $Z$-boson and $W$-boson 
     masses $m_Z$ and \mw\ from LHeC-60a or LHeC-50a data.
@@ -1219,7 +1219,7 @@ and
 %
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.54\textwidth]{figures/sw2eff}
+  \includegraphics[width=0.50\textwidth]{figures/sw2eff}
   \caption{
     Comparison of determinations of the weak mixing angle. 
     The results from LEP+SLD~\cite{ALEPH:2005ab},  
@@ -1282,8 +1282,8 @@ determination of \mw.
 \begin{table}[bth!]
   \footnotesize
   \centering
-%  \begin{tabular}{lcr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}lr@{$\,\pm\,$}l}
   \begin{tabular}{lcllll}
+    \\
     \toprule
     $\Qsq_i$ & Bin $i$ & \multicolumn{4}{c}{Expected relative 
                           uncertainty of
@@ -1338,7 +1338,7 @@ of the weak mixing angle.
 %--------------------------------------------------------------------
 %   top quark and Higgs mass
 %--------------------------------------------------------------------
-%\clearpage
+\clearpage
 
 \section{Mass parameters through higher-order corrections}
 \label{sec:mt} 
@@ -1354,18 +1354,18 @@ provides a test of the SM at the level of quantum corrections
 which is complementary to direct determinations. 
 
 The dominant corrections to the gauge boson self energies depend 
-on the top-quark mass \mt\,\footnote{Note that,
+on the top-quark mass \mt\,\footnote{Note that
   at sufficiently high scales, e.g.\ $\Qsq \gtrsim (2\mt)^2$, 
   the top-quark contributes also to the QCD evolution of the PDFs. 
-  However, these indirect contributions to the inclusive NC/CC 
+  However, these contributions to the inclusive
   DIS cross sections are very small at the LHeC. In particular, 
   their sensitivity to the actual value of the top-quark mass can 
   be neglected.
 }.
-In the on-shell scheme they enter through the quantity $\rho_t 
-= (3\alpha/16\pi\sw) (m_t^2/m_W^2)$ in the NC coupling parameters 
+In the on-shell scheme they enter in the NC coupling parameters 
 $\rho_\textrm{NC}$ and $\kappa$ and in the CC correction factor 
-\dr. Therefore, inclusive DIS cross sections depend quadratically 
+\dr\ through the quantity $\rho_t = (3\alpha/16\pi\sw) (m_t^2/m_W^2)$.
+Therefore, inclusive DIS cross sections depend quadratically 
 on \mt\ and since $\rho_t$ is in the order of 1\,\%, one can 
 expect to observe a sizeable effect on the DIS cross sections. 
 
@@ -1415,7 +1415,7 @@ measurements of \mt\ and \mw\ are taken into account.
 
 \begin{figure}[tb!]
     \centering
-    \includegraphics[width=0.54\textwidth]{plot_lhec_mWmt}
+    \includegraphics[width=0.54\textwidth,trim=0 40 0 25,clip]{plot_lhec_mWmt}
     \caption{
        Simultaneous determination of the $W$-boson and top-quark 
        masses from LHeC-60a or LHeC-50a data. Results from the 
@@ -1502,11 +1502,33 @@ definitions~\cite{Kennedy:1988sn,Altarelli:1990zd}
 %,Altarelli:1993sz ,Altarelli:1989hv
 is described in Ref.~\cite{Spiesberger:1993jg}.
 
+
+Results for various $STU$+PDF fits are presented in 
+Figs.~\ref{fig:STU_OS} and Tab.~\ref{tab:STU_OS}.
+These fits are performed in the on-shell scheme and the 
+SM masses are fixed at their PDG values, in particular the 
+values of $m_Z$ and $m_W$. Single-parameter fits of $S$, $T$ 
+or $U$ can provide uncertainties that are better by a factor 
+of 2 to 5 compared to the present PDG values~\cite{PDG2020}.
+In 2- and 3-parameter fits we observe a very strong correlation 
+of the parameters. This can be traced back to the fact that only 
+certain linear combinations of $S$, $T$ and $U$ contribute to 
+the NC and CC scattering cross sections and the $\gamma Z$ 
+interference contribution. For instance, the values of $T$ 
+and $U$ can be disentangled only if their contributions to NC 
+and CC DIS are combined, but not from NC DIS alone.
+By implication, however, these linear combinations can be 
+determined with very high precision -- a fact which makes the DIS 
+measurement particularly useful since it is complementary 
+to determinations of $S$, $T$ and $U$ from $Z$-pole data 
+(see, for example, 
+Refs.~\cite{deBlas:2016ojx,Haller:2018nnx,PDG2020}). 
+
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.32\textwidth,trim=20 0 20 0,clip]{STU_OS/plot_ST}
-  \includegraphics[width=0.32\textwidth,trim=20 0 20 0,clip]{STU_OS/plot_SU}
-  \includegraphics[width=0.32\textwidth,trim=20 0 20 0,clip]{STU_OS/plot_TU}
+  \includegraphics[width=0.32\textwidth,trim=20 48 20 25,clip]{STU_OS/plot_ST}
+  \includegraphics[width=0.32\textwidth,trim=20 48 20 25,clip]{STU_OS/plot_SU}
+  \includegraphics[width=0.32\textwidth,trim=20 48 20 25,clip]{STU_OS/plot_TU}
   \caption{
      Results of 2-parameter fits to pairs of $S$, $T$, and $U$ 
      where $m_Z$ and $m_W$ are fixed SM input parameters. For 
@@ -1518,7 +1540,7 @@ is described in Ref.~\cite{Spiesberger:1993jg}.
   }
   \label{fig:STU_OS}
 \end{figure}
-%
+
 \begin{table}[bht!]
   \footnotesize
   \centering
@@ -1555,27 +1577,7 @@ is described in Ref.~\cite{Spiesberger:1993jg}.
   }
   \label{tab:STU_OS}
 \end{table}
-%
-Results for various $STU$+PDF fits are presented in 
-Figs.~\ref{fig:STU_OS} and Tab.~\ref{tab:STU_OS}.
-These fits are performed in the on-shell scheme and the 
-SM masses are fixed at their PDG values, in particular the 
-values of $m_Z$ and $m_W$. Single-parameter fits of $S$, $T$ 
-or $U$ can provide uncertainties that are better by a factor 
-of 2 to 5 compared to the present PDG values~\cite{PDG2020}.
-In 2- and 3-parameter fits we observe a very strong correlation 
-of the parameters. This can be traced back to the fact that only 
-certain linear combinations of $S$, $T$ and $U$ contribute to 
-the NC and CC scattering cross sections and the $\gamma Z$ 
-interference contribution. For instance, the values of $T$ 
-and $U$ can be disentangled only if their contributions to NC 
-and CC DIS are combined, but not from NC DIS alone.
-By implication, however, these linear combinations can be 
-determined with very high precision -- a fact which makes the DIS 
-measurement particularly useful since it is complementary 
-to determinations of $S$, $T$ and $U$ from $Z$-pole data 
-(see, for example, 
-Refs.~\cite{deBlas:2016ojx,Haller:2018nnx,PDG2020}). 
+
 
 The $STU$+PDF fit to LHeC DIS data in the on-shell scheme 
 can be combined with the constraint from the $G_F$ measurement, 
@@ -1587,9 +1589,9 @@ Eq.~(\ref{eq:deltar-NLO})).
 
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.32\textwidth,trim=20 0 20 0,clip]{STU_MOMS/plot_ST}
-  \includegraphics[width=0.32\textwidth,trim=20 0 20 0,clip]{STU_MOMS/plot_SU}
-  \includegraphics[width=0.32\textwidth,trim=20 0 20 0,clip]{STU_MOMS/plot_TU}
+  \includegraphics[width=0.32\textwidth,trim=20 20 20 25,clip]{STU_MOMS/plot_ST}
+  \includegraphics[width=0.32\textwidth,trim=20 20 20 25,clip]{STU_MOMS/plot_SU}
+  \includegraphics[width=0.32\textwidth,trim=20 20 20 25,clip]{STU_MOMS/plot_TU}
   \caption{
     Same as Fig.~\ref{fig:STU_OS}, but the calculations are 
     performed in the modified on-shell scheme, i.e.\ 
@@ -1668,7 +1670,7 @@ improvements.
 %--------------------------------------------------------------------
 %   Results: rho and kappa form factors
 %--------------------------------------------------------------------
-%\clearpage
+\clearpage
 
 \section{\boldmath Weak neutral-current couplings beyond the SM: 
 $\rho_{\text{NC}}$ and $\kappa$}
@@ -1946,8 +1948,8 @@ then become
   }
 \label{fig:rhoCC}
 \end{figure}
-%
-\begin{table}[b!]
+
+\begin{table}[bt!]
   \footnotesize
   \centering
   \begin{tabular}{lccccc}
@@ -2009,7 +2011,7 @@ are obtained in this analysis than in a fit with CC DIS data alone.
 
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.54\textwidth]{plot_rhopWQ2}
+  \includegraphics[width=0.54\textwidth,trim=0 23 0 15,clip]{plot_rhopWQ2}
   \caption{
   Scale dependent determination of the anomalous CC coupling 
   parameters, assuming $\rho^\prime_{\text{CC},eq} = 
@@ -2177,7 +2179,7 @@ precision in other experiments.
 %--------------------------------------------------------------------
 %                            Summary
 %--------------------------------------------------------------------
-%\clearpage
+\clearpage
 
 \section{Summary and Conclusion}
 \label{sec:conclusions}
@@ -2503,9 +2505,9 @@ for our purpose.
 
 \begin{figure}[tb!]
   \centering
-  \includegraphics[width=0.48\textwidth]{plot_lhec_mWmt_global.pdf} 
+  \includegraphics[width=0.48\textwidth,trim=0 20 0 10,clip]{plot_lhec_mWmt_global.pdf} 
   \hskip0.02\textwidth
-  \includegraphics[width=0.48\textwidth]{plot_lhec_mWmt_global_ZOOM.pdf} 
+  \includegraphics[width=0.48\textwidth,trim=0 20 0 10,clip]{plot_lhec_mWmt_global_ZOOM.pdf} 
   \caption{
     Left: Expected uncertainties from a simplified global EW fit
     including LHeC-60b inclusive NC/CC DIS data. The results are 
