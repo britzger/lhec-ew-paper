@@ -1,60 +1,45 @@
 % ================================================================
-% LaTeX file with prefered layout for paper drafts
-% use: dvips -D600 file-name
+%   Britzger, Klein, Spiesberger
+%   Electroweak physics at the LHeC
 % ================================================================
-%%%%%%%%%%%%% LATEX HEADER
-%%%%%%%%%%%%% DO NOT DELET NOT CHANGE ANYTHING IN THE HEADER
-%%%%%%%%%%%%% UNLESS CLEARLY RECOMMENDED
 
 \documentclass[12pt]{article}
-%\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%\bibliographystyle{desy19-080}
 \bibliographystyle{utphys}
- %Choose a bibliograhpic style
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\usepackage{times}
-%\usepackage{txfonts}
 \usepackage[mathlines,displaymath]{lineno}
 \DeclareMathAlphabet{\mathbold}{OML}{txr}{b}{it}
-%\usepackage[font={small,it}]{caption}
-\usepackage[font={small}]{caption}
+\usepackage[font={small}]{caption}  %\usepackage[font={small,it}]{caption}
 
-\usepackage{multirow}
+
+% --- unused packages
 %\usepackage{units}
 %\usepackage{hhline}
-\usepackage{dsfont}
 %\usepackage{subcaption}
 %\usepackage{pdflscape}
+%\usepackage{longtable}
+
+\usepackage{multirow}
+\usepackage{dsfont}
 \usepackage{graphicx}
 \usepackage{rotating}
 \usepackage{paralist} % compactitem
 \graphicspath{{figures/}{./}}
 
-%\usepackage{longtable}
 \usepackage{xspace}
-%\usepackage{bm} % 'bold' math symbols (better use \usepackage{newtxtext,newtxmath}, if available on latex distribution)
 \usepackage{acronym}
 \usepackage{dcolumn}
 \newcolumntype{L}{D{.}{.}{2,5}}
-%\usepackage{bbold}
 \usepackage{booktabs} % for nice tables
-
 \usepackage{cite} % to allow a range of citations
 
 %%%%%%%%%%%%% Comment the next two lines to remove the line numbering
-\usepackage[]{lineno}
-\linenumbers
-\usepackage{soul}
-\usepackage{xcolor}
-\newcommand{\TODO}{\color{red}TODO\xspace}
+%\usepackage[]{lineno}
+%\linenumbers
+%\usepackage{soul}
+%\usepackage{xcolor}
 %%%%%%%%%%%%%%
-
-\newcommand{\includegraphicss}[2][]{\fbox{\includegraphics[#1]{#2}}}
-%\newcommand{\includegraphicss}[2][]{\includegraphics[#1]{#2}}
-
-
 
 \usepackage{hyperref} % has to be last package loaded
 \hypersetup{colorlinks=true, urlcolor=blue}
@@ -97,33 +82,20 @@
 
 
 %%%%%%%%%%%%%%%% END OF LATEX HEADER
-%===============================title page=============================
-\begin{document}  
 
-%Roman numbers
-\makeatletter
+
+% roman numbers
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
-\makeatother
 
-%% uncertainties: Absolute and relative uncertainties
-\newcommand{\delrel}{\ensuremath{\delta}}
-\newcommand{\delabs}{\ensuremath{\Delta}}
-\newcommand{\dabs}[2][1]{\ensuremath{\delabs^{{\rm{#1}}}_{{#2}}}}
-\newcommand{\drel}[2][1]{\ensuremath{\delrel^{{\rm{#1}}}_{{#2}}}}
-
+% QCD,EW
 \newcommand{\muf}{\ensuremath{\mu_{f}}\xspace}
 \newcommand{\mur}{\ensuremath{\mu_{r}}\xspace}
 \newcommand{\as}{\ensuremath{\alpha_s}\xspace}
 \newcommand{\asmz}{\ensuremath{\alpha_s(M_Z)}\xspace}
 \newcommand{\asmur}{\ensuremath{\alpha_s(\mur)}\xspace}
 \newcommand{\aem}{\ensuremath{\alpha_{\mathrm{em}}}\xspace}
-\newcommand{\Lumi}{\ensuremath{\mathcal{L}}}
 \newcommand{\pb}{\rm pb}
 \newcommand{\invpb}{\ensuremath{\rm{pb}^{-1}}}
-\newcommand{\PDF}{\ensuremath{{\rm PDF}}\xspace}
-
-\newcommand{\ex}{\ensuremath{{\rm exp}}\xspace}
-\newcommand{\pdf}{\ensuremath{{\rm pdf}}\xspace}
 
 %% observables
 \newcommand{\xbj}{\ensuremath{x}\xspace}
@@ -200,21 +172,14 @@
 \newcommand{\mWprop} {\ensuremath{m^{\rm prop}_W}}
 \newcommand{\mWGfW} {\ensuremath{m^{(\gf,\mW)}_W}}
 
-% Journal macro
-\def\Journal#1#2#3#4{{#1}~{\bf #2} (#3) #4}
-%
-\def\NPB{Nucl. Phys.~}
-\def\PRL{Phys. Rev. Lett.~}
-\def\EPJC{Eur. Phys. J.~}
-\def\PLB{Phys. Lett.~}
-\def\NIM{Nucl. Instrum. Meth.~}
-\def\PRD{Phys. Rev.~}
-\def\JHEP{JHEP~}
-\def\PROC{Conf. Proc.~}
-\def\CPC{Comp. Phys. Commun.~}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=============================== document =============================
+\begin{document}  
+\makeatletter
+\makeatother
+
+%=============================== title page =============================
 \begin{titlepage}
 
 \noindent
@@ -229,10 +194,10 @@
 \end{flushright}
 
 %\noindent
-%Date:      \ \ \ July 6, 2020      \\
-%Version:   2.2 \\
-%Editors:   D.\ Britzger (britzger@mpp.mpg.de), H. Spiesberger (spiesber@uni-mainz.de)
-%\noindent
+% Date:      \ \ \ July 6, 2020      \\
+% Version:   2.2 \\
+% Editors:   D.\ Britzger (britzger@mpp.mpg.de), H. Spiesberger (spiesber@uni-mainz.de)
+% \noindent
 
 
 \vspace{1.0cm}
@@ -304,10 +269,6 @@ We conclude that the LHeC will determine electroweak
 physics parameters, in the spacelike region, with unprecedented
 precision leading to thorough tests of the Standard Model
 and possibly beyond.
-%We conclude, that LHeC data will complement, with a high 
-%experimental precision, the determination of electroweak physics 
-%parameters from other past or ongoing experiments.
-
 %
 \end{abstract}
 
@@ -315,21 +276,16 @@ and possibly beyond.
 \sloppy
 
 \clearpage
-%
-%   REMOVE the table of contents 
-%\clearpage
-%\tableofcontents
-%\clearpage
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% body starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=============================== the paper =============================
 \input{lhec_ew}
+
 %%======================= References ==========================%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \begin{flushleft}
 \bibliography{lhec_ew}
 \end{flushleft}
 
-
-\end{document}
+% End.
+\end{document} 
